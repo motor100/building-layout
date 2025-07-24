@@ -1,0 +1,23 @@
+<!--#include virtual="/parts/header.html" -->
+
+<div class="container">
+
+  <form id="callback-form" class="form">
+    <input type="text" name="name" class="input-field">
+    <input type="text" name="phone" class="input-field js-input-phone-mask">
+    <button type="button" id="callback-submit-btn2" class="submit-btn">Оставить заявку</button>
+    <div class="agreement-text">
+      <input type="checkbox" name="checkbox-read" class="custom-checkbox js-required-checkbox" id="checkbox-read-callback2" checked required onchange="document.getElementById('callback-submit-btn2').disabled = !this.checked;">
+      <label for="checkbox-read-callback2" class="custom-checkbox-label"></label>
+      <span class="checkbox-text">Я согласен (-на) с <a href="/privacy-policy.html" class="privacy-policy-link" target="_blank">политикой конфиденциальности</a></span>
+    </div>
+    <div class="agreement-text">
+      <input type="checkbox" name="checkbox-agree" class="custom-checkbox js-required-checkbox" id="checkbox-agree-callback2" checked required onchange="document.getElementById('callback-submit-btn2').disabled = !this.checked;">
+      <label for="checkbox-agree-callback2" class="custom-checkbox-label"></label>
+      <span class="checkbox-text">Я согласен (-на) с <a href="/soglasie-posetitelya-sajta-na-obrabotku-personalnyh-dannyh.html" class="agreement-link" target="_blank">обработку персональных данных</a></span>
+    </div>
+  </form>
+
+</div>
+
+<!--#include virtual="/parts/footer.html" -->
