@@ -557,6 +557,92 @@ iframe {
   height: 1px;
   background-color: #CCCCCC;
 }
+.projects-detail-page .image-section .image {
+  height: 637px;
+  border-radius: 15px;
+  overflow: hidden;
+}
+.projects-detail-page .image-section .image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.projects-detail-page .image-section .details {
+  width: 440px;
+  padding: 30px;
+  border-radius: 15px;
+  background-color: #F9F9F9;
+}
+.projects-detail-page .image-section .details-row {
+  display: flex;
+  height: 36px;
+  margin: 0 0 8px 0;
+  padding: 10px 12px;
+  border-radius: 18px;
+  background-color: #F5F5F5;
+  align-items: center;
+  justify-content: space-between;
+}
+.projects-detail-page .image-section .details-row:last-child {
+  margin-bottom: 0;
+}
+.projects-detail-page .location-section .grid-container {
+  display: grid;
+  gap: 60px;
+  grid-template-columns: repeat(2, 1fr);
+}
+.projects-detail-page .location-section .location-item {
+  display: flex;
+  margin: 0 0 20px 0;
+  gap: 10px;
+  justify-content: space-between;
+}
+.projects-detail-page .location-section .location-item:last-child {
+  margin-bottom: 0;
+}
+.projects-detail-page .location-section .location-item__title {
+  margin: 0 0 10px 0;
+  font-size: 20px;
+  line-height: 1.2;
+}
+.projects-detail-page .location-section .location-item__text {
+  color: darkgrey;
+  line-height: 1.2;
+}
+.projects-detail-page .location-section .location-item__image {
+  width: 280px;
+  height: 160px;
+  border-radius: 20px;
+  overflow: hidden;
+}
+.projects-detail-page .location-section .location-item__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.projects-detail-page .location-section .map {
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+
+.projects-detail-page .advantages-section .grid-container {
+  display: grid;
+  gap: 30px;
+  grid-template-columns: repeat(3, 1fr);
+}
+.projects-detail-page .advantages-section .advantages-item {
+  height: 550px;
+  border-radius: 15px;
+}
+.projects-detail-page .working-progress-section .grid-container {
+  display: grid;
+  gap: 30px;
+  grid-template-columns: repeat(3, 1fr);
+}
+.projects-detail-page .map-section .map {
+  height: 500px;
+}
 
 
 
