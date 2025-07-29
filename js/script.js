@@ -15,9 +15,9 @@ document.addEventListener("DOMContentLoaded", () => {
   if (newsSlider) {
     const slider = new Swiper('.news-slider', {
       loop: true,
-      // slidesPerView: 'auto',
-      slidesPerView: 4,
-      spaceBetween: 40,
+      slidesPerView: 'auto',
+      // slidesPerView: 5,
+      spaceBetween: 30,
       autoplay: false,
       navigation: {
         nextEl: '.swiper-next',
