@@ -692,6 +692,14 @@ iframe {
   border-radius: 20px;
   overflow: hidden;
 }
+.projects-detail-page .location-section .location-map {
+  display: flex;
+  height: 700px;
+  flex-direction: column;
+}
+.projects-detail-page .location-section .map-text {
+  margin: 0 0 20px 0;
+}
 
 
 .projects-detail-page .advantages-section .grid-container {
