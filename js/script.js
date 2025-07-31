@@ -40,6 +40,29 @@ document.addEventListener("DOMContentLoaded", () => {
   }
   */
 
+  // Вкладки на странице Карточка проекта
+  const projectsDetailPage = document.querySelector('.projects-detail-page');
+
+  if (projectsDetailPage) {
+
+    const tabs = document.querySelectorAll('.tab');
+    const tabsContent = document.querySelectorAll('.tab-content');
+
+    for (let i = 0; i < tabs.length; i++) {
+      tabs[i].onclick = function() {
+
+        for (let j = 0; j < tabs.length; j++) {
+          tabs[j].classList.remove('active');
+          tabsContent[j].classList.remove('active');
+        }
+
+        tabs[i].classList.add('active');
+        tabsContent[i].classList.add('active');
+      }
+    }
+  }
+  
+
 
   // Current year
   const now = new Date();

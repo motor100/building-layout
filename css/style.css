@@ -775,6 +775,29 @@ iframe {
 .projects-detail-page .image-section .details-row:last-child {
   margin-bottom: 0;
 }
+
+/* Вкладки */
+.projects-detail-page .flat-section .tabs {
+  display: flex;
+}
+.projects-detail-page .flat-section .tab {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid red;
+  text-align: center;
+  cursor: pointer;
+}
+.projects-detail-page .flat-section .tab.active {
+  font-weight: bold;
+}
+.projects-detail-page .flat-section .tab-content {
+  display: none;
+}
+.projects-detail-page .flat-section .tab-content.active {
+  display: block;
+}
+
+
 .projects-detail-page .location-section .grid-container {
   display: grid;
   gap: 60px;
