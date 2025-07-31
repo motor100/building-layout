@@ -75,12 +75,13 @@ document.addEventListener("DOMContentLoaded", () => {
   // Mobile menu
   const body = document.querySelector('body');
   const burgerMenuWrapper = document.querySelector('.burger-menu-wrapper');
+  const openMenuBtns = document.querySelectorAll('.js-open-menu-btn');
   const mobileMenu = document.querySelector('.mobile-menu');
 
   function openMobileMenu() {
     body.classList.add('overflow-hidden');
-    mobileMenu.classList.add('active');
     burgerMenuWrapper.classList.add('menu-is-open');
+    mobileMenu.classList.add('active');
   }
 
   function closeMobileMenu() {
@@ -89,13 +90,15 @@ document.addEventListener("DOMContentLoaded", () => {
     mobileMenu.classList.remove('active');
   }
 
-  burgerMenuWrapper.onclick = function() {
-    if (burgerMenuWrapper.classList.contains('menu-is-open')) {
-      closeMobileMenu();
-    } else {
-      openMobileMenu();
+  openMenuBtns.forEach((item) => {
+    item.onclick = function() {
+      if (item.classList.contains('menu-is-open')) {
+        closeMobileMenu();
+      } else {
+        openMobileMenu();
+      }
     }
-  }
+  });
 
   const listParentClick = document.querySelectorAll('.mobile-menu li.menu-item a');
 
