@@ -137,9 +137,19 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Окна
   const modalWindows = document.querySelectorAll('.modal-window');
+
+  const advantagesModalBtns = document.querySelectorAll('.advantages-modal-btn');
+  const advantagesModal = document.querySelector('#advantages-modal');
+
   const callbackFormBtns = document.querySelectorAll('.callback-form-btn');
   const callbackModal = document.querySelector('#callback-modal');
   const modalCloseBtns = document.querySelectorAll('.modal-window .modal-close');
+
+  advantagesModalBtns.forEach((item) => {
+    item.onclick = function () {
+      modalWindowOpen(advantagesModal);
+    }
+  });
 
   callbackFormBtns.forEach((item) => {
     item.onclick = function () {
