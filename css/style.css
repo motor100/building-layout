@@ -42,6 +42,7 @@
   --white-color: #FFFFFF;
   --light-color: #F0F0F0;
   --second-lightgrey-color: #BFBFBF;
+  --third-ligtgrey-color: #B7B7B7;
   --margin-80: 80px;
 }
 
@@ -381,7 +382,7 @@ iframe {
   position: absolute;
   top: 176px;
   left: 30px;
-  color: #B7B7B7;
+  color: var(--third-ligtgrey-color);
 }
 .projects-section .projects-item__city {
   position: absolute;
@@ -398,7 +399,7 @@ iframe {
   top: 251px;
   left: 30px;
   font-size: 16px;
-  color: #B7B7B7;
+  color: var(--third-ligtgrey-color);
 }
 .projects-section .projects-item__price {
   position: absolute;
@@ -659,6 +660,52 @@ iframe {
 }
 
 
+/* Страница Документы */
+.documents-page .grid-container {
+  display: grid;
+  gap: 24px;
+  grid-template-columns: repeat(3, 1fr);
+}
+.documents-page .documents-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 132px;
+  padding: 10px 30px;
+  border-radius: 30px;
+  background-color: var(--lightgrey-color);
+  overflow: hidden;
+  font-size: 24px;
+  color: var(--text-color);
+  line-height: 1.2;
+  justify-content: center;
+  transition: color .3s;
+}
+.documents-page .documents-item:hover {
+  color: var(--blue-color);
+}
+.documents-page .documents-item__name {
+  margin: 5px 0 0 0;
+  font-size: 18px;
+  color: var(--third-ligtgrey-color);
+  line-height: 1.2;
+}
+
+
+/* Страница Реквизиты */
+.requisites-page .requisites-item {
+  margin: 0 0 20px 0;
+}
+.requisites-page .requisites-item .requisites-item__title {
+  margin: 0 0 4px 0;
+  font-size: 18px;
+  color: var(--third-ligtgrey-color);
+  line-height: 1.2;
+}
+.requisites-page .requisites-item .requisites-item__value {
+  font-size: 24px;
+  line-height: 1.2;
+}
 
 
 /* Footer */
