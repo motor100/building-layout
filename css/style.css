@@ -634,6 +634,53 @@ iframe {
 .about-company-section {
   padding: 60px 0;
 }
+.about-company-section .flex-container {
+  display: flex;
+  gap: 80px;
+  justify-content: space-between;
+}
+.about-company-section .about-company-content {
+  width: 55%;
+}
+.about-company-section .about-company-text {
+  margin: 0 0 40px 0;
+  font-size: 18px;
+}
+.about-company-section .about-company-items {
+  margin-bottom: 36px;
+}
+.about-company-section .about-company-item {
+  margin: 0 0 4px 0;
+  padding: 8px 20px;
+  border-radius: 20px;
+  background-color: var(--light-color);
+  font-size: 18px;
+  line-height: 1.2;
+}
+.about-company-section .about-company-btn {
+  display: flex;
+  width: 353px;
+  height: 60px;
+  border: none;
+  border-radius: 30px;
+  background-color: var(--blue-color);
+  font-size: 18px;
+  line-height: 1.2;
+  color: var(--background-color);  
+  align-items: center;
+  justify-content: center;
+}
+.about-company-section .about-company-image {
+  width: 45%;
+  border-radius: 20px;
+  overflow: hidden;
+}
+.about-company-section .about-company-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 
 /* Секция Новости главная и страница Новости */
 .news-section {
