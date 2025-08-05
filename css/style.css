@@ -519,9 +519,19 @@ iframe {
   font-family: 'InterDisplay-Medium';
   font-size: 18px;
   color: var(--text-color);
+  transition: color .3s;
 }
-.projects-section .view-all-btn__image {
+.projects-section svg {
   width: 20px;
+  stroke: #222222;
+  transition: transform .3s ,stroke .3s;
+}
+.projects-section .view-all-btn:hover .view-all-btn__text {
+  color: var(--blue-color);
+}
+.projects-section .view-all-btn:hover svg {
+  stroke: var(--blue-color);
+  transform: rotate(-45deg);
 }
 
 /* Секция Преимущества */
@@ -623,7 +633,11 @@ iframe {
   background-color: var(--blue-color);
   font-family: inherit;
   font-size: 18px;
-  color: var(--background-color );
+  color: var(--background-color);
+  transition: background-color .3s;
+}
+.callback-section .form .submit-btn:hover {
+  background-color: #006EEB;
 }
 .callback-section .form .checkboxes-flex-container {
   display: flex;
@@ -664,11 +678,25 @@ iframe {
   border: none;
   border-radius: 30px;
   background-color: var(--blue-color);
-  font-size: 18px;
-  line-height: 1.2;
-  color: var(--background-color);  
+  gap: 10px;
   align-items: center;
   justify-content: center;
+  transition: background-color .3s;
+}
+.about-company-section .about-company-btn__text {
+  font-size: 18px;
+  line-height: 1.2;
+  color: var(--background-color);
+}
+.about-company-section .about-company-btn__image {
+  width: 20px;
+  transition: transform .3s;
+}
+.about-company-section .about-company-btn:hover {
+  background-color: #006EEB;
+}
+.about-company-section .about-company-btn:hover .about-company-btn__image {
+  transform: rotate(-45deg);
 }
 .about-company-section .about-company-image {
   width: 45%;
@@ -869,6 +897,10 @@ iframe {
 }
 .news-section .view-all-news-btn .view-all-news-btn__image {
   width: 20px;
+  transition: transform .3s;
+}
+.news-section .view-all-news-btn:hover .view-all-news-btn__image {
+  transform: rotate(-45deg);
 }
 
 /* Секция Новости на главной */
@@ -1329,6 +1361,47 @@ iframe {
 }
 .projects-map-page .map-wrapper .map img {
   width: 100%;
+}
+
+
+/* Страница 404 */
+.page-404 .page-404-image {
+  width: 222px;
+  margin: 0 auto 40px auto;
+}
+.page-404 .page-404-title {
+  margin: 0 0 40px 0;
+  font-family: 'InterDisplay-SemiBold';
+  font-size: 68px;
+  text-align: center;
+}
+.page-404 .page-404-text {
+  width: 70%;
+  margin: 0 auto 40px auto;
+  font-size: 32px;
+  line-height: 1.2;
+  text-align: center;
+}
+.page-404 .flex-container {
+  display: flex;
+  justify-content: center;
+}
+.page-404 .page-404-btn {
+  display: flex;
+  height: 64px;
+  padding: 0 30px;
+  border: 1px solid var(--blue-color);
+  border-radius: 32px;
+  font-size: 24px;
+  align-items: center;
+  justify-content: center;
+}
+.page-404 .select-flat-btn {
+  color: var(--blue-color);
+}
+.page-404 .home-page-btn {
+  background-color: var(--blue-color);
+  color: var(--background-color);
 }
 
 

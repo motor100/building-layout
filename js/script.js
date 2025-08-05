@@ -141,6 +141,9 @@ document.addEventListener("DOMContentLoaded", () => {
   const advantagesModalBtns = document.querySelectorAll('.advantages-modal-btn');
   const advantagesModal = document.querySelector('#advantages-modal');
 
+  const videoBtn = document.querySelector('#video-btn');
+  const videoModal = document.querySelector('#video-modal');
+
   const callbackFormBtns = document.querySelectorAll('.callback-form-btn');
   const callbackModal = document.querySelector('#callback-modal');
   const modalCloseBtns = document.querySelectorAll('.modal-window .modal-close');
@@ -150,6 +153,12 @@ document.addEventListener("DOMContentLoaded", () => {
       modalWindowOpen(advantagesModal);
     }
   });
+
+  if (videoBtn) {
+    videoBtn.onclick = function () {
+      modalWindowOpen(videoModal);
+    }
+  }
 
   callbackFormBtns.forEach((item) => {
     item.onclick = function () {
