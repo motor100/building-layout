@@ -41,6 +41,7 @@ document.addEventListener("DOMContentLoaded", () => {
   */
 
   // Вкладки на странице Карточка проекта
+  /*
   const projectsDetailPage = document.querySelector('.projects-detail-page');
 
   if (projectsDetailPage) {
@@ -61,6 +62,7 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     }
   }
+  */
   
 
 

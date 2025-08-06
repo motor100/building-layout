@@ -523,7 +523,7 @@ iframe {
 }
 .projects-section svg {
   width: 20px;
-  stroke: #222222;
+  stroke: var(--text-color);
   transition: transform .3s ,stroke .3s;
 }
 .projects-section .view-all-btn:hover .view-all-btn__text {
@@ -813,73 +813,6 @@ iframe {
 .news-section .news-item:hover .arrow-right::after {
   background-color: var(--blue-color);
 }
-.news-section .swiper-nav {
-  display: flex;
-  width: 116px;
-  height: 52px;
-}
-.news-section .swiper-nav .swiper-prev,
-.news-section .swiper-nav .swiper-next {
-  position: relative;
-  width: 58px;
-  height: 52px;
-  background-color: #EEF0F4;
-  cursor: pointer;
-}
-.news-section .swiper-nav .swiper-prev {
-  border-radius: 26px 0 0 26px;
-}
-.news-section .swiper-nav .swiper-next {
-  border-radius: 0 26px 26px 0;
-}
-.news-section .swiper-nav .swiper-prev span,
-.news-section .swiper-nav .swiper-next span {
-  position: absolute;
-  top: 25px;
-  width: 15px;
-  height: 2px;
-  background-color: var(--blue-color);
-}
-.news-section .swiper-nav .swiper-prev span {
-  left: 18px;
-}
-.news-section .swiper-nav .swiper-next span {
-  right: 18px;
-}
-.news-section .swiper-nav .swiper-prev::before,
-.news-section .swiper-nav .swiper-prev::after {
-  content: '';
-  position: absolute;
-  left: 18px;
-  width: 7px;
-  height: 2px;
-  background-color: var(--blue-color);
-}
-.news-section .swiper-nav .swiper-prev::before {
-  top: 28px;
-  transform: rotate(45deg);
-}
-.news-section .swiper-nav .swiper-prev::after {
-  top: 22px;
-  transform: rotate(-45deg);
-}
-.news-section .swiper-nav .swiper-next::before,
-.news-section .swiper-nav .swiper-next::after {
-  content: '';
-  position: absolute;
-  right: 18px;
-  width: 7px;
-  height: 2px;
-  background-color: var(--blue-color);
-}
-.news-section .swiper-nav .swiper-next::before {
-  top: 22px;
-  transform: rotate(45deg);
-}
-.news-section .swiper-nav .swiper-next::after {
-  top: 28px;
-  transform: rotate(-45deg);
-}
 .news-section .view-all-news-btn {
   display: flex;
   width: 270px;
@@ -903,11 +836,79 @@ iframe {
   transform: rotate(-45deg);
 }
 
+/* swiper nav */
+.swiper-nav {
+  display: flex;
+  width: 116px;
+  height: 52px;
+}
+.swiper-nav .swiper-prev,
+.swiper-nav .swiper-next {
+  position: relative;
+  width: 58px;
+  height: 52px;
+  background-color: #EEF0F4;
+  cursor: pointer;
+}
+.swiper-nav .swiper-prev {
+  border-radius: 26px 0 0 26px;
+}
+.swiper-nav .swiper-next {
+  border-radius: 0 26px 26px 0;
+}
+.swiper-nav .swiper-prev span,
+.swiper-nav .swiper-next span {
+  position: absolute;
+  top: 25px;
+  width: 15px;
+  height: 2px;
+  background-color: var(--blue-color);
+}
+.swiper-nav .swiper-prev span {
+  left: 18px;
+}
+.swiper-nav .swiper-next span {
+  right: 18px;
+}
+.swiper-nav .swiper-prev::before,
+.swiper-nav .swiper-prev::after {
+  content: '';
+  position: absolute;
+  left: 18px;
+  width: 7px;
+  height: 2px;
+  background-color: var(--blue-color);
+}
+.swiper-nav .swiper-prev::before {
+  top: 28px;
+  transform: rotate(45deg);
+}
+.swiper-nav .swiper-prev::after {
+  top: 22px;
+  transform: rotate(-45deg);
+}
+.swiper-nav .swiper-next::before,
+.swiper-nav .swiper-next::after {
+  content: '';
+  position: absolute;
+  right: 18px;
+  width: 7px;
+  height: 2px;
+  background-color: var(--blue-color);
+}
+.swiper-nav .swiper-next::before {
+  top: 22px;
+  transform: rotate(45deg);
+}
+.swiper-nav .swiper-next::after {
+  top: 28px;
+  transform: rotate(-45deg);
+}
+
 /* Секция Новости на главной */
 .home-page .news-section {
   background-color: var(--lightgrey-color);
 }
-
 
 /* Страница Документы */
 .documents-page .grid-container {
@@ -1098,24 +1099,102 @@ iframe {
 .projects-detail-page .title-section {
   margin: 0 0 40px 0;
 }
+.projects-detail-page .title-section .projects-detail-title {
+  margin-bottom: 0;
+}
 .projects-detail-page .title-section .flex-container {
   display: flex;
-  padding: 0 0 16px 0;
+  margin: 0 0 16px 0;
+  align-items: center;
+  justify-content: space-between;
 }
+/*
 .projects-detail-page .title-section .projects-detail-title {
   font-family: 'InterDisplay-SemiBold';
   font-size: 48px;
   color: #42307D;
   line-height: 1.1;
 }
+*/
+.projects-detail-page .title-section .title-wrapper {
+  display: flex;
+  gap: 60px;
+}
+.projects-detail-page .title-section .project-title-buttons {
+  display: flex;
+}
+.projects-detail-page .title-section .project-title-btn {
+  display: flex;
+  height: 60px;
+  padding: 0 30px;
+  border: 1px solid var(--blue-color);
+  border-radius: 30px;
+  font-size: 18px;
+  line-height: 1.2;
+  color: var(--blue-color);
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.projects-detail-page .title-section .make-an-appointment-wrapper {
+  display: flex;
+  align-items: center;
+}
+.projects-detail-page .title-section .text-btn {
+  display: flex;
+  width: 135px;
+  height: 60px;
+  border: none;
+  font-size: 18px;
+  line-height: 1.2;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+/* сделать кнопку */
+.projects-detail-page .title-section .make-an-appointment-btn {
+  display: flex;
+  /*width: 353px;*/
+  width: 274px;
+  height: 60px;
+  margin-left: 10px;
+  border: none;
+  border-radius: 30px;
+  background-color: var(--blue-color);
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  transition: background-color .3s;
+  cursor: pointer;
+}
+.projects-detail-page .title-section .make-an-appointment-btn__text {
+  font-size: 18px;
+  line-height: 1.2;
+  color: var(--background-color);
+}
+.projects-detail-page .title-section .make-an-appointment-btn__image {
+  width: 20px;
+  transition: transform .3s;
+}
+.projects-detail-page .title-section .make-an-appointment-btn:hover {
+  background-color: #006EEB;
+}
+.projects-detail-page .title-section .make-an-appointment-btn:hover .make-an-appointment-btn__image {
+  transform: rotate(-45deg);
+}
+/* /сделать кнопку */
+
 .projects-detail-page .title-section .horizontal-line {
   width: 100%;
   height: 1px;
   background-color: #CCCCCC;
 }
+.projects-detail-page .image-wrapper {
+  position: relative;
+}
 .projects-detail-page .image-section .image {
-  height: 637px;
-  border-radius: 15px;
+  height: 650px;
+  border-radius: 30px;
   overflow: hidden;
 }
 .projects-detail-page .image-section .image img {
@@ -1124,10 +1203,25 @@ iframe {
   object-fit: cover;
 }
 .projects-detail-page .image-section .details {
-  width: 440px;
+  position: absolute;
+  top: 60px;
+  left: 60px;
+  width: 400px;
   padding: 30px;
   border-radius: 15px;
-  background-color: #F9F9F9;
+  background-color: var(--background-color);
+}
+.projects-detail-page .image-section .details-title {
+  margin: 0 0 6px 0;
+  font-family: 'InterDisplay-Medium';
+  font-size: 24px;
+  color: var(--blue-color);
+  line-height: 1.1;
+}
+.projects-detail-page .image-section .details-city {
+  margin: 0 0 6px 0;
+  font-size: 15px;
+  line-height: 1.2;
 }
 .projects-detail-page .image-section .details-row {
   display: flex;
@@ -1135,13 +1229,44 @@ iframe {
   margin: 0 0 8px 0;
   padding: 10px 12px;
   border-radius: 18px;
-  background-color: #F5F5F5;
+  background-color: var(--lightgrey-color);
   align-items: center;
   justify-content: space-between;
 }
 .projects-detail-page .image-section .details-row:last-child {
   margin-bottom: 0;
 }
+.projects-detail-page .image-section .details-row-top {
+  margin-bottom: 20px;
+  color: var(--blue-color);
+}
+.projects-detail-page .image-section .download-presentation-btn {
+  position: absolute;
+  left: 60px;
+  bottom: 60px;
+  display: flex;
+  width: 400px;
+  height: 60px;
+  border: 1px solid var(--background-color);
+  border-radius: 30px;
+  background-color: var(--text-color);
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  transition: background-color .3s;
+  cursor: pointer;
+}
+.projects-detail-page .image-section .download-presentation-btn__text {
+  font-size: 18px;
+  color: var(--background-color);
+  line-height: 1.2;
+}
+.projects-detail-page .image-section .swiper-nav {
+  position: absolute;
+  right: 60px;
+  bottom: 60px;
+}
+
 
 /* Вкладки */
 .projects-detail-page .flat-section .tabs {
@@ -1200,8 +1325,14 @@ iframe {
   object-fit: cover;
 }
 .projects-detail-page .location-section .map {
-  border-radius: 20px;
+  position: relative;
+  border-radius: 30px;
   overflow: hidden;
+}
+.projects-detail-page .location-section .map .map-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 .projects-detail-page .location-section .location-map {
   display: flex;
@@ -1211,20 +1342,200 @@ iframe {
 .projects-detail-page .location-section .map-text {
   margin: 0 0 20px 0;
 }
-.projects-detail-page .advantages-section .grid-container {
+
+/* сделать кнопку */
+.projects-detail-page .location-section .map-btn {
+  position: absolute;
+  right: 40px;
+  bottom: 40px;
+  display: flex;
+  /*width: 353px;*/
+  width: 242px;
+  height: 60px;
+  padding: 0;
+  border: none;
+  border-radius: 30px;
+  background-color: var(--blue-color);
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  transition: background-color .3s;
+  cursor: pointer;
+}
+.projects-detail-page .location-section .map-btn__text {
+  font-size: 18px;
+  line-height: 1.2;
+  color: var(--background-color);
+}
+.projects-detail-page .location-section .map-btn__image {
+  width: 20px;
+  transition: transform .3s;
+}
+.projects-detail-page .location-section .map-btn:hover {
+  background-color: #006EEB;
+}
+.projects-detail-page .location-section .map-btn:hover .map-btn__image {
+  transform: rotate(-45deg);
+}
+/* /сделать кнопку */
+
+
+.projects-detail-page .projects-detail-advantages-section .grid-container {
   display: grid;
-  gap: 30px;
+  margin: 0 0 40px 0;
+  gap: 24px;
   grid-template-columns: repeat(3, 1fr);
 }
-.projects-detail-page .advantages-section .advantages-item {
-  height: 550px;
-  border-radius: 15px;
+.projects-detail-page .projects-detail-advantages-section .projects-detail-advantages-item {
+  position: relative;
+  height: 510px;
+  padding: 30px;
+  border-radius: 30px;
+  overflow: hidden;
+  z-index: 1;
 }
+.projects-detail-page .projects-detail-advantages-section .projects-detail-advantages-item__image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+.projects-detail-page .projects-detail-advantages-section .projects-detail-advantages-item__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.projects-detail-page .projects-detail-advantages-section .projects-detail-advantages-item__filter {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(180deg, rgba(34, 34, 34, 0.6) 20%, rgba(34, 34, 34, 0));
+  z-index: -1;
+}
+.projects-detail-page .projects-detail-advantages-section .projects-detail-advantages-item__title {
+  margin: 0 0 10px 0;
+  font-family: 'InterDisplay-SemiBold';
+  font-size: 32px;
+  color: var(--background-color);
+  line-height: 1.2;  
+}
+.projects-detail-page .projects-detail-advantages-section .projects-detail-advantages-item__text {
+  font-size: 20px;
+  color: var(--background-color);
+  line-height: 1.2;  
+}
+.projects-detail-page .projects-detail-advantages-section .projects-detail-advantages-item__arrow {
+  position: absolute;
+  right: 30px;
+  bottom: 30px;
+  width: 64px;
+  height: 64px;
+  z-index: 2;
+}
+.projects-detail-page .projects-detail-advantages-section .projects-detail-advantages-item__arrow img {
+  width: 100%;
+}
+.projects-detail-page .projects-detail-advantages-section .flex-container {
+  display: flex;
+  gap: 80px;
+  justify-content: space-between;
+}
+.projects-detail-page .projects-detail-advantages-section .advantages-description {
+  width: 48%;
+  font-size: 18px;
+  line-height: 1.2;
+}
+.projects-detail-page .projects-detail-advantages-section .advantages-vertikal-item {
+  display: flex;
+  margin: 0 0 30px 0;
+  padding: 0 0 20px 0;
+  border-bottom: 1px solid #CCCCCC;
+  align-items: center;
+}
+.projects-detail-page .projects-detail-advantages-section .advantages-vertikal-items {
+  width: 53%;
+}
+.projects-detail-page .projects-detail-advantages-section .advantages-vertikal-item__image {
+  width: 32px;
+  height: 32px;
+  margin: 0 20px 0 0;
+}
+.projects-detail-page .projects-detail-advantages-section .advantages-vertikal-item__title {
+  margin: 0 0 6px 0;
+  font-family: 'InterDisplay-Medium';
+  font-size: 24px;
+  line-height: 1.2;  
+}
+.projects-detail-page .booking-online-section {
+  padding: 40px;
+  background-color: var(--lightgrey-color);
+}
+.projects-detail-page .booking-online-section .grid-container {
+  display: grid;
+  margin: 0 0 40px 0;
+  gap: 24px;
+  grid-template-columns: repeat(4, 1fr);
+}
+.projects-detail-page .booking-online-section .booking-online {
+  display: flex;
+  padding: 37px 40px;
+  background-color: var(--blue-color);
+  border-radius: 20px;
+  align-items: center;
+  justify-content: space-between;
+}
+.projects-detail-page .booking-online-section .booking-online-text {
+  font-size: 42px;
+  color: var(--background-color);
+  line-height: 1.1;
+}
+
+/* сделать кнопку серую */
+.projects-detail-page .booking-online-section .booking-online-btn {
+  display: flex;
+  width: 203px;
+  height: 56px;
+  border-radius: 28px;
+  background-color: var(--light-color);
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  transition: color .3s;
+}
+.projects-detail-page .booking-online-section .booking-online-btnn:hover {
+  color: var(--blue-color);
+}
+.projects-detail-page .booking-online-section .booking-online-btn__text {
+  font-family: 'InterDisplay-Medium';
+  font-size: 18px;
+  color: var(--text-color);
+  transition: color .3s;
+}
+.projects-detail-page .booking-online-section .booking-online-btn svg {
+  width: 20px;
+  stroke: var(--text-color);
+  transition: transform .3s ,stroke .3s;
+}
+.projects-detail-page .booking-online-section .booking-online-btn:hover .booking-online-btn__text {
+  color: var(--blue-color);
+}
+.projects-detail-page .booking-online-section .booking-online-btn:hover svg {
+  stroke: var(--blue-color);
+  transform: rotate(-45deg);
+}
+/* /сделать кнопку серую */
+
+
 .projects-detail-page .working-progress-section .grid-container {
   display: grid;
   gap: 30px;
   grid-template-columns: repeat(3, 1fr);
 }
+
 .projects-detail-page .map-section .map {
   height: 500px;
 }
