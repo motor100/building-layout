@@ -1393,6 +1393,7 @@ iframe {
   border-radius: 30px;
   overflow: hidden;
   z-index: 1;
+  cursor: pointer;
 }
 .projects-detail-page .projects-detail-advantages-section .projects-detail-advantages-item__image {
   position: absolute;
@@ -1565,10 +1566,89 @@ iframe {
   line-height: 1.2;
   z-index: 1;
 }
- 
-.projects-detail-page .map-section .map {
-  height: 500px;
+
+.projects-detail-page .office-map-section .office-map-wrapper {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
 }
+.projects-detail-page .office-map-section .office-map img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.projects-detail-page .office-map-section .address-card {
+  position: absolute;
+  top: 60px;
+  left: 60px;
+  width: 626px;
+  border-radius: 30px;
+  background-color: var(--background-color);  
+  z-index: 1;
+}
+.projects-detail-page .office-map-section .address-card__image {
+  height: 300px;
+  border-radius: 30px;
+  overflow: hidden;
+}
+.projects-detail-page .office-map-section .address-card__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.projects-detail-page .office-map-section .address-card__content {
+  padding: 40px;
+}
+.projects-detail-page .office-map-section .address-card__title {
+  margin: 0 0 10px 0;
+  font-size: 42px;
+  color: var(--blue-color);
+  line-height: 1.1;
+}
+.projects-detail-page .office-map-section .address-card__name {
+  margin: 0 0 24px 0;
+  font-size: 18px;
+}
+.projects-detail-page .office-map-section .address-item {
+  display: flex;
+  margin: 0 0 20px 0;
+  gap: 20px;
+  align-items: center;
+}
+.projects-detail-page .office-map-section .address-item__image {
+  width: 32px;
+}
+.projects-detail-page .office-map-section .address-item__image img {
+  width: 100%;
+}
+.projects-detail-page .office-map-section .address-item__text {
+  font-size: 18px;
+}
+/* сделать кнопку */
+.projects-detail-page .office-map-section .address-btn {
+  display: flex;
+  width: 100%;
+  height: 72px;
+  border: 1px solid var(--blue-color);
+  border-radius: 36px;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+}
+.projects-detail-page .office-map-section .address-btn__text {
+  font-size: 24px;
+}
+.projects-detail-page .office-map-section .driving-map-btn {
+  margin: 0 0 10px 0;
+}
+.projects-detail-page .office-map-section .make-an-appointment-btn {
+  background-color: var(--blue-color);
+}
+.projects-detail-page .office-map-section .make-an-appointment-btn__text {
+  color: var(--background-color);
+}
+/* /сделать кнопку */
+
 .projects-detail-page .blur-arrow-right {
   position: absolute;
   right: 30px;

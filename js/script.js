@@ -140,7 +140,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Окна
   const modalWindows = document.querySelectorAll('.modal-window');
 
-  const advantagesModalBtns = document.querySelectorAll('.advantages-modal-btn');
+  const advantagesModalBtns = document.querySelectorAll('.js-advantages-modal-btn');
   const advantagesModal = document.querySelector('#advantages-modal');
 
   const videoBtn = document.querySelector('#video-btn');
