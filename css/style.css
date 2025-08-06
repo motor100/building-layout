@@ -1428,17 +1428,6 @@ iframe {
   color: var(--background-color);
   line-height: 1.2;  
 }
-.projects-detail-page .projects-detail-advantages-section .projects-detail-advantages-item__arrow {
-  position: absolute;
-  right: 30px;
-  bottom: 30px;
-  width: 64px;
-  height: 64px;
-  z-index: 2;
-}
-.projects-detail-page .projects-detail-advantages-section .projects-detail-advantages-item__arrow img {
-  width: 100%;
-}
 .projects-detail-page .projects-detail-advantages-section .flex-container {
   display: flex;
   gap: 80px;
@@ -1529,15 +1518,67 @@ iframe {
 }
 /* /сделать кнопку серую */
 
+.projects-detail-page .general-plan-section {
+  padding: 40px 0 0 0;
+}
+.projects-detail-page .general-plan-section .image {
+  height: 600px;
+  border-radius: 30px;
+  overflow: hidden;
+}
+.projects-detail-page .general-plan-section .image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 
 .projects-detail-page .working-progress-section .grid-container {
   display: grid;
-  gap: 30px;
+  gap: 24px;
   grid-template-columns: repeat(3, 1fr);
 }
-
+.projects-detail-page .working-progress-section .working-progress-item {
+  position: relative;
+}
+.projects-detail-page .working-progress-section .working-progress-item__image {
+  height: 320px;
+  border-radius: 20px;
+  overflow: hidden;
+}
+.projects-detail-page .working-progress-section .working-progress-item__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.projects-detail-page .working-progress-section .working-progress-item__date {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  /*width: max-content;*/
+  height: 26px;
+  padding: 4px 12px;
+  border-radius: 13px;
+  background-color: rgba(244, 246, 251, 0.2);
+  backdrop-filter: blur(40px);
+  font-size: 15px;
+  color: var(--background-color);
+  line-height: 1.2;
+  z-index: 1;
+}
+ 
 .projects-detail-page .map-section .map {
   height: 500px;
+}
+.projects-detail-page .blur-arrow-right {
+  position: absolute;
+  right: 30px;
+  bottom: 30px;
+  width: 64px;
+  height: 64px;
+  z-index: 2;
+}
+.projects-detail-page .blur-arrow-right img {
+  width: 100%;
 }
 
 
