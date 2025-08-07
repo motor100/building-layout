@@ -86,6 +86,9 @@ input:disabled,
 input[disabled] {
   background-color: #999999 !important;
 }
+input::placeholder {
+  color: var(--second-lightgrey-color);
+}
 a {
   text-decoration: none;
 }
@@ -574,7 +577,7 @@ iframe {
 .callback-section .white-frame {
   padding: 30px 40px;
   border-radius: 30px;
-  background-color: var(--white-color);
+  background-color: var(--background-color);
 }
 .callback-section .white-frame-top {
   margin: 0 0 10px 0;
@@ -595,51 +598,71 @@ iframe {
   color: var(--background-color);
   line-height: 1.2;
 }
-.callback-section .form .flex-container {
+.callback-section .form .label {
+  color: var(--text-color);
+}
+.callback-section .form .input-field {
+  border-color: var(--text-color);
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+/*
+.callback-section .form .input-field::placeholder {
+  color: var(--second-lightgrey-color);  
+}
+*/
+.callback-section .form .input-field:focus-visible {
+  outline: none;
+}
+.callback-section .form .submit-btn {
+  background-color: var(--blue-color);
+  color: var(--background-color);
+}
+
+
+/* form */
+.form .flex-container {
   display: flex;
   margin: 0 0 20px 0;
   align-items: flex-end;
 }
-.callback-section .form .form-group {
+.form .form-group {
   width: 100%;
 }
-.callback-section .form .label {
+.form .label {
   display: block;
   margin-bottom: 10px;
   font-size: 18px;
   line-height: 1.2;
 }
-.callback-section .form .input-field {
+.form .input-field {
   display: block;
   width: 100%;
   height: 62px;
   padding: 20px 30px;
-  border: 1px solid var(--text-color);
+  border-width: 1px;
+  border-style: solid;
+  border-color: var(--text-color);
   border-radius: 31px;
   font-family: inherit;
   font-size: 18px;
   line-height: 1.2;
 }
-.callback-section .form .input-field:placeholder {
-  color: var(--second-lightgrey-color);  
-}
-.callback-section .form .submit-btn {
+.form .submit-btn {
   display: block;
   width: 100%;
   height: 62px;
   padding: 0;
   border: none;
   border-radius: 31px;
-  background-color: var(--blue-color);
   font-family: inherit;
   font-size: 18px;
-  color: var(--background-color);
   transition: background-color .3s;
 }
-.callback-section .form .submit-btn:hover {
+.form .submit-btn:hover {
   background-color: #006EEB;
 }
-.callback-section .form .checkboxes-flex-container {
+.form .checkboxes-flex-container {
   display: flex;
   gap: 40px;
 }
@@ -1567,8 +1590,12 @@ iframe {
   z-index: 1;
 }
 
+.projects-detail-page .office-map-section {
+  margin: 0 0 40px 0;
+}
 .projects-detail-page .office-map-section .office-map-wrapper {
   position: relative;
+  height: 900px;
   border-radius: 20px;
   overflow: hidden;
 }
@@ -1648,6 +1675,55 @@ iframe {
   color: var(--background-color);
 }
 /* /сделать кнопку */
+
+.projects-detail-page .subscribe-form-section {
+  margin-bottom: -40px;
+  padding: 40px 0 80px 0;
+  background-color: var(--lightgrey-color);
+}
+.projects-detail-page .subscribe-form-section .white-frame {
+  padding: 30px 40px;
+  border-radius: 15px;
+  background-color: var(--background-color);
+}
+.projects-detail-page .subscribe-form-section .form-wrapper {
+  padding: 30px 40px;
+  border-radius: 15px;
+  background-color: var(--blue-color);
+}
+.projects-detail-page .subscribe-form-section .form-title {
+  margin: 0 0 20px 0;
+  font-size: 42px;
+  color: var(--background-color);
+  line-height: 1.2;
+}
+.projects-detail-page .subscribe-form-section .form-text {
+  margin: 0 0 20px 0;
+  font-size: 18px;
+  color: var(--background-color);
+  line-height: 1.2;
+}
+.projects-detail-page .subscribe-form-section .form .label {
+  color: var(--background-color);
+}
+.projects-detail-page .subscribe-form-section .form .input-field {
+  border-color: var(--background-color);
+  background-color: var(--blue-color);
+  color: var(--background-color);
+}
+.projects-detail-page .subscribe-form-section .form .input-field:focus-visible {
+  outline: none;
+}
+.projects-detail-page .subscribe-form-section .form .submit-btn {
+  background-color: var(--background-color);
+  color: var(--blue-color);
+}
+.projects-detail-page .subscribe-form-section .form .agreement-text .checkbox-text {
+  color: var(--background-color);
+}
+.projects-detail-page .subscribe-form-section .form .agreement-text a {
+  color: var(--background-color);
+}
 
 .projects-detail-page .blur-arrow-right {
   position: absolute;
@@ -1862,13 +1938,14 @@ iframe {
   border-width: 1px;
   border-style: solid;
   border-color: var(--second-lightgrey-color);
+  border-radius: 3px;
   background-repeat: no-repeat;
   background-position: center center;
   background-size: 72% 53%;
   background-color: #fff;
 }
 .agreement-text .custom-checkbox:checked+label::before {
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='18' height='13' fill='none'><path stroke='%230077FF' stroke-linecap='round' stroke-linejoin='round' d='m1.438 7.375 4.812 4.813 11-11'/%3e%3c/svg%3e");
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='10' height='7' fill='none'><path stroke='%230077FF' stroke-linecap='round' stroke-linejoin='round' d='M1.25 3.75L3.5 6L8.75 0.75'/%3e%3c/svg%3e");
   border-color: var(--blue-color);
 }
 .agreement-text .custom-checkbox-label {
