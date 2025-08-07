@@ -1212,7 +1212,7 @@ iframe {
   height: 1px;
   background-color: #CCCCCC;
 }
-.projects-detail-page .image-wrapper {
+.projects-detail-page .image-section .image-wrapper {
   position: relative;
 }
 .projects-detail-page .image-section .image {
@@ -1289,9 +1289,41 @@ iframe {
   right: 60px;
   bottom: 60px;
 }
+.projects-detail-page .flats-section .flats-sold-out {
+  display: flex;
+  height: 385px;
+  flex-direction: column;
+  border-radius: 30px;
+  background-color: var(--lightgrey-color);
+  gap: 40px;
+  align-items: center;
+  justify-content: center;
+}
+.projects-detail-page .flats-section .flats-sold-out-title {
+  font-size: 42px;
+  color: var(--blue-color);
+  line-height: 1.2;
+}
+
+/* сделать кнопку */
+.projects-detail-page .flats-section .flats-sold-out-btn {
+  display: flex;
+  width: 346px;
+  height: 60px;
+  padding: 0;
+  border: none;
+  border-radius: 30px;
+  background-color: var(--blue-color);
+  font-size: 18px;
+  color: var(--background-color);
+  align-items: center;
+  justify-content: center;
+  transition: background-color .3s;
+}
 
 
 /* Вкладки */
+/*
 .projects-detail-page .flat-section .tabs {
   display: flex;
 }
@@ -1311,6 +1343,7 @@ iframe {
 .projects-detail-page .flat-section .tab-content.active {
   display: block;
 }
+*/
 /* /вкладки */
 
 .projects-detail-page .location-section .grid-container {
@@ -2094,7 +2127,7 @@ iframe {
   left: 0;
   bottom: 35px;
   display: none;
-  max-width: 1100px;
+  max-width: 1055px;
   margin: 0 auto;
   padding: 0 12px;
   z-index: 15;
@@ -2104,28 +2137,36 @@ iframe {
 }
 .we-use-cookie .we-use-cookie-wrapper {
   display: flex;
-  padding: 28px;
-  border-radius: 10px;
-  background-color: #484848;
+  padding: 30px 40px;
+  border-radius: 30px;
+  background-color: var(--background-color);
+  gap: 35px;
   align-items: center;
+  box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.06);
+}
+.we-use-cookie .we-use-cookie-image {
+  width: 48px;
+  flex-shrink: 0;
+}
+.we-use-cookie .we-use-cookie-image img {
+  width: 100%;
 }
 .we-use-cookie .we-use-cookie-text {
-  padding: 0 10px 0 0;
-  font-size: 14px;
-  color: #E8E8E8;
+  font-size: 17px;
+  color: var(--text-color);
 }
 .we-use-cookie .we-use-cookie-text a {
-  color: #E8E8E8;
+  color: var(--text-color);
   text-decoration: underline;
 }
 .we-use-cookie .we-use-cookie-close {
   display: block;
-  width: 70px;
-  height: 40px;
+  width: 130px;
+  height: 60px;
   padding: 0;
-  border: 1px solid #E8E8E8;
-  border-radius: 25px;
-  background-color: #484848;
+  border: 1px solid var(--blue-color);
+  border-radius: 30px;
+  background-color: var(--blue-color);
   font-family: inherit;
   font-size: 16px;
   font-weight: 400;
