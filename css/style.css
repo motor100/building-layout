@@ -132,11 +132,57 @@ iframe {
   color: var(--blue-color);
   line-height: 1.1;
 }
-/*
-.page-title {
-  margin: 0 0 80px 0;
+.primary-btn {
+  display: flex;
+  width: max-content;
+  height: 60px;
+  padding: 0 30px;
+  border: none;
+  border-radius: 30px;
+  background-color: var(--blue-color);
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color .3s;
 }
-*/
+.primary-btn .primary-btn__text {
+  font-size: 18px;
+  line-height: 1.2;
+  color: var(--background-color);
+}
+.primary-btn .primary-btn__image {
+  width: 20px;
+  transition: transform .3s;
+}
+.primary-btn:hover {
+  background-color: #006EEB;
+}
+.primary-btn:hover .primary-btn__image {
+  transform: rotate(-45deg);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* Header */
 .header {
@@ -694,6 +740,7 @@ iframe {
   font-size: 18px;
   line-height: 1.2;
 }
+/*
 .about-company-section .about-company-btn {
   display: flex;
   width: 353px;
@@ -721,6 +768,7 @@ iframe {
 .about-company-section .about-company-btn:hover .about-company-btn__image {
   transform: rotate(-45deg);
 }
+*/
 .about-company-section .about-company-image {
   width: 45%;
   border-radius: 20px;
@@ -1169,44 +1217,16 @@ iframe {
   height: 60px;
   border: none;
   font-size: 18px;
+  color: var(--text-color);
   line-height: 1.2;
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  transition: color .3s;
 }
-/* сделать кнопку */
-.projects-detail-page .title-section .make-an-appointment-btn {
-  display: flex;
-  /*width: 353px;*/
-  width: 274px;
-  height: 60px;
-  margin-left: 10px;
-  border: none;
-  border-radius: 30px;
-  background-color: var(--blue-color);
-  gap: 10px;
-  align-items: center;
-  justify-content: center;
-  transition: background-color .3s;
-  cursor: pointer;
+.projects-detail-page .title-section .text-btn:hover {
+  color: var(--blue-color);
 }
-.projects-detail-page .title-section .make-an-appointment-btn__text {
-  font-size: 18px;
-  line-height: 1.2;
-  color: var(--background-color);
-}
-.projects-detail-page .title-section .make-an-appointment-btn__image {
-  width: 20px;
-  transition: transform .3s;
-}
-.projects-detail-page .title-section .make-an-appointment-btn:hover {
-  background-color: #006EEB;
-}
-.projects-detail-page .title-section .make-an-appointment-btn:hover .make-an-appointment-btn__image {
-  transform: rotate(-45deg);
-}
-/* /сделать кнопку */
-
 .projects-detail-page .title-section .horizontal-line {
   width: 100%;
   height: 1px;
@@ -1305,22 +1325,6 @@ iframe {
   line-height: 1.2;
 }
 
-/* сделать кнопку */
-.projects-detail-page .flats-section .flats-sold-out-btn {
-  display: flex;
-  width: 346px;
-  height: 60px;
-  padding: 0;
-  border: none;
-  border-radius: 30px;
-  background-color: var(--blue-color);
-  font-size: 18px;
-  color: var(--background-color);
-  align-items: center;
-  justify-content: center;
-  transition: background-color .3s;
-}
-
 
 /* Вкладки */
 /*
@@ -1398,44 +1402,11 @@ iframe {
 .projects-detail-page .location-section .map-text {
   margin: 0 0 20px 0;
 }
-
-/* сделать кнопку */
 .projects-detail-page .location-section .map-btn {
   position: absolute;
   right: 40px;
   bottom: 40px;
-  display: flex;
-  /*width: 353px;*/
-  width: 242px;
-  height: 60px;
-  padding: 0;
-  border: none;
-  border-radius: 30px;
-  background-color: var(--blue-color);
-  gap: 10px;
-  align-items: center;
-  justify-content: center;
-  transition: background-color .3s;
-  cursor: pointer;
 }
-.projects-detail-page .location-section .map-btn__text {
-  font-size: 18px;
-  line-height: 1.2;
-  color: var(--background-color);
-}
-.projects-detail-page .location-section .map-btn__image {
-  width: 20px;
-  transition: transform .3s;
-}
-.projects-detail-page .location-section .map-btn:hover {
-  background-color: #006EEB;
-}
-.projects-detail-page .location-section .map-btn:hover .map-btn__image {
-  transform: rotate(-45deg);
-}
-/* /сделать кнопку */
-
-
 .projects-detail-page .projects-detail-advantages-section .grid-container {
   display: grid;
   margin: 0 0 40px 0;
@@ -1684,31 +1655,12 @@ iframe {
 .projects-detail-page .office-map-section .address-item__text {
   font-size: 18px;
 }
-/* сделать кнопку */
-.projects-detail-page .office-map-section .address-btn {
-  display: flex;
-  width: 100%;
-  height: 72px;
-  border: 1px solid var(--blue-color);
-  border-radius: 36px;
-  gap: 20px;
-  align-items: center;
-  justify-content: center;
-}
-.projects-detail-page .office-map-section .address-btn__text {
-  font-size: 24px;
-}
 .projects-detail-page .office-map-section .driving-map-btn {
   margin: 0 0 10px 0;
 }
 .projects-detail-page .office-map-section .make-an-appointment-btn {
-  background-color: var(--blue-color);
+  width: 100%;
 }
-.projects-detail-page .office-map-section .make-an-appointment-btn__text {
-  color: var(--background-color);
-}
-/* /сделать кнопку */
-
 .projects-detail-page .subscribe-form-section {
   margin-bottom: -40px;
   padding: 40px 0 80px 0;
