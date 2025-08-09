@@ -161,6 +161,75 @@ iframe {
 .primary-btn:hover .primary-btn__image {
   transform: rotate(-45deg);
 }
+/* серая кнопка */
+.secondary-btn {
+  display: flex;
+  width: max-content;
+  height: 56px;
+  padding: 0 30px;
+  border-radius: 28px;
+  background-color: var(--light-color);
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  transition: color .3s;
+}
+.secondary-btn:hover {
+  color: var(--blue-color);
+}
+.secondary-btn__text {
+  font-family: 'InterDisplay-Medium';
+  font-size: 18px;
+  color: var(--text-color);
+  transition: color .3s;
+}
+.secondary-btn svg {
+  width: 20px;
+  stroke: var(--text-color);
+  transition: transform .3s ,stroke .3s;
+}
+.secondary-btn:hover .secondary-btn__text {
+  color: var(--blue-color);
+}
+.secondary-btn:hover svg {
+  stroke: var(--blue-color);
+  transform: rotate(-45deg);
+}
+
+/* белая кнопка */
+.tertiary-btn {
+  display: flex;
+  width: max-content;
+  height: 60px;
+  padding: 0 30px;
+  gap: 10px;
+  border: 1px solid var(--blue-color);
+  border-radius: 30px;
+  align-items: center;
+  justify-content: center;
+}
+.tertiary-btn .tertiary-btn__text {
+  font-size: 18px;
+  color: var(--blue-color);
+}
+.tertiary-btn .tertiary-btn__image {
+  width: 20px;
+  transition: transform .3s;
+}
+.tertiary-btn:hover .tertiary-btn__image {
+  transform: rotate(-45deg);
+}
+
+
+
+
+
+
+
+
+
+
+
 .position-relative {
   position: relative;
   z-index: 1;
@@ -529,38 +598,9 @@ iframe {
   visibility: visible;
 }
 .projects-section .view-all-btn {
-  display: flex;
-  width: 203px;
-  height: 56px;
   margin: 0 auto;
-  border-radius: 28px;
-  background-color: var(--light-color);
-  gap: 10px;
-  align-items: center;
-  justify-content: center;
-  transition: color .3s;
 }
-.projects-section .view-all-btn:hover {
-  color: var(--blue-color);
-}
-.projects-section .view-all-btn__text {
-  font-family: 'InterDisplay-Medium';
-  font-size: 18px;
-  color: var(--text-color);
-  transition: color .3s;
-}
-.projects-section svg {
-  width: 20px;
-  stroke: var(--text-color);
-  transition: transform .3s ,stroke .3s;
-}
-.projects-section .view-all-btn:hover .view-all-btn__text {
-  color: var(--blue-color);
-}
-.projects-section .view-all-btn:hover svg {
-  stroke: var(--blue-color);
-  transform: rotate(-45deg);
-}
+
 
 /* Секция Преимущества */
 .advantages-section .grid-container {
@@ -862,26 +902,7 @@ iframe {
   background-color: var(--blue-color);
 }
 .news-section .view-all-news-btn {
-  display: flex;
-  width: 270px;
-  height: 60px;
   margin-left: auto;
-  gap: 10px;
-  border: 1px solid var(--blue-color);
-  border-radius: 30px;
-  align-items: center;
-  justify-content: center;
-}
-.news-section .view-all-news-btn .view-all-news-btn__text {
-  font-size: 18px;
-  color: var(--blue-color);
-}
-.news-section .view-all-news-btn .view-all-news-btn__image {
-  width: 20px;
-  transition: transform .3s;
-}
-.news-section .view-all-news-btn:hover .view-all-news-btn__image {
-  transform: rotate(-45deg);
 }
 
 /* swiper nav */
@@ -1185,19 +1206,6 @@ iframe {
 .projects-detail-page .title-section .project-title-buttons {
   display: flex;
 }
-.projects-detail-page .title-section .project-title-btn {
-  display: flex;
-  height: 60px;
-  padding: 0 30px;
-  border: 1px solid var(--blue-color);
-  border-radius: 30px;
-  font-size: 18px;
-  line-height: 1.2;
-  color: var(--blue-color);
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-}
 .projects-detail-page .title-section .make-an-appointment-wrapper {
   display: flex;
   align-items: center;
@@ -1361,7 +1369,6 @@ iframe {
   line-height: 1.2;
 }
 .projects-detail-page .location-section .location-item__text {
-  color: red;
   line-height: 1.2;
 }
 .projects-detail-page .location-section .location-item__image {
@@ -1501,42 +1508,6 @@ iframe {
   color: var(--background-color);
   line-height: 1.1;
 }
-
-/* сделать кнопку серую */
-.projects-detail-page .booking-online-section .booking-online-btn {
-  display: flex;
-  width: 203px;
-  height: 56px;
-  border-radius: 28px;
-  background-color: var(--light-color);
-  gap: 10px;
-  align-items: center;
-  justify-content: center;
-  transition: color .3s;
-}
-.projects-detail-page .booking-online-section .booking-online-btnn:hover {
-  color: var(--blue-color);
-}
-.projects-detail-page .booking-online-section .booking-online-btn__text {
-  font-family: 'InterDisplay-Medium';
-  font-size: 18px;
-  color: var(--text-color);
-  transition: color .3s;
-}
-.projects-detail-page .booking-online-section .booking-online-btn svg {
-  width: 20px;
-  stroke: var(--text-color);
-  transition: transform .3s ,stroke .3s;
-}
-.projects-detail-page .booking-online-section .booking-online-btn:hover .booking-online-btn__text {
-  color: var(--blue-color);
-}
-.projects-detail-page .booking-online-section .booking-online-btn:hover svg {
-  stroke: var(--blue-color);
-  transform: rotate(-45deg);
-}
-/* /сделать кнопку серую */
-
 .projects-detail-page .general-plan-section {
   padding: 40px 0 0 0;
 }
@@ -1646,9 +1617,11 @@ iframe {
 .projects-detail-page .office-map-section .address-item__text {
   font-size: 18px;
 }
+/* сделать белую кнопку */
 .projects-detail-page .office-map-section .driving-map-btn {
   margin: 0 0 10px 0;
 }
+/* /сделать белую кнопку */
 .projects-detail-page .office-map-section .make-an-appointment-btn {
   width: 100%;
 }
