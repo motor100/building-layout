@@ -25,18 +25,20 @@
             <div class="project-menu-btn tertiary-btn">
               <span class="tertiary-btn__text">Меню проекта</span>
             </div>
+            <!-- 
             <div class="general-plan-btn tertiary-btn">
               <span class="tertiary-btn__text">Генплан</span>
             </div>
+             -->
           </div>
         </div>
         <div class="make-an-appointment-wrapper">
           <div class="flats text-btn">Квартиры</div>
           <div class="commerce text-btn">Коммерция</div>
-          <div class="make-an-appointment-btn primary-btn">
+          <a href="#booking-online-form-wrapper" class="make-an-appointment-btn primary-btn">
             <span class="make-an-appointment-btn__text primary-btn__text">Записаться на встречу</span>
             <img src="/images/arrow-right-white.png" class="make-an-appointment-btn__image primary-btn__image" alt="">
-          </div>
+          </a>
         </div>
       </div>
       <div class="horizontal-line"></div>
@@ -289,6 +291,49 @@
         </div>
       </div>
     </div>
+
+    <div id="booking-online-form-wrapper" class="booking-online-form-wrapper">
+      <div class="container">
+        <div class="white-frame">
+          <div class="form-wrapper">
+            <!-- <div class="form-title">Подпишитесь и отслеживайте ход строительства!</div> -->
+            <div class="form-title">Квартиры можно забронировать онлайн</div>
+            <div class="form-text">оставьте заявку и наш менеджер с вами свяжется в течение 10 минут</div>
+            <form id="booking-online-form" class="form">
+              <div class="flex-container">
+                <div class="form-group">
+                  <label for="name" class="label">Имя*</label>
+                  <input type="text" id="name" class="input-field" placeholder="Введите имя">
+                </div>
+                <div class="form-group">
+                  <label for="name" class="label">Имя*</label>
+                  <input type="email" id="name" class="input-field" placeholder="pochta@mail.ru">
+                </div>
+                <div class="form-group">
+                  <label for="name" class="label">Имя*</label>
+                  <input type="text" id="name" class="input-field js-input-phone-mask" placeholder="+7 (999) 999 99 99">
+                </div>
+                <button id="callback-submit-btn3" class="submit-btn">Отправить заявку</button>
+              </div>
+              <div class="checkboxes-flex-container">
+                <div class="agreement-text">
+                  <input type="checkbox" name="checkbox-read" class="custom-checkbox js-required-checkbox" id="checkbox-read-callback3" checked required onchange="document.getElementById('callback-submit-btn3').disabled = !this.checked;">
+                  <label for="checkbox-read-callback3" class="custom-checkbox-label"></label>
+                  <span class="checkbox-text">Ознакомлен (-на) с <a href="/privacy-policy.html" class="privacy-policy-link" target="_blank">политикой конфиденциальности</a></span>
+                </div>
+                <div class="agreement-text">
+                  <input type="checkbox" name="checkbox-agree" class="custom-checkbox js-required-checkbox" id="checkbox-agree-callback3" checked required onchange="document.getElementById('callback-submit-btn3').disabled = !this.checked;">
+                  <label for="checkbox-agree-callback3" class="custom-checkbox-label"></label>
+                  <span class="checkbox-text">Я согласен (-на) на <a href="/soglasie-posetitelya-sajta-na-obrabotku-personalnyh-dannyh.html" class="agreement-link" target="_blank">обработку персональных данных</a></span>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 
     <div class="container">
       <div class="booking-online">
         <div class="booking-online-text">Квартиры можно забронировать онлайн</div>
@@ -300,8 +345,10 @@
         </div>
       </div>
     </div>
+     -->
   </div>
 
+  <!-- 
   <div class="general-plan-section section">
     <div class="container">
       <div class="section-title">Генплан</div>
@@ -310,6 +357,7 @@
       </div>
     </div>
   </div>
+   -->
 
   <!-- 
   <div class="room-plan-section section">
@@ -385,54 +433,14 @@
               </div>
               <div class="address-item__text">+7 (999) 999 99 99</div>
             </div>
-            <div class="driving-map-btn address-btn">
-              <span class="driving-map-btn__text address-btn__text">Схема проезда</span>
+            <div class="driving-map-btn tertiary-btn">
+              <span class="driving-map-btn__text tertiary-btn__text">Схема проезда</span>
               <img src="/images/map-pin.png" class="driving-map-btn__image" alt="">
             </div>
             <div class="make-an-appointment-btn primary-btn">
               <span class="make-an-appointment-btn__text primary-btn__text">Записаться на встречу</span>
             </div>
           </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="subscribe-form-section">
-    <div class="container">
-      <div class="white-frame">
-        <div class="form-wrapper">
-          <div class="form-title">Подпишитесь и отслеживайте ход строительства!</div>
-          <div class="form-text">Только самая полезная информация о проектах и квартирах от нас</div>
-          <form id="subscribe-form" class="form">
-            <div class="flex-container">
-              <div class="form-group">
-                <label for="name" class="label">Имя*</label>
-                <input type="text" id="name" class="input-field" placeholder="Введите имя">
-              </div>
-              <div class="form-group">
-                <label for="name" class="label">Имя*</label>
-                <input type="email" id="name" class="input-field" placeholder="pochta@mail.ru">
-              </div>
-              <div class="form-group">
-                <label for="name" class="label">Имя*</label>
-                <input type="text" id="name" class="input-field js-input-phone-mask" placeholder="+7 (999) 999 99 99">
-              </div>
-              <button id="callback-submit-btn3" class="submit-btn">Отправить заявку</button>
-            </div>
-            <div class="checkboxes-flex-container">
-              <div class="agreement-text">
-                <input type="checkbox" name="checkbox-read" class="custom-checkbox js-required-checkbox" id="checkbox-read-callback3" checked required onchange="document.getElementById('callback-submit-btn3').disabled = !this.checked;">
-                <label for="checkbox-read-callback3" class="custom-checkbox-label"></label>
-                <span class="checkbox-text">Ознакомлен (-на) с <a href="/privacy-policy.html" class="privacy-policy-link" target="_blank">политикой конфиденциальности</a></span>
-              </div>
-              <div class="agreement-text">
-                <input type="checkbox" name="checkbox-agree" class="custom-checkbox js-required-checkbox" id="checkbox-agree-callback3" checked required onchange="document.getElementById('callback-submit-btn3').disabled = !this.checked;">
-                <label for="checkbox-agree-callback3" class="custom-checkbox-label"></label>
-                <span class="checkbox-text">Я согласен (-на) на <a href="/soglasie-posetitelya-sajta-na-obrabotku-personalnyh-dannyh.html" class="agreement-link" target="_blank">обработку персональных данных</a></span>
-              </div>
-            </div>
-          </form>
         </div>
       </div>
     </div>
