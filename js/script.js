@@ -1,13 +1,11 @@
 document.addEventListener("DOMContentLoaded", () => {
 
   // Top menu item set active
-  /*
-  const topMenuItemLink = document.querySelectorAll('.top-menu .menu-item__link');
+  const topMenuItem = document.querySelectorAll('.top-menu .menu-item');
 
   if (typeof(topMenuItemActive) != "undefined" && topMenuItemActive !== null) {
-    topMenuItemLink[topMenuItemActive].classList.add('active');
+    topMenuItem[topMenuItemActive].classList.add('active');
   }
-  */
 
   // News Swiper slider
   const newsSlider = document.querySelector('.news-slider');
