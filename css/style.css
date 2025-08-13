@@ -262,33 +262,6 @@ iframe {
   display: flex;
   justify-content: space-between;
 }
-.header .top-menu .menu-item {
-  display: flex;
-  height: 42px;
-  padding: 0 16px;
-  border-width: 1px;
-  border-style: solid;
-  border-color: var(--light-color);
-  border-radius: 21px;
-  color: var(--second-lightgrey-color);
-  white-space: nowrap;
-  align-items: center;
-  justify-content: center;
-  transition: border-color .3s;
-}
-.header .top-menu .menu-item__link {
-  font-size: 18px;
-  color: var(--text-color);
-  transition: color .3s;
-}
-.header .top-menu .menu-item:hover,
-.header .top-menu .menu-item.active {
-  border-color: var(--blue-color);
-}
-.header .top-menu .menu-item:hover .menu-item__link,
-.header .top-menu .menu-item.active .menu-item__link {
-  color: var(--blue-color);
-}
 .header .header-contacts {
   display: flex;
 }
@@ -321,6 +294,35 @@ iframe {
   align-items: center;
   justify-content: center;
   cursor: pointer;
+}
+
+/* Верхнее меню */
+.top-menu .menu-item {
+  display: flex;
+  height: 42px;
+  padding: 0 16px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: var(--light-color);
+  border-radius: 21px;
+  color: var(--second-lightgrey-color);
+  white-space: nowrap;
+  align-items: center;
+  justify-content: center;
+  transition: border-color .3s;
+}
+.top-menu .menu-item__link {
+  font-size: 18px;
+  color: var(--text-color);
+  transition: color .3s;
+}
+.top-menu .menu-item:hover,
+.top-menu .menu-item.active {
+  border-color: var(--blue-color);
+}
+.top-menu .menu-item:hover .menu-item__link,
+.top-menu .menu-item.active .menu-item__link {
+  color: var(--blue-color);
 }
 
 /* Main section */
@@ -909,22 +911,29 @@ iframe {
 /* swiper nav */
 .swiper-nav {
   display: flex;
-  width: 116px;
+  width: 104px;
   height: 52px;
+  border-radius: 26px;
+  background-color: var(--background-color);
 }
 .swiper-nav .swiper-prev,
 .swiper-nav .swiper-next {
   position: relative;
-  width: 58px;
+  width: 52px;
   height: 52px;
-  background-color: #EEF0F4;
+  background-color: var(--background-color);
   cursor: pointer;
+  transition: background-color .3s;
+}
+.swiper-nav .swiper-prev:hover,
+.swiper-nav .swiper-next:hover {
+  background-color: var(--blue-color);
 }
 .swiper-nav .swiper-prev {
-  border-radius: 26px 0 0 26px;
+  border-radius: 26px;
 }
 .swiper-nav .swiper-next {
-  border-radius: 0 26px 26px 0;
+  border-radius: 26px;
 }
 .swiper-nav .swiper-prev span,
 .swiper-nav .swiper-next span {
@@ -933,6 +942,11 @@ iframe {
   width: 15px;
   height: 2px;
   background-color: var(--blue-color);
+  transition: background-color .3s;
+}
+.swiper-nav .swiper-prev:hover span,
+.swiper-nav .swiper-next:hover span {
+  background-color: var(--background-color);
 }
 .swiper-nav .swiper-prev span {
   left: 18px;
@@ -948,6 +962,7 @@ iframe {
   width: 7px;
   height: 2px;
   background-color: var(--blue-color);
+  transition: background-color .3s;
 }
 .swiper-nav .swiper-prev::before {
   top: 28px;
@@ -957,6 +972,10 @@ iframe {
   top: 22px;
   transform: rotate(-45deg);
 }
+.swiper-nav .swiper-prev:hover::before,
+.swiper-nav .swiper-prev:hover::after {
+  background-color: var(--background-color);
+}
 .swiper-nav .swiper-next::before,
 .swiper-nav .swiper-next::after {
   content: '';
@@ -965,6 +984,7 @@ iframe {
   width: 7px;
   height: 2px;
   background-color: var(--blue-color);
+  transition: background-color .3s;
 }
 .swiper-nav .swiper-next::before {
   top: 22px;
@@ -973,6 +993,10 @@ iframe {
 .swiper-nav .swiper-next::after {
   top: 28px;
   transform: rotate(-45deg);
+}
+.swiper-nav .swiper-next:hover::before,
+.swiper-nav .swiper-next:hover::after {
+  background-color: var(--background-color);
 }
 
 /* Секция Новости на главной */
@@ -1092,11 +1116,11 @@ iframe {
 .footer .bottom-menu .menu-item:hover {
   color: var(--blue-color);
 }
-.footer .socials {
+.footer .footer-socials {
   display: flex;
   justify-content: flex-end;
 }
-.footer .socials .socials-item {
+.footer .footer-socials .footer-socials-item {
   display: flex;
   width: 62px;
   height: 44px;
@@ -1109,16 +1133,16 @@ iframe {
   justify-content: center;
   transition: border-color .3s;
 }
-.footer .socials .socials-item:hover {
+.footer .footer-socials .footer-socials-item:hover {
   border-color: var(--blue-color);
 }
-.footer .socials .socials-item svg {
+.footer .footer-socials .footer-socials-item svg {
   height: 22px;
   fill: var(--second-lightgrey-color);
   stroke: var(--second-lightgrey-color);
   transition: fill .3s, stroke .3s;
 }
-.footer .socials .socials-item:hover svg {
+.footer .footer-socials .footer-socials-item:hover svg {
   fill: var(--blue-color);
   stroke: var(--blue-color);
 }
@@ -1180,38 +1204,38 @@ iframe {
 }
 
 /* Карточка проекта */
-.projects-detail-page .title-section {
+.project-detail-page .title-section {
   margin: 0 0 40px 0;
 }
-.projects-detail-page .title-section .projects-detail-title {
+.project-detail-page .title-section .project-detail-title {
   margin-bottom: 0;
 }
-.projects-detail-page .title-section .flex-container {
+.project-detail-page .title-section .flex-container {
   display: flex;
   margin: 0 0 16px 0;
   align-items: center;
   justify-content: space-between;
 }
 /*
-.projects-detail-page .title-section .projects-detail-title {
+.project-detail-page .title-section .project-detail-title {
   font-family: 'InterDisplay-SemiBold';
   font-size: 48px;
   color: #42307D;
   line-height: 1.1;
 }
 */
-.projects-detail-page .title-section .title-wrapper {
+.project-detail-page .title-section .title-wrapper {
   display: flex;
   gap: 60px;
 }
-.projects-detail-page .title-section .project-title-buttons {
+.project-detail-page .title-section .project-title-buttons {
   display: flex;
 }
-.projects-detail-page .title-section .make-an-appointment-wrapper {
+.project-detail-page .title-section .make-an-appointment-wrapper {
   display: flex;
   align-items: center;
 }
-.projects-detail-page .title-section .text-btn {
+.project-detail-page .title-section .text-btn {
   display: flex;
   width: 135px;
   height: 60px;
@@ -1224,28 +1248,28 @@ iframe {
   cursor: pointer;
   transition: color .3s;
 }
-.projects-detail-page .title-section .text-btn:hover {
+.project-detail-page .title-section .text-btn:hover {
   color: var(--blue-color);
 }
-.projects-detail-page .title-section .horizontal-line {
+.project-detail-page .title-section .horizontal-line {
   width: 100%;
   height: 1px;
   background-color: #CCCCCC;
 }
-.projects-detail-page .image-section .image-wrapper {
+.project-detail-page .slider-section .slider-wrapper {
   position: relative;
 }
-.projects-detail-page .image-section .image {
+.project-detail-page .slider-section .project-slider-item__image {
   height: 650px;
   border-radius: 30px;
   overflow: hidden;
 }
-.projects-detail-page .image-section .image img {
+.project-detail-page .slider-section .project-slider-item__image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-.projects-detail-page .image-section .details {
+.project-detail-page .slider-section .details {
   position: absolute;
   top: 60px;
   left: 60px;
@@ -1253,20 +1277,21 @@ iframe {
   padding: 30px;
   border-radius: 15px;
   background-color: var(--background-color);
+  z-index: 2;
 }
-.projects-detail-page .image-section .details-title {
+.project-detail-page .slider-section .details-title {
   margin: 0 0 6px 0;
   font-family: 'InterDisplay-Medium';
   font-size: 24px;
   color: var(--blue-color);
   line-height: 1.1;
 }
-.projects-detail-page .image-section .details-city {
+.project-detail-page .slider-section .details-city {
   margin: 0 0 6px 0;
   font-size: 15px;
   line-height: 1.2;
 }
-.projects-detail-page .image-section .details-row {
+.project-detail-page .slider-section .details-row {
   display: flex;
   height: 36px;
   margin: 0 0 8px 0;
@@ -1276,14 +1301,14 @@ iframe {
   align-items: center;
   justify-content: space-between;
 }
-.projects-detail-page .image-section .details-row:last-child {
+.project-detail-page .slider-section .details-row:last-child {
   margin-bottom: 0;
 }
-.projects-detail-page .image-section .details-row-top {
+.project-detail-page .slider-section .details-row-top {
   margin-bottom: 20px;
   color: var(--blue-color);
 }
-.projects-detail-page .image-section .download-presentation-btn {
+.project-detail-page .slider-section .download-presentation-btn {
   position: absolute;
   left: 60px;
   bottom: 60px;
@@ -1298,18 +1323,20 @@ iframe {
   justify-content: center;
   transition: background-color .3s;
   cursor: pointer;
+  z-index: 2;
 }
-.projects-detail-page .image-section .download-presentation-btn__text {
+.project-detail-page .slider-section .download-presentation-btn__text {
   font-size: 18px;
   color: var(--background-color);
   line-height: 1.2;
 }
-.projects-detail-page .image-section .swiper-nav {
+.project-detail-page .slider-section .swiper-nav {
   position: absolute;
   right: 60px;
   bottom: 60px;
+  z-index: 2;
 }
-.projects-detail-page .flats-section .flats-sold-out {
+.project-detail-page .flats-section .flats-sold-out {
   display: flex;
   height: 385px;
   flex-direction: column;
@@ -1319,7 +1346,7 @@ iframe {
   align-items: center;
   justify-content: center;
 }
-.projects-detail-page .flats-section .flats-sold-out-title {
+.project-detail-page .flats-section .flats-sold-out-title {
   font-size: 42px;
   color: var(--blue-color);
   line-height: 1.2;
@@ -1328,91 +1355,91 @@ iframe {
 
 /* Вкладки */
 /*
-.projects-detail-page .flat-section .tabs {
+.project-detail-page .flat-section .tabs {
   display: flex;
 }
-.projects-detail-page .flat-section .tab {
+.project-detail-page .flat-section .tab {
   width: 100%;
   padding: 10px;
   border: 1px solid red;
   text-align: center;
   cursor: pointer;
 }
-.projects-detail-page .flat-section .tab.active {
+.project-detail-page .flat-section .tab.active {
   font-weight: bold;
 }
-.projects-detail-page .flat-section .tab-content {
+.project-detail-page .flat-section .tab-content {
   display: none;
 }
-.projects-detail-page .flat-section .tab-content.active {
+.project-detail-page .flat-section .tab-content.active {
   display: block;
 }
 */
 /* /вкладки */
 
-.projects-detail-page .location-section .grid-container {
+.project-detail-page .location-section .grid-container {
   display: grid;
   gap: 60px;
   grid-template-columns: repeat(2, 1fr);
 }
-.projects-detail-page .location-section .location-item {
+.project-detail-page .location-section .location-item {
   display: flex;
   margin: 0 0 20px 0;
   gap: 10px;
   justify-content: space-between;
 }
-.projects-detail-page .location-section .location-item:last-child {
+.project-detail-page .location-section .location-item:last-child {
   margin-bottom: 0;
 }
-.projects-detail-page .location-section .location-item__title {
+.project-detail-page .location-section .location-item__title {
   margin: 0 0 10px 0;
   font-size: 20px;
   line-height: 1.2;
 }
-.projects-detail-page .location-section .location-item__text {
+.project-detail-page .location-section .location-item__text {
   line-height: 1.2;
 }
-.projects-detail-page .location-section .location-item__image {
+.project-detail-page .location-section .location-item__image {
   width: 280px;
   height: 160px;
   border-radius: 20px;
   overflow: hidden;
 }
-.projects-detail-page .location-section .location-item__image img {
+.project-detail-page .location-section .location-item__image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-.projects-detail-page .location-section .map {
+.project-detail-page .location-section .map {
   position: relative;
   border-radius: 30px;
   overflow: hidden;
 }
-.projects-detail-page .location-section .map .map-image {
+.project-detail-page .location-section .map .map-image {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-.projects-detail-page .location-section .location-map {
+.project-detail-page .location-section .location-map {
   display: flex;
   height: 700px;
   flex-direction: column;
 }
-.projects-detail-page .location-section .map-text {
+.project-detail-page .location-section .map-text {
   margin: 0 0 20px 0;
 }
-.projects-detail-page .location-section .map-btn {
+.project-detail-page .location-section .map-btn {
   position: absolute;
   right: 40px;
   bottom: 40px;
 }
-.projects-detail-page .projects-detail-advantages-section .grid-container {
+.project-detail-page .project-detail-advantages-section .grid-container {
   display: grid;
   margin: 0 0 40px 0;
   gap: 24px;
   grid-template-columns: repeat(3, 1fr);
 }
-.projects-detail-page .projects-detail-advantages-section .projects-detail-advantages-item {
+.project-detail-page .project-detail-advantages-section .project-detail-advantages-item {
   position: relative;
   height: 510px;
   padding: 30px;
@@ -1421,7 +1448,7 @@ iframe {
   z-index: 1;
   cursor: pointer;
 }
-.projects-detail-page .projects-detail-advantages-section .projects-detail-advantages-item__image {
+.project-detail-page .project-detail-advantages-section .project-detail-advantages-item__image {
   position: absolute;
   top: 0;
   left: 0;
@@ -1429,12 +1456,12 @@ iframe {
   height: 100%;
   z-index: -1;
 }
-.projects-detail-page .projects-detail-advantages-section .projects-detail-advantages-item__image img {
+.project-detail-page .project-detail-advantages-section .project-detail-advantages-item__image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-.projects-detail-page .projects-detail-advantages-section .projects-detail-advantages-item__filter {
+.project-detail-page .project-detail-advantages-section .project-detail-advantages-item__filter {
   position: absolute;
   top: 0;
   left: 0;
@@ -1443,61 +1470,61 @@ iframe {
   background-image: linear-gradient(180deg, rgba(34, 34, 34, 0.6) 20%, rgba(34, 34, 34, 0));
   z-index: -1;
 }
-.projects-detail-page .projects-detail-advantages-section .projects-detail-advantages-item__title {
+.project-detail-page .project-detail-advantages-section .project-detail-advantages-item__title {
   margin: 0 0 10px 0;
   font-family: 'InterDisplay-SemiBold';
   font-size: 32px;
   color: var(--background-color);
   line-height: 1.2;  
 }
-.projects-detail-page .projects-detail-advantages-section .projects-detail-advantages-item__text {
+.project-detail-page .project-detail-advantages-section .project-detail-advantages-item__text {
   font-size: 20px;
   color: var(--background-color);
   line-height: 1.2;  
 }
-.projects-detail-page .projects-detail-advantages-section .flex-container {
+.project-detail-page .project-detail-advantages-section .flex-container {
   display: flex;
   gap: 80px;
   justify-content: space-between;
 }
-.projects-detail-page .projects-detail-advantages-section .advantages-description {
+.project-detail-page .project-detail-advantages-section .advantages-description {
   width: 48%;
   font-size: 18px;
   line-height: 1.2;
 }
-.projects-detail-page .projects-detail-advantages-section .advantages-vertikal-item {
+.project-detail-page .project-detail-advantages-section .advantages-vertikal-item {
   display: flex;
   margin: 0 0 30px 0;
   padding: 0 0 20px 0;
   border-bottom: 1px solid #CCCCCC;
   align-items: center;
 }
-.projects-detail-page .projects-detail-advantages-section .advantages-vertikal-items {
+.project-detail-page .project-detail-advantages-section .advantages-vertikal-items {
   width: 53%;
 }
-.projects-detail-page .projects-detail-advantages-section .advantages-vertikal-item__image {
+.project-detail-page .project-detail-advantages-section .advantages-vertikal-item__image {
   width: 32px;
   height: 32px;
   margin: 0 20px 0 0;
 }
-.projects-detail-page .projects-detail-advantages-section .advantages-vertikal-item__title {
+.project-detail-page .project-detail-advantages-section .advantages-vertikal-item__title {
   margin: 0 0 6px 0;
   font-family: 'InterDisplay-Medium';
   font-size: 24px;
   line-height: 1.2;  
 }
-.projects-detail-page .booking-online-section {
+.project-detail-page .booking-online-section {
   padding: 40px;
   background-color: var(--lightgrey-color);
 }
-.projects-detail-page .booking-online-section .grid-container {
+.project-detail-page .booking-online-section .grid-container {
   display: grid;
   margin: 0 0 40px 0;
   gap: 24px;
   grid-template-columns: repeat(4, 1fr);
 }
 /*
-.projects-detail-page .booking-online-section .booking-online {
+.project-detail-page .booking-online-section .booking-online {
   display: flex;
   padding: 37px 40px;
   background-color: var(--blue-color);
@@ -1505,53 +1532,53 @@ iframe {
   align-items: center;
   justify-content: space-between;
 }
-.projects-detail-page .booking-online-section .booking-online-text {
+.project-detail-page .booking-online-section .booking-online-text {
   font-size: 42px;
   color: var(--background-color);
   line-height: 1.1;
 }
 */
-.projects-detail-page .booking-online-section .flats-item img {
+.project-detail-page .booking-online-section .flats-item img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-.projects-detail-page .general-plan-section {
+.project-detail-page .general-plan-section {
   padding: 40px 0 0 0;
 }
-.projects-detail-page .general-plan-section .image {
+.project-detail-page .general-plan-section .image {
   height: 600px;
   border-radius: 30px;
   overflow: hidden;
 }
-.projects-detail-page .general-plan-section .image img {
+.project-detail-page .general-plan-section .image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-.projects-detail-page .working-progress-section {
+.project-detail-page .working-progress-section {
   padding: 40px 0 0 0;
 }
-.projects-detail-page .working-progress-section .grid-container {
+.project-detail-page .working-progress-section .grid-container {
   display: grid;
   gap: 24px;
   grid-template-columns: repeat(3, 1fr);
 }
-.projects-detail-page .working-progress-section .working-progress-item {
+.project-detail-page .working-progress-section .working-progress-item {
   position: relative;
 }
-.projects-detail-page .working-progress-section .working-progress-item__image {
+.project-detail-page .working-progress-section .working-progress-item__image {
   height: 320px;
   border-radius: 20px;
   overflow: hidden;
 }
-.projects-detail-page .working-progress-section .working-progress-item__image img {
+.project-detail-page .working-progress-section .working-progress-item__image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-.projects-detail-page .working-progress-section .working-progress-item__date {
+.project-detail-page .working-progress-section .working-progress-item__date {
   position: absolute;
   top: 30px;
   left: 30px;
@@ -1566,10 +1593,10 @@ iframe {
   line-height: 1.2;
   z-index: 1;
 }
-.projects-detail-page .booking-online-form-wrapper {
+.project-detail-page .booking-online-form-wrapper {
   background-color: var(--lightgrey-color);
 }
-.projects-detail-page .blur-arrow-right {
+.project-detail-page .blur-arrow-right {
   position: absolute;
   right: 30px;
   bottom: 30px;
@@ -1577,7 +1604,7 @@ iframe {
   height: 64px;
   z-index: 2;
 }
-.projects-detail-page .blur-arrow-right img {
+.project-detail-page .blur-arrow-right img {
   width: 100%;
 }
 
@@ -2001,45 +2028,7 @@ iframe {
   color: var(--blue-color);
   line-height: 1.2;
 }
-.contacts-page .contacts-section .socials-item {
-  display: flex;
-  width: 180px;
-  height: 50px;
-  border-width: 1px;
-  border-style: solid;
-  border-color: var(--light-color);
-  border-radius: 25px;
-  gap: 16px;
-  align-items: center;
-  justify-content: center;
-  transition: border-color .3s;
-}
-.contacts-page .contacts-section .socials {
-  display: flex;
-  flex-wrap: wrap;
-}
-.contacts-page .contacts-section .socials-item:hover {
-  border-color: var(--blue-color);
-}
-.contacts-page .contacts-section .socials-item svg {
-  height: 22px;
-  fill: var(--second-lightgrey-color);
-  stroke: var(--second-lightgrey-color);
-  transition: fill .3s, stroke .3s;
-}
-.contacts-page .contacts-section .socials-item:hover svg {
-  fill: var(--blue-color);
-  stroke: var(--blue-color);
-}
-.contacts-page .contacts-section .socials-item__text {
-  font-size: 20px;
-  color: var(--second-lightgrey-color);
-  line-height: 1.1;
-  transition: color .3s;
-}
-.contacts-page .contacts-section .socials-item:hover .socials-item__text {
-  color: var(--blue-color);
-}
+
 .contacts-page .contacts-section .blue-contacts-item {
   display: flex;
   flex-direction: column;
@@ -2063,6 +2052,53 @@ iframe {
   background-color: var(--lightgrey-color);
 }
 
+/* Соцсети */
+.socials {
+  display: flex;
+  flex-wrap: wrap;
+}
+.socials .socials-item {
+  display: flex;
+  width: 180px;
+  height: 50px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: var(--light-color);
+  border-radius: 25px;
+  gap: 16px;
+  align-items: center;
+  justify-content: center;
+  transition: border-color .3s;
+}
+.socials .socials-item:hover {
+  border-color: var(--blue-color);
+}
+.socials .socials-item svg {
+  height: 22px;
+  fill: var(--second-lightgrey-color);
+  stroke: var(--second-lightgrey-color);
+  transition: fill .3s, stroke .3s;
+}
+.socials .socials-item:hover svg {
+  fill: var(--blue-color);
+  stroke: var(--blue-color);
+}
+.socials .socials-item__text {
+  font-size: 20px;
+  color: var(--second-lightgrey-color);
+  line-height: 1.1;
+  transition: color .3s;
+}
+.socials .socials-item:hover .socials-item__text {
+  color: var(--blue-color);
+}
+
+/* Страница Схема проезда */
+.driving-map-page .map {
+  height: 500px;
+  border-radius: 20px;
+  overflow: hidden;
+}
 
 /* Страница 404 */
 .page-404 .page-404-image {
@@ -2411,9 +2447,22 @@ iframe {
   opacity: 1;
   visibility: visible;
 }
+.mobile-menu .flex-container {
+  display: flex;
+  margin: 0 0 45px 0;
+  gap: 20px;
+  align-items: center;
+}
+.mobile-menu .close-menu-back {
+  width: 42px;
+  cursor: pointer;
+}
+.mobile-menu .close-menu-back img {
+  width: 100%;
+}
 .mobile-menu .logo {
   display: block;
-  width: 200px;
+  width: 150px;
 }
 .mobile-menu .logo img {
   width: 100%;
@@ -2422,10 +2471,23 @@ iframe {
   margin-bottom: 30px;
 }
 .mobile-menu .menu {
-  margin: 0 0 20px 0;
-  padding: 0;
-  list-style: none;
+  display: flex;
+  max-width: 440px;
+  margin: 0 0 60px 0;
+  flex-wrap: wrap;
 }
+.mobile-menu .socials {
+  max-width: 375px;
+}
+.mobile-menu .socials .socials-item-phone {
+  width: 190px;
+}
+.mobile-menu .socials .socials-item-phone .phone-text {
+  font-size: 18px;
+  color: var(--blue-color);
+  line-height: 1.2;
+}
+/*
 .mobile-menu .menu-item {
   display: block;
   padding: 5px 0;
@@ -2435,6 +2497,8 @@ iframe {
   color: var(--text-color);
   text-decoration: none;
 }
+*/
+/*
 .mobile-menu .socials {
   display: flex;
   margin: 0 0 20px 0;
@@ -2457,6 +2521,7 @@ iframe {
   font-family: 'InterDisplay-SemiBold';
   font-size: 18px;
 }
+*/
 
 /* fixed bottom menu */
 .fixed-bottom-menu {
@@ -2610,7 +2675,7 @@ iframe {
   }
 
   /* Карточка проекта */
-  .projects-detail-page .projects-detail-advantages-section .projects-detail-advantages-item {
+  .project-detail-page .project-detail-advantages-section .project-detail-advantages-item {
     height: 420px;
     border-radius: 25px;
   }
@@ -2758,7 +2823,7 @@ iframe {
   .footer .contacts .footer-phone {
     font-size: 28px;
   }
-  .footer .socials {
+  .footer .footer-socials {
     flex-wrap: wrap;
   }
   .footer .contacts .footer-email {
@@ -2771,18 +2836,18 @@ iframe {
   }
 
   /* Карточка проекта */
-  .projects-detail-page .title-section .flex-container {
+  .project-detail-page .title-section .flex-container {
     flex-direction: column;
     gap: 20px;
     align-items: flex-start;
   }
-  .projects-detail-page .location-section .map {
+  .project-detail-page .location-section .map {
     border-radius: 25px;
   }
-  .projects-detail-page .projects-detail-advantages-section .projects-detail-advantages-item {
+  .project-detail-page .project-detail-advantages-section .project-detail-advantages-item {
     height: 360px;
   }
-  .projects-detail-page .booking-online-form-wrapper .white-frame {
+  .project-detail-page .booking-online-form-wrapper .white-frame {
     padding: 30px;
   }
 
@@ -3024,7 +3089,7 @@ iframe {
   .footer .contacts .footer-email {
     margin-top: 0;
   }
-  .footer .socials {
+  .footer .footer-socials {
     justify-content: flex-start;
   }
   .footer .required-links {
@@ -3037,74 +3102,74 @@ iframe {
   }
 
   /* Карточка проекта */
-  .projects-detail-page .image-section .image {
+  .project-detail-page .image-section .image {
     height: 580px;
     border-radius: 25px;
   }
-  .projects-detail-page .image-section .details {
+  .project-detail-page .image-section .details {
     top: 50px;
     left: 50px;
     width: 350px;
     padding: 25px;
   }
-  .projects-detail-page .image-section .download-presentation-btn {
+  .project-detail-page .image-section .download-presentation-btn {
     left: 50px;
     bottom: 50px;
     width: 350px;
     height: 55px;
   }
-  .projects-detail-page .image-section .swiper-nav {
+  .project-detail-page .image-section .swiper-nav {
     right: 50px;
     bottom: 50px;
   }
-  .projects-detail-page .flats-section .flats-sold-out-title {
+  .project-detail-page .flats-section .flats-sold-out-title {
     font-size: 40px;
   }
-  .projects-detail-page .flats-section .flats-sold-out {
+  .project-detail-page .flats-section .flats-sold-out {
     height: 320px;
     border-radius: 25px;
   }
-  .projects-detail-page .location-section .grid-container {
+  .project-detail-page .location-section .grid-container {
     gap: 20px;
   }
-  .projects-detail-page .location-section .location-item__image {
+  .project-detail-page .location-section .location-item__image {
     width: 200px;
     height: 115px;
     border-radius: 15px;
   }
-  .projects-detail-page .location-section .location-item__title {
+  .project-detail-page .location-section .location-item__title {
     font-size: 18px;
   }
-  .projects-detail-page .location-section .location-map {
+  .project-detail-page .location-section .location-map {
     height: 520px;
   }
-  .projects-detail-page .projects-detail-advantages-section .grid-container {
+  .project-detail-page .project-detail-advantages-section .grid-container {
     gap: 20px;
   }
-  .projects-detail-page .projects-detail-advantages-section .projects-detail-advantages-item {
+  .project-detail-page .project-detail-advantages-section .project-detail-advantages-item {
     height: 300px;
     padding: 20px;
     border-radius: 20px;
   }
-  .projects-detail-page .projects-detail-advantages-section .projects-detail-advantages-item__title {
+  .project-detail-page .project-detail-advantages-section .project-detail-advantages-item__title {
     font-size: 28px;
   }
-  .projects-detail-page .projects-detail-advantages-section .projects-detail-advantages-item__text {
+  .project-detail-page .project-detail-advantages-section .project-detail-advantages-item__text {
     font-size: 18px;
   }
-  .projects-detail-page .blur-arrow-right {
+  .project-detail-page .blur-arrow-right {
     right: 20px;
     bottom: 20px;
     width: 54px;
     height: 54px;
   }
-  .projects-detail-page .projects-detail-advantages-section .advantages-vertikal-item__title {
+  .project-detail-page .project-detail-advantages-section .advantages-vertikal-item__title {
     font-size: 22px;
   }
-  .projects-detail-page .working-progress-section .grid-container {
+  .project-detail-page .working-progress-section .grid-container {
     gap: 20px;
   }
-  .projects-detail-page .working-progress-section .working-progress-item__image {
+  .project-detail-page .working-progress-section .working-progress-item__image {
     height: 295px;
   }
 

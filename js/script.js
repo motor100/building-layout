@@ -18,19 +18,34 @@ document.addEventListener("DOMContentLoaded", () => {
       // spaceBetween: 30,
       autoplay: false,
       breakpoints: {
-      // mobile 320-991
-      320: {
-        spaceBetween: 15,
+        // mobile 320-991
+        320: {
+          spaceBetween: 15,
+        },
+        // desktop >= 992
+        992: {
+          spaceBetween: 24,
+        },
+        // desktop >= 992
+        1200: {
+          spaceBetween: 30,
+        }
       },
-      // desktop >= 992
-      992: {
-        spaceBetween: 24,
+      navigation: {
+        nextEl: '.swiper-next',
+        prevEl: '.swiper-prev',
       },
-      // desktop >= 992
-      1200: {
-        spaceBetween: 30,
-      }
-    },
+    });
+  }
+
+  // Project detail Swiper slider
+  const projectDetailSlider = document.querySelector('.project-detail-slider');
+
+  if (projectDetailSlider) {
+    const slider = new Swiper('.project-detail-slider', {
+      loop: true,
+      slidesPerView: 1,
+      autoplay: false,
       navigation: {
         nextEl: '.swiper-next',
         prevEl: '.swiper-prev',
@@ -90,6 +105,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const body = document.querySelector('body');
   const burgerMenuWrapper = document.querySelector('.burger-menu-wrapper');
   const openMenuBtns = document.querySelectorAll('.js-open-menu-btn');
+  const closeMenuBtn = document.querySelector('.js-close-menu')
   const mobileMenu = document.querySelector('.mobile-menu');
 
   function openMobileMenu() {
@@ -113,6 +129,10 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     }
   });
+
+  closeMenuBtn.onclick = function() {
+    closeMobileMenu();
+  }
 
   const listParentClick = document.querySelectorAll('.mobile-menu li.menu-item a');
 
