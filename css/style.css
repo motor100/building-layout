@@ -427,6 +427,10 @@ iframe {
 }
 
 /* Projects section */
+.projects-section .title-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
 .projects-section .grid-container {
   display: grid;
   margin: 0 0 40px 0;
@@ -1317,6 +1321,13 @@ iframe {
   font-size: 18px;
   color: var(--background-color);
   line-height: 1.2;
+}
+.project-detail-page .slider-section .download-presentation-btn__image {
+  width: 20px;
+  transition: transform .3s;
+}
+.project-detail-page .slider-section .download-presentation-btn:hover .download-presentation-btn__image {
+  transform: rotate(-45deg);
 }
 .project-detail-page .slider-section .swiper-nav {
   position: absolute;
