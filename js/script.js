@@ -53,6 +53,32 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  // Location advantages Swiper slider слайдер Здесь начинается удобство
+  const locationAdvantagesSlider = document.querySelector('.location-advantages-slider');
+
+  if (locationAdvantagesSlider) {
+    const laSlider = new Swiper('.location-advantages-slider', {
+      loop: true,
+      slidesPerView: 'auto',
+      autoplay: false,
+      spaceBetween: 20,
+      navigation: {
+        nextEl: '.swiper-next',
+        prevEl: '.swiper-prev',
+      },
+    });
+
+    laSlider.on('click', function (swiper, event) {
+        console.log('Slide clicked!');
+        console.log('Clicked slide index:', swiper.clickedIndex); // Get the index of the clicked slide
+        console.log('Clicked slide element:', swiper.clickedSlide); // Get the DOM element of the clicked slide
+        // Perform actions based on the click
+    });
+
+  }
+
+
+
   /*
   // Events Swiper slider
   const eventsSlider = document.querySelector('.events-slider');
