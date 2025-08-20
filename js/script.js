@@ -142,7 +142,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const body = document.querySelector('body');
   const burgerMenuWrapper = document.querySelector('.burger-menu-wrapper');
   const openMenuBtns = document.querySelectorAll('.js-open-menu-btn');
-  const closeMenuBtn = document.querySelector('.js-close-menu')
+  const closeMenuBtns = document.querySelectorAll('.js-close-menu')
   const mobileMenu = document.querySelector('.mobile-menu');
 
   function openMobileMenu() {
@@ -167,9 +167,11 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  closeMenuBtn.onclick = function() {
-    closeMobileMenu();
-  }
+  closeMenuBtns.forEach((item) => {
+    item.onclick = function() {
+      closeMobileMenu();
+    }
+  });
 
   const listParentClick = document.querySelectorAll('.mobile-menu li.menu-item a');
 
