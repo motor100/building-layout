@@ -91,6 +91,43 @@ document.addEventListener("DOMContentLoaded", () => {
   }
   */
   
+  // Slim Select в большой форме
+  const bigBookingOnlineForm = document.getElementById('big-booking-online-form');
+
+  if (bigBookingOnlineForm) {
+
+    new SlimSelect({
+      select: '#big-form-project',
+      showSearch: false,
+      searchFocus: false,
+    });
+
+    new SlimSelect({
+      select: '#big-form-type-meeting',
+      showSearch: false,
+      searchFocus: false,
+    });
+
+    new SlimSelect({
+      select: '#big-form-type-room',
+      showSearch: false,
+      searchFocus: false,
+    });
+
+  }
+
+  // Date and time picker
+  let datetimepickers = document.querySelector('.datetimepicker');
+  // let startDate = new Date('2023-07-20');
+
+  // datetimepickers.forEach((item) => {
+    new AirDatepicker(datetimepickers, {
+      timepicker: true,
+      minutesStep: 30,
+      minDate: new Date(),
+      autoClose: true
+    });
+  // });
 
 
   // Current year

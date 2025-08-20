@@ -1722,6 +1722,31 @@ iframe {
   color: var(--background-color);
 }
 
+/* Большая форма Запись на встречу */
+.big-booking-online-form-wrapper .form .flex-container {
+  gap: 20px;
+}
+.big-booking-online-form-wrapper .form .submit-btn {
+  margin-bottom: 20px;
+  font-size: 22px;
+}
+
+/* slim select */
+.ss-main .ss-single-selected {
+  height: 62px;
+  padding: 20px 30px;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 31px;
+  background-color: var(--blue-color);
+  font-size: 18px;
+  color: var(--background-color);
+  line-height: 1.2;
+}
+.ss-main .ss-single-selected .ss-arrow span {
+  border-color: var(--background-color);
+}
+
 /* Секция Карта офисов в карточке проекта и Контакты */
 .office-map-section {
   margin: 0 0 40px 0;
@@ -3395,7 +3420,6 @@ iframe {
     height: 400px;
     border-radius: 20px;
   }
-
 
   /* we use cookie */
   .we-use-cookie {
