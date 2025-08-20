@@ -243,7 +243,10 @@ document.addEventListener("DOMContentLoaded", () => {
   const videoBtn = document.querySelector('#video-btn');
   const videoModal = document.querySelector('#video-modal');
 
-  const callbackFormBtns = document.querySelectorAll('.callback-form-btn');
+  const writeUsBtn = document.querySelector('.js-write-us-btn');
+  const writeUsModal = document.querySelector('#write-us-modal');
+
+  const callbackFormBtns = document.querySelectorAll('.js-callback-form-btn');
   const callbackModal = document.querySelector('#callback-modal');
   const modalCloseBtns = document.querySelectorAll('.modal-window .modal-close');
 
@@ -256,6 +259,12 @@ document.addEventListener("DOMContentLoaded", () => {
   if (videoBtn) {
     videoBtn.onclick = function () {
       modalWindowOpen(videoModal);
+    }
+  }
+
+  if (writeUsBtn) {
+    writeUsBtn.onclick = function () {
+      modalWindowOpen(writeUsModal);
     }
   }
 
