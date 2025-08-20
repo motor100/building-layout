@@ -2807,6 +2807,11 @@ iframe {
   .booking-online-form-wrapper .form-title {
     font-size: 40px;
   }
+
+  /* Страница Документы */
+  .documents-page .documents-item {
+    font-size: 22px;
+  }
 }
 
 @media only screen and (max-width : 1400px) {
@@ -3059,6 +3064,17 @@ iframe {
   }
   .contacts-page .contacts-section .c-item__title {
     font-size: 28px;
+  }
+
+  /* Страница Документы */
+  .documents-page .grid-container {
+    gap: 20px;
+  }
+  .documents-page .documents-item {
+    height: 122px;
+    padding: 10px 25px;
+    border-radius: 25px;
+    font-size: 20px;
   }
 
   /* we use cookie */
@@ -3492,6 +3508,17 @@ iframe {
     font-size: 18px;
   }
 
+  /* Страница Документы */
+  .documents-page .grid-container {
+    gap: 16px;
+  }
+  .documents-page .documents-item {
+    height: 112px;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 18px;
+  }
+
   /* we use cookie */
   .we-use-cookie {
     max-width: 880px;
@@ -3515,6 +3542,14 @@ iframe {
   /* Секция Новости главная и страница Новости */
   .news-section .news-slider-wrapper {
     margin-left: calc(50% - 696px / 2);
+  }
+
+  /* Страница Документы */
+  .documents-page .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .documents-page .documents-item {
+    height: 95px;
   }
 }
 
@@ -3541,6 +3576,13 @@ iframe {
     display: block;
   }
 
+  /* Страница Документы */
+  .documents-page .documents-item {
+    padding: 10px 15px;
+    border-radius: 15px;
+    font-size: 17px;
+  }
+
 }
 
 @media only screen and (max-width : 576px) {
@@ -3550,7 +3592,10 @@ iframe {
     font-size: 36px;
   }
 
-
+  /* Страница Документы */
+  .documents-page .documents-item {
+    font-size: 16px;
+  }
 }
 
 @media only screen and (max-width : 480px) {
@@ -3562,6 +3607,15 @@ iframe {
     line-height: 1;
   }
 
+  /* Страница Документы */
+  .documents-page .grid-container {
+    grid-template-columns: auto;
+  }
+  .documents-page .documents-item {
+    height: auto;
+    border-radius: 10px;
+  }
+
 }
 
 @media only screen and (max-width : 360px) {
@@ -3569,6 +3623,11 @@ iframe {
   .page-title,
   .section-title {
     font-size: 28px;
+  }
+
+  /* Страница Документы */
+  .documents-page .documents-item {
+    font-size: 15px;
   }
 
 }
