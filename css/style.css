@@ -2110,38 +2110,32 @@ iframe {
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: auto;
 }
+.contacts-page .contacts-section .c-item {
+  display: flex;
+  flex-direction: column;
+  height: 255px;
+  padding: 30px;
+  border-radius: 30px;
+  gap: 10px;
+  justify-content: space-between;
+}
 .contacts-page .contacts-section .contacts-item {
-  display: flex;
-  flex-direction: column;
-  height: 244px;
-  padding: 30px;
-  border-radius: 30px;
   background-color: var(--lightgrey-color);
-  justify-content: space-between;
 }
-.contacts-page .contacts-section .contacts-item .contacts-item__title {
-  margin: 0 0 8px 0;
+.contacts-page .contacts-section .c-item__title {
   font-size: 32px;
+  line-height: 1.1;
+}
+.contacts-page .contacts-section .contacts-item__title {
   color: var(--blue-color);
-  line-height: 1.2;
 }
-
 .contacts-page .contacts-section .blue-contacts-item {
-  display: flex;
-  flex-direction: column;
-  height: 244px;
-  padding: 30px;
-  border-radius: 30px;
   background-color: var(--blue-color);
-  justify-content: space-between;
 }
-.contacts-page .contacts-section .blue-contacts-item .contacts-item__title {
-  margin: 0 0 8px 0;
-  font-size: 32px;
+.contacts-page .contacts-section .blue-contacts-item__title {
   color: var(--background-color);
-  line-height: 1.2;
 }
-.contacts-page .contacts-section .blue-contacts-item .contacts-item__text {
+.contacts-page .contacts-section .blue-contacts-item__text {
   color: var(--background-color);
 }
 .contacts-page .contacts-section .blue-contacts-item .write-us-btn {
@@ -2800,6 +2794,19 @@ iframe {
   .about-company-page .our-values-section .our-values-item__star {
     width: 62px;
   }
+
+  /* Страница Контакты */
+  .contacts-page .contacts-section .c-item {
+    padding: 25px;
+  }
+  .contacts-page .contacts-section .c-item__title {
+    font-size: 30px;
+  }
+
+  /* Форма Забронировать онлайн */
+  .booking-online-form-wrapper .form-title {
+    font-size: 40px;
+  }
 }
 
 @media only screen and (max-width : 1400px) {
@@ -2897,6 +2904,19 @@ iframe {
   }
   .form .submit-btn {
     height: 58px;
+    font-size: 17px;
+  }
+
+  /* slim select */
+  .ss-main .ss-single-selected {
+    height: 58px;
+    padding: 16px 25px;
+    font-size: 17px;
+  }
+
+  /* Большая форма Запись на встречу */
+  .big-booking-online-form-wrapper .form .submit-btn {
+    font-size: 20px;
   }
 
   /* agreement text галочка соглашения */
@@ -3027,6 +3047,18 @@ iframe {
   .about-company-page .team-section .photo {
     height: 450px;
     border-radius: 25px;
+  }
+
+  /* Страница Контакты */
+  .contacts-page .contacts-section .grid-container {
+    gap: 20px;
+  }
+  .contacts-page .contacts-section .c-item {
+    height: 241px;
+    border-radius: 25px;
+  }
+  .contacts-page .contacts-section .c-item__title {
+    font-size: 28px;
   }
 
   /* we use cookie */
@@ -3178,12 +3210,12 @@ iframe {
 
   /* form */
   .form .input-field {
-    height: 52px;
+    height: 50px;
     padding: 10px 20px;
     font-size: 16px;
   }
   .form .submit-btn {
-    height: 52px;
+    height: 50px;
     font-size: 16px;
   }
   .form .label {
@@ -3419,6 +3451,45 @@ iframe {
   .about-company-page .team-section .photo {
     height: 400px;
     border-radius: 20px;
+  }
+
+  /* Страница Контакты */
+  .contacts-page .contacts-section .grid-container {
+    gap: 16px;
+  }
+  .contacts-page .contacts-section .c-item {
+    border-radius: 20px;
+  }
+  .contacts-page .contacts-section .c-item__title {
+    font-size: 24px;
+  }
+  .contacts-page .contacts-section .c-item__text {
+    font-size: 15px;
+  }
+
+  /* form */
+  .form .label {
+    font-size: 16px;
+  }
+  .form .input-field {
+    height: 50px;
+    padding: 12px 20px;
+    font-size: 16px;
+  }
+
+  /* slim select */
+  .ss-main .ss-single-selected {
+    height: 50px;
+    padding: 12px 20px;
+    font-size: 16px;
+  }
+
+  /* Большая форма Запись на встречу */
+  .big-booking-online-form-wrapper .form .flex-container {
+    gap: 10px;
+  }
+  .big-booking-online-form-wrapper .form .submit-btn {
+    font-size: 18px;
   }
 
   /* we use cookie */
