@@ -227,6 +227,11 @@ iframe {
   position: relative;
   z-index: 1;
 }
+.horizontal-line {
+  width: 100%;
+  height: 1px;
+  background-color: var(--second-lightgrey-color);
+}
 
 /* Header */
 .header {
@@ -520,8 +525,6 @@ iframe {
   position: absolute;
   left: 30px;
   width: 50%;
-  height: 1px;
-  background-color: var(--second-lightgrey-color);
 }
 .projects-section .horizontal-line-top {
   top: 160px;
@@ -1257,11 +1260,6 @@ iframe {
 }
 .project-detail-page .title-section .text-btn:hover {
   color: var(--blue-color);
-}
-.project-detail-page .title-section .horizontal-line {
-  width: 100%;
-  height: 1px;
-  background-color: #CCCCCC;
 }
 .project-detail-page .slider-section .slider-wrapper {
   position: relative;
@@ -2278,77 +2276,11 @@ iframe {
 .mortgage-page .submit-application-section .submit-application-item-blue .submit-application-item__text {
   color: var(--background-color);
 }
-.mortgage-page .submit-application-section .horizontal-line {
-  width: 100%;
-  height: 1px;
-  background-color: var(--second-lightgrey-color);
-}
 .mortgage-page .accordeon-section {
   padding: 40px 0 0 0;
 }
 .mortgage-page .accordeon-section .accordeon-section-title {
   margin: 0 0 20px 0;
-}
-.mortgage-page .accordeon-section .accordeon-item {
-  position: relative;
-  margin: 0 0 10px 0;
-  padding: 40px 30px;
-  border-radius: 30px;
-  background-color: var(--lightgrey-color);
-}
-.mortgage-page .accordeon-section .accordeon-item-title {
-  margin-bottom: 0;
-  font-family: 'InterDisplay-Medium';
-  font-size: 24px;
-  cursor: pointer;
-  transition: margin-bottom .3s;
-}
-.mortgage-page .accordeon-section .accordeon-text {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height .3s;
-}
-.mortgage-page .accordeon-section .accordeon-item.active .accordeon-item-title {
-  margin-bottom: 20px;
-}
-.mortgage-page .accordeon-section .accordeon-item.active .accordeon-text {
-  max-height: 300px;
-}
-.mortgage-page .accordeon-section .accordeon-item .arrow {
-  position: absolute;
-  top: 40px;
-  right: 30px;
-  display: block;
-  width: 32px;
-  height: 32px;
-  border-radius: 16px;
-  background-color: var(--background-color);
-  margin: auto;
-  z-index: 1;
-}
-.mortgage-page .accordeon-section .accordeon-item .arrow::before,
-.mortgage-page .accordeon-section .accordeon-item .arrow::after {
-  content: '';
-  position: absolute;
-  top: 15px;
-  width: 10px;
-  height: 2px;
-  background-color: var(--text-color);
-  transition: transform .3s;
-}
-.mortgage-page .accordeon-section .accordeon-item .arrow::before {
-  transform: rotate(-45deg);
-  left: 8px;
-}
-.mortgage-page .accordeon-section .accordeon-item .arrow::after {
-  transform: rotate(45deg);
-  left: 14px;
-}
-.mortgage-page .accordeon-section .accordeon-item.active .arrow::before {
-  transform: rotate(45deg);
-}
-.mortgage-page .accordeon-section .accordeon-item.active .arrow::after {
-  transform: rotate(-45deg);
 }
 .mortgage-page .contacts-section .flex-container {
   display: flex;
@@ -2383,8 +2315,89 @@ iframe {
   font-size: 18px;
 }
 
+/* Accordeon */
+.accordeon .accordeon-item {
+  position: relative;
+  margin: 0 0 10px 0;
+  padding: 40px 30px;
+  border-radius: 30px;
+  background-color: var(--lightgrey-color);
+}
+.accordeon .accordeon-item-title {
+  margin-bottom: 0;
+  font-family: 'InterDisplay-Medium';
+  font-size: 24px;
+  cursor: pointer;
+  transition: margin-bottom .3s;
+}
+.accordeon .accordeon-text {
+  max-height: 0;
+  overflow: hidden;
+  font-size: 18px;
+  transition: max-height .3s;
+}
+.accordeon .accordeon-item.active .accordeon-item-title {
+  margin-bottom: 20px;
+}
+.accordeon .accordeon-item.active .accordeon-text {
+  max-height: 300px;
+}
+.accordeon .accordeon-item .arrow {
+  position: absolute;
+  top: 40px;
+  right: 30px;
+  display: block;
+  width: 32px;
+  height: 32px;
+  border-radius: 16px;
+  background-color: var(--background-color);
+  margin: auto;
+  z-index: 1;
+}
+.accordeon .accordeon-item .arrow::before,
+.accordeon .accordeon-item .arrow::after {
+  content: '';
+  position: absolute;
+  top: 15px;
+  width: 10px;
+  height: 2px;
+  background-color: var(--text-color);
+  transition: transform .3s;
+}
+.accordeon .accordeon-item .arrow::before {
+  transform: rotate(-45deg);
+  left: 8px;
+}
+.accordeon .accordeon-item .arrow::after {
+  transform: rotate(45deg);
+  left: 14px;
+}
+.accordeon .accordeon-item.active .arrow::before {
+  transform: rotate(45deg);
+}
+.accordeon .accordeon-item.active .arrow::after {
+  transform: rotate(-45deg);
+}
 
-
+/* Страница Гид по ипотеке */
+.mortgage-guide-page .mortgage-guide-section {
+  margin: 0 0 40px 0;
+}
+.mortgage-guide-page .mortgage-title {
+  margin: 0 0 20px 0;
+  font-size: 32px;
+  line-height: 1.2;
+}
+.mortgage-guide-page .section-content {
+  margin: 0 0 20px 0;
+  padding: 30px;
+  border-radius: 30px;
+  background-color: var(--lightgrey-color);
+  font-size: 18px;
+}
+.mortgage-guide-page .section-content .list-item {
+  margin-bottom: 5px;
+}
 
 
 

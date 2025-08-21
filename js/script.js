@@ -156,9 +156,9 @@ document.addEventListener("DOMContentLoaded", () => {
   // });
 
   // Аккордеон на странице Ипотека
-  const mortgagePage = document.querySelector('.mortgage-page');
+  const accordeon = document.querySelector('.accordeon');
 
-  if (mortgagePage) {
+  if (accordeon) {
     const accordeonItems = document.querySelectorAll('.accordeon-item');
 
     accordeonItems.forEach((item) => {
