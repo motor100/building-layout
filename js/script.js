@@ -155,6 +155,21 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   // });
 
+  // Аккордеон на странице Ипотека
+  const mortgagePage = document.querySelector('.mortgage-page');
+
+  if (mortgagePage) {
+    const accordeonItems = document.querySelectorAll('.accordeon-item');
+
+    accordeonItems.forEach((item) => {
+      const accordeonItemTitle = item.querySelector('.accordeon-item-title');
+
+      accordeonItemTitle.onclick = function () {
+        item.classList.toggle('active');
+      }
+    });
+  }
+
 
   // Current year
   const now = new Date();

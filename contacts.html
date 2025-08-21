@@ -241,7 +241,9 @@
           <label for="phone-callback-modal" class="label">Телефон*</label>
           <input type="text" id="phone-callback-modal" class="input-field js-required-phone js-input-phone-mask" name="phone" required maxlength="18" autocomplete="on">
         </div>
-        <input type="button" id="callback-modal-btn" class="submit-btn" value="Отправить">
+        <button type="button" id="callback-modal-btn" class="submit-btn primary-btn">
+          <span class="primary-btn__text">Отправить</span>
+        </button>
         <div class="agreement-text">
           <input type="checkbox" name="checkbox-read" class="custom-checkbox js-required-checkbox" id="checkbox-read-callback" checked required onchange="document.getElementById('callback-modal-btn').disabled = !this.checked;">
           <label for="checkbox-read-callback" class="custom-checkbox-label"></label>
@@ -277,7 +279,9 @@
           <label for="message-write-us-modal" class="label">Сообщение*</label>
           <textarea type="message" id="message-write-us-modal" class="input-field textarea js-required-message" name="message" required minlength="3" maxlength="300" autocomplete="on"></textarea>
         </div>
-        <input type="button" id="write-us-modal-btn" class="submit-btn" value="Отправить">
+        <button type="button" id="write-us-modal-btn" class="submit-btn primary-btn">
+          <span class="primary-btn__text">Отправить</span>
+        </button>
         <div class="agreement-text">
             <input type="checkbox" name="checkbox-read" class="custom-checkbox js-required-checkbox" id="checkbox-read-write-us" checked required onchange="document.getElementById('write-us-modal-btn').disabled = !this.checked;">
             <label for="checkbox-read-write-us" class="custom-checkbox-label"></label>
