@@ -89,6 +89,10 @@ input[disabled] {
 input::placeholder {
   color: var(--second-lightgrey-color);
 }
+input:focus-visible,
+textarea:focus-visible {
+  outline: none;
+}
 a {
   text-decoration: none;
 }
@@ -2380,34 +2384,34 @@ iframe {
   position: relative;
   max-width: 1540px;
   margin: 0 auto;
-  padding: 60px;
+  padding: 50px;
   border-radius: 40px;
   background-color: #fff;
   overflow: hidden;
 }
 .modal-window .modal-close {
   position: absolute;
-  top: 65px;
-  right: 60px;
+  top: 55px;
+  right: 50px;
   cursor: pointer;
 }
 .modal-window .close {
   position: relative;
-  width: 34px;
-  height: 34px;
-  border: 2px solid var(--text-color);
-  border-radius: 17px;
+  width: 30px;
+  height: 30px;
+  border: 2px solid var(--blue-color);
+  border-radius: 15px;
 }
 .modal-window .close::before,
 .modal-window .close:after { 
   content: "";
   position: absolute;
   top: 5px;
-  left: 14px;
+  left: 12px;
   width: 2px;
-  height: 20px;
+  height: 16px;
   border-radius: 2px;
-  background-color: var(--text-color);
+  background-color: var(--blue-color);
   transition: background-color .3s;
 }
 .modal-window .close::before {
@@ -2417,11 +2421,21 @@ iframe {
   transform: rotate(-45deg);
 }
 .modal-window .modal-title {
-  margin: 0 0 50px 0;
+  margin: 0 0 40px 0;
   font-size: 42px;
   color: var(--blue-color);
   line-height: 1.1;
 }
+.modal-window .form-group {
+  margin: 0 0 10px 0;
+}
+.modal-window .submit-btn {
+  margin: 20px 0;
+  background-color: var(--blue-color);
+  color: var(--background-color);
+}
+/*
+// Окно преимущества в карточке проекта
 .modal-window .flex-container {
   display: flex;
   gap: 40px;
@@ -2440,16 +2454,36 @@ iframe {
 .modal-window .modal-text {
   width: 70%;
 }
+*/
 
 /* video modal */
 .video-modal .modal-area {
   width: 1400px;
   height: 840px;
+  padding-top: 45px;
+  padding-bottom: 45px;
 }
 .video-modal .modal-close {
   top: 25px;
   right: 25px;
 }
+
+/* callback modal */
+.callback-modal .modal-area {
+  width: 540px;
+  padding-top: 45px;
+  padding-bottom: 45px;
+}
+
+/* write-us modal */
+.write-us-modal .modal-area {
+  width: 540px;
+}
+.write-us-modal .textarea {
+  height: 124px;
+  resize: none;
+}
+
 
 /* we use cookie */
 .we-use-cookie {
