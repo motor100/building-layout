@@ -77,7 +77,21 @@ document.addEventListener("DOMContentLoaded", () => {
 
   }
 
+  // Переключение
+  const locationContentItems = document.querySelectorAll('.location-content-item');
+  const ps = document.querySelectorAll('.p');
 
+  for (let i = 0; i < ps.length; i++) {
+    ps[i].onclick = function() {
+
+      for (let j = 0; j < ps.length; j++) {
+        locationContentItems[j].classList.remove('active');
+      }
+
+      locationContentItems[i].classList.add('active');
+
+    }
+  }
 
   /*
   // Events Swiper slider
@@ -275,6 +289,10 @@ document.addEventListener("DOMContentLoaded", () => {
     videoBtn.onclick = function () {
       modalWindowOpen(videoModal);
     }
+    /*
+    .onclick = function
+    paused
+    */
   }
 
   if (writeUsBtn) {
@@ -321,6 +339,13 @@ document.addEventListener("DOMContentLoaded", () => {
     setTimeout(() => {
       win.classList.remove('active');
     }, 300);
+    // Если это окно с видео, то при закрытии ставлю видео на паузу
+    console.log(win == videoModal);
+    if (win == videoModal) {
+      const video = document.getElementById("video");
+      console.log(video);
+      video.load();
+    }
   }
 
 
