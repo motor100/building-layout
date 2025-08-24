@@ -68,29 +68,28 @@ document.addEventListener("DOMContentLoaded", () => {
       },
     });
 
+    const locationContentItems = document.querySelectorAll('.location-content-item');
+
+    // Переключение слайда при клике на неактивный
     laSlider.on('click', function (swiper, event) {
-        console.log('Slide clicked!');
-        console.log('Clicked slide index:', swiper.clickedIndex); // Get the index of the clicked slide
-        console.log('Clicked slide element:', swiper.clickedSlide); // Get the DOM element of the clicked slide
-        // Perform actions based on the click
+      let el = swiper.clickedSlide; // Get the DOM element of the clicked slide
+
+      if (!el.classList.contains('swiper-slide-active')) {
+        swiper.slideNext();
+      }
     });
 
-  }
+    // Обновление галереи .location-content-item
+    laSlider.on('slideChange', function (swiper) {
+      let slideActiveIndex = swiper.realIndex;
 
-  // Переключение
-  const locationContentItems = document.querySelectorAll('.location-content-item');
-  const ps = document.querySelectorAll('.p');
-
-  for (let i = 0; i < ps.length; i++) {
-    ps[i].onclick = function() {
-
-      for (let j = 0; j < ps.length; j++) {
-        locationContentItems[j].classList.remove('active');
+      for (let i = 0; i < locationContentItems.length; i++) {
+        locationContentItems[i].classList.remove('active');
       }
 
-      locationContentItems[i].classList.add('active');
+      locationContentItems[slideActiveIndex].classList.add('active');
+    });
 
-    }
   }
 
   /*
