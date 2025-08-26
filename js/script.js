@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
       loop: true,
       slidesPerView: 'auto',
       // slidesPerView: 5,
-      // spaceBetween: 30,
+      // spaceBetween: 24,
       autoplay: false,
       breakpoints: {
         // mobile 320-991
@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
         992: {
           spaceBetween: 24,
         },
-        // desktop >= 992
+        // desktop >= 1200
         1200: {
           spaceBetween: 30,
         }
@@ -194,20 +194,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Mobile menu
   const body = document.querySelector('body');
-  const burgerMenuWrapper = document.querySelector('.burger-menu-wrapper');
   const openMenuBtns = document.querySelectorAll('.js-open-menu-btn');
   const closeMenuBtns = document.querySelectorAll('.js-close-menu')
   const mobileMenu = document.querySelector('.mobile-menu');
 
   function openMobileMenu() {
     body.classList.add('overflow-hidden');
-    burgerMenuWrapper.classList.add('menu-is-open');
     mobileMenu.classList.add('active');
   }
 
   function closeMobileMenu() {
     body.classList.remove('overflow-hidden');
-    burgerMenuWrapper.classList.remove('menu-is-open');
     mobileMenu.classList.remove('active');
   }
 

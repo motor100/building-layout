@@ -233,7 +233,7 @@ iframe {
   background-color: var(--second-lightgrey-color);
 }
 
-/* Header */
+/* header */
 .header {
   padding: 24px 0;
 }
@@ -323,7 +323,7 @@ iframe {
   color: var(--blue-color);
 }
 
-/* Main section */
+/* main section */
 .main-section .main-image {
   position: relative;
   height: 620px;
@@ -446,7 +446,7 @@ iframe {
   transform: rotate(-45deg);
 }
 
-/* Projects section */
+/* projects section */
 .projects-section .title-wrapper {
   display: flex;
   justify-content: space-between;
@@ -460,11 +460,17 @@ iframe {
 .projects-section .projects-item__image-wrapper {
   position: relative;
   height: 460px;
+  padding: 30px;
   border-radius: 30px;
   overflow: hidden;
 }
 .projects-section .projects-item__image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
   height: 100%;
+  z-index: -2;
 }
 .projects-section .projects-item__image img {
   width: 100%;
@@ -477,16 +483,14 @@ iframe {
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 1;
+  z-index: -1;
   transition: background-color .3s;
 }
 .projects-section .projects-item:hover .projects-item__filter {
   background-color: rgba(34, 34, 34, .65);
 }
+
 .projects-section .projects-item__logo {
-  position: absolute;
-  top: 20px;
-  left: 30px;
   width: 50px;
   height: 50px;
 }
@@ -496,9 +500,6 @@ iframe {
   object-fit: contain;
 }
 .projects-section .projects-item__status {
-  position: absolute;
-  top: 80px;
-  left: 30px;
   width: max-content;
   height: 26px;
   margin: 0 0 10px 0;
@@ -509,11 +510,6 @@ iframe {
   color: var(--light-color);
 }
 .projects-section .projects-item__title {
-  position: absolute;
-  top: 115px;
-  left: 30px;
-  width: 50%;
-  margin: 0 0 10px 0;
   font-size: 32px;
   line-height: 1.2;
   color: var(--light-color);
@@ -522,47 +518,26 @@ iframe {
   white-space: nowrap;
 }
 .projects-section .horizontal-line {
-  position: absolute;
-  left: 30px;
   width: 50%;
 }
-.projects-section .horizontal-line-top {
-  top: 160px;
-}
 .projects-section .projects-item__location {
-  position: absolute;
-  top: 176px;
-  left: 30px;
   color: var(--third-ligtgrey-color);
 }
 .projects-section .projects-item__city {
-  position: absolute;
-  top: 197px;
-  left: 30px;
+  height: 26px;
   font-size: 18px;
   color: var(--light-color);
-}
-.projects-section .horizontal-line-bottom {
-  top: 235px;
+  overflow: hidden;
 }
 .projects-section .projects-item__price-text {
-  position: absolute;
-  top: 251px;
-  left: 30px;
   font-size: 16px;
   color: var(--third-ligtgrey-color);
 }
 .projects-section .projects-item__price {
-  position: absolute;
-  top: 272px;
-  left: 30px;
   font-size: 18px;
   color: var(--light-color);
 }
 .projects-section .flex-container {
-  position: absolute;
-  left: 30px;
-  bottom: 30px;
   display: flex;
 }
 .projects-section .projects-item__btn {
@@ -596,7 +571,6 @@ iframe {
 .projects-section .projects-item__price {
   opacity: 0;
   visibility: hidden;
-  z-index: 2;
   transition: opacity .4s, visibility .4s;
 }
 .projects-section .projects-item:hover .flex-container,
@@ -610,6 +584,17 @@ iframe {
 .projects-section .projects-item:hover .projects-item__price {
   opacity: 1;
   visibility: visible;
+}
+.projects-section .flex-container,
+.projects-section .projects-item__logo,
+.projects-section .projects-item__status,
+.projects-section .projects-item__title,
+.projects-section .horizontal-line,
+.projects-section .projects-item__city {
+  margin-bottom: 10px;
+}
+.projects-section .projects-item__price {
+  margin-bottom: 55px;
 }
 .projects-section .view-all-btn {
   margin: 0 auto;
@@ -831,6 +816,7 @@ iframe {
 }
 .news-section .news-slider .news-item {
   width: 21%;
+  padding-bottom: 1px;
 }
 .news-section .news-item {
   position: relative;
@@ -1060,15 +1046,18 @@ iframe {
   line-height: 1.2;
 }
 
-/* Footer */
+/* footer */
 .footer {
   margin-top: -40px;
   padding: 80px 0 40px 0;
 }
 .footer .flex-container {
-  display: grid;
+  display: flex;
+  margin: 0 0 40px 0;
   gap: 60px;
-  grid-template-columns: 340px repeat(3, 1fr) 340px;
+}
+.footer .logo-wrapper {
+  width: 340px;
 }
 .footer .logo-wrapper .logo {
   width: 200px;
@@ -1077,7 +1066,6 @@ iframe {
   width: 100%;
 }
 .footer .logo-wrapper .footer-decription {
-  margin: 0 0 40px 0;
   font-size: 16px;
   color: var(--third-ligtgrey-color);
   line-height: 1.2;
@@ -1237,9 +1225,36 @@ iframe {
 .project-detail-page .title-section .title-wrapper {
   display: flex;
   gap: 60px;
+  align-items: center;
 }
+/*
 .project-detail-page .title-section .project-title-buttons {
   display: flex;
+}
+*/
+.project-detail-page .title-section .view-more-btn {
+  display: flex;
+  width: max-content;
+  height: 60px;
+  padding: 0 28px;
+  border: none;
+  border-radius: 30px;
+  background-color: var(--text-color);
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+}
+.project-detail-page .title-section .view-more-btn__text {
+  font-size: 18px;
+  color: var(--background-color);
+  line-height: 1.2;
+}
+.project-detail-page .title-section .view-more-btn__image {
+  width: 20px;
+  transition: transform .3s;
+}
+.project-detail-page .title-section .view-more-btn:hover .view-more-btn__image {
+  transform: rotate(-45deg);
 }
 .project-detail-page .title-section .make-an-appointment-wrapper {
   display: flex;
@@ -1405,7 +1420,9 @@ iframe {
   height: 390px;
 }
 .project-detail-page .new-location-section .decription-title {
+  display: flex;
   margin: 0 0 24px 0;
+  align-items: center;
 }
 .project-detail-page .new-location-section .decription-title__number {
   margin-right: 24px;
@@ -1473,9 +1490,12 @@ iframe {
   -webkit-box-orient: vertical;
 }
 .project-detail-page .new-location-section .location-advantages-slider-item__image {
+  width: 265px;
+  height: 160px;
   border-radius: 20px;
   overflow: hidden;
   opacity: .4;
+  flex-shrink: 0;
 }
 .project-detail-page .new-location-section .location-advantages-slider-item__image img {
   width: 100%;
@@ -1710,12 +1730,12 @@ iframe {
 .project-detail-page .working-progress-section .working-progress-item {
   position: relative;
 }
-.project-detail-page .working-progress-section .working-progress-item__image {
+.project-detail-page .working-progress-section .working-progress-gallery {
   height: 320px;
   border-radius: 20px;
   overflow: hidden;
 }
-.project-detail-page .working-progress-section .working-progress-item__image img {
+.project-detail-page .working-progress-section .working-progress-gallery img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -2772,66 +2792,6 @@ iframe {
   cursor: pointer;
 }
 
-/* burger menu */
-.burger-menu-wrapper {
-  position: fixed;
-  top: 33px;
-  right: 12px;
-  display: none;
-  width: 46px;
-  height: 46px;
-  padding: 7px 5px;
-  border-radius: 5px;
-  background-color: #fff;
-  cursor: pointer;
-  z-index: 12;
-  transition: background-color .5s;
-}
-.burger-menu-wrapper .burger-menu {
-  position: relative;
-  height: 100%;
-}
-.burger-menu-wrapper .burger-menu::before,
-.burger-menu-wrapper .burger-menu::after,
-.burger-menu-wrapper .span {
-  content: "";
-  position: absolute;
-  display: block;
-  width: 24px;
-  height: 2px;
-  border-radius: 3px;
-  background-color: var(--blue-color);
-  transition: all .5s;
-}
-.burger-menu-wrapper .burger-menu::before {
-  left: 0;
-  top: 6px;
-}
-.burger-menu-wrapper .span {
-  left: 10px;
-  top: 15px;
-}
-.burger-menu-wrapper .burger-menu::after {
-  left: 0;
-  top: 24px;
-}
-.burger-menu-wrapper.menu-is-open {
-  background-color: #fff;
-}
-.burger-menu-wrapper.menu-is-open .burger-menu::before,
-.burger-menu-wrapper.menu-is-open .burger-menu::after {
-  top: 15px;
-}
-.burger-menu-wrapper.menu-is-open .burger-menu::before {
-  transform: rotate(-45deg);
-}
-.burger-menu-wrapper.menu-is-open .burger-menu::after {
-  transform: rotate(45deg);
-}
-.burger-menu-wrapper.menu-is-open .burger-menu span {
-  display: none;
-}
-
 /* mobile menu */
 .mobile-menu {
   position: fixed;
@@ -3056,7 +3016,7 @@ iframe {
 
 @media only screen and (max-width : 1600px) {
 
-  /* Main section */
+  /* main section */
   .main-section .main-title {
     top: 70px;
     left: 70px;
@@ -3067,12 +3027,19 @@ iframe {
     bottom: 70px;
   }
 
-  /* Projects section */
+  /* projects section */
   .projects-section .projects-item__image-wrapper {
     height: 405px;
   }
   .projects-section .projects-title {
     font-size: 30px;
+  }
+  .projects-section .projects-item__price {
+    margin-bottom: 30px;
+  }
+  .projects-section .projects-item__btn {
+    width: 172px;
+    height: 42px;
   }
 
   /* Форма заявки на главной */
@@ -3132,6 +3099,24 @@ iframe {
   .documents-page .documents-item {
     font-size: 22px;
   }
+
+  /* Карточка проекта */
+  .project-detail-page .new-location-section .location-advantages-slider-item__image {
+    width: 220px;
+    height: 162px;
+  }
+  .project-detail-page .new-location-section .location-image {
+    width: 536px;
+  }
+  .project-detail-page .new-location-section .decription-title__number {
+    font-size: 40px;
+  }
+  .project-detail-page .new-location-section .decription-title__text {
+    font-size: 32px;
+  }
+  .project-detail-page .working-progress-section .working-progress-gallery {
+    height: 271px;
+  }
 }
 
 @media only screen and (max-width : 1400px) {
@@ -3145,7 +3130,15 @@ iframe {
     font-size: 40px;
   }
 
-  /* Header */
+  .tertiary-btn {
+    height: 54px;
+    padding: 0 25px;
+  }
+  .tertiary-btn .tertiary-btn__text {
+    font-size: 17px;
+  }
+
+  /* header */
   .header .flex-container {
     gap: 40px;
   }
@@ -3171,7 +3164,7 @@ iframe {
     font-size: 16px;
   }
 
-  /* Main section */
+  /* main section */
   .main-section .main-image {
     height: 580px;
     border-radius: 35px;
@@ -3181,18 +3174,36 @@ iframe {
     font-size: 56px;
   }
 
-  /* Projects section */
+  /* projects section */
   .projects-section .grid-container {
     margin-bottom: 30px;
     gap: 30px;
   }
   .projects-section .projects-item__image-wrapper {
-    height: 350px;
+    height: 375px;
     border-radius: 25px;
   }
   .projects-section .projects-title {
     margin-top: 20px;
     font-size: 28px;
+  }
+  .projects-section .projects-item__image-wrapper {
+    padding: 20px;
+  }
+  .projects-section .projects-item__logo {
+    width: 45px;
+    height: 45px;
+  }
+  .projects-section .projects-item__title {
+    font-size: 30px;
+  }
+  .projects-section .projects-item__price {
+    margin-bottom: 25px;
+  }
+  .projects-section .projects-item__btn {
+    width: 156px;
+    height: 38px;
+    font-size: 14px;
   }
 
   /* Секция Преимущества */
@@ -3256,10 +3267,22 @@ iframe {
   .about-company-section .flex-container {
     gap: 60px;
   }
+  .about-company-section .about-company-item {
+    font-size: 17px;
+  }
 
   /* Секция Новости главная и страница Новости */
   .news-section {
     padding: 40px 0;
+  }
+  .news-section .button-next {
+    width: 36px;
+    height: 36px;
+  }
+  .news-section .arrow-right {
+    top: 15px;
+    right: 9px;
+    width: 16px;
   }
 
   /* Footer */
@@ -3268,12 +3291,13 @@ iframe {
     padding-top: 60px;
   }
   .footer .flex-container {
-    margin-bottom: 60px;
-    gap: 20px 40px ;
-    grid-template-columns: 280px repeat(3, 1fr) 255px;
+    margin-bottom: 30px;
+    gap: 40px;
+  }
+  .footer .logo-wrapper {
+    width: 280px;
   }
   .footer .logo-wrapper .footer-decription {
-    margin-bottom: 30px;
     font-size: 15px;
   }
   .footer .bottom-menu .menu-title {
@@ -3282,8 +3306,11 @@ iframe {
   .footer .bottom-menu .menu-item {
     font-size: 16px;
   }
+  .footer .contacts {
+    width: 237px;
+  }
   .footer .contacts .footer-phone {
-    font-size: 28px;
+    font-size: 26px;
   }
   .footer .footer-socials {
     flex-wrap: wrap;
@@ -3299,7 +3326,7 @@ iframe {
 
   /* Карточка проекта */
   .project-detail-page .title-section .flex-container {
-    flex-direction: column;
+    /*flex-direction: column;*/
     gap: 20px;
     align-items: flex-start;
   }
@@ -3311,6 +3338,37 @@ iframe {
   }
   .project-detail-page .booking-online-form-wrapper .white-frame {
     padding: 30px;
+  }
+  .project-detail-page .new-location-section .location-advantages-slider-item {
+    height: 192px;
+    padding: 15px 20px;
+    border-radius: 20px;
+  }
+  .project-detail-page .new-location-section .decription-title__number {
+    font-size: 38px;
+  }
+  .project-detail-page .new-location-section .decription-title__text {
+    font-size: 30px;
+  }
+  .project-detail-page .new-location-section .description-text {
+    font-size: 17px;
+  }
+  .project-detail-page .new-location-section .location-advantages-slider-item__image {
+    width: 196px;
+    border-radius: 15px;
+  }
+  .project-detail-page .new-location-section .location-image {
+    width: 478px;
+    border-radius: 25px;
+  }
+  .project-detail-page .working-progress-section .working-progress-gallery {
+    height: 232px;
+  }
+  .project-detail-page .blur-arrow-right {
+    right: 20px;
+    bottom: 20px;
+    width: 54px;
+    height: 54px;
   }
 
   /* Секция Карта офисов в карточке проекта и Контакты */
@@ -3447,14 +3505,14 @@ iframe {
   }
 
   .tertiary-btn {
-    height: 54px;
-    padding: 0 25px;
+    height: 50px;
+    padding: 0 20px;
   }
   .tertiary-btn .tertiary-btn__text {
     font-size: 16px;
   }
 
-  /* Header */
+  /* header */
   .header .flex-container {
     gap: 30px;
   }
@@ -3480,7 +3538,7 @@ iframe {
     font-size: 14px;
   }
 
-  /* Main section */
+  /* main section */
   .main-section .main-image {
     height: 480px;
     border-radius: 30px;
@@ -3498,16 +3556,27 @@ iframe {
     height: 186px;
   }
 
-  /* Projects section */
+  /* projects section */
   .projects-section .grid-container {
+    grid-template-columns: repeat(2, 1fr);
     gap: 20px;
   }
   .projects-section .projects-item__image-wrapper {
+    height: 410px;
     border-radius: 20px;
   }
   .projects-section .projects-title {
     margin-top: 15px;
     font-size: 26px;
+  }
+  .projects-section .projects-item__logo {
+    width: 40px;
+    height: 40px;
+  }
+  .projects-section .projects-item__city,
+  .projects-section .projects-item__price {
+    height: 24px;
+    font-size: 17px;
   }
 
   /* Секция Преимущества */
@@ -3582,6 +3651,9 @@ iframe {
   .news-section .news-slider-wrapper {
     margin-left: calc(50% - 936px / 2);
   }
+  .news-section .news-slider .news-item {
+    width: 26%;
+  }
   .news-section .news-item__image {
     border-radius: 15px;
   }
@@ -3591,12 +3663,14 @@ iframe {
     font-size: 18px;
     -webkit-line-clamp: 2;
   }
+  .news-section .news-item__date {
+    font-size: 15px;
+  }
   .news-section .button-next {
-    width: 38px;
-    height: 38px;
     border-width: 1px;
   }
   .news-section .arrow-right {
+    top: 17px;
     right: 9px;
     width: 18px;
     height: 1px;
@@ -3607,10 +3681,10 @@ iframe {
     height: 1px;
   }
 
-  /* Footer */
+  /* footer */
   .footer .flex-container {
-    grid-template-columns: 400px repeat(3, 1fr);
-    grid-template-rows: auto;
+    gap: 30px;
+    flex-wrap: wrap;
   }
   .footer .bottom-menu .menu-title {
     font-size: 19px;
@@ -3618,7 +3692,11 @@ iframe {
   .footer .bottom-menu .menu-item {
     font-size: 15px;
   }
+  .footer .logo-wrapper {
+    width: 100%;
+  }
   .footer .contacts {
+    width: 100%;
     text-align: left;
   }
   .footer .contacts .footer-email {
@@ -3637,6 +3715,14 @@ iframe {
   }
 
   /* Карточка проекта */
+  .project-detail-page .title-section .view-more-btn {
+    height: 54px;
+    padding: 0 25px;
+  }
+  .project-detail-page .title-section .view-more-btn__text {
+    font-size: 16px;
+  }
+  /*
   .project-detail-page .image-section .image {
     height: 580px;
     border-radius: 25px;
@@ -3657,6 +3743,7 @@ iframe {
     right: 50px;
     bottom: 50px;
   }
+  */
   .project-detail-page .flats-section .flats-sold-out-title {
     font-size: 40px;
   }
@@ -3678,6 +3765,17 @@ iframe {
   .project-detail-page .location-section .location-map {
     height: 520px;
   }
+  .project-detail-page .new-location-section .location-advantages-slider-item {
+    width: 49%;
+    padding: 15px;
+    gap: 20px;
+  }
+  .project-detail-page .new-location-section .decription-title {
+    align-items: flex-start;
+  }
+  .project-detail-page .new-location-section .swiper-slide-active .location-advantages-slider-item__title {
+    font-size: 19px;
+  }
   .project-detail-page .project-detail-advantages-section .grid-container {
     gap: 20px;
   }
@@ -3692,20 +3790,19 @@ iframe {
   .project-detail-page .project-detail-advantages-section .project-detail-advantages-item__text {
     font-size: 18px;
   }
-  .project-detail-page .blur-arrow-right {
-    right: 20px;
-    bottom: 20px;
-    width: 54px;
-    height: 54px;
-  }
   .project-detail-page .project-detail-advantages-section .advantages-vertikal-item__title {
     font-size: 22px;
   }
   .project-detail-page .working-progress-section .grid-container {
     gap: 20px;
   }
-  .project-detail-page .working-progress-section .working-progress-item__image {
-    height: 295px;
+  .project-detail-page .working-progress-section .working-progress-gallery {
+    height: 195px;
+    border-radius: 15px;
+  }
+  .project-detail-page .working-progress-section .working-progress-item__date {
+    top: 20px;
+    left: 20px;
   }
 
   /* Секция Карта офисов в карточке проекта и Контакты */
@@ -3859,9 +3956,120 @@ iframe {
 
 @media only screen and (max-width : 992px) {
 
+  :root {
+    --margin-80: 50px;
+  }
+
+  .page-title,
+  .section-title {
+    margin-bottom: 25px;
+    font-size: 36px;
+  }
+
+  .tertiary-btn {
+    height: 45px;
+    padding: 0 16px;
+  }
+
+  /* header */
+  .header .top-menu {
+    display: none;
+  }
+
+  /* main section */
+  .main-section .main-title {
+    top: 40px;
+    left: 40px;
+    font-size: 46px;
+  }
+  .main-section .main-video {
+    right: 40px;
+    bottom: 40px;
+    width: 290px;
+    height: 156px;
+  }
+  .main-section .main-video .main-video__play {
+    width: 68px;
+    height: 68px;
+  }
+
+  /* projects section */
+  .projects-section .projects-item__image-wrapper {
+    height: 370px;
+  }
+  .projects-section .projects-item__title {
+    font-size: 28px;
+  }
+  .projects-section .horizontal-line {
+    width: 60%;
+  }
+
+  /* Секция Преимущества */
+  .advantages-section .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .advantages-section .advantages-item {
+    padding: 15px 20px;
+  }
+  .advantages-section .advantages-item__title {
+    margin-bottom: 12px;
+    font-size: 32px;
+  }
+  .callback-section .callback-section-title {
+    font-size: 28px;
+  }
+
+  /* Большая форма Запись на встречу */
+  .form .flex-container {
+    flex-wrap: wrap;
+    gap: 10px 0;
+  }
+  .form .form-group,
+  .form .submit-btn {
+    width: 50%;
+  }
+  .form .checkboxes-flex-container {
+    flex-direction: column;
+    gap: 0;
+  }
+  
+  /* Форма заявки на главной */
+  .callback-section .white-frame {
+    padding: 20px 25px;
+  }
+
+  /* Секция О компании */
+  .about-company-section {
+    padding: 30px 0;
+  }
+
   /* Секция Новости главная и страница Новости */
   .news-section .news-slider-wrapper {
     margin-left: calc(50% - 696px / 2);
+  }
+  .news-section .news-item__title {
+    height: 39px;
+    margin-bottom: 25px;
+    font-size: 16px;
+  }
+  .news-section .button-next {
+    width: 30px;
+    height: 30px;
+  }
+  .news-section .arrow-right {
+    top: 14px;
+    right: 8px;
+    width: 13px;
+  }
+  .news-section .arrow-right::before,
+  .news-section .arrow-right::after {
+    width: 6px;
+  }
+  .news-section .arrow-right::before {
+    top: -2px;
+  }
+  .news-section .arrow-right::after {
+    top: 2px;
   }
 
   /* Страница Документы */
@@ -3874,6 +4082,11 @@ iframe {
 }
 
 @media only screen and (max-width : 768px) {
+
+  :root {
+    --margin-80: 40px;
+  }
+
   .hidden-mobile {
     display: none !important;
   }
@@ -3884,16 +4097,125 @@ iframe {
 
   .page-title,
   .section-title {
-    font-size: 40px;
+    font-size: 34px;
   }
 
-  
+  /* main section */
+  .main-section .main-title {
+    top: 30px;
+    left: 30px;
+    font-size: 42px;
+  }
+  .main-section .main-title br {
+    display: none;
+  }
+  .main-section .main-video {
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+  }
 
+  /* projects section */
+  .projects-section .title-wrapper {
+    margin: 0 0 20px 0;
+    flex-direction: column;
+  }
+  .projects-section .grid-container {
+    grid-template-columns: auto;
+  }
+  .projects-section .projects-title {
+    margin: 10px 0 0 ;
+    font-size: 22px;
+  }
+  .projects-section .projects-city {
+    font-size: 17px;
+  }
 
+  /* Форма заявки на главной */
+  .callback-section .white-frame {
+    padding: 20px;
+  }
+  .callback-section .title-wrapper {
+    padding: 20px;
+  }
+  .callback-section .callback-section-title {
+    font-size: 24px;
+  }
+  .callback-section .callback-section-text {
+    font-size: 17px;
+  }
 
+  /* form */
+  .form .input-field {
+    height: 45px;
+    font-size: 15px;
+  }
 
-  .burger-menu-wrapper {
-    display: block;
+  /* Секция О компании */
+  .about-company-section .flex-container {
+    gap: 20px;
+    flex-direction: column;
+  }
+  .about-company-section .about-company-content,
+  .about-company-section .about-company-image {
+    width: 100%;
+  }
+
+  /* Секция Новости главная и страница Новости */
+  .news-section .news-slider-wrapper {
+    margin-left: calc(50% - 516px / 2);
+  }
+  .news-section .news-slider .news-item {
+    width: 36%;
+  }
+
+  /* footer */
+  .footer {
+    padding-bottom: 120px;
+  }
+  .footer .required-links {
+    margin-bottom: 40px;
+  }
+  .footer .footer-bottom {
+    gap: 20px;
+    flex-direction: column;
+  }
+
+  /* swiper nav */
+  .swiper-nav {
+    width: 92px;
+    height: 46px;
+  }
+  .swiper-nav .swiper-prev,
+  .swiper-nav .swiper-next {
+    width: 46px;
+    height: 46px;
+  }
+  .swiper-nav .swiper-prev span,
+  .swiper-nav .swiper-next span {
+    top: 23px;
+  }
+  .swiper-nav .swiper-prev span {
+    left: 15px;
+  }
+  .swiper-nav .swiper-next span {
+    right: 15px;
+  }
+  .swiper-nav .swiper-prev::before,
+  .swiper-nav .swiper-prev::after {
+    left: 14px;
+  }
+  .swiper-nav .swiper-next::before,
+  .swiper-nav .swiper-next::after {
+    right: 14px;
+  }
+  .swiper-nav .swiper-prev::before,
+  .swiper-nav .swiper-next::after {
+    top: 25px;
+  }
+  .swiper-nav .swiper-prev::after,
+  .swiper-nav .swiper-next::before {
+    top: 21px;
   }
 
   /* Страница Документы */
