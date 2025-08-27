@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Сайт с сапфировыми и бежевыми оттенками</title>
+<style>
+  /* Общие стили */
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f0e1; /* бежевый фон */
+    color: #333;
+  }
+
+  /* Шапка сайта */
+header {
+    background-color: #084b8a; /* темный сапфир */
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #fff;
+  }
+
+  header h1 {
+    margin: 0;
+    font-size: 24px;
+  }
+
+  /* Навигация */
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: bold;
+  }
+
+  nav a:hover {
+    text-decoration: underline;
+  }
+
+  /* Основной контент с сеткой */
+main {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+  }
+
+  /* Блоки контента */
+.content-block {
+    background-color: #f5f0e1; /* бежевый фон */
+    border: 2px solid #0f52ba; /* сапфировая рамка */
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.content-block h2 {
+    color: #0f52ba; /* сапфировый заголовок */
+}
+
+.content-block p {
+    margin-top: 10px;
+}
+
+/* Кнопки */
+.btn-primary {
+    background-color: #0f52ba; /* сапфировый */
+    color: #fff; /* белый текст */
+    padding: 12px 24px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: auto; /* чтобы кнопка была внизу блока */
+}
+
+.btn-primary:hover {
+    background-color: #084b8a; /* темнее при наведении */
+}
+
+/* Подвал сайта */
+footer {
+   background-color:#084b8a; /* темный сапфир */
+   color:#fff; 
+   padding:20px; 
+   text-align:center; 
+}
+</style>
+</head>
+<body>
+
+<header>
+<h1>Мой сайт</h1>
+<nav>
+<a href="#">Главная</a>
+<a href="#">О нас</a>
+<a href="#">Контакты</a>
+</nav>
+</header>
+
+<main>
+<div class="content-block">
+<h2>Раздел один</h2>
+<p>Это пример блока с бежевым фоном и сапфировой рамкой. Здесь можно разместить описание или другую информацию.</p>
+<button class="btn-primary">Подробнее</button>
+</div>
+
+<div class="content-block">
+<h2>Раздел два</h2>
+<p>Еще один блок с аналогичным стилем. Используйте такие блоки для разделения контента.</p>
+<button class="btn-primary">Подробнее</button>
+</div>
+
+<div class="content-block">
+<h2>Раздел три</h2>
+<p>Дополнительный раздел для демонстрации сетки и сочетания цветов.</p>
+<button class="btn-primary">Подробнее</button>
+</div>
+
+<!-- Можно добавлять больше блоков по необходимости -->
+</main>
+
+<footer>
+<p>&copy; 2024 Мой сайт. Все права защищены.</p>
+</footer>
+
+</body>
+</html>
