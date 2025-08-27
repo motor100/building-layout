@@ -7,11 +7,42 @@ document.addEventListener("DOMContentLoaded", () => {
     topMenuItem[topMenuItemActive].classList.add('active');
   }
 
+  // Our advantages slider
+  const ourAdvantagesSlider = document.querySelector('.our-advantages-slider');
+
+  if (ourAdvantagesSlider) {
+    new Swiper('.our-advantages-slider', {
+      loop: true,
+      slidesPerView: 'auto',
+      // slidesPerView: 5,
+      // spaceBetween: 24,
+      autoplay: false,
+      breakpoints: {
+        // mobile 320-991
+        320: {
+          spaceBetween: 15,
+        },
+        // desktop >= 992
+        992: {
+          spaceBetween: 24,
+        },
+        // desktop >= 1200
+        1200: {
+          spaceBetween: 30,
+        }
+      },
+      navigation: {
+        nextEl: '.swiper-next',
+        prevEl: '.swiper-prev',
+      },
+    });
+  }
+
   // News Swiper slider
   const newsSlider = document.querySelector('.news-slider');
 
   if (newsSlider) {
-    const slider = new Swiper('.news-slider', {
+    new Swiper('.news-slider', {
       loop: true,
       slidesPerView: 'auto',
       // slidesPerView: 5,

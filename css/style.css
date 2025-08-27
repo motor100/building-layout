@@ -35,7 +35,7 @@
 }
 
 :root {
-  --text-color: #0D141C;
+  --text-color: #1D1E33;
   --blue-color: #6C99C3;
   --lightgrey-color: #F4F6FB;
   --background-color: #FAFAFA;
@@ -133,7 +133,7 @@ iframe {
 .section-title {
   margin: 0 0 40px 0;
   font-size: 42px;
-  color: var(--blue-color);
+  color: var(--text-color);
   line-height: 1.1;
 }
 .primary-btn {
@@ -283,7 +283,7 @@ iframe {
   width: 109px;
   height: 42px;
   border-radius: 21px;
-  background-color: var(--blue-color);
+  background-color: var(--text-color);
   font-family: 'InterDisplay-Medium';
   font-size: 18px;
   color: var(--background-color);
@@ -336,7 +336,8 @@ iframe {
   width: 100%;
   height: 100%;
   /*background-image: linear-gradient(90deg, var(--blue-color) 15%, transparent 98%);*/
-  background-image: linear-gradient(90deg, rgba(0, 48, 103, 0.6) 0.64%, rgba(0, 48, 103, 0) 100%);
+  /*background-image: linear-gradient(90deg, rgba(0, 48, 103, 0.6) 0.64%, rgba(0, 48, 103, 0) 100%);*/
+  background: linear-gradient(96deg, rgba(50, 52, 96, 0.8) 0.64%, rgba(50, 52, 96, 0) 100%);
   z-index: 2;
 }
 .main-section .main-image img {
@@ -629,6 +630,37 @@ iframe {
   line-height: 1.2;
 }
 
+/* Новая секция Наши преимущества */
+.our-advantages-section .title-wrapper {
+  display: flex;
+  margin: 0 0 40px 0;
+  align-items: center;
+  justify-content: space-between;
+}
+.our-advantages-section .our-advantages-section-title {
+  margin-bottom: 0;
+}
+.our-advantages-section .our-advantages-slider-wrapper {
+  margin-left: calc(50% - 1524px / 2);
+}
+.our-advantages-section .our-advantages-slider .our-advantages-item {
+  width: 21%;
+  height: 200px;
+  padding: 30px;
+  border-radius: 15px;
+  background-color: var(--blue-color);
+}
+.our-advantages-section .our-advantages-slider .our-advantages-item__title {
+  font-family: 'InterDisplay-SemiBold';
+  font-size: 41px;
+  color: #323460;
+  line-height: 1;
+}
+.our-advantages-section .our-advantages-slider .our-advantages-item__title .white-color {
+  color: var(--white-color);
+}
+
+
 /* Форма заявки на главной */
 .callback-section {
   padding-top: 40px;
@@ -640,13 +672,16 @@ iframe {
   border-radius: 30px;
   background-color: var(--background-color);
 }
+/*
 .callback-section .white-frame-top {
   margin: 0 0 10px 0;
 }
+*/
 .callback-section .title-wrapper {
+  margin: 0 0 10px 0;
   padding: 30px;
   border-radius: 15px;
-  background-color: var(--blue-color);
+  background-color: var(--text-color);
 }
 .callback-section .callback-section-title {
   margin: 0 0 20px 0;
@@ -676,7 +711,7 @@ iframe {
   outline: none;
 }
 .callback-section .form .submit-btn {
-  background-color: var(--blue-color);
+  background-color: var(--text-color);
   color: var(--background-color);
 }
 
@@ -1100,7 +1135,7 @@ iframe {
 .footer .bottom-menu .menu-title {
   margin: 0 0 10px 0;
   font-size: 23px;
-  color: var(--blue-color);
+  color: var(--text-color);
   line-height: 1.1;
 }
 .footer .bottom-menu .menu-item {
@@ -2559,8 +2594,8 @@ iframe {
   background-color: #fff;
 }
 .agreement-text .custom-checkbox:checked+label::before {
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='10' height='7' fill='none'><path stroke='%236C99C3' stroke-linecap='round' stroke-linejoin='round' d='M1.25 3.75L3.5 6L8.75 0.75'/%3e%3c/svg%3e");
-  border-color: var(--blue-color);
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='10' height='7' fill='none'><path stroke='%231D1E33' stroke-linecap='round' stroke-linejoin='round' d='M1.25 3.75L3.5 6L8.75 0.75'/%3e%3c/svg%3e");
+  border-color: var(--text-color);
 }
 .agreement-text .custom-checkbox-label {
   display: block;
