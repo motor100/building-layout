@@ -7,6 +7,13 @@ document.addEventListener("DOMContentLoaded", () => {
     topMenuItem[topMenuItemActive].classList.add('active');
   }
 
+  // Paralax main image
+  window.addEventListener('scroll', function() {
+    let parallax = document.getElementById('parallax');
+    let offset = window.pageYOffset;
+    parallax.style.backgroundPositionY = (-50 + offset * 0.4) + 'px';
+  });
+
   // Our advantages slider
   const ourAdvantagesSlider = document.querySelector('.our-advantages-slider');
 

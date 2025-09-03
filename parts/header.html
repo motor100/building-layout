@@ -25,36 +25,76 @@
   <header class="header">
     <div class="container">
       <div class="flex-container">
-        <div class="logo">
-          <a href="/" class="logo-link">
-            <img src="/images/logo.svg" alt="">
-          </a>
+        <div class="logo-wrapper">
+          <div class="logo">
+            <a href="/" class="logo-link">
+              <img src="/images/logo.svg" alt="">
+            </a>
+          </div>
         </div>
         <div class="top-menu">
           <div class="menu-item">
             <a href="/projects.html" class="menu-item__link">Проекты</a>
           </div>
-          <!-- 
-          <div class="menu-item">
-            <a href="/flats.html" class="menu-item__link">Квартиры</a>
+          <div class="menu-item menu-item-has-children real-estate">
+            <span class="menu-item__link">Недвижимость</span>
+            <ul class="sub-menu">
+              <li class="sub-menu-item">
+                <a href="#" class="sub-menu-item__link">Квартиры</a>
+              </li>
+              <!-- 
+              <li class="sub-menu-item">
+                <a href="#" class="sub-menu-item__link">Коммерция</a>
+              </li>
+               -->
+            </ul>
           </div>
-           -->
           <div class="menu-item">
             <a href="/promo.html" class="menu-item__link">Акции</a>
           </div>
           <div class="menu-item">
             <a href="/mortgage.html" class="menu-item__link">Ипотека</a>
           </div>
-          <div class="menu-item">
-            <a href="/about-company.html" class="menu-item__link">О компании</a>
+          <div class="menu-item menu-item-has-children about-company">
+            <span class="menu-item__link">О компании</span>
+            <ul class="sub-menu">
+              <li class="sub-menu-item">
+                <a href="/about-company.html" class="sub-menu-item__link">О нас</a>
+              </li>
+              <li class="sub-menu-item">
+                <a href="#" class="sub-menu-item__link">Партнерам</a>
+              </li>
+              <li class="sub-menu-item">
+                <a href="#" class="sub-menu-item__link">Вакансии</a>
+              </li>
+              <li class="sub-menu-item">
+                <a href="/documents.html" class="sub-menu-item__link">Документы</a>
+              </li>
+              <li class="sub-menu-item">
+                <a href="/news.html" class="sub-menu-item__link">Новости</a>
+              </li>
+              <li class="sub-menu-item">
+                <a href="/requisites.html" class="sub-menu-item__link">Реквизиты</a>
+              </li>
+              <li class="sub-menu-item">
+                <a href="#" class="sub-menu-item__link">Отзывы</a>
+              </li>
+              <li class="sub-menu-item">
+                <a href="/contacts.html" class="sub-menu-item__link">Контакты</a>
+              </li>
+            </ul>
           </div>
-          
+          <!-- 
           <div class="menu-item">
-            <a href="/contacts.html" class="menu-item__link">Контакты</a>
+            <span class="menu-item__link">Сервисы</span>
           </div>
+           -->
         </div>
         <div class="header-contacts hidden-mobile">
           <a href="tel:+79999999999" class="header-phone">+7 999 999 99 99</a>
+          <button class="callback-me-btn quaternary-btn">
+            <span class="quaternary-btn__text"> Перезвоните мне</span>
+          </button>
           <!-- <div class="menu-btn js-open-menu-btn">Меню</div> -->
         </div>
       </div>
