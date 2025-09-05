@@ -170,6 +170,7 @@ iframe {
   width: max-content;
   height: 56px;
   padding: 0 30px;
+  border: none;
   border-radius: 28px;
   background-color: var(--light-color);
   gap: 10px;
@@ -180,7 +181,7 @@ iframe {
 .secondary-btn:hover {
   color: var(--blue-color);
 }
-.secondary-btn__text {
+.secondary-btn .secondary-btn__text {
   font-family: 'InterDisplay-Medium';
   font-size: 18px;
   color: var(--text-color);
@@ -227,6 +228,7 @@ iframe {
   border: none;
   border-radius: 31px;
   background-color: var(--text-color);
+  gap: 10px;
   align-items: center;
   justify-content: center;
   transition: background-color .3s;
@@ -238,6 +240,13 @@ iframe {
   font-family: 'InterDisplay-Regular';
   font-size: 18px;
   color: var(--background-color);
+}
+.quaternary-btn .quaternary-btn__image {
+  width: 20px;
+  transition: transform .3s;
+}
+.quaternary-btn:hover .quaternary-btn__image {
+  transform: rotate(-45deg);
 }
 .position-relative {
   position: relative;
@@ -640,7 +649,7 @@ iframe {
   margin: 0 0 10px 0;
   padding: 2px 10px;
   border-radius: 13px;
-  background-color: #888989;
+  background-color: var(--blue-color);
   font-size: 13px;
   color: var(--light-color);
 }
@@ -816,24 +825,6 @@ iframe {
   margin: 0 0 10px 0;
 }
 */
-.callback-section .title-wrapper {
-  margin: 0 0 10px 0;
-  padding: 30px;
-  border-radius: 15px;
-  background-color: var(--text-color);
-}
-.callback-section .callback-section-title {
-  margin: 0 0 20px 0;
-  font-family: 'InterDisplay-SemiBold';  
-  font-size: 42px;
-  color: var(--background-color);
-  line-height: 1.1;
-}
-.callback-section .callback-section-text {
-  font-size: 18px;
-  color: var(--background-color);
-  line-height: 1.2;
-}
 .callback-section .form .label {
   color: var(--text-color);
 }
@@ -893,6 +884,32 @@ iframe {
   gap: 40px;
 }
 
+/* Темная рамка */
+.dark-frame {
+  margin: 0 0 10px 0;
+}
+.dark-frame .frame {
+  padding: 30px;
+  border-radius: 15px;
+  background-color: var(--text-color);
+}
+.dark-frame .dark-frame__title {
+  margin: 0 0 20px 0;
+  font-family: 'InterDisplay-SemiBold';  
+  font-size: 42px;
+  color: var(--background-color);
+  line-height: 1.1;
+}
+.dark-frame .dark-frame__text {
+  font-size: 20px;
+  color: var(--background-color);
+  line-height: 1.2;
+}
+.dark-frame .dark-frame-btn {
+  margin-top: 20px;
+  border: none;
+}
+
 /* Секция О компании */
 .about-company-section {
   padding: 60px 0;
@@ -906,8 +923,29 @@ iframe {
   width: 55%;
 }
 .about-company-section .about-company-text {
-  margin: 0 0 40px 0;
   font-size: 18px;
+}
+.about-company-section .about-company-accent {
+  display: flex;
+  margin: 0 0 40px 0;
+  padding: 25px 30px;
+  border-radius: 30px;
+  background-color: var(--blue-color);
+  align-items: center;
+  justify-content: space-between;
+}
+.about-company-section .about-company-accent .about-company-accent__text {
+  font-size: 20px;
+  line-height: 1.1;
+  color: var(--white-color);
+}
+.about-company-section .about-company-accent .about-company-accent__image {
+  width: 118px;
+  height: 36px;
+  flex-shrink: 0;
+}
+.about-company-section .about-company-accent .about-company-accent__image img {
+  width: 100%;
 }
 .about-company-section .about-company-items {
   margin-bottom: 36px;
@@ -951,6 +989,7 @@ iframe {
 */
 .about-company-section .about-company-image {
   width: 45%;
+  height: 435px;
   border-radius: 20px;
   overflow: hidden;
 }
@@ -1235,7 +1274,7 @@ iframe {
   justify-content: space-between;
 }
 .footer .logo-wrapper {
-  width: 340px;
+  width: 440px;
 }
 .footer .logo-wrapper .logo {
   width: 200px;
@@ -1244,13 +1283,22 @@ iframe {
   width: 100%;
 }
 .footer .logo-wrapper .footer-decription {
+  margin: 0 0 40px 0;
   font-size: 16px;
   color: var(--third-ligtgrey-color);
   line-height: 1.2;
 }
+.footer .footer-menu {
+  display: flex;
+  gap: 40px 80px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+/*
 .footer .required-links {
   margin: 0 0 80px 0;
 }
+*/
 .footer .required-links .required-link {
   display: block;
   width: max-content;
@@ -1277,8 +1325,9 @@ iframe {
 }
 .footer .bottom-menu .menu-title {
   margin: 0 0 10px 0;
+  font-family: 'InterDisplay-Medium';  
   font-size: 23px;
-  color: var(--text-color);
+  color: var(--blue-color);
   line-height: 1.1;
 }
 .footer .bottom-menu .menu-item {
@@ -1323,22 +1372,28 @@ iframe {
   stroke: var(--blue-color);
 }
 .footer .contacts {
+  width: 285px;
   text-align: right;
 }
 .footer .contacts .footer-phone {
+  display: block;
   margin: 0 0 10px 0;
   font-size: 32px;
   color: var(--blue-color);
+  transition: color .3s;
+}
+.footer .contacts .footer-phone:hover {
+  color: var(--text-color);
 }
 .footer .contacts .footer-email {
   display: flex;
-  width: 220px;
+  width: 250px;
   height: 44px;
+  margin-left: auto;
   border-width: 1px;
   border-style: solid;
   border-color: var(--second-lightgrey-color);
   border-radius: 22px;
-  flex-shrink: 0;
   gap: 15px;
   align-items: center;
   justify-content: center;
@@ -1405,31 +1460,8 @@ iframe {
   gap: 60px;
   align-items: center;
 }
-/*
-.project-detail-page .title-section .project-title-buttons {
-  display: flex;
-}
-*/
 .project-detail-page .title-section .view-more-btn {
-  display: flex;
-  width: max-content;
   height: 60px;
-  padding: 0 28px;
-  border: none;
-  border-radius: 30px;
-  background-color: var(--text-color);
-  gap: 10px;
-  align-items: center;
-  justify-content: center;
-}
-.project-detail-page .title-section .view-more-btn__text {
-  font-size: 18px;
-  color: var(--background-color);
-  line-height: 1.2;
-}
-.project-detail-page .title-section .view-more-btn__image {
-  width: 20px;
-  transition: transform .3s;
 }
 .project-detail-page .title-section .view-more-btn:hover .view-more-btn__image {
   transform: rotate(-45deg);
@@ -1510,23 +1542,10 @@ iframe {
   position: absolute;
   left: 60px;
   bottom: 60px;
-  display: flex;
   width: 400px;
   height: 60px;
   border: 1px solid var(--background-color);
-  border-radius: 30px;
-  background-color: var(--text-color);
-  gap: 10px;
-  align-items: center;
-  justify-content: center;
-  transition: background-color .3s;
-  cursor: pointer;
   z-index: 2;
-}
-.project-detail-page .slider-section .download-presentation-btn__text {
-  font-size: 18px;
-  color: var(--background-color);
-  line-height: 1.2;
 }
 .project-detail-page .slider-section .download-presentation-btn__image {
   width: 20px;
@@ -1540,6 +1559,9 @@ iframe {
   right: 60px;
   bottom: 60px;
   z-index: 2;
+}
+.project-detail-page .dark-frame-section .frame {
+  border-radius: 30px;
 }
 .project-detail-page .flats-section .flats-sold-out {
   display: flex;
@@ -1561,15 +1583,30 @@ iframe {
 .project-detail-page .new-location-section {
   padding: 0 0 40px 0;
 }
-.project-detail-page .new-location-section .section-title {
-  margin-bottom: 16px;
+.project-detail-page .new-location-section-title {
+  margin: 0 0 20px 0;
+  font-family: 'InterDisplay-SemiBold';
+  font-size: 42px;
+  line-height: 1.2;
+  letter-spacing: -1.5px;
 }
+.project-detail-page .new-location-section .paragraph {
+  width: 70%;
+  margin-bottom: 30px;
+  font-size: 32px;
+  line-height: 1.2;
+}
+.project-detail-page .new-location-section .paragraph-right {
+  margin-left: auto;
+  margin-bottom: 60px;
+}
+/*
 .project-detail-page .new-location-section .new-location-address {
   margin: 0 0 40px 0;
   font-size: 20px;
   line-height: 1.2;
 }
-
+*/
 .project-detail-page .new-location-section .location-content {
   position: relative;
   height: 390px;
@@ -1855,7 +1892,7 @@ iframe {
 }
 .project-detail-page .booking-online-section {
   padding: 40px;
-  background-color: var(--lightgrey-color);
+  /*background-color: var(--lightgrey-color);*/
 }
 .project-detail-page .booking-online-section .grid-container {
   display: grid;
@@ -1863,27 +1900,27 @@ iframe {
   gap: 24px;
   grid-template-columns: repeat(4, 1fr);
 }
-/*
 .project-detail-page .booking-online-section .booking-online {
   display: flex;
   padding: 37px 40px;
-  background-color: var(--blue-color);
+  background-color: var(--text-color);
   border-radius: 20px;
   align-items: center;
   justify-content: space-between;
 }
 .project-detail-page .booking-online-section .booking-online-text {
+  font-family: 'InterDisplay-SemiBold';
   font-size: 42px;
   color: var(--background-color);
   line-height: 1.1;
 }
-*/
 .project-detail-page .booking-online-section .flats-item img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
+/*
 .project-detail-page .general-plan-section {
   padding: 40px 0 0 0;
 }
@@ -1897,6 +1934,7 @@ iframe {
   height: 100%;
   object-fit: cover;
 }
+*/
 .project-detail-page .working-progress-section {
   padding: 40px 0 0 0;
 }
@@ -2031,10 +2069,9 @@ iframe {
   border-style: solid;
   border-color: var(--text-color);
   border-radius: 31px;
-  /*background-color: var(--blue-color);*/
   background-color: var(--lightgrey-color);
   font-size: 18px;
-  color: var(--background-color);
+  color: var(--text-color);
   line-height: 1.2;
 }
 /*
@@ -2230,26 +2267,9 @@ iframe {
 }
 
 /* Страница Проекты */
-.projects-page .flex-container {
+.projects-page .title-section .flex-container {
   display: flex;
   justify-content: space-between;
-}
-.projects-page .view-on-map-btn {
-  display: flex;
-  width: 242px;
-  height: 60px;
-  border-radius: 30px;
-  background-color: var(--blue-color);
-  gap: 8px;
-  align-items: center;
-  justify-content: center;
-}
-.projects-page .view-on-map-btn__text {
-  font-size: 18px;
-  color: var(--background-color);
-}
-.projects-page .view-on-map-btn__image {
-  width: 20px;
 }
 
 /* Карта проектов */
@@ -3260,7 +3280,7 @@ iframe {
   }
 
   /* Форма заявки на главной */
-  .callback-section .callback-section-title {
+  .dark-frame .dark-frame__title {
     font-size: 40px;
   }
 
@@ -3466,7 +3486,7 @@ iframe {
     padding: 30px;
     border-radius: 25px;
   }
-  .callback-section .callback-section-title {
+  .dark-frame .dark-frame__title {
     font-size: 36px;
   }
 
@@ -3842,10 +3862,10 @@ iframe {
     padding: 25px;
     border-radius: 20px;
   }
-  .callback-section .title-wrapper {
+  .dark-frame {
     padding: 25px;
   }
-  .callback-section .callback-section-title {
+  .dark-frame .dark-frame__title {
     margin-bottom: 15px;
     font-size: 32px;
   }
@@ -4271,7 +4291,7 @@ iframe {
     margin-bottom: 12px;
     font-size: 32px;
   }
-  .callback-section .callback-section-title {
+  .dark-frame .dark-frame__title {
     font-size: 28px;
   }
 
@@ -4398,14 +4418,14 @@ iframe {
   .callback-section .white-frame {
     padding: 20px;
   }
-  .callback-section .title-wrapper {
+  .dark-frame {
     padding: 20px;
   }
-  .callback-section .callback-section-title {
+  .dark-frame .dark-frame__title {
     font-size: 24px;
   }
-  .callback-section .callback-section-text {
-    font-size: 17px;
+  .dark-frame .dark-frame__text {
+    font-size: 18px;
   }
 
   /* form */
