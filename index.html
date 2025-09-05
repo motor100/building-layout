@@ -19,13 +19,28 @@
     </div>
   </div>
 
+  <div class="projects-map-section section">
+    <div class="container">
+      <div class="projects-map-section-title section-title fullscreen__title _anim-items _anim-no-hide">Карта проектов</div>
+      <div class="projects-map">
+        <div class="projects-map__image">
+          <img src="/images/temp-office-map.jpg" alt="">
+        </div>
+        <a href="/projects-map.html" class="projects-map-btn primary-btn">
+          <span class="primary-btn__text">Смотреть карту проектов</span>
+          <img src="/images/arrow-right-white.png" class="primary-btn__image" alt="">
+        </a>
+      </div>
+    </div>
+  </div>
+
   <div class="projects-section section">
     <div class="container">
       <div class="title-wrapper">
       <div class="projects-section-title section-title fullscreen__title _anim-items _anim-no-hide">Наши проекты</div>
       <a href="/projects-map.html" class="view-projects-map-btn tertiary-btn">
         <span class="view-projects-map-btn __text tertiary-btn__text">Смотреть карту проектов</span>
-        <img src="/images/arrow-right-blue.svg" class="view-projects-map-btn__image tertiary-btn__image" alt="">
+        <img src="/images/arrow-right-blue.svg" class="tertiary-btn__image" alt="">
       </a>
       </div>
 
@@ -114,6 +129,46 @@
     </div>
   </div>
 
+  <div class="our-advantages-section section">
+    <div class="container">
+      <div class="title-wrapper">
+        <div class="our-advantages-section-title section-title">Наши преимущества</div>
+        <div class="swiper-nav">
+          <div class="swiper-prev">
+            <span></span>
+          </div>
+          <div class="swiper-next">
+            <span></span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="our-advantages-slider-wrapper">
+      <div class="our-advantages-slider swiper">
+        <div class="swiper-wrapper">
+
+          <div class="our-advantages-item swiper-slide">
+            <div class="our-advantages-item__title"><span class="white-color">Высокие темпы</span> строительства</div>
+          </div>
+          <div class="our-advantages-item swiper-slide">
+            <div class="our-advantages-item__title"><span class="white-color">Своевременная</span> сдача домов</div>
+          </div>
+          <div class="our-advantages-item swiper-slide">
+            <div class="our-advantages-item__title"><span class="white-color">Разнообразие</span> проектов</div>
+          </div>
+          <div class="our-advantages-item swiper-slide">
+            <div class="our-advantages-item__title"><span class="white-color">Участие в развитии</span> территории</div>
+          </div>
+          <div class="our-advantages-item swiper-slide">
+            <div class="our-advantages-item__title"><span class="white-color">Детальная</span> проработка планировок</div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 
   <div class="advantages-section section">
     <div class="container">
       <div class="advantages-section-title section-title fullscreen__title _anim-items _anim-no-hide">Наши преимущества</div>
@@ -141,13 +196,95 @@
       </div>
     </div>
   </div>
+   -->
 
   <div class="callback-section">
     <div class="container">
       <div class="title-wrapper">
-        <div class="callback-section-title">Свяжитесь с нами и наш менеджер подберет ипотеку под ваш запрос</div>
+        <div class="callback-section-title">Свяжитесь с нами и наш менеджер подберет квартиру под ваш запрос</div>
         <div class="callback-section-text">оставьте заявку и наш менеджер с вами свяжется в течение 10 минут</div>
       </div>
+
+      <div id="big-booking-online-form-wrapper" class="booking-online-form-wrapper big-booking-online-form-wrapper">
+        <div class="form-wrapper">
+          <div class="form-title">Запись на встречу</div>
+          <div class="form-text">Онлайн или в офисе продаж. Персональный менеджер поможет вам подобрать выгодное предложение.</div>
+          <form id="big-booking-online-form" class="form">
+            <div class="flex-container">
+              <div class="form-group">
+                <label for="big-form-project" class="label">Проект*</label>
+                <select name="project" id="big-form-project">
+                  <option value="" data-placeholder="true">Выберите проект</option>
+                  <option value="Цинковая">Цинковая</option>
+                  <option value="Эльтонская">Эльтонская</option>
+                  <option value="Гранат">Гранат</option>
+                </select>
+                <!-- <input type="text" name="project" id="big-form-project" class="input-field"> -->
+              </div>
+              <div class="form-group">
+                <label for="big-form-type-meeting" class="label">Тип встречи*</label>
+                <select name="type-meeting" id="big-form-type-meeting">
+                  <option value="" data-placeholder="true">Выберите тип</option>
+                  <option value="Оформление">Оформление</option>
+                  <option value="Консультация">Консультация</option>
+                </select>
+                <!-- <input type="text" name="type-meeting" id="big-form-type-meeting" class="input-field"> -->
+              </div>
+              <div class="form-group">
+                <label for="big-form-type-room" class="label">Тип недвижимости*</label>
+                <select name="type-room" id="big-form-type-room">
+                  <option value="" data-placeholder="true">Выберите тип</option>
+                  <option value="Квартира">Квартира</option>
+                  <option value="Коммерция">Коммерция</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="big-form-type-payment" class="label">Вид оплаты*</label>
+                <select name="type-payment" id="big-form-type-payment">
+                  <option value="" data-placeholder="true">Выберите тип</option>
+                  <option value="Квартира">Собственные средства</option>
+                  <option value="Коммерция">Кредит</option>
+                </select>
+              </div>
+            </div>
+            <div class="flex-container">
+              <div class="form-group">
+                <label for="big-form-datetime" class="label">Дата и время*</label>
+                <input type="text" name="datetime" id="big-form-datetime" class="input-field datetimepicker" placeholder="ДД.ММ.ГГГГ">
+              </div>
+              <div class="form-group">
+                <label for="big-form-name" class="label">Имя*</label>
+                <input type="text" name="name" id="big-form-name" class="input-field" placeholder="Введите имя">
+              </div>
+              <div class="form-group">
+                <label for="big-form-email" class="label">Почта*</label>
+                <input type="email" name="email" id="big-form-email" class="input-field" placeholder="pochta@mail.ru">
+              </div>
+              <div class="form-group">
+                <label for="big-form-phone" class="label">Телефон*</label>
+                <input type="text" name="phone" id="big-form-phone" class="input-field js-input-phone-mask" placeholder="+7 (999) 999 99 99">
+              </div>
+            </div>
+            <button id="callback-submit-btn3" class="submit-btn primary-btn">
+              <span class="primary-btn__text">Записаться на встречу</span>
+            </button>
+            <div class="checkboxes-flex-container">
+              <div class="agreement-text">
+                <input type="checkbox" name="checkbox-read" class="custom-checkbox js-required-checkbox" id="checkbox-read-callback4" required onchange="document.getElementById('callback-submit-btn4').disabled = !this.checked;">
+                <label for="checkbox-read-callback4" class="custom-checkbox-label"></label>
+                <span class="checkbox-text">Ознакомлен (-на) с <a href="/privacy-policy.html" class="privacy-policy-link" target="_blank">политикой конфиденциальности</a></span>
+              </div>
+              <div class="agreement-text">
+                <input type="checkbox" name="checkbox-agree" class="custom-checkbox js-required-checkbox" id="checkbox-agree-callback3" required onchange="document.getElementById('callback-submit-btn3').disabled = !this.checked;">
+                <label for="checkbox-agree-callback3" class="custom-checkbox-label"></label>
+                <span class="checkbox-text">Я согласен (-на) на <a href="/soglasie-posetitelya-sajta-na-obrabotku-personalnyh-dannyh.html" class="agreement-link" target="_blank">обработку персональных данных</a></span>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <!-- 
       <div class="white-frame">
         <form class="form">
           <div class="flex-container">
@@ -169,18 +306,19 @@
           </div>
           <div class="checkboxes-flex-container">
             <div class="agreement-text">
-              <input type="checkbox" name="checkbox-read" class="custom-checkbox js-required-checkbox" id="checkbox-read-callback3" checked required onchange="document.getElementById('callback-submit-btn3').disabled = !this.checked;">
+              <input type="checkbox" name="checkbox-read" class="custom-checkbox js-required-checkbox" id="checkbox-read-callback3" required onchange="document.getElementById('callback-submit-btn3').disabled = !this.checked;">
               <label for="checkbox-read-callback3" class="custom-checkbox-label"></label>
               <span class="checkbox-text">Ознакомлен (-на) с <a href="/privacy-policy.html" class="privacy-policy-link" target="_blank">политикой конфиденциальности</a></span>
             </div>
             <div class="agreement-text">
-              <input type="checkbox" name="checkbox-agree" class="custom-checkbox js-required-checkbox" id="checkbox-agree-callback3" checked required onchange="document.getElementById('callback-submit-btn3').disabled = !this.checked;">
+              <input type="checkbox" name="checkbox-agree" class="custom-checkbox js-required-checkbox" id="checkbox-agree-callback3" required onchange="document.getElementById('callback-submit-btn3').disabled = !this.checked;">
               <label for="checkbox-agree-callback3" class="custom-checkbox-label"></label>
               <span class="checkbox-text">Я согласен (-на) на <a href="/soglasie-posetitelya-sajta-na-obrabotku-personalnyh-dannyh.html" class="agreement-link" target="_blank">обработку персональных данных</a></span>
             </div>
           </div>
         </form>
       </div>
+       -->
     </div>
   </div>
 
@@ -209,7 +347,7 @@
     </div>
   </div>
 
-  <div class="news-section">
+  <div class="news-section section">
     <div class="container">
       <div class="title-wrapper">
         <div class="news-section-title section-title fullscreen__title _anim-items _anim-no-hide">Что у нас нового</div>
@@ -346,45 +484,18 @@
     <div class="container">
       <a href="/news.html" class="view-all-news-btn tertiary-btn">
         <span class="view-all-news-btn__text tertiary-btn__text">Смотреть все новости</span>
-        <img src="/images/arrow-right-blue.svg" class="view-all-news-btn__image tertiary-btn__image" alt="">
+        <img src="/images/arrow-right-blue.svg" class="tertiary-btn__image" alt="">
       </a>
     </div>
   </div>
 
-  <div class="our-advantages-section section">
+  <div class="follow-section">
     <div class="container">
-      <div class="title-wrapper">
-        <div class="our-advantages-section-title section-title">Наши преимущества</div>
-        <div class="swiper-nav">
-          <div class="swiper-prev">
-            <span></span>
-          </div>
-          <div class="swiper-next">
-            <span></span>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="our-advantages-slider-wrapper">
-      <div class="our-advantages-slider swiper">
-        <div class="swiper-wrapper">
-
-          <div class="our-advantages-item swiper-slide">
-            <div class="our-advantages-item__title"><span class="white-color">Высокие темпы</span> строительства</div>
-          </div>
-          <div class="our-advantages-item swiper-slide">
-            <div class="our-advantages-item__title"><span class="white-color">Своевременная</span> сдача домов</div>
-          </div>
-          <div class="our-advantages-item swiper-slide">
-            <div class="our-advantages-item__title"><span class="white-color">Разнообразие</span> проектов</div>
-          </div>
-          <div class="our-advantages-item swiper-slide">
-            <div class="our-advantages-item__title"><span class="white-color">Участие в развитии</span> территории</div>
-          </div>
-          <div class="our-advantages-item swiper-slide">
-            <div class="our-advantages-item__title"><span class="white-color">Детальная</span> проработка планировок</div>
-          </div>
-
+      <div class="follow-section-frame">
+        <div class="follow-section-title">Следите за нашими акционными предложениями и не упустите возможность приобрести жилье по выгодным условиям!</div>
+        <div class="follow-section-btn tertiary-btn">
+          <span class="follow-section-btn__text tertiary-btn__text">Узнать подробнее</span>
+          <img src="/images/arrow-right-blue.svg" class="tertiary-btn__image" alt="">
         </div>
       </div>
     </div>

@@ -160,7 +160,7 @@ iframe {
   transition: transform .3s;
 }
 .primary-btn:hover {
-  background-color: #006EEB;
+  background-color: #4E7EAC;
 }
 .primary-btn:hover .primary-btn__image {
   transform: rotate(-45deg);
@@ -424,13 +424,6 @@ iframe {
   width: 310px;
 }
 
-
-
-
-
-
-
-
 /* main section */
 .main-section .main-image {
   position: relative;
@@ -450,8 +443,6 @@ iframe {
   left: 0;
   width: 100%;
   height: 100%;
-  /*background-image: linear-gradient(90deg, var(--blue-color) 15%, transparent 98%);*/
-  /*background-image: linear-gradient(90deg, rgba(0, 48, 103, 0.6) 0.64%, rgba(0, 48, 103, 0) 100%);*/
   background: linear-gradient(96deg, rgba(50, 52, 96, 0.8) 0.64%, rgba(50, 52, 96, 0) 100%);
   z-index: 2;
 }
@@ -559,6 +550,35 @@ iframe {
   top: 3px;
   right: -1px;
   transform: rotate(-45deg);
+}
+
+/* projects map section */
+.projects-map-section .projects-map {
+  position: relative;
+  height: 480px;
+  border-radius: 40px;
+  overflow: hidden;
+}
+.projects-map-section .projects-map__image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+.projects-map-section .projects-map__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.projects-map-section .projects-map-btn {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
 }
 
 /* projects section */
@@ -774,12 +794,17 @@ iframe {
 .our-advantages-section .our-advantages-slider .our-advantages-item__title .white-color {
   color: var(--white-color);
 }
+.our-advantages-section .swiper-nav {
+  background-color: var(--lightgrey-color);  
+}
+.our-advantages-section .swiper-nav .swiper-prev,
+.our-advantages-section .swiper-nav .swiper-next {
+  background-color: var(--lightgrey-color);
+}
 
 /* Форма заявки на главной */
 .callback-section {
   padding-top: 40px;
-  padding-bottom: var(--margin-80);
-  background-color: var(--lightgrey-color);
 }
 .callback-section .white-frame {
   padding: 30px 40px;
@@ -799,6 +824,7 @@ iframe {
 }
 .callback-section .callback-section-title {
   margin: 0 0 20px 0;
+  font-family: 'InterDisplay-SemiBold';  
   font-size: 42px;
   color: var(--background-color);
   line-height: 1.1;
@@ -1040,7 +1066,7 @@ iframe {
   background-color: var(--blue-color);
 }
 .news-section .view-all-news-btn {
-  margin-left: auto;
+  margin: 0 auto;
 }
 
 /* swiper nav */
@@ -1134,9 +1160,21 @@ iframe {
   background-color: var(--background-color);
 }
 
-/* Секция Новости на главной */
-.home-page .news-section {
-  background-color: var(--lightgrey-color);
+/* Секция следите за акциями */
+.follow-section .follow-section-frame {
+  background-color: var(--text-color);
+  padding: 60px;
+  border-radius: 40px;
+}
+.follow-section .follow-section-title {
+  margin: 0 0 24px 0;
+  font-family: 'InterDisplay-SemiBold';
+  font-size: 42px;
+  color: var(--background-color);
+  line-height: 1.1;
+}
+.follow-section .follow-section-btn {
+  border: none;
 }
 
 /* Страница Документы */
@@ -1187,7 +1225,7 @@ iframe {
 
 /* footer */
 .footer {
-  margin-top: -40px;
+  /*margin-top: -40px;*/
   padding: 80px 0 40px 0;
 }
 .footer .flex-container {
@@ -1949,40 +1987,31 @@ iframe {
 .booking-online-form-wrapper .form-wrapper {
   padding: 30px 40px;
   border-radius: 15px;
-  background-color: var(--blue-color);
+  background-color: var(--lightgrey-color);
 }
 .booking-online-form-wrapper .form-title {
-  margin: 0 0 20px 0;
+  margin: 0 0 10px 0;
+  font-family: 'InterDisplay-SemiBold';
   font-size: 42px;
-  color: var(--background-color);
   line-height: 1.2;
 }
 .booking-online-form-wrapper .form-text {
   margin: 0 0 20px 0;
   font-size: 18px;
-  color: var(--background-color);
   line-height: 1.2;
 }
 .booking-online-form-wrapper .form .label {
-  color: var(--background-color);
+  color: var(--text-color);
 }
 .booking-online-form-wrapper .form .input-field {
-  border-color: var(--background-color);
-  background-color: var(--blue-color);
-  color: var(--background-color);
+  border-color: var(--text-color);
+  background-color: var(--lightgrey-color);
+}
+.booking-online-form-wrapper .form .input-field::placeholder {
+  color: var(--text-color);
 }
 .booking-online-form-wrapper .form .input-field:focus-visible {
   outline: none;
-}
-.booking-online-form-wrapper .form .submit-btn {
-  background-color: var(--background-color);
-  color: var(--blue-color);
-}
-.booking-online-form-wrapper .form .agreement-text .checkbox-text {
-  color: var(--background-color);
-}
-.booking-online-form-wrapper .form .agreement-text a {
-  color: var(--background-color);
 }
 
 /* Большая форма Запись на встречу */
@@ -2000,14 +2029,21 @@ iframe {
   padding: 20px 30px;
   border-width: 1px;
   border-style: solid;
+  border-color: var(--text-color);
   border-radius: 31px;
-  background-color: var(--blue-color);
+  /*background-color: var(--blue-color);*/
+  background-color: var(--lightgrey-color);
   font-size: 18px;
   color: var(--background-color);
   line-height: 1.2;
 }
+/*
 .ss-main .ss-single-selected .ss-arrow span {
-  border-color: var(--background-color);
+  border-color: var(--text-color);
+}
+*/
+.ss-main .ss-single-selected .placeholder .ss-disabled {
+  color: var(--text-color);
 }
 
 /* Секция Карта офисов в карточке проекта и Контакты */

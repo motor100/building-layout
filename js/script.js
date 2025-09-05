@@ -10,8 +10,10 @@ document.addEventListener("DOMContentLoaded", () => {
   // Paralax main image
   window.addEventListener('scroll', function() {
     let parallax = document.getElementById('parallax');
-    let offset = window.pageYOffset;
-    parallax.style.backgroundPositionY = (-50 + offset * 0.4) + 'px';
+    if (parallax) {
+      let offset = window.pageYOffset;
+      parallax.style.backgroundPositionY = (-50 + offset * 0.4) + 'px';
+    }
   });
 
   // Our advantages slider
@@ -187,6 +189,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
     new SlimSelect({
       select: '#big-form-type-room',
+      showSearch: false,
+      searchFocus: false,
+    });
+
+    new SlimSelect({
+      select: '#big-form-type-payment',
       showSearch: false,
       searchFocus: false,
     });
