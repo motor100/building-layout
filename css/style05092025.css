@@ -2249,6 +2249,31 @@ iframe {
 .np-detail-page .news-section .section-title {
   color: var(--blue-color);
 }
+.np-detail-page .subscribe-section .subscribe-frame {
+  padding: 40px 30px;
+  border-radius: 40px;
+  background-color: var(--text-color);
+}
+.np-detail-page .subscribe-section {
+  color: var(--white-color);
+}
+.np-detail-page .subscribe-section .subscribe-frame__title {
+  margin: 0 0 20px 0;
+}
+.np-detail-page .subscribe-section .subscribe-frame__text {
+  margin: 0 0 20px 0;
+  font-size: 18px;
+}
+.np-detail-page .subscribe-section .agreement-text a {
+  color: var(--white-color);
+}
+.np-detail-page .subscribe-section .input-field {
+  border-color: var(--white-color);
+  background-color: var(--text-color);
+}
+.np-detail-page .subscribe-section .submit-btn {
+  border: none;
+}
 
 /* Страница Проекты */
 .projects-page .title-section .flex-container {
