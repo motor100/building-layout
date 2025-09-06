@@ -14,7 +14,7 @@
 
   <div class="contacts-section">
     <div class="container">
-      <div class="page-title">Контакты</div>
+      <div class="primary-title section-title">Контакты</div>
       
       <div class="grid-container">
         <div class="contacts-item c-item">
@@ -69,48 +69,10 @@
     </div>
   </div>
 
-  <div id="booking-online-form-wrapper" class="booking-online-form-wrapper">
-    <div class="container">
-      <div class="form-wrapper">
-        <div class="form-title">Запись на встречу</div>
-        <div class="form-text">оставьте заявку и наш менеджер с вами свяжется в течение 10 минут</div>
-        <form id="booking-online-form" class="form">
-          <div class="flex-container">
-            <div class="form-group">
-              <label for="name" class="label">Имя*</label>
-              <input type="text" id="name" class="input-field" placeholder="Введите имя">
-            </div>
-            <div class="form-group">
-              <label for="name" class="label">Почта*</label>
-              <input type="email" id="name" class="input-field" placeholder="pochta@mail.ru">
-            </div>
-            <div class="form-group">
-              <label for="name" class="label">Телефон*</label>
-              <input type="text" id="name" class="input-field js-input-phone-mask" placeholder="+7 (999) 999 99 99">
-            </div>
-            <button id="callback-submit-btn3" class="submit-btn">Отправить заявку</button>
-          </div>
-          <div class="checkboxes-flex-container">
-            <div class="agreement-text">
-              <input type="checkbox" name="checkbox-read" class="custom-checkbox js-required-checkbox" id="checkbox-read-callback3" required onchange="document.getElementById('callback-submit-btn3').disabled = !this.checked;">
-              <label for="checkbox-read-callback3" class="custom-checkbox-label"></label>
-              <span class="checkbox-text">Ознакомлен (-на) с <a href="/privacy-policy.html" class="privacy-policy-link" target="_blank">политикой конфиденциальности</a></span>
-            </div>
-            <div class="agreement-text">
-              <input type="checkbox" name="checkbox-agree" class="custom-checkbox js-required-checkbox" id="checkbox-agree-callback3" required onchange="document.getElementById('callback-submit-btn3').disabled = !this.checked;">
-              <label for="checkbox-agree-callback3" class="custom-checkbox-label"></label>
-              <span class="checkbox-text">Я согласен (-на) на <a href="/soglasie-posetitelya-sajta-na-obrabotku-personalnyh-dannyh.html" class="agreement-link" target="_blank">обработку персональных данных</a></span>
-            </div>
-          </div>
-        </form>
-      </div>
-    </div>
-  </div>
-
   <div id="big-booking-online-form-wrapper" class="booking-online-form-wrapper big-booking-online-form-wrapper">
     <div class="container">
       <div class="form-wrapper">
-        <div class="form-title">Запись на встречу</div>
+        <div class="form-title primary-title">Запись на встречу</div>
         <div class="form-text">Онлайн или в офисе продаж. Персональный менеджер поможет вам подобрать выгодное предложение.</div>
         <form id="big-booking-online-form" class="form">
           <div class="flex-container">
@@ -122,7 +84,6 @@
                 <option value="Эльтонская">Эльтонская</option>
                 <option value="Гранат">Гранат</option>
               </select>
-              <!-- <input type="text" name="project" id="big-form-project" class="input-field"> -->
             </div>
             <div class="form-group">
               <label for="big-form-type-meeting" class="label">Тип встречи*</label>
@@ -131,7 +92,6 @@
                 <option value="Оформление">Оформление</option>
                 <option value="Консультация">Консультация</option>
               </select>
-              <!-- <input type="text" name="type-meeting" id="big-form-type-meeting" class="input-field"> -->
             </div>
             <div class="form-group">
               <label for="big-form-type-room" class="label">Тип недвижимости*</label>
@@ -168,10 +128,12 @@
               <input type="text" name="phone" id="big-form-phone" class="input-field js-input-phone-mask" placeholder="+7 (999) 999 99 99">
             </div>
           </div>
-          <button id="callback-submit-btn3" class="submit-btn">Записаться на встречу</button>
+          <button id="callback-submit-btn3" class="submit-btn primary-btn">
+            <span class="primary-btn__text">Записаться на встречу</span>
+          </button>
           <div class="checkboxes-flex-container">
             <div class="agreement-text">
-              <input type="checkbox" name="checkbox-read" class="custom-checkbox js-required-checkbox" id="checkbox-read-callback3" required onchange="document.getElementById('callback-submit-btn4').disabled = !this.checked;">
+              <input type="checkbox" name="checkbox-read" class="custom-checkbox js-required-checkbox" id="checkbox-read-callback4" required onchange="document.getElementById('callback-submit-btn4').disabled = !this.checked;">
               <label for="checkbox-read-callback4" class="custom-checkbox-label"></label>
               <span class="checkbox-text">Ознакомлен (-на) с <a href="/privacy-policy.html" class="privacy-policy-link" target="_blank">политикой конфиденциальности</a></span>
             </div>

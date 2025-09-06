@@ -23,8 +23,6 @@ document.addEventListener("DOMContentLoaded", () => {
     new Swiper('.our-advantages-slider', {
       loop: true,
       slidesPerView: 'auto',
-      // slidesPerView: 5,
-      // spaceBetween: 24,
       autoplay: false,
       breakpoints: {
         // mobile 320-991
@@ -54,8 +52,6 @@ document.addEventListener("DOMContentLoaded", () => {
     new Swiper('.news-slider', {
       loop: true,
       slidesPerView: 'auto',
-      // slidesPerView: 5,
-      // spaceBetween: 24,
       autoplay: false,
       breakpoints: {
         // mobile 320-991
@@ -132,44 +128,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   }
 
-  /*
-  // Events Swiper slider
-  const eventsSlider = document.querySelector('.events-slider');
-
-  if (eventsSlider) {
-    const slider = new Swiper('.events-slider', {
-      loop: true,
-      slidesPerView: 'auto',
-      spaceBetween: 15,
-      autoplay: false,
-    });
-  }
-  */
-
-  // Вкладки на странице Карточка проекта
-  /*
-  const projectsDetailPage = document.querySelector('.projects-detail-page');
-
-  if (projectsDetailPage) {
-
-    const tabs = document.querySelectorAll('.tab');
-    const tabsContent = document.querySelectorAll('.tab-content');
-
-    for (let i = 0; i < tabs.length; i++) {
-      tabs[i].onclick = function() {
-
-        for (let j = 0; j < tabs.length; j++) {
-          tabs[j].classList.remove('active');
-          tabsContent[j].classList.remove('active');
-        }
-
-        tabs[i].classList.add('active');
-        tabsContent[i].classList.add('active');
-      }
-    }
-  }
-  */
-  
   // Slim Select в большой форме
   const bigBookingOnlineForm = document.getElementById('big-booking-online-form');
 
@@ -202,17 +160,14 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // Date and time picker
-  let datetimepickers = document.querySelector('.datetimepicker');
-  // let startDate = new Date('2023-07-20');
+  const datetimepickers = document.querySelector('.datetimepicker');
 
-  // datetimepickers.forEach((item) => {
-    new AirDatepicker(datetimepickers, {
-      timepicker: true,
-      minutesStep: 30,
-      minDate: new Date(),
-      autoClose: true
-    });
-  // });
+  new AirDatepicker(datetimepickers, {
+    timepicker: true,
+    minutesStep: 30,
+    minDate: new Date(),
+    autoClose: true
+  });
 
   // Аккордеон на странице Ипотека
   const accordeon = document.querySelector('.accordeon');
@@ -283,27 +238,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  /*
-  // Filter menu
-  const filterMenuBtn = document.querySelector('#filter-menu-btn');
-  const filterMenu = document.querySelector('.filter-menu');
-  const filterMenuClose = document.querySelector('.filter-menu-close');
-
-  function openFilterMenu() {
-    body.classList.add('overflow-hidden');
-    filterMenu.classList.add('active');
-  }
-
-  function closeFilterMenu() {
-    body.classList.remove('overflow-hidden');
-    filterMenu.classList.remove('active');
-  }
-
-  if (filterMenuBtn) {
-    filterMenuBtn.onclick = openFilterMenu;
-    filterMenuClose.onclick = closeFilterMenu;
-  }
-  */
 
   // Окна
   const modalWindows = document.querySelectorAll('.modal-window');
@@ -331,10 +265,6 @@ document.addEventListener("DOMContentLoaded", () => {
     videoBtn.onclick = function () {
       modalWindowOpen(videoModal);
     }
-    /*
-    .onclick = function
-    paused
-    */
   }
 
   if (writeUsBtn) {
@@ -403,14 +333,6 @@ document.addEventListener("DOMContentLoaded", () => {
       const mask = IMask(item, maskOptionsPhone);
     });
 
-    /*
-    // Маска номера телефона на странице оформления заказа checkout billing billing_phone
-    const billingPhone = document.getElementById('billing_phone');
-
-    if (billingPhone) {
-      const maskBillingPhone = IMask(billingPhone, maskOptionsPhone);
-    }
-    */
   }
 
   inputPhoneMask();
@@ -449,50 +371,5 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   checkCookies();
-
-  /*
-  // Показ карты Офис/Склад страница Контакты
-  const contactsPage = document.querySelector('.contacts-page');
-
-  if (contactsPage) {
-
-    const mapBtns = document.querySelectorAll('.map-btn');
-    const mapItems = document.querySelectorAll('.map-item');
-
-    for (let i = 0; i < mapBtns.length; i++) {
-      mapBtns[i].onclick = function() {
-        console.log(mapBtns[i]);
-        for (let j = 0; j < mapItems.length; j++) {
-          mapItems[j].classList.add('hidden');
-        }
-
-        mapItems[i].classList.remove('hidden');
-      }
-    }
-
-  }
-  */
-
-  /*
-  // Поиск товаров
-  const searchInput = document.querySelector('.search-input');
-  const searchClose = document.querySelector('.search-close');
-
-  if (searchInput) {
-    searchInput.oninput = function() {
-      if (searchInput.value.length > 1 && searchInput.value.length <= 200) {
-        searchClose.classList.add('active');
-      } else {
-        searchClose.classList.remove('active');
-      }
-    }
-
-    function searchResetForm() {
-      searchInput.value = '';
-      searchClose.classList.remove('active');
-    }
-
-    searchClose.onclick = searchResetForm;
-  }
-  */
+  
 });

@@ -132,8 +132,11 @@ iframe {
 .page-title,
 .section-title {
   margin: 0 0 40px 0;
-  font-size: 42px;
   color: var(--text-color);
+}
+.primary-title {
+  font-family: 'InterDisplay-SemiBold';
+  font-size: 42px;
   line-height: 1.1;
 }
 .primary-btn {
@@ -381,7 +384,7 @@ iframe {
 .top-menu .sub-menu {
   position: absolute;
   left: 0;
-  top: 42px;
+  top: 41px;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -396,8 +399,8 @@ iframe {
   list-style: none;
   z-index: 10;
   box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.06);
-  transition: opacity 0.3s, transform 0.3s;
   transform: translate(0, 20%);
+  transition: opacity 0.3s, transform 0.2s;
 }
 .top-menu .menu-item-has-children:hover > .sub-menu {
   visibility: visible;
@@ -757,10 +760,7 @@ iframe {
 }
 .advantages-section .advantages-item__title {
   margin: 0 0 24px 0;
-  font-family: 'InterDisplay-SemiBold';
-  font-size: 42px;
   color: var(--second-lightgrey-color);
-  line-height: 1.1;
 }
 .advantages-section .advantages-item__accent {
   margin: 0 0 5px 0;
@@ -895,10 +895,7 @@ iframe {
 }
 .dark-frame .dark-frame__title {
   margin: 0 0 20px 0;
-  font-family: 'InterDisplay-SemiBold';  
-  font-size: 42px;
   color: var(--background-color);
-  line-height: 1.1;
 }
 .dark-frame .dark-frame__text {
   font-size: 20px;
@@ -1207,10 +1204,7 @@ iframe {
 }
 .follow-section .follow-section-title {
   margin: 0 0 24px 0;
-  font-family: 'InterDisplay-SemiBold';
-  font-size: 42px;
   color: var(--background-color);
-  line-height: 1.1;
 }
 .follow-section .follow-section-btn {
   border: none;
@@ -1574,9 +1568,7 @@ iframe {
   justify-content: center;
 }
 .project-detail-page .flats-section .flats-sold-out-title {
-  font-size: 42px;
   color: var(--blue-color);
-  line-height: 1.2;
 }
 
 /* Карточка проекта выполненная */
@@ -1585,9 +1577,6 @@ iframe {
 }
 .project-detail-page .new-location-section-title {
   margin: 0 0 20px 0;
-  font-family: 'InterDisplay-SemiBold';
-  font-size: 42px;
-  line-height: 1.2;
   letter-spacing: -1.5px;
 }
 .project-detail-page .new-location-section .paragraph {
@@ -1641,9 +1630,7 @@ iframe {
 }
 .project-detail-page .new-location-section .decription-title__number {
   margin-right: 24px;
-  font-size: 42px;
   color: var(--blue-color);
-  line-height: 1.1;
 }
 .project-detail-page .new-location-section .decription-title__text {
   font-size: 32px;
@@ -1909,10 +1896,7 @@ iframe {
   justify-content: space-between;
 }
 .project-detail-page .booking-online-section .booking-online-text {
-  font-family: 'InterDisplay-SemiBold';
-  font-size: 42px;
   color: var(--background-color);
-  line-height: 1.1;
 }
 .project-detail-page .booking-online-section .flats-item img {
   width: 100%;
@@ -1997,10 +1981,11 @@ iframe {
 .project-detail-page .working-progress-section .working-progress-gallery {
   display: none;
 }
-*/
+
 .project-detail-page .booking-online-form-wrapper {
   background-color: var(--lightgrey-color);
 }
+*/
 .project-detail-page .blur-arrow-right {
   position: absolute;
   right: 30px;
@@ -2029,9 +2014,6 @@ iframe {
 }
 .booking-online-form-wrapper .form-title {
   margin: 0 0 10px 0;
-  font-family: 'InterDisplay-SemiBold';
-  font-size: 42px;
-  line-height: 1.2;
 }
 .booking-online-form-wrapper .form-text {
   margin: 0 0 20px 0;
@@ -2226,9 +2208,9 @@ iframe {
   margin: 0 0 40px 0;
   padding: 3px 12px;
   border-radius: 13px;
-  background-color: var(--lightgrey-color);
+  background-color: var(--blue-color);
   font-size: 14px;
-  color: var(--second-lightgrey-color);
+  color: var(--white-color);
 }
 .np-detail-page .np-detail__excerpt {
   margin: 0 0 40px 0;
@@ -2244,6 +2226,7 @@ iframe {
 .np-detail-page .np-detail__buttons {
   display: flex;
 }
+/*
 .np-detail-page .np-detail__btn {
   display: flex;
   height: 60px;
@@ -2262,8 +2245,9 @@ iframe {
   background-color: var(--blue-color);
   color: var(--background-color);
 }
-.np-detail-page  .news-section {
-  background-color: var(--lightgrey-color);
+*/
+.np-detail-page .news-section .section-title {
+  color: var(--blue-color);
 }
 
 /* Страница Проекты */
@@ -2404,7 +2388,6 @@ iframe {
 }
 .about-company-page .team-section {
   padding: 40px 0;
-  background-color: var(--lightgrey-color);
 }
 .about-company-page .team-section .flex-container {
   display: flex;
@@ -2517,10 +2500,11 @@ iframe {
 }
 .mortgage-page .submit-application-section .submit-application-section-title {
   margin: 0 0 10px 0;
+  color: var(--blue-color);
 }
 .mortgage-page .submit-application-section .submit-application-section-text {
   margin: 0 0 40px 0;
-  font-size: 18px;
+  font-size: 22px;
 }
 .mortgage-page .submit-application-section .submit-application-btn {
   margin: 0 0 40px 0;
@@ -2555,6 +2539,27 @@ iframe {
 .mortgage-page .submit-application-section .submit-application-item-blue .submit-application-item__text {
   color: var(--background-color);
 }
+
+.mortgage-page .list-section {
+  padding: 40px 0 0 0;
+}
+.mortgage-page .list-section .list-section__title {
+  margin-bottom: 20px;
+  font-size: 32px;
+  line-height: 1.2;
+}
+.mortgage-page .list-section .list-section-frame {
+  margin: 0 0 20px 0;
+  padding: 30px;
+  border-radius: 30px;
+  background-color: var(--lightgrey-color);  
+}
+.mortgage-page .list-section .list-item {
+  margin: 0 0 5px 0;
+}
+
+
+
 .mortgage-page .accordeon-section {
   padding: 40px 0 0 0;
 }
@@ -2989,6 +2994,7 @@ iframe {
 }
 
 /* burger menu */
+/*
 .burger-menu-wrapper {
   position: fixed;
   top: 24px;
@@ -3045,6 +3051,7 @@ iframe {
 .burger-menu-wrapper.menu-is-open .burger-menu span {
   display: none;
 }
+*/
 
 /* mobile menu */
 .mobile-menu {
