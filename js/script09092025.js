@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
   if (ourAdvantagesSlider) {
     new Swiper('.our-advantages-slider', {
       loop: true,
-      slidesPerView: 'auto',
+      slidesPerView: 4,
       autoplay: false,
       breakpoints: {
         // mobile 320-991
@@ -51,7 +51,7 @@ document.addEventListener("DOMContentLoaded", () => {
   if (newsSlider) {
     new Swiper('.news-slider', {
       loop: true,
-      slidesPerView: 'auto',
+      slidesPerView: 4,
       autoplay: false,
       breakpoints: {
         // mobile 320-991

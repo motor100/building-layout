@@ -36,6 +36,7 @@
 
 :root {
   --text-color: #1D1E33;
+  --dark-color: #323460;
   --blue-color: #6C99C3;
   --lightgrey-color: #F4F6FB;
   --background-color: #FAFAFA;
@@ -51,7 +52,6 @@ body {
   max-width: 1920px;
   min-width: 320px;
   margin: 0 auto;
-  background-color: var(--background-color);
   font-family: 'InterDisplay-Regular', sans-serif;
   font-size: 16px;
   color: var(--text-color);
@@ -230,8 +230,9 @@ iframe {
   padding: 0 30px;
   border: none;
   border-radius: 31px;
-  background-color: var(--text-color);
+  background-color: var(--blue-color);
   gap: 10px;
+  flex-shrink: 0;
   align-items: center;
   justify-content: center;
   transition: background-color .3s;
@@ -294,8 +295,9 @@ iframe {
   flex-grow: 1;
 }
 .header .logo {
-  width: 200px;
-  height: 62px;
+  width: 220px;
+  /*height: 62px;*/
+  height: auto;
   flex-shrink: 0;
 }
 .header .logo .logo-link {
@@ -330,7 +332,7 @@ iframe {
 .header .header-contacts .header-phone:hover {
   border-color: var(--text-color);
 }
-.callback-me-btn {
+.header .header-contacts .callback-me-btn {
   height: 42px;
 }
 /*
@@ -366,7 +368,7 @@ iframe {
 }
 .top-menu .menu-item__link {
   font-size: 18px;
-  color: var(--second-lightgrey-color);
+  color: var(--text-color);
   cursor: pointer;
   transition: color .3s;
 }
@@ -421,7 +423,7 @@ iframe {
 */
 .top-menu .sub-menu-item__link {
   font-size: 18px;
-  line-height: 30px;
+  line-height: 1.6;
   color: var(--text-color);
   transition: color .3s;
 }
@@ -748,6 +750,7 @@ iframe {
 }
 
 /* Секция Преимущества */
+/*
 .advantages-section .grid-container {
   display: grid;
   gap: 24px;
@@ -773,6 +776,7 @@ iframe {
   font-size: 18px;
   line-height: 1.2;
 }
+*/
 
 /* Новая секция Наши преимущества */
 .our-advantages-section .title-wrapper {
@@ -783,9 +787,6 @@ iframe {
 }
 .our-advantages-section .our-advantages-section-title {
   margin-bottom: 0;
-}
-.our-advantages-section .our-advantages-slider-wrapper {
-  margin-left: calc(50% - 1524px / 2);
 }
 .our-advantages-section .our-advantages-slider .our-advantages-item {
   width: 21%;
@@ -803,18 +804,13 @@ iframe {
 .our-advantages-section .our-advantages-slider .our-advantages-item__title .white-color {
   color: var(--white-color);
 }
-.our-advantages-section .swiper-nav {
-  background-color: var(--lightgrey-color);  
-}
-.our-advantages-section .swiper-nav .swiper-prev,
-.our-advantages-section .swiper-nav .swiper-next {
-  background-color: var(--lightgrey-color);
-}
 
 /* Форма заявки на главной */
+/*
 .callback-section {
   padding-top: 40px;
 }
+*/
 .callback-section .white-frame {
   padding: 30px 40px;
   border-radius: 30px;
@@ -1006,18 +1002,11 @@ iframe {
   align-items: center;
   justify-content: space-between;
 }
-.news-section .news-slider-wrapper {
-  margin-left: calc(50% - 1524px / 2);
-}
 .news-section .news-slider {
   margin: 0 0 40px 0;
 }
 .news-section .news-section-title {
   margin-bottom: 0;
-}
-.news-section .news-slider .news-item {
-  width: 21%;
-  padding-bottom: 1px;
 }
 .news-section .news-item {
   position: relative;
@@ -1048,6 +1037,7 @@ iframe {
 }
 .news-section .flex-container {
   display: flex;
+  padding: 0 1px 1px 0;
   align-items: center;
   justify-content: space-between;
 }
@@ -1111,14 +1101,14 @@ iframe {
   width: 104px;
   height: 52px;
   border-radius: 26px;
-  background-color: var(--background-color);
+  background-color: var(--lightgrey-color);
 }
 .swiper-nav .swiper-prev,
 .swiper-nav .swiper-next {
   position: relative;
   width: 52px;
   height: 52px;
-  background-color: var(--background-color);
+  background-color: var(--lightgrey-color);
   cursor: pointer;
   transition: background-color .3s;
 }
@@ -1288,11 +1278,6 @@ iframe {
   flex-wrap: wrap;
   justify-content: space-between;
 }
-/*
-.footer .required-links {
-  margin: 0 0 80px 0;
-}
-*/
 .footer .required-links .required-link {
   display: block;
   width: max-content;
@@ -1303,6 +1288,10 @@ iframe {
 }
 .footer .required-links .required-link:hover {
   color: var(--blue-color);
+}
+.footer .required-links-mobile {
+  display: none;
+  margin: 0 0 40px 0;
 }
 .footer .footer-bg {
   position: absolute;
@@ -1441,21 +1430,10 @@ iframe {
   align-items: center;
   justify-content: space-between;
 }
-/*
-.project-detail-page .title-section .project-detail-title {
-  font-family: 'InterDisplay-SemiBold';
-  font-size: 48px;
-  color: #42307D;
-  line-height: 1.1;
-}
-*/
 .project-detail-page .title-section .title-wrapper {
   display: flex;
   gap: 60px;
   align-items: center;
-}
-.project-detail-page .title-section .view-more-btn {
-  height: 60px;
 }
 .project-detail-page .title-section .view-more-btn:hover .view-more-btn__image {
   transform: rotate(-45deg);
@@ -1579,16 +1557,6 @@ iframe {
   margin: 0 0 20px 0;
   letter-spacing: -1.5px;
 }
-.project-detail-page .new-location-section .paragraph {
-  width: 70%;
-  margin-bottom: 30px;
-  font-size: 32px;
-  line-height: 1.2;
-}
-.project-detail-page .new-location-section .paragraph-right {
-  margin-left: auto;
-  margin-bottom: 60px;
-}
 /*
 .project-detail-page .new-location-section .new-location-address {
   margin: 0 0 40px 0;
@@ -1601,7 +1569,6 @@ iframe {
   height: 390px;
   margin: 0 0 40px 0;
 }
-
 .project-detail-page .new-location-section .location-content-item {
   position: absolute;
   top: 0;
@@ -1716,32 +1683,6 @@ iframe {
 .project-detail-page .new-location-section .swiper-slide-active .location-advantages-slider-item__image {
   opacity: 1;
 }
-
-
-/* Вкладки */
-/*
-.project-detail-page .flat-section .tabs {
-  display: flex;
-}
-.project-detail-page .flat-section .tab {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid red;
-  text-align: center;
-  cursor: pointer;
-}
-.project-detail-page .flat-section .tab.active {
-  font-weight: bold;
-}
-.project-detail-page .flat-section .tab-content {
-  display: none;
-}
-.project-detail-page .flat-section .tab-content.active {
-  display: block;
-}
-*/
-/* /вкладки */
-
 .project-detail-page .location-section .grid-container {
   display: grid;
   gap: 60px;
@@ -1775,15 +1716,6 @@ iframe {
   height: 100%;
   object-fit: cover;
 }
-
-/*
-.project-detail-page .location-section .description {
-  position: relative;
-  border-radius: 30px;
-  overflow: hidden;
-}
-*/
-
 .project-detail-page .location-section .location-map {
   display: flex;
   height: 700px;
@@ -1879,7 +1811,6 @@ iframe {
 }
 .project-detail-page .booking-online-section {
   padding: 40px;
-  /*background-color: var(--lightgrey-color);*/
 }
 .project-detail-page .booking-online-section .grid-container {
   display: grid;
@@ -1903,22 +1834,6 @@ iframe {
   height: 100%;
   object-fit: cover;
 }
-
-/*
-.project-detail-page .general-plan-section {
-  padding: 40px 0 0 0;
-}
-.project-detail-page .general-plan-section .image {
-  height: 600px;
-  border-radius: 30px;
-  overflow: hidden;
-}
-.project-detail-page .general-plan-section .image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-*/
 .project-detail-page .working-progress-section {
   padding: 40px 0 0 0;
 }
@@ -1940,28 +1855,12 @@ iframe {
   height: 100%;
   object-fit: cover;
 }
-
 .project-detail-page .working-progress-section .working-progress-gallery-item {
   display: block;
   margin: 0;
   width: 100%;
   height: 100%;
 }
-/*
-.project-detail-page .working-progress-section .working-progress-gallery {
-  position: relative;
-}
-.project-detail-page .working-progress-section .working-progress-gallery-item {
-  height: 320px;
-  border-radius: 20px;
-  overflow: hidden;
-}
-.project-detail-page .working-progress-section .working-progress-gallery-item img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-*/
 .project-detail-page .working-progress-section .working-progress-item__date {
   position: absolute;
   top: 30px;
@@ -1977,15 +1876,6 @@ iframe {
   line-height: 1.2;
   z-index: 1;
 }
-/*
-.project-detail-page .working-progress-section .working-progress-gallery {
-  display: none;
-}
-
-.project-detail-page .booking-online-form-wrapper {
-  background-color: var(--lightgrey-color);
-}
-*/
 .project-detail-page .blur-arrow-right {
   position: absolute;
   right: 30px;
@@ -1998,10 +1888,26 @@ iframe {
   width: 100%;
 }
 
+/* Параграф текста левый и правый */
+.paragraph-left-right {
+  width: 70%;
+  font-size: 28px;
+  line-height: 1.2;
+}
+.paragraph-left-right.paragraph-left {
+  margin-bottom: 30px;
+}
+.paragraph-left-right.paragraph-right {
+  margin-left: auto;
+  margin-bottom: 60px;
+}
+
 /* Форма Забронировать онлайн */
+/*
 .booking-online-form-wrapper {
   padding: 40px 0;
 }
+*/
 .booking-online-form-wrapper .white-frame {
   padding: 30px 40px;
   border-radius: 15px;
@@ -2020,9 +1926,11 @@ iframe {
   font-size: 18px;
   line-height: 1.2;
 }
+/*
 .booking-online-form-wrapper .form .label {
   color: var(--text-color);
 }
+*/
 .booking-online-form-wrapper .form .input-field {
   border-color: var(--text-color);
   background-color: var(--lightgrey-color);
@@ -2305,9 +2213,17 @@ iframe {
 .about-company-page .title-section .title {
   font-family: 'InterDisplay-SemiBold';
   font-size: 68px;
-  color: var(--blue-color);
+  color: var(--text-color);
   line-height: 1.1;
 }
+.about-company-page .title-section .description {
+  font-family: 'InterDisplay-Medium';
+  font-size: 28px;
+  line-height: 1.1;
+}
+
+/* О компании Наши преимущества */
+
 .about-company-page .advantages-section .image-wrapper {
   position: relative;
   margin: 150px 0 0 0;
@@ -2328,12 +2244,16 @@ iframe {
   object-fit: cover;
   z-index: 1;
 }
+/*
 .about-company-page .advantages-section .grid-container {
   position: absolute;
   top: -110px;
   left: 0;
   z-index: 2;
 }
+*/
+
+
 .about-company-page .mission-section .flex-container {
   display: flex;
   gap: 24px;
@@ -2352,7 +2272,6 @@ iframe {
 .about-company-page .our-values-section {
   padding-top: 40px;
   padding-bottom: var(--margin-80);
-  background-color: var(--lightgrey-color);
 }
 .about-company-page .our-values-section .grid-container {
   display: grid;
@@ -2361,25 +2280,35 @@ iframe {
 }
 .about-company-page .our-values-section .our-values-item {
   padding: 30px;
-  background-color: var(--background-color);
   border-radius: 30px;
+}
+.about-company-page .our-values-section .our-values-item-light {
+  background-color: var(--background-color);
+}
+.about-company-page .our-values-section .our-values-item-blue {
+  background-color: var(--blue-color);
 }
 .about-company-page .our-values-section .our-values-item__title {
   margin: 0 0 20px 0;
   font-size: 32px;
-  color: var(--blue-color);
   line-height: 1.2;
 }
-.about-company-page .our-values-section .our-values-item__text {
+.about-company-page .our-values-section .our-values-item-light .our-values-item__title {
+  color: var(--blue-color);
+}
+.about-company-page .our-values-section .our-values-item-blue .our-values-item__title {
+  color: var(--white-color);
+}
+.about-company-page .our-values-section .our-values-item .our-values-item__text {
   margin: 0 0 40px 0;
   font-size: 18px;
   line-height: 1.2;
 }
-.about-company-page .our-values-section .our-values-item__star {
-  width: 68px;
+.about-company-page .our-values-section .our-values-item-blue .our-values-item__text {
+  color: var(--white-color);
 }
-.about-company-page .our-values-section .our-values-item__star img {
-  width: 100%;
+.about-company-page .our-values-section .our-values-item .our-values-item__star {
+  width: 68px;
 }
 .about-company-page .awards-section {
   padding: 40px 0;
@@ -3083,6 +3012,7 @@ iframe {
   position: fixed;
   top: 0;
   left: 0;
+  display: none;
   width: 100%;
   height: 100vh;
   padding: 20px 0 30px 0;
@@ -3233,7 +3163,6 @@ iframe {
   height: 18px;
 }
 
-
 /* photoswipe */
 .pswp img {
   object-fit: contain;
@@ -3285,6 +3214,10 @@ iframe {
 
 @media only screen and (max-width : 1600px) {
 
+  .primary-title {
+    font-size: 40px;
+  }
+
   /* main section */
   .main-section .main-title {
     top: 70px;
@@ -3311,14 +3244,23 @@ iframe {
     height: 42px;
   }
 
+  /* Новая секция Наши преимущества */
+  .our-advantages-section .our-advantages-slider .our-advantages-item {
+    width: 26%;
+    padding: 25px;
+  }
+  .our-advantages-section .our-advantages-slider .our-advantages-item__title {
+    font-size: 38px;
+  }
+
+  /* Секция следите за акциями */
+  .follow-section .follow-section-frame {
+    padding: 55px;
+  }
+
   /* Форма заявки на главной */
   .dark-frame .dark-frame__title {
     font-size: 40px;
-  }
-
-  /* Секция Новости главная и страница Новости */
-  .news-section .news-slider-wrapper {
-    margin-left: calc(50% - 1296px / 2);
   }
 
   /* Карточка проекта */
@@ -3360,9 +3302,11 @@ iframe {
   }
 
   /* Форма Забронировать онлайн */
+  /*
   .booking-online-form-wrapper .form-title {
     font-size: 40px;
   }
+  */
 
   /* Страница Документы */
   .documents-page .documents-item {
@@ -3386,11 +3330,31 @@ iframe {
   .project-detail-page .working-progress-section .working-progress-gallery {
     height: 271px;
   }
+  .project-detail-page .new-location-section-title {
+    letter-spacing: 0;
+  }
+
+  /* Параграф текста левый и правый */
+  .paragraph-left-right {
+    font-size: 26px;
+  }
 
   /* footer */
   .footer .flex-container {
     gap: 30px;
   }
+  .footer .footer-menu {
+    column-gap: 60px;
+  }
+  .footer .bottom-menu .menu-title {
+    font-size: 21px;
+  }
+
+  /* form */
+  .form .label {
+    font-size: 17px;
+  }
+
 }
 
 @media only screen and (max-width : 1400px) {
@@ -3399,9 +3363,8 @@ iframe {
     --margin-80: 70px;
   }
 
-  .page-title,
-  .section-title {
-    font-size: 40px;
+  .primary-title {
+    font-size: 38px;
   }
 
   .primary-btn {
@@ -3425,6 +3388,13 @@ iframe {
   .tertiary-btn .tertiary-btn__text {
     font-size: 17px;
   }
+  .quaternary-btn {
+    height: 54px;
+    padding: 0 25px;
+  }
+  .quaternary-btn .quaternary-btn__text {
+    font-size: 17px;
+  }
 
   /* header */
   .header .flex-container {
@@ -3446,6 +3416,9 @@ iframe {
     height: 38px;
     font-size: 16px;
   }
+  .header .header-contacts .callback-me-btn {
+    height: 38px;
+  }
   /*
   .header .header-contacts .menu-btn {
     width: 95px;
@@ -3454,14 +3427,38 @@ iframe {
   }
   */
 
+  /* Верхнее меню */
+  .top-menu .sub-menu {
+    top: 37px;
+    padding: 25px 30px;
+    border-radius: 25px;
+  }
+  .top-menu .about-company .sub-menu {
+    height: 205px;
+  }
+  .top-menu .sub-menu-item__link {
+    font-size: 17px;
+  }
+
   /* main section */
   .main-section .main-image {
     height: 580px;
     border-radius: 35px;
   }
   .main-section .main-title {
+    top: 65px;
+    left: 65px;
     width: 73%;
     font-size: 56px;
+  }
+  .main-section .main-video {
+    right: 60px;
+    bottom: 60px;
+  }
+
+  /* projects map section */
+  .projects-map-section .projects-map {
+    height: 440px;
   }
 
   /* projects section */
@@ -3497,6 +3494,7 @@ iframe {
   }
 
   /* Секция Преимущества */
+  /*
   .advantages-section .advantages-item {
     padding: 25px;
   }
@@ -3511,6 +3509,27 @@ iframe {
   }
   .advantages-section .grid-container {
     gap: 20px;
+  }
+  */
+
+  /* Новая секция Наши преимущества */
+  .our-advantages-section .our-advantages-slider .our-advantages-item__title {
+    font-size: 34px;
+  }
+
+  /* Секция О компании */
+  .about-company-section .about-company-accent {
+    margin-bottom: 30px;
+    padding: 20px 25px;
+  }
+  .about-company-section .about-company-accent .about-company-accent__text {
+    font-size: 19px;
+  }
+
+  /* Секция следите за акциями */
+  .follow-section .follow-section-frame {
+    padding: 50px;
+    border-radius: 30px;
   }
 
   /* Форма заявки на главной */
@@ -3587,13 +3606,17 @@ iframe {
     width: 280px;
   }
   .footer .logo-wrapper .footer-decription {
-    font-size: 15px;
+    margin-bottom: 60px;
+  }
+  .footer .footer-menu {
+    height: 100%;
+    row-gap: 20px;
   }
   .footer .bottom-menu .menu-title {
     font-size: 21px;
   }
   .footer .bottom-menu .menu-item {
-    font-size: 16px;
+    font-size: 17px;
   }
   .footer .contacts {
     width: 237px;
@@ -3608,16 +3631,44 @@ iframe {
     margin-top: 15px;
   }
 
-  /* Секция Новости главная и страница Новости */
-  .news-section .news-slider-wrapper {
-    margin-left: calc(50% - 1116px / 2);
+  /* Форма Забронировать онлайн */
+  .booking-online-form-wrapper .form-wrapper {
+    padding: 25px 35px;
+  }
+
+  /* Большая форма Запись на встречу */
+  .big-booking-online-form-wrapper .form .flex-container {
+    gap: 12px;
   }
 
   /* Карточка проекта */
+  .project-detail-page .title-section {
+    margin-bottom: 30px;
+  }
   .project-detail-page .title-section .flex-container {
     /*flex-direction: column;*/
     gap: 20px;
     align-items: flex-start;
+  }
+  .project-detail-page .title-section .text-btn {
+    height: 54px;
+  }
+  .project-detail-page .slider-section .project-slider-item__image {
+    height: 585px;
+    border-radius: 25px;
+  }
+  .project-detail-page .slider-section .details {
+    top: 50px;
+    left: 50px;
+  }
+  .project-detail-page .slider-section .download-presentation-btn {
+    left: 50px;
+    bottom: 50px;
+    height: 54px;
+  }
+  .project-detail-page .slider-section .swiper-nav {
+    right: 50px;
+    bottom: 50px;
   }
   .project-detail-page .location-section .map {
     border-radius: 25px;
@@ -3658,6 +3709,11 @@ iframe {
     bottom: 20px;
     width: 54px;
     height: 54px;
+  }
+
+  /* Параграф текста левый и правый */
+  .paragraph-left-right {
+    font-size: 24px;
   }
 
   /* Секция Карта офисов в карточке проекта и Контакты */
@@ -3744,6 +3800,12 @@ iframe {
     font-size: 20px;
   }
 
+  /* form */
+  .form .label {
+    margin-bottom: 5px;
+    font-size: 16px;
+  }
+
   /* we use cookie */
   .we-use-cookie {
     max-width: 960px;
@@ -3774,7 +3836,10 @@ iframe {
   .page-title,
   .section-title {
     margin-bottom: 30px;
-    font-size: 38px;
+  }
+
+  .primary-title {
+    font-size: 36px;
   }
 
   .primary-btn {
@@ -3798,10 +3863,17 @@ iframe {
   .tertiary-btn .tertiary-btn__text {
     font-size: 16px;
   }
+  .quaternary-btn {
+    height: 50px;
+    padding: 0 20px;
+  }
+  .quaternary-btn .quaternary-btn__text {
+    font-size: 16px;
+  }
 
   /* header */
   .header .flex-container {
-    gap: 30px;
+    gap: 22px;
   }
   .header .logo {
     width: 150px;
@@ -3818,6 +3890,9 @@ iframe {
     width: 145px;
     height: 32px;
     font-size: 14px;
+  }
+  .header .header-contacts .callback-me-btn {
+    height: 32px;
   }
   /*
   .header .header-contacts .menu-btn {
@@ -3837,12 +3912,17 @@ iframe {
     left: 50px;
     width: 90%;
     font-size: 52px;
+    line-height: 1;
   }
   .main-section .main-video {
-    right: 50px;
-    bottom: 50px;
-    width: 320px;
-    height: 186px;
+    right: 40px;
+    bottom: 40px;
+    width: 300px;
+    height: 174px;
+  }
+  .main-section .main-video .main-video__play {
+    width: 78px;
+    height: 78px;
   }
 
   /* projects section */
@@ -3869,6 +3949,7 @@ iframe {
   }
 
   /* Секция Преимущества */
+  /*
   .advantages-section .grid-container {
     gap: 16px;
   }
@@ -3885,16 +3966,37 @@ iframe {
   .advantages-section .advantages-item__text {
     font-size: 15px;
   }
+  */
+
+  /* Новая секция Наши преимущества */
+  .our-advantages-section .our-advantages-slider .our-advantages-item {
+    width: 33%;
+    height: 180px;
+  }
+  .our-advantages-section .our-advantages-slider .our-advantages-item__title {
+    font-size: 30px;
+  }
+
+  /* Секция О компании */
+  .about-company-section .about-company-accent {
+    padding: 15px 20px;
+    border-radius: 20px;
+  }
+  .about-company-section .about-company-accent .about-company-accent__text {
+    font-size: 18px;
+  }
 
   /* Форма заявки на главной */
+  /*
   .callback-section {
     padding-top: 30px;
   }
+  */
   .callback-section .white-frame {
     padding: 25px;
     border-radius: 20px;
   }
-  .dark-frame {
+  .dark-frame .frame {
     padding: 25px;
   }
   .dark-frame .dark-frame__title {
@@ -3933,12 +4035,14 @@ iframe {
     font-size: 16px;
   }
 
+  /* Секция следите за акциями */
+  .follow-section .follow-section-frame {
+    padding: 35px;
+  }
+
   /* Секция Новости главная и страница Новости */
   .news-section {
     padding: 30px 0;
-  }
-  .news-section .news-slider-wrapper {
-    margin-left: calc(50% - 936px / 2);
   }
   .news-section .news-slider .news-item {
     width: 26%;
@@ -3976,6 +4080,10 @@ iframe {
     flex-wrap: wrap;
     justify-content: flex-start;
   }
+   .footer .logo-wrapper .footer-decription {
+    margin-bottom: 0;
+    font-size: 15px;
+  }
   .footer .bottom-menu .menu-title {
     font-size: 19px;
   }
@@ -3991,12 +4099,16 @@ iframe {
   }
   .footer .contacts .footer-email {
     margin-top: 0;
+    margin-left: 0;
   }
   .footer .footer-socials {
     justify-content: flex-start;
   }
-  .footer .required-links {
-    margin-bottom: 60px;
+  .footer .required-links-desktop {
+    display: none;
+  }
+  .footer .required-links-mobile {
+    display: block;
   }
   .footer .footer-bottom .company-info-item,
   .footer .required-links .required-link,
@@ -4005,35 +4117,28 @@ iframe {
   }
 
   /* Карточка проекта */
-  .project-detail-page .title-section .view-more-btn {
-    height: 54px;
-    padding: 0 25px;
+  .project-detail-page .title-section .text-btn {
+    height: 50px;
   }
-  .project-detail-page .title-section .view-more-btn__text {
-    font-size: 16px;
+  .project-detail-page .slider-section .project-slider-item__image {
+    height: 570px;
+    border-radius: 20px;
   }
-  /*
-  .project-detail-page .image-section .image {
-    height: 580px;
-    border-radius: 25px;
+  .project-detail-page .slider-section .details {
+    top: 40px;
+    left: 40px;
   }
-  .project-detail-page .image-section .details {
-    top: 50px;
-    left: 50px;
-    width: 350px;
-    padding: 25px;
+  .project-detail-page .slider-section .download-presentation-btn {
+    left: 40px;
+    bottom: 40px;
   }
-  .project-detail-page .image-section .download-presentation-btn {
-    left: 50px;
-    bottom: 50px;
-    width: 350px;
-    height: 55px;
+  .project-detail-page .slider-section .swiper-nav {
+    right: 40px;
+    bottom: 40px;
   }
-  .project-detail-page .image-section .swiper-nav {
-    right: 50px;
-    bottom: 50px;
+  .project-detail-page .location-section .map {
+    border-radius: 20px;
   }
-  */
   .project-detail-page .flats-section .flats-sold-out-title {
     font-size: 40px;
   }
@@ -4066,6 +4171,9 @@ iframe {
   .project-detail-page .new-location-section .swiper-slide-active .location-advantages-slider-item__title {
     font-size: 19px;
   }
+  .project-detail-page .booking-online-section {
+    padding: 30px;
+  }
   .project-detail-page .project-detail-advantages-section .grid-container {
     gap: 20px;
   }
@@ -4093,6 +4201,12 @@ iframe {
   .project-detail-page .working-progress-section .working-progress-item__date {
     top: 20px;
     left: 20px;
+  }
+
+  /* Параграф текста левый и правый */
+  .paragraph-left-right {
+    width: 100%;
+    font-size: 22px;
   }
 
   /* Секция Карта офисов в карточке проекта и Контакты */
@@ -4253,7 +4367,10 @@ iframe {
   .page-title,
   .section-title {
     margin-bottom: 25px;
-    font-size: 36px;
+  }
+
+  .primary-title {
+    font-size: 34px;
   }
 
 
@@ -4313,6 +4430,7 @@ iframe {
   }
 
   /* Секция Преимущества */
+  /*
   .advantages-section .grid-container {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -4326,6 +4444,7 @@ iframe {
   .dark-frame .dark-frame__title {
     font-size: 28px;
   }
+  */
 
   /* Большая форма Запись на встречу */
   .form .flex-container {
@@ -4352,9 +4471,6 @@ iframe {
   }
 
   /* Секция Новости главная и страница Новости */
-  .news-section .news-slider-wrapper {
-    margin-left: calc(50% - 696px / 2);
-  }
   .news-section .news-item__title {
     height: 39px;
     margin-bottom: 25px;
@@ -4403,9 +4519,8 @@ iframe {
     display: block;
   }
 
-  .page-title,
-  .section-title {
-    font-size: 34px;
+  .primary-title {
+    font-size: 32px;
   }
 
   /* main section */
@@ -4483,9 +4598,6 @@ iframe {
   }
 
   /* Секция Новости главная и страница Новости */
-  .news-section .news-slider-wrapper {
-    margin-left: calc(50% - 516px / 2);
-  }
   .news-section .news-slider .news-item {
     width: 36%;
   }
@@ -4546,7 +4658,8 @@ iframe {
     font-size: 17px;
   }
 
-  .burger-menu-wrapper {
+  /* mobile menu */
+  .mobile-menu {
     display: block;
   }
 
@@ -4554,14 +4667,8 @@ iframe {
 
 @media only screen and (max-width : 576px) {
 
-  .page-title,
-  .section-title {
-    font-size: 36px;
-  }
-
-  /* Секция Новости главная и страница Новости */
-  .news-section .news-slider-wrapper {
-    margin-left: 12px;
+  .primary-title {
+    font-size: 30px;
   }
 
   /* Страница Документы */
@@ -4577,10 +4684,8 @@ iframe {
 
 @media only screen and (max-width : 480px) {
 
-
-  .page-title,
-  .section-title {
-    font-size: 30px;
+  .primary-title {
+    font-size: 28px;
     line-height: 1;
   }
 
@@ -4602,9 +4707,8 @@ iframe {
 
 @media only screen and (max-width : 360px) {
 
-  .page-title,
-  .section-title {
-    font-size: 28px;
+  .primary-title {
+    font-size: 26px;
   }
 
   /* Страница Документы */
