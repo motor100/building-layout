@@ -230,7 +230,7 @@ iframe {
   padding: 0 30px;
   border: none;
   border-radius: 31px;
-  background-color: var(--blue-color);
+  background-color: var(--dark-color);
   gap: 10px;
   flex-shrink: 0;
   align-items: center;
@@ -238,7 +238,7 @@ iframe {
   transition: background-color .3s;
 }
 .quaternary-btn:hover {
-  background-color: #090A17;
+  background-color: var(--blue-color);
 }
 .quaternary-btn .quaternary-btn__text {
   font-family: 'InterDisplay-Regular';
@@ -296,9 +296,7 @@ iframe {
 }
 .header .logo {
   width: 220px;
-  /*height: 62px;*/
-  height: auto;
-  flex-shrink: 0;
+  height: 68px;
 }
 .header .logo .logo-link {
   display: block;
@@ -307,10 +305,6 @@ iframe {
 }
 .header .logo img {
   width: 100%;
-}
-.header .top-menu {
-  display: flex;
-  justify-content: space-between;
 }
 .header .header-contacts {
   display: flex;
@@ -335,23 +329,29 @@ iframe {
 .header .header-contacts .callback-me-btn {
   height: 42px;
 }
-/*
-.header .header-contacts .menu-btn {
-  display: flex;
-  width: 109px;
-  height: 42px;
-  border-radius: 21px;
-  background-color: var(--text-color);
-  font-family: 'InterDisplay-Medium';
-  font-size: 18px;
-  color: var(--background-color);
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
+.header.active {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  max-width: 1920px;
+  padding: 10px 0;
+  margin: 0 auto;
+  background-color: #fff;
+  z-index: 11;
+  box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.10);
 }
-*/
+.header.active .logo {
+  width: 155px;
+  height: 48px;
+}
 
 /* Верхнее меню */
+.top-menu {
+  display: flex;
+  justify-content: space-between;
+}
 .top-menu .menu-item {
   display: flex;
   height: 42px;
@@ -400,7 +400,7 @@ iframe {
   opacity: 0;
   list-style: none;
   z-index: 10;
-  box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.06);
+  box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.2);
   transform: translate(0, 20%);
   transition: opacity 0.3s, transform 0.2s;
 }
@@ -480,14 +480,14 @@ iframe {
 }
 .main-section .main-video {
   position: absolute;
-  right: 80px;
-  bottom: 80px;
-  width: 380px;
-  height: 220px;
+  right: 30px;
+  bottom: 30px;
+  width: 306px;
+  height: 178px;
   padding: 15px;
   border-radius: 20px;
   z-index: 3;
-  background: rgba(0, 0, 0, 0.20);
+  background: rgba(50, 52, 96, 0.20);
   backdrop-filter: blur(40px);
   cursor: pointer;
 }
@@ -505,65 +505,10 @@ iframe {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 88px;
-  height: 88px;
+  width: 70px;
+  height: 70px;
   transform: translate(-50%, -50%);
   z-index: 4;
-}
-
-/* button prev next */
-.prev-next {
-  position: relative;
-  height: 50px;
-}
-.prev-next .button-prev,
-.prev-next .button-next {
-  position: relative;
-  width: 48px;
-  height: 48px;
-  background-color: #fff;
-  border: 1px solid var(--text-color);
-  border-radius: 50%;
-  cursor: pointer;
-}
-.prev-next .button-prev .arrow-left,
-.prev-next .button-next .arrow-right {
-  position: absolute;
-  top: 22px;
-  right: 14px;
-  width: 20px;
-  height: 2px;
-  background-color: var(--text-color);
-}
-.prev-next .button-prev .arrow-left::before,
-.prev-next .button-prev .arrow-left::after,
-.prev-next .button-next .arrow-right::before,
-.prev-next .button-next .arrow-right::after {
-  content: '';
-  position: absolute;
-  width: 10px;
-  height: 2px;
-  background-color: var(--text-color);
-}
-.prev-next .button-prev .arrow-left::before {
-  top: -3px;
-  left: -1px;
-  transform: rotate(-45deg);
-}
-.prev-next .button-prev .arrow-left::after {
-  top: 3px;
-  left: -1px;
-  transform: rotate(45deg);
-}
-.prev-next .button-next .arrow-right::before {
-  top: -3px;
-  right: -1px;
-  transform: rotate(45deg);
-}
-.prev-next .button-next .arrow-right::after {
-  top: 3px;
-  right: -1px;
-  transform: rotate(-45deg);
 }
 
 /* projects map section */
@@ -797,8 +742,8 @@ iframe {
 }
 .our-advantages-section .our-advantages-slider .our-advantages-item__title {
   font-family: 'InterDisplay-SemiBold';
-  font-size: 41px;
-  color: #323460;
+  font-size: 40px;
+  color: var(--dark-color);
   line-height: 1;
 }
 .our-advantages-section .our-advantages-slider .our-advantages-item__title .white-color {
@@ -887,7 +832,7 @@ iframe {
 .dark-frame .frame {
   padding: 30px;
   border-radius: 15px;
-  background-color: var(--text-color);
+  background-color: var(--dark-color);
 }
 .dark-frame .dark-frame__title {
   margin: 0 0 20px 0;
@@ -917,13 +862,14 @@ iframe {
 }
 .about-company-section .about-company-text {
   font-size: 18px;
+  line-height: 1.2;
 }
 .about-company-section .about-company-accent {
   display: flex;
   margin: 0 0 40px 0;
   padding: 25px 30px;
-  border-radius: 30px;
-  background-color: var(--blue-color);
+  border-radius: 15px;
+  background-color: var(--dark-color);
   align-items: center;
   justify-content: space-between;
 }
@@ -940,6 +886,7 @@ iframe {
 .about-company-section .about-company-accent .about-company-accent__image img {
   width: 100%;
 }
+/*
 .about-company-section .about-company-items {
   margin-bottom: 36px;
 }
@@ -951,35 +898,33 @@ iframe {
   font-size: 18px;
   line-height: 1.2;
 }
-/*
+*/
+
+
 .about-company-section .about-company-btn {
   display: flex;
-  width: 353px;
-  height: 60px;
-  border: none;
-  border-radius: 30px;
-  background-color: var(--blue-color);
+  width: max-content;
+  height: 22px;
   gap: 10px;
   align-items: center;
   justify-content: center;
   transition: background-color .3s;
 }
 .about-company-section .about-company-btn__text {
+  font-family: 'InterDisplay-Medium';
   font-size: 18px;
   line-height: 1.2;
-  color: var(--background-color);
+  color: var(--dark-color);
 }
 .about-company-section .about-company-btn__image {
   width: 20px;
   transition: transform .3s;
 }
-.about-company-section .about-company-btn:hover {
-  background-color: #006EEB;
-}
 .about-company-section .about-company-btn:hover .about-company-btn__image {
   transform: rotate(-45deg);
 }
-*/
+
+
 .about-company-section .about-company-image {
   width: 45%;
   height: 435px;
@@ -1188,7 +1133,7 @@ iframe {
 
 /* Секция следите за акциями */
 .follow-section .follow-section-frame {
-  background-color: var(--text-color);
+  background-color: var(--dark-color);
   padding: 60px;
   border-radius: 40px;
 }
@@ -1308,7 +1253,7 @@ iframe {
 }
 .footer .bottom-menu .menu-title {
   margin: 0 0 10px 0;
-  font-family: 'InterDisplay-Medium';  
+  font-family: 'InterDisplay-Medium';
   font-size: 23px;
   color: var(--blue-color);
   line-height: 1.1;
@@ -1435,8 +1380,8 @@ iframe {
   gap: 60px;
   align-items: center;
 }
-.project-detail-page .title-section .view-more-btn:hover .view-more-btn__image {
-  transform: rotate(-45deg);
+.project-detail-page .title-section .view-more-btn {
+  height: 60px;
 }
 .project-detail-page .title-section .make-an-appointment-wrapper {
   display: flex;
@@ -1516,6 +1461,7 @@ iframe {
   bottom: 60px;
   width: 400px;
   height: 60px;
+  background-color: var(--text-color);
   border: 1px solid var(--background-color);
   z-index: 2;
 }
@@ -1621,12 +1567,14 @@ iframe {
 }
 .project-detail-page .new-location-section .swiper-nav {
   margin: 0 0 20px auto;
-  background-color: #EEF0F4;
+  /*background-color: #EEF0F4;*/
 }
+/*
 .project-detail-page .new-location-section .swiper-nav .swiper-prev,
 .project-detail-page .new-location-section .swiper-nav .swiper-next {
   background-color: #EEF0F4;
 }
+*/
 .project-detail-page .new-location-section .location-advantages-slider-item {
   display: flex;
   width: 40%;
@@ -1788,6 +1736,7 @@ iframe {
   font-size: 18px;
   line-height: 1.2;
 }
+/*
 .project-detail-page .project-detail-advantages-section .advantages-vertikal-item {
   display: flex;
   margin: 0 0 30px 0;
@@ -1809,31 +1758,7 @@ iframe {
   font-size: 24px;
   line-height: 1.2;  
 }
-.project-detail-page .booking-online-section {
-  padding: 40px;
-}
-.project-detail-page .booking-online-section .grid-container {
-  display: grid;
-  margin: 0 0 40px 0;
-  gap: 24px;
-  grid-template-columns: repeat(4, 1fr);
-}
-.project-detail-page .booking-online-section .booking-online {
-  display: flex;
-  padding: 37px 40px;
-  background-color: var(--text-color);
-  border-radius: 20px;
-  align-items: center;
-  justify-content: space-between;
-}
-.project-detail-page .booking-online-section .booking-online-text {
-  color: var(--background-color);
-}
-.project-detail-page .booking-online-section .flats-item img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
+*/
 .project-detail-page .working-progress-section {
   padding: 40px 0 0 0;
 }
@@ -1903,11 +1828,6 @@ iframe {
 }
 
 /* Форма Забронировать онлайн */
-/*
-.booking-online-form-wrapper {
-  padding: 40px 0;
-}
-*/
 .booking-online-form-wrapper .white-frame {
   padding: 30px 40px;
   border-radius: 15px;
@@ -1926,11 +1846,6 @@ iframe {
   font-size: 18px;
   line-height: 1.2;
 }
-/*
-.booking-online-form-wrapper .form .label {
-  color: var(--text-color);
-}
-*/
 .booking-online-form-wrapper .form .input-field {
   border-color: var(--text-color);
   background-color: var(--lightgrey-color);
@@ -2159,8 +2074,8 @@ iframe {
 }
 .np-detail-page .subscribe-section .subscribe-frame {
   padding: 40px 30px;
-  border-radius: 40px;
-  background-color: var(--text-color);
+  border-radius: 30px;
+  background-color: var(--dark-color);
 }
 .np-detail-page .subscribe-section {
   color: var(--white-color);
@@ -2177,7 +2092,7 @@ iframe {
 }
 .np-detail-page .subscribe-section .input-field {
   border-color: var(--white-color);
-  background-color: var(--text-color);
+  background-color: var(--dark-color);
 }
 .np-detail-page .subscribe-section .submit-btn {
   border: none;
@@ -2725,6 +2640,35 @@ iframe {
   font-size: 15px;
 }
 
+/* sticky desktop menu */
+/*
+.sticky-desktop-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
+  background-color: #fff;
+  visibility: hidden;
+  opacity: 0;
+  z-index: 11;
+  box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.10);
+  transition: all .2s;
+}
+.sticky-desktop-menu.active {
+  visibility: visible;
+  opacity: 1;
+}
+.sticky-desktop-menu .menu-container {
+  width: 587px;
+  padding: 15px 0;
+  margin: 0 auto;
+}
+*/
+
+
 /* breadscrumbs */
 .breadcrumbs {
   margin: 40px 0 20px 0;
@@ -2753,7 +2697,7 @@ iframe {
   transition: color .3s;
 }
 .breadcrumbs .parent a {
-  color: #BFBFBF;
+  color: var(--second-lightgrey-color);
 }
 .breadcrumbs .parent a,
 .breadcrumbs .active {
@@ -2795,7 +2739,7 @@ iframe {
   margin: 0 auto;
   padding: 50px;
   border-radius: 40px;
-  background-color: #fff;
+  background-color: var(--white-color);
   overflow: hidden;
 }
 .modal-window .modal-close {
@@ -2914,7 +2858,7 @@ iframe {
   background-color: var(--background-color);
   gap: 35px;
   align-items: center;
-  box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.06);
+  box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.2);
 }
 .we-use-cookie .we-use-cookie-image {
   width: 48px;
@@ -2936,76 +2880,16 @@ iframe {
   width: 130px;
   height: 60px;
   padding: 0;
-  border: 1px solid var(--blue-color);
+  border: 1px solid var(--text-color);
   border-radius: 30px;
-  background-color: var(--blue-color);
+  background-color: var(--text-color);
   font-family: inherit;
   font-size: 16px;
   font-weight: 400;
-  color: #E8E8E8;
+  color: var(--text-color);
   flex-shrink: 0;
   cursor: pointer;
 }
-
-/* burger menu */
-/*
-.burger-menu-wrapper {
-  position: fixed;
-  top: 24px;
-  right: 20px;
-  display: none;
-  width: 46px;
-  height: 46px;
-  padding: 7px;
-  border-radius: 5px;
-  background-color: var(--white-color);
-  cursor: pointer;
-  z-index: 10003;
-  transition: background-color .5s;
-}
-.burger-menu-wrapper .burger-menu {
-  position: relative;
-  height: 100%;
-}
-.burger-menu-wrapper .burger-menu:before,
-.burger-menu-wrapper .burger-menu:after,
-.burger-menu-wrapper .span {
-  content: "";
-  position: absolute;
-  left: 0;
-  display: block;
-  width: 100%;
-  height: 2px;
-  border-radius: 3px;
-  background-color: var(--text-color);
-  transition: all .5s;
-  }
-.burger-menu-wrapper .burger-menu:before {
-  top: 6px;
-}
-.burger-menu-wrapper .span {
-  top: 15px;
-}
-.burger-menu-wrapper .burger-menu:after {
-  top: 24px;
-}
-.burger-menu-wrapper.menu-is-open {
-  background-color: var(--white-color);
-}
-.burger-menu-wrapper.menu-is-open .burger-menu:before,
-.burger-menu-wrapper.menu-is-open .burger-menu:after {
-  top: 15px;
-}
-.burger-menu-wrapper.menu-is-open .burger-menu:before {
-  transform: rotate(-45deg);
-}
-.burger-menu-wrapper.menu-is-open .burger-menu:after {
-  transform: rotate(45deg);
-}
-.burger-menu-wrapper.menu-is-open .burger-menu span {
-  display: none;
-}
-*/
 
 /* mobile menu */
 .mobile-menu {
@@ -3145,6 +3029,7 @@ iframe {
 .fixed-bottom-menu .menu-item img {
   height: 28px;
 }
+/*
 .fixed-bottom-menu .cart-menu-item .menu-item__image {
   position: relative;
   width: 54px;
@@ -3162,6 +3047,7 @@ iframe {
   width: 18px;
   height: 18px;
 }
+*/
 
 /* photoswipe */
 .pswp img {
@@ -3300,13 +3186,6 @@ iframe {
   .contacts-page .contacts-section .c-item__title {
     font-size: 30px;
   }
-
-  /* Форма Забронировать онлайн */
-  /*
-  .booking-online-form-wrapper .form-title {
-    font-size: 40px;
-  }
-  */
 
   /* Страница Документы */
   .documents-page .documents-item {
@@ -3576,9 +3455,11 @@ iframe {
   .about-company-section .flex-container {
     gap: 60px;
   }
+  /*
   .about-company-section .about-company-item {
     font-size: 17px;
   }
+  */
 
   /* Секция Новости главная и страница Новости */
   .news-section {
@@ -3675,9 +3556,6 @@ iframe {
   }
   .project-detail-page .project-detail-advantages-section .project-detail-advantages-item {
     height: 360px;
-  }
-  .project-detail-page .booking-online-form-wrapper .white-frame {
-    padding: 30px;
   }
   .project-detail-page .new-location-section .location-advantages-slider-item {
     height: 192px;
@@ -3980,7 +3858,6 @@ iframe {
   /* Секция О компании */
   .about-company-section .about-company-accent {
     padding: 15px 20px;
-    border-radius: 20px;
   }
   .about-company-section .about-company-accent .about-company-accent__text {
     font-size: 18px;
@@ -4030,10 +3907,12 @@ iframe {
     margin-bottom: 30px;
     font-size: 16px;
   }
+  /*
   .about-company-section .about-company-item {
     border-radius: 15px;
     font-size: 16px;
   }
+  */
 
   /* Секция следите за акциями */
   .follow-section .follow-section-frame {
@@ -4171,9 +4050,6 @@ iframe {
   .project-detail-page .new-location-section .swiper-slide-active .location-advantages-slider-item__title {
     font-size: 19px;
   }
-  .project-detail-page .booking-online-section {
-    padding: 30px;
-  }
   .project-detail-page .project-detail-advantages-section .grid-container {
     gap: 20px;
   }
@@ -4188,9 +4064,11 @@ iframe {
   .project-detail-page .project-detail-advantages-section .project-detail-advantages-item__text {
     font-size: 18px;
   }
+  /*
   .project-detail-page .project-detail-advantages-section .advantages-vertikal-item__title {
     font-size: 22px;
   }
+  */
   .project-detail-page .working-progress-section .grid-container {
     gap: 20px;
   }

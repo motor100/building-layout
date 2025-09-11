@@ -7,6 +7,18 @@ document.addEventListener("DOMContentLoaded", () => {
     topMenuItem[topMenuItemActive].classList.add('active');
   }
 
+  // Sticky header
+  window.onscroll = function() {
+    const scrStickyHeader = window.pageYOffset || document.documentElement.scrollTop;
+    const stickyHeader = document.querySelector('.js-sticky-header');
+    if (scrStickyHeader > 400) {
+      stickyHeader.classList.add('active');
+    }
+    if (scrStickyHeader < 400) {
+      stickyHeader.classList.remove('active');
+    }
+  }
+
   // Paralax main image
   window.addEventListener('scroll', function() {
     let parallax = document.getElementById('parallax');
@@ -33,10 +45,6 @@ document.addEventListener("DOMContentLoaded", () => {
         992: {
           spaceBetween: 24,
         },
-        // desktop >= 1200
-        1200: {
-          spaceBetween: 30,
-        }
       },
       navigation: {
         nextEl: '.swiper-next',
@@ -159,14 +167,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
   }
 
-  // Date and time picker
-  const datetimepickers = document.querySelector('.datetimepicker');
+  // Date picker
+  let datepickers = document.querySelectorAll('.datepicker');
 
-  new AirDatepicker(datetimepickers, {
-    timepicker: true,
-    minutesStep: 30,
-    minDate: new Date(),
-    autoClose: true
+  datepickers.forEach((item) => {
+    const dp = new AirDatepicker(item, {
+      minDate: new Date(),
+      autoClose: true
+    });
   });
 
   // Аккордеон на странице Ипотека

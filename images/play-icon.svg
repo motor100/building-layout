@@ -1,7 +1,7 @@
 <svg width="88" height="88" viewBox="0 0 88 88" fill="none" xmlns="http://www.w3.org/2000/svg">
 <foreignObject x="-40" y="-40" width="168" height="168"><div xmlns="http://www.w3.org/1999/xhtml" style="backdrop-filter:blur(20px);clip-path:url(#bgblur_1_106_2519_clip_path);height:100%;width:100%"></div></foreignObject><g data-figma-bg-blur-radius="40">
 <g clip-path="url(#clip0_106_2519)">
-<rect width="88" height="88" rx="44" fill="#1D1E33"/>
+<rect width="88" height="88" rx="44" fill="#323460"/>
 <path d="M44 77C62.2254 77 77 62.2254 77 44C77 25.7746 62.2254 11 44 11C25.7746 11 11 25.7746 11 44C11 62.2254 25.7746 77 44 77Z" stroke="#FAFAFA" stroke-width="2" stroke-miterlimit="10"/>
 <path d="M59.125 44L37.125 30.25V57.75L59.125 44Z" stroke="#FAFAFA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
