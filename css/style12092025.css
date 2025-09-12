@@ -227,6 +227,7 @@ iframe {
 }
 .quaternary-btn {
   display: flex;
+  width: max-content;
   padding: 0 30px;
   border: none;
   border-radius: 31px;
@@ -537,14 +538,11 @@ iframe {
   left: 0;
   right: 0;
   bottom: 0;
+  height: 60px;
   margin: auto;
 }
 
 /* projects section */
-.projects-section .title-wrapper {
-  display: flex;
-  justify-content: space-between;
-}
 .projects-section .grid-container {
   display: grid;
   margin: 0 0 40px 0;
@@ -691,6 +689,7 @@ iframe {
   margin-bottom: 55px;
 }
 .projects-section .view-all-btn {
+  height: 56px;
   margin: 0 auto;
 }
 
@@ -2856,7 +2855,7 @@ iframe {
   padding: 30px 40px;
   border-radius: 30px;
   background-color: var(--background-color);
-  gap: 35px;
+  gap: 32px;
   align-items: center;
   box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.2);
 }
@@ -2875,6 +2874,9 @@ iframe {
   color: var(--text-color);
   text-decoration: underline;
 }
+.we-use-cookie .we-use-cookie-buttons {
+  display: flex;
+}
 .we-use-cookie .we-use-cookie-close {
   display: block;
   width: 130px;
@@ -2882,13 +2884,19 @@ iframe {
   padding: 0;
   border: 1px solid var(--text-color);
   border-radius: 30px;
-  background-color: var(--text-color);
-  font-family: inherit;
+  font-family: 'InterDisplay-Regular';
   font-size: 16px;
   font-weight: 400;
-  color: var(--text-color);
   flex-shrink: 0;
   cursor: pointer;
+}
+.we-use-cookie .we-use-cookie-close-accept {
+  background-color: var(--text-color);
+  color: var(--white-color);
+}
+.we-use-cookie .we-use-cookie-close-dont-accept {
+  background-color: var(--white-color);
+  color: var(--text-color);
 }
 
 /* mobile menu */
@@ -4420,10 +4428,6 @@ iframe {
   }
 
   /* projects section */
-  .projects-section .title-wrapper {
-    margin: 0 0 20px 0;
-    flex-direction: column;
-  }
   .projects-section .grid-container {
     grid-template-columns: auto;
   }
