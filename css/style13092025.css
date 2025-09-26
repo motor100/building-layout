@@ -4199,11 +4199,18 @@ iframe {
   .projects-section .projects-item__image-wrapper {
     height: 370px;
   }
+  .projects-section .projects-item__status {
+    margin-top: 20px;
+  }
   .projects-section .projects-item__title {
     font-size: 28px;
   }
   .projects-section .horizontal-line {
     width: 60%;
+  }
+  .projects-section .flex-container {
+    flex-direction: column;
+    gap: 5px;
   }
 
   /* Секция Преимущества */
@@ -4345,6 +4352,9 @@ iframe {
   .projects-section .grid-container {
     grid-template-columns: auto;
   }
+  .projects-section .projects-item__image-wrapper {
+    height: auto;
+  }
   .projects-section .projects-title {
     margin: 10px 0 0 ;
     font-size: 22px;
@@ -4355,6 +4365,10 @@ iframe {
   .projects-section .flex-container {
     opacity: 1;
     visibility: visible;
+  }
+  .projects-section .flex-container {
+    flex-direction: row;
+    gap: 0;
   }
   .projects-section .projects-item .projects-item__filter {
     background-color: rgba(34, 34, 34, .65);
@@ -4598,7 +4612,6 @@ iframe {
     right: 12px;
   }
 
-
 }
 
 @media only screen and (max-width : 480px) {
@@ -4607,6 +4620,11 @@ iframe {
     margin-bottom: 15px;
     font-size: 26px;
     line-height: 1;
+  }
+
+  .primary-btn {
+    height: 40px;
+    padding: 0 12px;
   }
 
   /* main section */
@@ -4623,19 +4641,19 @@ iframe {
     border-radius: 15px;
   }
 
-  /* projects map section */
-  .projects-map-section .projects-map {
-    height: 200px;
-    border-radius: 20px;
-  }
-
   /* projects section */
-  .projects-section .projects-item__image-wrapper {
-    height: auto;
+  .projects-section .projects-item__title {
+    font-size: 26px;
   }
   .projects-section .flex-container {
     flex-direction: column;
     gap: 5px;
+  }
+
+  /* projects map section */
+  .projects-map-section .projects-map {
+    height: 200px;
+    border-radius: 20px;
   }
 
   /* Новая секция Наши преимущества */
@@ -4689,6 +4707,12 @@ iframe {
   /* fixed bottom menu */
   .fixed-bottom-menu .menu-wrapper {
     padding: 10px 20px;
+  }
+
+  /* Страница Проекты */
+  .projects-page .title-section .flex-container {
+    margin: 0 0 20px 0;
+    flex-direction: column;
   }
 
   /* Страница Документы */
