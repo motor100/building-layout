@@ -24,6 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
     let parallax = document.getElementById('parallax');
     if (parallax) {
       let offset = window.pageYOffset;
+      let clientWidth = document.body.clientWidth;
       parallax.style.backgroundPositionY = (-50 + offset * 0.4) + 'px';
     }
   });
@@ -34,16 +35,28 @@ document.addEventListener("DOMContentLoaded", () => {
   if (ourAdvantagesSlider) {
     new Swiper('.our-advantages-slider', {
       loop: true,
-      slidesPerView: 4,
+      
       autoplay: false,
       breakpoints: {
         // mobile 320-991
         320: {
           spaceBetween: 15,
+          slidesPerView: 1,
+        },
+        // desktop >= 480
+        480: {
+          spaceBetween: 15,
+          slidesPerView: 2,
         },
         // desktop >= 992
         992: {
+          spaceBetween: 20,
+          slidesPerView: 3,
+        },
+        // desktop >= 1200
+        1400: {
           spaceBetween: 24,
+          slidesPerView: 4,
         },
       },
       navigation: {
@@ -65,14 +78,27 @@ document.addEventListener("DOMContentLoaded", () => {
         // mobile 320-991
         320: {
           spaceBetween: 15,
+          slidesPerView: 1,
+        },
+        // mobile >= 480
+        480: {
+          spaceBetween: 15,
+          slidesPerView: 2,
+        },
+        // mobile >= 768
+        768: {
+          spaceBetween: 15,
+          slidesPerView: 3,
         },
         // desktop >= 992
         992: {
           spaceBetween: 24,
+          slidesPerView: 4,
         },
         // desktop >= 1200
         1200: {
           spaceBetween: 30,
+          slidesPerView: 4,
         }
       },
       navigation: {

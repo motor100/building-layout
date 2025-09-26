@@ -4,7 +4,6 @@
   <div class="main-section section">
     <div class="container">
       <div id="parallax" class="main-image">
-        <!-- <img src="/images/main-image.jpg" alt=""> -->
         <div class="main-filter"></div>
         <div class="main-title"><span class="text-semibold">ЭРИСТАВИ — ваш надежный партнер в создании будущего</span> <br>Квартиры в Челябинске и Челябинской области</div>
         <div id="video-btn" class="main-video">
@@ -46,7 +45,6 @@
               <img src="/images/project-cinkovaya.jpg" alt="">
             </div>
             <div class="projects-item__filter"></div>
-            <div class="projects-item__logo"></div>
             <div class="projects-item__status">продажи завершены</div>
             <div class="projects-item__title">Островский</div>
             <div class="horizontal-line"></div>
@@ -70,7 +68,6 @@
               <img src="/images/project-ehltonskaya.jpg" alt="">
             </div>
             <div class="projects-item__filter"></div>
-            <div class="projects-item__logo"></div>
             <div class="projects-item__status">продажи завершены</div>
             <div class="projects-item__title">Чурилово 3.20</div>
             <div class="horizontal-line"></div>
@@ -93,7 +90,6 @@
               <img src="/images/temp-granat1.jpg" alt="">
             </div>
             <div class="projects-item__filter"></div>
-            <div class="projects-item__logo"></div>
             <div class="projects-item__status">сдан</div>
             <div class="projects-item__title">Гранат</div>
             <div class="horizontal-line"></div>
@@ -103,7 +99,7 @@
             <div class="projects-item__price-text">Квартиры</div>
             <div class="projects-item__price">от 40 кв.м.</div>
             <div class="flex-container">
-              <a href="#" class="projects-item__btn view-flats-btn">Смотреть квартиры</a>
+              <a href="/temp-vidget.html" class="projects-item__btn view-flats-btn">Смотреть квартиры</a>
               <a href="/project-detail-progress.html" class="projects-item__btn about-project-btn">О проекте</a>
             </div>
           </div>
@@ -162,10 +158,10 @@
   <div class="callback-section">
     <div class="container">
       <div class="dark-frame">
-        <div class="frame">
+        <!-- <div class="frame"> -->
           <div class="dark-frame__title primary-title">Свяжитесь с нами и наш менеджер подберет квартиру под ваш запрос</div>
           <div class="dark-frame__text">оставьте заявку и наш менеджер с вами свяжется в течение 10 минут</div>
-        </div>
+        <!-- </div> -->
       </div>
     </div>
 
@@ -210,13 +206,7 @@
                 </select>
               </div>
             </div>
-            <div class="flex-container">
-              <!-- 
-              <div class="form-group">
-                <label for="big-form-date" class="label">Дата и время*</label>
-                <input type="text" name="date" id="big-form-date" class="input-field datepicker" placeholder="ДД.ММ.ГГГГ">
-              </div>
-               -->
+            <div class="flex-container flex-container-bottom">
               <div class="form-group">
                 <label for="big-form-name" class="label">Имя*</label>
                 <input type="text" name="name" id="big-form-name" class="input-field" placeholder="Введите имя">
@@ -229,10 +219,11 @@
                 <label for="big-form-phone" class="label">Телефон*</label>
                 <input type="text" name="phone" id="big-form-phone" class="input-field js-input-phone-mask" placeholder="+7 (999) 999 99 99">
               </div>
+              <button id="callback-submit-btn3" class="submit-btn quaternary-btn">
+                <span class="quaternary-btn__text">Записаться на встречу</span>
+              </button>
             </div>
-            <button id="callback-submit-btn3" class="submit-btn quaternary-btn">
-              <span class="quaternary-btn__text">Записаться на встречу</span>
-            </button>
+            
             <div class="checkboxes-flex-container">
               <div class="agreement-text">
                 <input type="checkbox" name="checkbox-read" class="custom-checkbox js-required-checkbox" id="checkbox-read-callback4" required onchange="document.getElementById('callback-submit-btn4').disabled = !this.checked;">

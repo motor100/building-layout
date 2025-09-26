@@ -443,15 +443,16 @@ iframe {
 /* main section */
 .main-section .main-image {
   position: relative;
-  height: 620px;
+  padding: 80px;
   border-radius: 40px;
   background: url(../images/main-image.jpg) center no-repeat;
-  /*background-attachment: fixed;*/
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
   overflow: hidden;
-  z-index: 1;
+  z-index: -2;
+}
+.main-section .main-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 .main-section .main-filter {
   position: absolute;
@@ -460,35 +461,24 @@ iframe {
   width: 100%;
   height: 100%;
   background: linear-gradient(96deg, rgba(50, 52, 96, 0.8) 0.64%, rgba(50, 52, 96, 0) 100%);
-  z-index: 2;
-}
-.main-section .main-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  z-index: -1;
 }
 .main-section .main-title {
-  position: absolute;
-  top: 80px;
-  left: 80px;
-  width: 63%;
+  width: 82%;
+  margin: 0 0 30px 0;
   font-size: 66px;
   color: var(--background-color);
   line-height: 1.1;
-  z-index: 3;
 }
 .main-section .main-title .text-semibold {
   font-family: 'InterDisplay-SemiBold';
 }
 .main-section .main-video {
-  position: absolute;
-  right: 30px;
-  bottom: 30px;
   width: 306px;
   height: 178px;
+  margin: 0 -50px -50px auto;
   padding: 15px;
   border-radius: 20px;
-  z-index: 3;
   background: rgba(50, 52, 96, 0.20);
   backdrop-filter: blur(40px);
   cursor: pointer;
@@ -581,20 +571,10 @@ iframe {
 .projects-section .projects-item:hover .projects-item__filter {
   background-color: rgba(34, 34, 34, .65);
 }
-
-.projects-section .projects-item__logo {
-  width: 50px;
-  height: 50px;
-}
-.projects-section .projects-item__logo img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-}
 .projects-section .projects-item__status {
   width: max-content;
   height: 26px;
-  margin: 0 0 10px 0;
+  margin: 50px 0 10px 0;
   padding: 2px 10px;
   border-radius: 13px;
   background-color: var(--blue-color);
@@ -653,7 +633,6 @@ iframe {
   color: var(--second-lightgrey-color);
 }
 .projects-section .flex-container,
-.projects-section .projects-item__logo,
 .projects-section .projects-item__status,
 .projects-section .projects-item__title,
 .projects-section .horizontal-line,
@@ -666,7 +645,6 @@ iframe {
   transition: opacity .4s, visibility .4s;
 }
 .projects-section .projects-item:hover .flex-container,
-.projects-section .projects-item:hover .projects-item__logo,
 .projects-section .projects-item:hover .projects-item__status,
 .projects-section .projects-item:hover .projects-item__title,
 .projects-section .projects-item:hover .horizontal-line,
@@ -678,7 +656,6 @@ iframe {
   visibility: visible;
 }
 .projects-section .flex-container,
-.projects-section .projects-item__logo,
 .projects-section .projects-item__status,
 .projects-section .projects-item__title,
 .projects-section .horizontal-line,
@@ -689,7 +666,6 @@ iframe {
   margin-bottom: 55px;
 }
 .projects-section .view-all-btn {
-  height: 56px;
   margin: 0 auto;
 }
 
@@ -743,6 +719,7 @@ iframe {
   display: flex;
   margin: 0 0 20px 0;
   align-items: flex-end;
+  justify-content: space-between;
 }
 .form .form-group {
   width: 100%;
@@ -776,10 +753,18 @@ iframe {
 }
 
 /* Темная рамка */
+/*
 .dark-frame {
   margin: 0 0 10px 0;
 }
 .dark-frame .frame {
+  padding: 30px;
+  border-radius: 15px;
+  background-color: var(--dark-color);
+}
+*/
+.dark-frame {
+  margin: 0 0 10px 0;
   padding: 30px;
   border-radius: 15px;
   background-color: var(--dark-color);
@@ -860,7 +845,7 @@ iframe {
 }
 .about-company-section .about-company-image {
   width: 45%;
-  height: 435px;
+  /*height: 435px;*/
   border-radius: 20px;
   overflow: hidden;
 }
@@ -1775,7 +1760,7 @@ iframe {
   line-height: 1.2;
 }
 .booking-online-form-wrapper .form .input-field {
-  border-color: var(--text-color);
+  /*border-color: var(--text-color);*/
   background-color: var(--lightgrey-color);
 }
 .booking-online-form-wrapper .form .input-field::placeholder {
@@ -1789,8 +1774,14 @@ iframe {
 .big-booking-online-form-wrapper .form .flex-container {
   gap: 20px;
 }
+.big-booking-online-form-wrapper .form .flex-container-bottom {
+  flex-wrap: wrap;
+}
+.big-booking-online-form-wrapper .form .flex-container-bottom .form-group {
+  width: 32.4%;
+}
 .big-booking-online-form-wrapper .form .submit-btn {
-  margin-bottom: 20px;
+  /*margin-bottom: 20px;*/
   font-size: 22px;
 }
 
@@ -2979,14 +2970,19 @@ iframe {
   }
 
   /* main section */
+  .main-section .main-image {
+    padding: 70px;
+  }
   .main-section .main-title {
-    top: 70px;
-    left: 70px;
     font-size: 64px;
   }
   .main-section .main-video {
-    right: 70px;
-    bottom: 70px;
+    margin: 0 -40px -40px auto;
+  }
+
+  /* projects map section */
+  .projects-map-section .projects-map {
+    height: 450px;
   }
 
   /* projects section */
@@ -3010,7 +3006,7 @@ iframe {
     padding: 25px;
   }
   .our-advantages-section .our-advantages-slider .our-advantages-item__title {
-    font-size: 38px;
+    font-size: 34px;
   }
 
   /* Секция следите за акциями */
@@ -3102,10 +3098,18 @@ iframe {
   .footer .bottom-menu .menu-title {
     font-size: 21px;
   }
+  .footer .contacts .footer-phone {
+    font-size: 30px;
+  }
 
   /* form */
   .form .label {
     font-size: 17px;
+  }
+
+  /* Большая форма Запись на встречу */
+  .big-booking-online-form-wrapper .form .flex-container-bottom .form-group {
+    width: 32%;
   }
 
 }
@@ -3117,6 +3121,7 @@ iframe {
   }
 
   .primary-title {
+    margin-bottom: 35px;
     font-size: 38px;
   }
 
@@ -3195,23 +3200,21 @@ iframe {
 
   /* main section */
   .main-section .main-image {
-    height: 580px;
+    padding: 60px;
     border-radius: 35px;
   }
   .main-section .main-title {
-    top: 65px;
-    left: 65px;
-    width: 73%;
+    margin-bottom: 20px;
     font-size: 56px;
   }
   .main-section .main-video {
-    right: 60px;
-    bottom: 60px;
+    margin: 0 -30px -30px auto;
   }
 
   /* projects map section */
   .projects-map-section .projects-map {
-    height: 440px;
+    height: 400px;
+    border-radius: 35px;
   }
 
   /* projects section */
@@ -3225,15 +3228,21 @@ iframe {
   }
   .projects-section .projects-title {
     margin-top: 20px;
-    font-size: 28px;
+    font-size: 26px;
   }
   .projects-section .projects-item__image-wrapper {
+    height: 352px;
     padding: 20px;
   }
+  .projects-section .projects-item__status {
+    margin-top: 30px;
+  }
+  /*
   .projects-section .projects-item__logo {
     width: 45px;
     height: 45px;
   }
+  */
   .projects-section .projects-item__title {
     font-size: 30px;
   }
@@ -3314,6 +3323,7 @@ iframe {
 
   /* Большая форма Запись на встречу */
   .big-booking-online-form-wrapper .form .submit-btn {
+    margin-top: 10px;
     font-size: 20px;
   }
 
@@ -3585,12 +3595,8 @@ iframe {
     --margin-80: 60px;
   }
 
-  .page-title,
-  .section-title {
-    margin-bottom: 30px;
-  }
-
   .primary-title {
+    margin-bottom: 30px;
     font-size: 36px;
   }
 
@@ -3656,25 +3662,32 @@ iframe {
 
   /* main section */
   .main-section .main-image {
-    height: 480px;
+    padding: 50px;
     border-radius: 30px;
   }
   .main-section .main-title {
-    top: 50px;
-    left: 50px;
+    top: 40px;
+    left: 40px;
     width: 90%;
-    font-size: 52px;
+    font-size: 50px;
     line-height: 1;
   }
   .main-section .main-video {
-    right: 40px;
-    bottom: 40px;
+    right: 25px;
+    bottom: 25px;
     width: 300px;
     height: 174px;
+    margin: 0 -20px -20px auto;
   }
   .main-section .main-video .main-video__play {
     width: 78px;
     height: 78px;
+  }
+
+  /* projects map section */
+  .projects-map-section .projects-map {
+    height: 350px;
+    border-radius: 30px;
   }
 
   /* projects section */
@@ -3687,13 +3700,18 @@ iframe {
     border-radius: 20px;
   }
   .projects-section .projects-title {
-    margin-top: 15px;
-    font-size: 26px;
+    margin: 15px 0 6px 0;
+    font-size: 24px;
   }
+  .projects-section .projects-city {
+    font-size: 17px;
+  }
+  /*
   .projects-section .projects-item__logo {
     width: 40px;
     height: 40px;
   }
+  */
   .projects-section .projects-item__city,
   .projects-section .projects-item__price {
     height: 24px;
@@ -3701,6 +3719,9 @@ iframe {
   }
 
   /* Секция Преимущества */
+  .our-advantages-section .title-wrapper {
+    margin-bottom: 30px;
+  }
   /*
   .advantages-section .grid-container {
     gap: 16px;
@@ -3747,7 +3768,9 @@ iframe {
     padding: 25px;
     border-radius: 20px;
   }
-  .dark-frame .frame {
+
+  /* Темная рамка */
+  .dark-frame {
     padding: 25px;
   }
   .dark-frame .dark-frame__title {
@@ -3756,13 +3779,16 @@ iframe {
   }
 
   /* form */
+  .form .label {
+    font-size: 15px;
+  }
   .form .input-field {
     height: 50px;
     padding: 10px 20px;
     font-size: 16px;
   }
   .form .submit-btn {
-    height: 50px;
+    height: 45px;
     font-size: 16px;
   }
   .form .label {
@@ -3797,10 +3823,14 @@ iframe {
   .news-section {
     padding: 30px 0;
   }
+  .news-section .title-wrapper {
+    margin-bottom: 30px;
+  }
   .news-section .news-slider .news-item {
     width: 26%;
   }
   .news-section .news-item__image {
+    margin-bottom: 15px;
     border-radius: 15px;
   }
   .news-section .news-item__title {
@@ -3833,7 +3863,7 @@ iframe {
     flex-wrap: wrap;
     justify-content: flex-start;
   }
-   .footer .logo-wrapper .footer-decription {
+  .footer .logo-wrapper .footer-decription {
     margin-bottom: 0;
     font-size: 15px;
   }
@@ -4000,9 +4030,6 @@ iframe {
   .booking-online-form-wrapper .form-wrapper {
     padding: 20px 30px;
   }
-  .booking-online-form-wrapper .form-title {
-    font-size: 40px;
-  }
 
   /* Страница О компании */
   .about-company-page .title-section .title {
@@ -4058,16 +4085,6 @@ iframe {
     font-size: 15px;
   }
 
-  /* form */
-  .form .label {
-    font-size: 16px;
-  }
-  .form .input-field {
-    height: 50px;
-    padding: 12px 20px;
-    font-size: 16px;
-  }
-
   /* slim select */
   .ss-main .ss-single-selected {
     height: 50px;
@@ -4118,15 +4135,10 @@ iframe {
     --margin-80: 50px;
   }
 
-  .page-title,
-  .section-title {
-    margin-bottom: 25px;
-  }
-
   .primary-title {
+    margin-bottom: 25px;
     font-size: 34px;
   }
-
 
   .primary-btn {
     height: 45px;
@@ -4139,14 +4151,21 @@ iframe {
     height: 45px;
     padding: 0 16px;
   }
-  .secondary-btn__text {
+  .secondary-btn .secondary-btn__text {
     font-size: 15px;
   }
   .tertiary-btn {
     height: 45px;
     padding: 0 16px;
   }
-  .tertiary-btn__text {
+  .tertiary-btn .tertiary-btn__text {
+    font-size: 15px;
+  }
+  .quaternary-btn {
+    height: 45px;
+    padding: 0 16px;
+  }
+  .quaternary-btn .quaternary-btn__text {
     font-size: 15px;
   }
 
@@ -4156,20 +4175,24 @@ iframe {
   }
 
   /* main section */
+  .main-section .main-image {
+    padding: 40px;
+  }
   .main-section .main-title {
-    top: 40px;
-    left: 40px;
     font-size: 46px;
   }
   .main-section .main-video {
-    right: 40px;
-    bottom: 40px;
     width: 290px;
     height: 156px;
   }
   .main-section .main-video .main-video__play {
     width: 68px;
     height: 68px;
+  }
+
+  /* projects map section */
+  .projects-map-section .projects-map {
+    height: 300px;
   }
 
   /* projects section */
@@ -4200,14 +4223,18 @@ iframe {
   }
   */
 
+  /* Темная рамка */
+  .dark-frame .dark-frame__text {
+    font-size: 18px;
+  }
+
   /* Большая форма Запись на встречу */
   .form .flex-container {
     flex-wrap: wrap;
     gap: 10px 0;
   }
-  .form .form-group,
-  .form .submit-btn {
-    width: 50%;
+  .form .form-group {
+    width: 49%;
   }
   .form .checkboxes-flex-container {
     flex-direction: column;
@@ -4222,6 +4249,12 @@ iframe {
   /* Секция О компании */
   .about-company-section {
     padding: 30px 0;
+  }
+  .about-company-section .flex-container {
+    gap: 20px;
+  }
+  .about-company-section .about-company-accent .about-company-accent__text {
+    font-size: 17px;
   }
 
   /* Секция Новости главная и страница Новости */
@@ -4250,12 +4283,22 @@ iframe {
     top: 2px;
   }
 
+  /* Секция следите за акциями */
+  .follow-section .follow-section-frame {
+    padding: 30px;
+  }
+
   /* Страница Документы */
   .documents-page .grid-container {
     grid-template-columns: repeat(2, 1fr);
   }
   .documents-page .documents-item {
     height: 95px;
+  }
+
+  /* Форма Забронировать онлайн */
+  .booking-online-form-wrapper .form-wrapper {
+    padding: 20px;
   }
 }
 
@@ -4279,20 +4322,23 @@ iframe {
 
   /* main section */
   .main-section .main-image {
+    padding: 30px;
     border-radius: 25px;
   }
   .main-section .main-title {
-    top: 30px;
-    left: 30px;
-    font-size: 42px;
+    font-size: 40px;
   }
   .main-section .main-title br {
     display: none;
   }
   .main-section .main-video {
-    right: 0;
-    left: 0;
     margin: 0 auto;
+  }
+
+  /* projects map section */
+  .projects-map-section .projects-map {
+    height: 250px;
+    border-radius: 25px;
   }
 
   /* projects section */
@@ -4310,11 +4356,46 @@ iframe {
     opacity: 1;
     visibility: visible;
   }
+  .projects-section .projects-item .projects-item__filter {
+    background-color: rgba(34, 34, 34, .65);
+  }
+  .projects-section .projects-item .flex-container,
+  .projects-section .projects-item .projects-item__status,
+  .projects-section .projects-item .projects-item__title,
+  .projects-section .projects-item .horizontal-line,
+  .projects-section .projects-item .projects-item__location,
+  .projects-section .projects-item .projects-item__city,
+  .projects-section .projects-item .projects-item__price-text,
+  .projects-section .projects-item .projects-item__price {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  /* Новая секция Наши преимущества */
+  .our-advantages-section .our-advantages-slider .our-advantages-item {
+    height: 150px;
+    padding: 20px;
+  }
+  .our-advantages-section .our-advantages-slider .our-advantages-item__title {
+    font-size: 27px;
+  }
 
   /* Форма заявки на главной */
   .callback-section .white-frame {
     padding: 20px;
   }
+
+  /* Секция следите за акциями */
+  .follow-section .follow-section-frame {
+    padding: 25px;
+    border-radius: 25px;
+  }
+  .follow-section .follow-section-title {
+    font-size: 24px;
+  }
+
+
+  /* Темная рамка */
   .dark-frame {
     padding: 20px;
   }
@@ -4325,7 +4406,20 @@ iframe {
     font-size: 18px;
   }
 
+  /* Большая форма Запись на встречу */
+  .big-booking-online-form-wrapper .form .flex-container {
+    margin-bottom: 12px;
+    gap: 8px;
+  }
+  .big-booking-online-form-wrapper .form .flex-container-bottom .form-group,
+  .big-booking-online-form-wrapper .form .submit-btn {
+    width: 49%;
+  }
+
   /* form */
+  .form .label {
+    font-size: 14px;
+  }
   .form .input-field {
     height: 45px;
     font-size: 15px;
@@ -4362,6 +4456,12 @@ iframe {
   .footer .footer-bottom {
     gap: 20px;
     flex-direction: column;
+  }
+
+  /* slim select */
+  .ss-main .ss-single-selected {
+    height: 45px;
+    font-size: 15px;
   }
 
   /* swiper nav */
@@ -4418,7 +4518,74 @@ iframe {
 @media only screen and (max-width : 576px) {
 
   .primary-title {
+    margin-bottom: 20px;
     font-size: 30px;
+  }
+
+  /* main section */
+  .main-section .main-image {
+    padding: 25px;
+  }
+  .main-section .main-title {
+    font-size: 36px;
+  }
+  .main-section .main-video {
+    width: 250px;
+    height: 135px;
+    padding: 10px;
+  }
+  .main-section .main-video .main-video__play {
+    width: 58px;
+    height: 58px;
+  }
+
+  /* projects section */
+  .projects-section .projects-title {
+    font-size: 20px;
+  }
+
+  /* Новая секция Наши преимущества */
+  .our-advantages-section .our-advantages-slider .our-advantages-item {
+    height: 120px;
+    padding: 15px;
+  }
+  .our-advantages-section .our-advantages-slider .our-advantages-item__title {
+    font-size: 24px;
+  }
+
+  /* Форма Забронировать онлайн */
+  .booking-online-form-wrapper .form-text {
+    font-size: 16px;
+  }
+
+  .form .form-group {
+    width: 100%;
+  }
+
+  /* Большая форма Запись на встречу */
+  .big-booking-online-form-wrapper .form .flex-container-bottom .form-group,
+  .big-booking-online-form-wrapper .form .submit-btn {
+    width: 100%;
+  }
+
+  /* Секция следите за акциями */
+  .follow-section .follow-section-frame {
+    padding: 20px;
+    border-radius: 20px;
+  }
+  .follow-section .follow-section-title {
+    font-size: 20px;
+  }
+
+  /* footer */
+  .footer .logo-wrapper .logo {
+    width: 150px;
+  }
+  .footer .footer-menu {
+    justify-content: flex-start;
+  }
+  .footer .bottom-menu {
+    width: 135px;
   }
 
   /* Страница Документы */
@@ -4430,13 +4597,93 @@ iframe {
   .burger-menu-wrapper {
     right: 12px;
   }
+
+
 }
 
 @media only screen and (max-width : 480px) {
 
   .primary-title {
-    font-size: 28px;
+    margin-bottom: 15px;
+    font-size: 26px;
     line-height: 1;
+  }
+
+  /* main section */
+  .main-section .main-image {
+    padding: 20px;
+    border-radius: 20px;
+  }
+  .main-section .main-title {
+    font-size: 26px;
+  }
+  .main-section .main-video {
+    width: 200px;
+    height: 108px;
+    border-radius: 15px;
+  }
+
+  /* projects map section */
+  .projects-map-section .projects-map {
+    height: 200px;
+    border-radius: 20px;
+  }
+
+  /* projects section */
+  .projects-section .projects-item__image-wrapper {
+    height: auto;
+  }
+  .projects-section .flex-container {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  /* Новая секция Наши преимущества */
+  .our-advantages-section .our-advantages-slider .our-advantages-item__title {
+    font-size: 22px;
+  }
+  .our-advantages-section .our-advantages-slider .our-advantages-item {
+    height: 100px;
+    padding: 15px;
+  }
+
+  /* Секция следите за акциями */
+  .follow-section .follow-section-title {
+    font-size: 18px;
+  }
+
+  /* Темная рамка */
+  .dark-frame .dark-frame__title {
+    font-size: 22px;
+  }
+  .dark-frame .dark-frame__text {
+    font-size: 16px;
+  }
+
+  /* Секция О компании */
+  .about-company-section .about-company-accent {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+  .about-company-section .about-company-btn__text {
+    font-size: 16px;
+  }
+
+  /* footer */
+  .footer .logo-wrapper .footer-decription {
+    font-size: 14px;
+  }
+  .footer .footer-menu {
+    column-gap: 30px;
+  }
+  .footer .required-links .required-link {
+    width: auto;
+  }
+
+  /* Форма Забронировать онлайн */
+  .booking-online-form-wrapper .form-wrapper {
+    padding: 20px 15px;
   }
 
   /* fixed bottom menu */
@@ -4453,12 +4700,25 @@ iframe {
     border-radius: 10px;
   }
 
+  /* agreement text галочка соглашения */
+  .agreement-text .checkbox-text {
+    font-size: 12px;
+  }
+
 }
 
 @media only screen and (max-width : 360px) {
 
   .primary-title {
-    font-size: 26px;
+    font-size: 22px;
+  }
+
+  /* main section */
+  .main-section .main-image {
+    padding: 16px;
+  }
+  .main-section .main-title {
+    font-size: 22px;
   }
 
   /* Страница Документы */
