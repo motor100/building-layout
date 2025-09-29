@@ -1884,17 +1884,23 @@ iframe {
   border-radius: 40px;
   background-color: var(--blue-color);
 }
-.np-page .flex-container {
+.np-page .frame .flex-container {
   display: flex;
   gap: 16px;
   justify-content: space-between;
 }
 .np-page .n-main-section .n-main-section__title {
+  display: -webkit-box;
+  height: 75px;
   margin: 0 0 24px 0;
   font-family: 'InterDisplay-SemiBold';
   font-size: 68px;
   color: var(--background-color);
   line-height: 1.1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
 }
 .np-page .n-main-section .n-main-section__excerpt {
   display: -webkit-box;
@@ -3112,6 +3118,19 @@ iframe {
     width: 32%;
   }
 
+  /* Страница Новости и Акции */
+  .np-page .n-main-section .frame {
+    padding: 55px;
+  }
+  .np-page .n-main-section .n-main-section__title {
+    height: 71px;
+    font-size: 64px;
+  }
+  .np-page .n-main-section .n-main-section__excerpt {
+    height: 76px;
+    font-size: 21px;
+  }
+
 }
 
 @media only screen and (max-width : 1400px) {
@@ -3136,7 +3155,7 @@ iframe {
     height: 52px;
     padding: 0 25px;
   }
-  .secondary-btn__text {
+  .secondary-btn .secondary-btn__text {
     font-size: 17px;
   }
   .tertiary-btn {
@@ -3568,6 +3587,25 @@ iframe {
     font-size: 16px;
   }
 
+  /* Страница Новости и Акции */
+  .np-page .n-main-section .frame {
+    padding: 50px;
+    border-radius: 35px;
+  }
+  .np-page .n-main-section .n-main-section__title {
+    margin-bottom: 16px;
+    height: 66px;
+    font-size: 60px;
+  }
+  .np-page .n-main-section .n-main-section__excerpt {
+    height: 72px;
+    font-size: 20px;
+  }
+  .np-page .n-main-section .n-main-section__image {
+    width: 400px;
+    height: 224px;
+  }
+
   /* we use cookie */
   .we-use-cookie {
     max-width: 960px;
@@ -3608,10 +3646,10 @@ iframe {
     font-size: 16px;
   }
   .secondary-btn {
-    height: 50px;
+    height: 48px;
     padding: 0 20px;
   }
-  .secondary-btn__text {
+  .secondary-btn .secondary-btn__text {
     font-size: 16px;
   }
   .tertiary-btn {
@@ -3652,13 +3690,6 @@ iframe {
   .header .header-contacts .callback-me-btn {
     height: 32px;
   }
-  /*
-  .header .header-contacts .menu-btn {
-    width: 85px;
-    height: 32px;
-    font-size: 14px;
-  }
-  */
 
   /* main section */
   .main-section .main-image {
@@ -3706,12 +3737,6 @@ iframe {
   .projects-section .projects-city {
     font-size: 17px;
   }
-  /*
-  .projects-section .projects-item__logo {
-    width: 40px;
-    height: 40px;
-  }
-  */
   .projects-section .projects-item__city,
   .projects-section .projects-item__price {
     height: 24px;
@@ -3722,24 +3747,6 @@ iframe {
   .our-advantages-section .title-wrapper {
     margin-bottom: 30px;
   }
-  /*
-  .advantages-section .grid-container {
-    gap: 16px;
-  }
-  .advantages-section .advantages-item {
-    padding: 20px;
-  }
-  .advantages-section .advantages-item__title {
-    margin-bottom: 16px;
-    font-size: 34px;
-  }
-  .advantages-section .advantages-item__accent {
-    font-size: 18px;
-  }
-  .advantages-section .advantages-item__text {
-    font-size: 15px;
-  }
-  */
 
   /* Новая секция Наши преимущества */
   .our-advantages-section .our-advantages-slider .our-advantages-item {
@@ -3759,11 +3766,6 @@ iframe {
   }
 
   /* Форма заявки на главной */
-  /*
-  .callback-section {
-    padding-top: 30px;
-  }
-  */
   .callback-section .white-frame {
     padding: 25px;
     border-radius: 20px;
@@ -3807,12 +3809,6 @@ iframe {
     margin-bottom: 30px;
     font-size: 16px;
   }
-  /*
-  .about-company-section .about-company-item {
-    border-radius: 15px;
-    font-size: 16px;
-  }
-  */
 
   /* Секция следите за акциями */
   .follow-section .follow-section-frame {
@@ -3968,11 +3964,6 @@ iframe {
   .project-detail-page .project-detail-advantages-section .project-detail-advantages-item__text {
     font-size: 18px;
   }
-  /*
-  .project-detail-page .project-detail-advantages-section .advantages-vertikal-item__title {
-    font-size: 22px;
-  }
-  */
   .project-detail-page .working-progress-section .grid-container {
     gap: 20px;
   }
@@ -4035,11 +4026,6 @@ iframe {
   .about-company-page .title-section .title {
     font-size: 56px;
   }
-  /*
-  .about-company-page .advantages-section .image {
-    border-radius: 25px;
-  }
-  */
   .about-company-page .mission-section .mission-title {
     font-size: 34px;
   }
@@ -4109,6 +4095,29 @@ iframe {
     padding: 10px 20px;
     border-radius: 20px;
     font-size: 18px;
+  }
+
+  /* Страница Новости и Акции */
+  .np-page .n-main-section .frame {
+    padding: 45px;
+    border-radius: 30px;
+  }
+  .np-page .n-main-section .n-main-section__title {
+    margin-bottom: 16px;
+    height: 60px;
+    font-size: 54px;
+  }
+  .np-page .n-main-section .n-main-section__excerpt {
+    height: 65px;
+    font-size: 18px;
+  }
+  .np-page .n-main-section .n-main-section__image {
+    width: 350px;
+    height: 196px;
+  }
+  .np-page .news-section .grid-container {
+    gap: 30px 16px;
+    grid-template-columns: repeat(3, 1fr);
   }
 
   /* we use cookie */
@@ -4213,23 +4222,6 @@ iframe {
     gap: 5px;
   }
 
-  /* Секция Преимущества */
-  /*
-  .advantages-section .grid-container {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  .advantages-section .advantages-item {
-    padding: 15px 20px;
-  }
-  .advantages-section .advantages-item__title {
-    margin-bottom: 12px;
-    font-size: 32px;
-  }
-  .dark-frame .dark-frame__title {
-    font-size: 28px;
-  }
-  */
-
   /* Темная рамка */
   .dark-frame .dark-frame__text {
     font-size: 18px;
@@ -4306,6 +4298,19 @@ iframe {
   /* Форма Забронировать онлайн */
   .booking-online-form-wrapper .form-wrapper {
     padding: 20px;
+  }
+
+  /* Страница Новости и Акции */
+  .np-page .n-main-section .frame {
+    padding: 40px;
+    border-radius: 25px;
+  }
+  .np-page .n-main-section .n-main-section__title {
+    height: 55px;
+    font-size: 50px;
+  }
+  .np-page .frame .flex-container {
+    flex-direction: column;
   }
 }
 
@@ -4459,6 +4464,9 @@ iframe {
   .news-section .news-slider .news-item {
     width: 36%;
   }
+  .news-section .news-item__title {
+    margin-bottom: 15px;
+  }
 
   /* footer */
   .footer {
@@ -4520,6 +4528,22 @@ iframe {
     padding: 10px 15px;
     border-radius: 15px;
     font-size: 17px;
+  }
+
+  /* Страница Новости и Акции */
+  .np-page .n-main-section .frame {
+    padding: 35px;
+  }
+  .np-page .n-main-section .n-main-section__title {
+    height: 51px;
+    font-size: 46px;
+  }
+  .np-page .n-main-section .n-main-section__excerpt {
+    height: 61px;
+    font-size: 17px;
+  }
+  .np-page .news-section .grid-container {
+    grid-template-columns: repeat(2, 1fr);
   }
 
   /* mobile menu */
@@ -4605,6 +4629,19 @@ iframe {
   /* Страница Документы */
   .documents-page .documents-item {
     font-size: 16px;
+  }
+
+  /* Страница Новости и Акции */
+  .np-page .n-main-section .frame {
+    padding: 30px;
+    border-radius: 20px;
+  }
+  .np-page .n-main-section .n-main-section__title {
+    height: 46px;
+    font-size: 42px;
+  }
+  .np-page .n-main-section .n-main-section__image {
+    border-radius: 15px;
   }
 
   /* burger menu */
@@ -4724,6 +4761,28 @@ iframe {
     border-radius: 10px;
   }
 
+  /* Страница Новости и Акции */
+  .np-page .n-main-section .frame {
+    padding: 20px;
+    border-radius: 15px;
+  }
+  .np-page .n-main-section .n-main-section__title {
+    height: 71px;
+    font-size: 32px;
+    -webkit-line-clamp: 2;
+  }
+  .np-page .n-main-section .n-main-section__excerpt {
+    height: 58px;
+    font-size: 16px;
+  }
+  .np-page .n-main-section .n-main-section__image {
+    width: 100%;
+  }
+  .np-page .news-section .grid-container {
+    grid-template-columns: auto;
+  }
+
+
   /* agreement text галочка соглашения */
   .agreement-text .checkbox-text {
     font-size: 12px;
@@ -4748,6 +4807,12 @@ iframe {
   /* Страница Документы */
   .documents-page .documents-item {
     font-size: 15px;
+  }
+
+  /* Страница Новости и Акции */
+  .np-page .n-main-section .n-main-section__title {
+    height: 62px;
+    font-size: 28px;
   }
 
 }
