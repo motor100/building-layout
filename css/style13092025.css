@@ -1385,6 +1385,9 @@ iframe {
   border: 1px solid var(--background-color);
   z-index: 2;
 }
+.project-detail-page .slider-section .download-presentation-hidden-desktop {
+  display: none;
+}
 .project-detail-page .slider-section .download-presentation-btn__image {
   width: 20px;
   transition: transform .3s;
@@ -2210,6 +2213,7 @@ iframe {
 /* Страница Контакты */
 .contacts-page .contacts-section .grid-container {
   display: grid;
+  margin: 0 0 20px 0;
   gap: 24px;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: auto;
@@ -3975,6 +3979,12 @@ iframe {
     top: 20px;
     left: 20px;
   }
+  .project-detail-page .new-location-section .decription-title__text {
+    font-size: 28px;
+  }
+  .project-detail-page .new-location-section .location-content-item {
+    gap: 40px;
+  }
 
   /* Параграф текста левый и правый */
   .paragraph-left-right {
@@ -3987,6 +3997,8 @@ iframe {
     height: 750px;
   }
   .office-map-section .address-card {
+    top: 40px;
+    left: 40px;
     width: 450px;
     border-radius: 20px;
   }
@@ -4012,9 +4024,11 @@ iframe {
   }
 
   /* Форма Забронировать онлайн */
+  /*
   .booking-online-form-wrapper {
     padding: 20px 0;
   }
+  */
   .booking-online-form-wrapper .white-frame {
     padding: 0;
   }
@@ -4312,6 +4326,150 @@ iframe {
   .np-page .frame .flex-container {
     flex-direction: column;
   }
+
+
+
+  /* Карточка проекта */
+  .project-detail-page .title-section .flex-container {
+    flex-direction: column;
+  }
+  .project-detail-page .title-section .make-an-appointment-wrapper {
+    width: 100%;
+    justify-content: flex-end;
+  }
+  .project-detail-page .title-section .text-btn {
+    height: 45px;
+  }
+  .project-detail-page .slider-section .project-slider-item__image {
+    height: 540px;
+  }
+  .project-detail-page .slider-section .details {
+    top: 30px;
+    left: 30px;
+  }
+  .project-detail-page .slider-section .download-presentation-btn {
+    left: 30px;
+    bottom: 30px;
+  }
+  .project-detail-page .slider-section .swiper-nav {
+    right: 30px;
+    bottom: 30px;
+  }
+  .project-detail-page .flats-section .flats-sold-out-title {
+    font-size: 34px;
+  }
+  .project-detail-page .flats-section .flats-sold-out {
+    height: 280px;
+    border-radius: 20px;
+  }
+  .project-detail-page .location-section .location-item__image {
+    width: 200px;
+    height: 115px;
+    border-radius: 15px;
+  }
+  .project-detail-page .location-section .location-item__title {
+    font-size: 18px;
+  }
+  .project-detail-page .new-location-section .description-text {
+    font-size: 16px;
+  }
+  .project-detail-page .new-location-section .decription-title__text {
+    font-size: 24px;
+  }
+  .project-detail-page .new-location-section .location-image {
+    width: 350px;
+    border-radius: 20px;
+  }
+  .project-detail-page .new-location-section .location-content-item {
+    gap: 20px;
+  }
+  .project-detail-page .new-location-section .location-advantages-slider-item__image {
+    width: 146px;
+  }
+  .project-detail-page .new-location-section .location-advantages-slider-item__title {
+    display: -webkit-box;
+    height: 48px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+  }
+  .project-detail-page .new-location-section .location-advantages-slider-item__content,
+  .project-detail-page .new-location-section .location-advantages-slider-item__image {
+    width: 48%;
+  }
+  .project-detail-page .working-progress-section .grid-container {
+    gap: 10px;
+  }
+  .project-detail-page .working-progress-section .working-progress-item__date {
+    top: 15px;
+    left: 15px;
+    font-size: 14px;
+  }
+  .project-detail-page .blur-arrow-right {
+    right: 15px;
+    bottom: 15px;
+    width: 44px;
+    height: 44px;
+  }
+
+
+
+
+  /* Секция Карта офисов в карточке проекта и Контакты */
+  .office-map-section .office-map {
+    height: 720px;
+  }
+
+
+  /*
+  .project-detail-page .location-section .location-map {
+    height: 520px;
+  }
+  .project-detail-page .new-location-section .location-advantages-slider-item {
+    width: 49%;
+    padding: 15px;
+    gap: 20px;
+  }
+  .project-detail-page .new-location-section .decription-title {
+    align-items: flex-start;
+  }
+  .project-detail-page .new-location-section .swiper-slide-active .location-advantages-slider-item__title {
+    font-size: 19px;
+  }
+  .project-detail-page .project-detail-advantages-section .grid-container {
+    gap: 20px;
+  }
+  .project-detail-page .project-detail-advantages-section .project-detail-advantages-item {
+    height: 300px;
+    padding: 20px;
+    border-radius: 20px;
+  }
+  .project-detail-page .project-detail-advantages-section .project-detail-advantages-item__title {
+    font-size: 28px;
+  }
+  .project-detail-page .project-detail-advantages-section .project-detail-advantages-item__text {
+    font-size: 18px;
+  }
+  .project-detail-page .working-progress-section .grid-container {
+    gap: 20px;
+  }
+  .project-detail-page .working-progress-section .working-progress-gallery {
+    height: 195px;
+    border-radius: 15px;
+  }
+  .project-detail-page .working-progress-section .working-progress-item__date {
+    top: 20px;
+    left: 20px;
+  }
+  
+  */
+
+  /* Параграф текста левый и правый */
+  .paragraph-left-right {
+    font-size: 20px;
+  }
+
 }
 
 @media only screen and (max-width : 768px) {
@@ -4546,6 +4704,73 @@ iframe {
     grid-template-columns: repeat(2, 1fr);
   }
 
+  /* Карточка проекта */
+  .project-detail-page .title-section .title-wrapper {
+    gap: 16px;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .project-detail-page .slider-section .project-slider-item__image {
+    height: 340px;
+  }
+  .project-detail-page .slider-section .details {
+    position: static;
+    width: 100%;
+    margin: 0 0 20px 0;
+    padding: 25px;
+  }
+  .project-detail-page .slider-section .download-presentation-hidden-desktop {
+    display: flex;
+    width: 100%;
+    margin: 0 0 20px 0;
+  }
+  .project-detail-page .slider-section .download-presentation-btn {
+    position: static;
+  }
+  .project-detail-page .new-location-section .location-image {
+    display: none;
+  }
+  .project-detail-page .new-location-section .decription-title {
+    margin: 0 0 10px 0;
+  }
+  .project-detail-page .new-location-section .location-content {
+    height: 250px;
+    margin-bottom: 30px;
+  }
+  .project-detail-page .working-progress-section .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .project-detail-page .new-location-section .description {
+    height: 250px;
+  }
+  .project-detail-page .new-location-section .location-advantages-slider-item {
+    width: 100%;
+  }
+
+  /* Секция Карта офисов в карточке проекта и Контакты */
+  .office-map-section .office-map-wrapper {
+    padding: 20px;
+  }
+  .office-map-section .office-map {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
+  .office-map-section .address-card {
+    position: static;
+    width: 100%;
+  }
+    
+
+
+  /* Параграф текста левый и правый */
+  .paragraph-left-right {
+    font-size: 18px;
+  }
+
   /* mobile menu */
   .mobile-menu {
     display: block;
@@ -4642,6 +4867,33 @@ iframe {
   }
   .np-page .n-main-section .n-main-section__image {
     border-radius: 15px;
+  }
+
+  /* Карточка проекта */
+  .project-detail-page .slider-section .details {
+    padding: 20px;
+  }
+  .project-detail-page .slider-section .project-slider-item__image {
+    height: 240px;
+  }
+  .project-detail-page .new-location-section .location-content {
+    height: 280px;
+  }
+  .project-detail-page .new-location-section .description {
+    height: 280px;
+  }
+  .project-detail-page .new-location-section .location-advantages-slider-item__content,
+  .project-detail-page .new-location-section .location-advantages-slider-item__image {
+    width: 47%;
+  }
+
+
+  /* Параграф текста левый и правый */
+  .paragraph-left-right {
+    font-size: 17px;
+  }
+  .paragraph-left-right.paragraph-left {
+    margin-bottom: 20px;
   }
 
   /* burger menu */
@@ -4782,6 +5034,19 @@ iframe {
     grid-template-columns: auto;
   }
 
+  /* Карточка проекта */
+  .project-detail-page .title-section .make-an-appointment-wrapper {
+    flex-direction: column;
+  }
+  .project-detail-page .title-section .make-an-appointment-wrapper {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  /* Параграф текста левый и правый */
+  .paragraph-left-right {
+    font-size: 16px;
+  }
 
   /* agreement text галочка соглашения */
   .agreement-text .checkbox-text {

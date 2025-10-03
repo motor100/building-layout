@@ -131,7 +131,16 @@ document.addEventListener("DOMContentLoaded", () => {
       loop: true,
       slidesPerView: 'auto',
       autoplay: false,
-      spaceBetween: 20,
+      breakpoints: {
+        // mobile 320-991
+        320: {
+          spaceBetween: 10,
+        },
+        // desktop >= 992
+        992: {
+          spaceBetween: 20,
+        },
+      },
       navigation: {
         nextEl: '.swiper-next',
         prevEl: '.swiper-prev',
