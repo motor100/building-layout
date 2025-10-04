@@ -2300,10 +2300,6 @@ iframe {
 }
 
 /* Страница Ипотека */
-.mortgage-page .mortgage-page-section-title {
-  font-size: 32px;
-  line-height: 1.2;
-}
 .mortgage-page .submit-application-section .submit-application-section-title {
   margin: 0 0 10px 0;
   color: var(--blue-color);
@@ -2363,9 +2359,6 @@ iframe {
 .mortgage-page .list-section .list-item {
   margin: 0 0 5px 0;
 }
-
-
-
 .mortgage-page .accordeon-section {
   padding: 40px 0 0 0;
 }
@@ -2415,6 +2408,7 @@ iframe {
 }
 .accordeon .accordeon-item-title {
   margin-bottom: 0;
+  padding: 0 40px 0 0;
   font-family: 'InterDisplay-Medium';
   font-size: 24px;
   cursor: pointer;
@@ -2441,7 +2435,6 @@ iframe {
   height: 32px;
   border-radius: 16px;
   background-color: var(--background-color);
-  margin: auto;
   z-index: 1;
 }
 .accordeon .accordeon-item .arrow::before,
@@ -3200,13 +3193,6 @@ iframe {
   .header .header-contacts .callback-me-btn {
     height: 38px;
   }
-  /*
-  .header .header-contacts .menu-btn {
-    width: 95px;
-    height: 38px;
-    font-size: 16px;
-  }
-  */
 
   /* Верхнее меню */
   .top-menu .sub-menu {
@@ -3260,12 +3246,6 @@ iframe {
   .projects-section .projects-item__status {
     margin-top: 30px;
   }
-  /*
-  .projects-section .projects-item__logo {
-    width: 45px;
-    height: 45px;
-  }
-  */
   .projects-section .projects-item__title {
     font-size: 30px;
   }
@@ -3608,6 +3588,34 @@ iframe {
   .np-page .n-main-section .n-main-section__image {
     width: 400px;
     height: 224px;
+  }
+
+  /* Страница Ипотека */
+  .mortgage-page .submit-application-section .submit-application-section-text {
+    margin-bottom: 30px;
+    font-size: 20px;
+  }
+  .mortgage-page .submit-application-section .submit-application-item {
+    padding: 25px;
+    border-radius: 25px;
+  }
+  .mortgage-page .contacts-section .contacts-item {
+    padding: 30px;
+  }
+  .mortgage-page .contacts-section .contacts-item__title {
+    font-size: 22px;
+  }
+
+  /* Accordeon */
+  .accordeon .accordeon-item {
+    padding: 30px;
+    border-radius: 25px;
+  }
+  .accordeon .accordeon-item-title {
+    font-size: 22px;
+  }
+  .accordeon .accordeon-item .arrow {
+    top: 30px;
   }
 
   /* we use cookie */
@@ -4134,6 +4142,46 @@ iframe {
     grid-template-columns: repeat(3, 1fr);
   }
 
+  /* Страница Ипотека */
+  .mortgage-page .submit-application-section .submit-application-section-text {
+    margin-bottom: 20px;
+    font-size: 18px;
+  }
+  .mortgage-page .submit-application-section .submit-application-item {
+    padding: 20px;
+    border-radius: 20px;
+  }
+  .mortgage-page .submit-application-section .submit-application-item__title {
+    font-size: 28px;
+  }
+  .mortgage-page .list-section .list-section__title {
+    margin-bottom: 15px;
+    font-size: 28px;
+  }
+  .mortgage-page .list-section .list-section-frame {
+    padding: 20px;
+    border-radius: 20px;
+  }
+  .mortgage-page .contacts-section .contacts-item {
+    padding: 20px;
+    border-radius: 20px;
+  }
+  .mortgage-page .contacts-section .contacts-item__title {
+    font-size: 20px;
+  }
+
+  /* Accordeon */
+  .accordeon .accordeon-item {
+    padding: 20px;
+    border-radius: 20px;
+  }
+  .accordeon .accordeon-item-title {
+    font-size: 20px;
+  }
+  .accordeon .accordeon-item .arrow {
+    top: 20px;
+  }
+
   /* we use cookie */
   .we-use-cookie {
     max-width: 880px;
@@ -4413,61 +4461,42 @@ iframe {
     height: 44px;
   }
 
-
-
-
   /* Секция Карта офисов в карточке проекта и Контакты */
   .office-map-section .office-map {
     height: 720px;
   }
 
-
-  /*
-  .project-detail-page .location-section .location-map {
-    height: 520px;
-  }
-  .project-detail-page .new-location-section .location-advantages-slider-item {
-    width: 49%;
-    padding: 15px;
-    gap: 20px;
-  }
-  .project-detail-page .new-location-section .decription-title {
-    align-items: flex-start;
-  }
-  .project-detail-page .new-location-section .swiper-slide-active .location-advantages-slider-item__title {
-    font-size: 19px;
-  }
-  .project-detail-page .project-detail-advantages-section .grid-container {
-    gap: 20px;
-  }
-  .project-detail-page .project-detail-advantages-section .project-detail-advantages-item {
-    height: 300px;
-    padding: 20px;
-    border-radius: 20px;
-  }
-  .project-detail-page .project-detail-advantages-section .project-detail-advantages-item__title {
-    font-size: 28px;
-  }
-  .project-detail-page .project-detail-advantages-section .project-detail-advantages-item__text {
-    font-size: 18px;
-  }
-  .project-detail-page .working-progress-section .grid-container {
-    gap: 20px;
-  }
-  .project-detail-page .working-progress-section .working-progress-gallery {
-    height: 195px;
-    border-radius: 15px;
-  }
-  .project-detail-page .working-progress-section .working-progress-item__date {
-    top: 20px;
-    left: 20px;
-  }
-  
-  */
-
   /* Параграф текста левый и правый */
   .paragraph-left-right {
     font-size: 20px;
+  }
+
+  /* Страница Ипотека */
+  .mortgage-page .submit-application-section .submit-application-section-title {
+    font-size: 30px;
+  }
+  .mortgage-page .submit-application-section .submit-application-section-text {
+    font-size: 16px;
+  }
+  .mortgage-page .submit-application-section .submit-application-item {
+    padding: 15px;
+  }
+  .mortgage-page .submit-application-section .submit-application-item__title {
+    font-size: 24px;
+  }
+  .mortgage-page .list-section .list-section__title {
+    font-size: 24px;
+  }
+  .mortgage-page .list-section {
+    padding-top: 20px;
+  }
+  .mortgage-page .list-section .list-section-frame {
+    padding: 15px;
+  }
+
+  /* Accordeon */
+  .accordeon .accordeon-item-title {
+    font-size: 18px;
   }
 
 }
@@ -4768,6 +4797,43 @@ iframe {
     font-size: 18px;
   }
 
+  /* Страница Ипотека */
+  .mortgage-page .submit-application-section .flex-container {
+    margin-bottom: 20px;
+    gap: 16px;
+    flex-direction: column;
+  }
+  .mortgage-page .submit-application-section .submit-application-item__title {
+    font-size: 22px;
+  }
+  .mortgage-page .submit-application-section .submit-application-btn {
+    margin-bottom: 20px;
+  }
+  .mortgage-page .list-section .list-section__title {
+    font-size: 22px;
+  }
+  .mortgage-page .accordeon-section {
+    margin-bottom: 30px;
+    padding-top: 20px;
+  }
+  .mortgage-page .contacts-section .flex-container {
+    gap: 16px;
+    flex-direction: column;
+  }
+
+  /* Accordeon */
+  .accordeon .accordeon-item {
+    padding: 15px;
+    border-radius: 15px;
+  }
+  .accordeon .accordeon-item-title {
+    font-size: 16px;
+  }
+  .accordeon .accordeon-item .arrow {
+    top: 15px;
+    right: 15px;
+  }
+
   /* mobile menu */
   .mobile-menu {
     display: block;
@@ -4894,6 +4960,26 @@ iframe {
   }
   .paragraph-left-right.paragraph-left {
     margin-bottom: 20px;
+  }
+
+  /* Страница Ипотека */
+  .mortgage-page .submit-application-section .submit-application-section-title {
+    font-size: 26px;
+  }
+  .mortgage-page .submit-application-section .submit-application-item__title {
+    font-size: 20px;
+  }
+  .mortgage-page .submit-application-section .submit-application-item__text {
+    font-size: 16px;
+  }
+  .mortgage-page .list-section .list-section__title {
+    font-size: 20px;
+  }
+  .mortgage-page .contacts-section .contacts-item__title {
+    font-size: 18px;
+  }
+  .mortgage-page .contacts-section .contacts-item {
+    padding: 15px;
   }
 
   /* burger menu */
@@ -5073,6 +5159,14 @@ iframe {
   /* Параграф текста левый и правый */
   .paragraph-left-right {
     font-size: 16px;
+  }
+
+  /* Страница Ипотека */
+  .mortgage-page .submit-application-section .submit-application-section-title {
+    font-size: 22px;
+  }
+  .mortgage-page .list-section .list-section__title {
+    font-size: 18px;
   }
 
   /* agreement text галочка соглашения */
