@@ -4571,7 +4571,6 @@ iframe {
     font-size: 24px;
   }
 
-
   /* Темная рамка */
   .dark-frame {
     padding: 20px;
@@ -4763,8 +4762,6 @@ iframe {
     position: static;
     width: 100%;
   }
-    
-
 
   /* Параграф текста левый и правый */
   .paragraph-left-right {
@@ -4779,6 +4776,10 @@ iframe {
 }
 
 @media only screen and (max-width : 576px) {
+
+  :root {
+    --margin-80: 30px;
+  }
 
   .primary-title {
     margin-bottom: 20px;
@@ -4887,7 +4888,6 @@ iframe {
     width: 47%;
   }
 
-
   /* Параграф текста левый и правый */
   .paragraph-left-right {
     font-size: 17px;
@@ -4904,6 +4904,10 @@ iframe {
 }
 
 @media only screen and (max-width : 480px) {
+
+  :root {
+    --margin-80: 20px;
+  }
 
   .primary-title {
     margin-bottom: 15px;
@@ -5042,6 +5046,29 @@ iframe {
     flex-direction: column;
     align-items: flex-start;
   }
+  .project-detail-page .new-location-section .location-content {
+    height: 320px;
+  }
+  .project-detail-page .new-location-section .description {
+    height: 320px;
+  }
+  .project-detail-page .working-progress-section .grid-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  /* Секция Карта офисов в карточке проекта и Контакты */
+  .office-map-section .address-card__content {
+    padding: 20px 15px;
+  }
+  .office-map-section .office-map-wrapper {
+    padding: 0;
+  }
+  .office-map-section .address-card__title {
+    font-size: 32px;
+  }
+  .office-map-section .address-card__content {
+    padding: 20px;
+  }
 
   /* Параграф текста левый и правый */
   .paragraph-left-right {
@@ -5078,6 +5105,11 @@ iframe {
   .np-page .n-main-section .n-main-section__title {
     height: 62px;
     font-size: 28px;
+  }
+
+  /* Карточка проекта */
+  .project-detail-page .slider-section .details {
+    padding: 15px;
   }
 
 }
