@@ -1419,19 +1419,19 @@ iframe {
 }
 
 /* Карточка проекта выполненная */
-.project-detail-page .new-location-section {
+.project-detail-page .location-section {
   padding: 0 0 40px 0;
 }
 .project-detail-page .new-location-section-title {
   margin: 0 0 20px 0;
   letter-spacing: -1.5px;
 }
-.project-detail-page .new-location-section .location-content {
+.project-detail-page .location-section .location-content {
   position: relative;
   height: 390px;
   margin: 0 0 40px 0;
 }
-.project-detail-page .new-location-section .location-content-item {
+.project-detail-page .location-section .location-content-item {
   position: absolute;
   top: 0;
   left: 0;
@@ -1444,31 +1444,31 @@ iframe {
   justify-content: space-between;
   transition: opacity .2s, visibility .2s;
 }
-.project-detail-page .new-location-section .location-content-item.active {
+.project-detail-page .location-section .location-content-item.active {
   opacity: 1;
   visibility: visible;
 }
-.project-detail-page .new-location-section .description {
+.project-detail-page .location-section .description {
   position: relative;
   height: 390px;
 }
-.project-detail-page .new-location-section .decription-title {
+.project-detail-page .location-section .decription-title {
   display: flex;
   margin: 0 0 24px 0;
   align-items: center;
 }
-.project-detail-page .new-location-section .decription-title__number {
+.project-detail-page .location-section .decription-title__number {
   margin-right: 24px;
   color: var(--blue-color);
 }
-.project-detail-page .new-location-section .decription-title__text {
+.project-detail-page .location-section .decription-title__text {
   font-size: 32px;
   line-height: 1.1;
 }
-.project-detail-page .new-location-section .description-text {
+.project-detail-page .location-section .description-text {
   font-size: 18px;
 }
-.project-detail-page .new-location-section .location-image {
+.project-detail-page .location-section .location-image {
   position: relative;
   width: 646px;
   height: 390px;
@@ -1476,22 +1476,16 @@ iframe {
   overflow: hidden;
   flex-shrink: 0;
 }
-.project-detail-page .new-location-section .location-image img {
+.project-detail-page .location-section .location-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-.project-detail-page .new-location-section .swiper-nav {
+.project-detail-page .location-section .swiper-nav {
   margin: 0 0 20px auto;
   /*background-color: #EEF0F4;*/
 }
-/*
-.project-detail-page .new-location-section .swiper-nav .swiper-prev,
-.project-detail-page .new-location-section .swiper-nav .swiper-next {
-  background-color: #EEF0F4;
-}
-*/
-.project-detail-page .new-location-section .location-advantages-slider-item {
+.project-detail-page .location-section .location-advantages-slider-item {
   display: flex;
   width: 40%;
   height: 200px;
@@ -1501,17 +1495,17 @@ iframe {
   justify-content: space-between;
   cursor: pointer;
 }
-.project-detail-page .new-location-section .location-advantages-slider-item__content,
-.project-detail-page .new-location-section .location-advantages-slider-item__image {
+.project-detail-page .location-section .location-advantages-slider-item__content,
+.project-detail-page .location-section .location-advantages-slider-item__image {
   width: 50%;
 }
-.project-detail-page .new-location-section .location-advantages-slider-item__title {
+.project-detail-page .location-section .location-advantages-slider-item__title {
   margin: 0 0 6px 0;
   font-size: 20px;
   color: var(--second-lightgrey-color);
   line-height: 1.2;
 }
-.project-detail-page .new-location-section .location-advantages-slider-item__description {
+.project-detail-page .location-section .location-advantages-slider-item__description {
   display: -webkit-box;
   height: 108px;
   font-size: 15px;
@@ -1522,7 +1516,7 @@ iframe {
   -webkit-line-clamp: 6;
   -webkit-box-orient: vertical;
 }
-.project-detail-page .new-location-section .location-advantages-slider-item__image {
+.project-detail-page .location-section .location-advantages-slider-item__image {
   width: 265px;
   height: 160px;
   border-radius: 20px;
@@ -1530,63 +1524,22 @@ iframe {
   opacity: .4;
   flex-shrink: 0;
 }
-.project-detail-page .new-location-section .location-advantages-slider-item__image img {
+.project-detail-page .location-section .location-advantages-slider-item__image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-.project-detail-page .new-location-section .swiper-slide-active {
+.project-detail-page .location-section .swiper-slide-active {
   background-color: var(--lightgrey-color);
 }
-.project-detail-page .new-location-section .swiper-slide-active .location-advantages-slider-item__title {
+.project-detail-page .location-section .swiper-slide-active .location-advantages-slider-item__title {
   color: var(--blue-color);
 }
-.project-detail-page .new-location-section .swiper-slide-active .location-advantages-slider-item__description {
+.project-detail-page .location-section .swiper-slide-active .location-advantages-slider-item__description {
   color: var(--text-color);
 }
-.project-detail-page .new-location-section .swiper-slide-active .location-advantages-slider-item__image {
+.project-detail-page .location-section .swiper-slide-active .location-advantages-slider-item__image {
   opacity: 1;
-}
-.project-detail-page .location-section .grid-container {
-  display: grid;
-  gap: 60px;
-  grid-template-columns: repeat(2, 1fr);
-}
-.project-detail-page .location-section .location-item {
-  display: flex;
-  margin: 0 0 20px 0;
-  gap: 10px;
-  justify-content: space-between;
-}
-.project-detail-page .location-section .location-item:last-child {
-  margin-bottom: 0;
-}
-.project-detail-page .location-section .location-item__title {
-  margin: 0 0 10px 0;
-  font-size: 20px;
-  line-height: 1.2;
-}
-.project-detail-page .location-section .location-item__text {
-  line-height: 1.2;
-}
-.project-detail-page .location-section .location-item__image {
-  width: 280px;
-  height: 160px;
-  border-radius: 20px;
-  overflow: hidden;
-}
-.project-detail-page .location-section .location-item__image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-.project-detail-page .location-section .location-map {
-  display: flex;
-  height: 700px;
-  flex-direction: column;
-}
-.project-detail-page .location-section .map-text {
-  margin: 0 0 20px 0;
 }
 .project-detail-page .location-section .map-btn {
   position: absolute;
@@ -3058,17 +3011,17 @@ iframe {
   }
 
   /* Карточка проекта */
-  .project-detail-page .new-location-section .location-advantages-slider-item__image {
+  .project-detail-page .location-section .location-advantages-slider-item__image {
     width: 220px;
     height: 162px;
   }
-  .project-detail-page .new-location-section .location-image {
+  .project-detail-page .location-section .location-image {
     width: 536px;
   }
-  .project-detail-page .new-location-section .decription-title__number {
+  .project-detail-page .location-section .decription-title__number {
     font-size: 40px;
   }
-  .project-detail-page .new-location-section .decription-title__text {
+  .project-detail-page .location-section .decription-title__text {
     font-size: 32px;
   }
   .project-detail-page .working-progress-section .working-progress-gallery {
@@ -3432,31 +3385,28 @@ iframe {
     right: 50px;
     bottom: 50px;
   }
-  .project-detail-page .location-section .map {
-    border-radius: 25px;
-  }
   .project-detail-page .project-detail-advantages-section .project-detail-advantages-item {
     height: 360px;
   }
-  .project-detail-page .new-location-section .location-advantages-slider-item {
+  .project-detail-page .location-section .location-advantages-slider-item {
     height: 192px;
     padding: 15px 20px;
     border-radius: 20px;
   }
-  .project-detail-page .new-location-section .decription-title__number {
+  .project-detail-page .location-section .decription-title__number {
     font-size: 38px;
   }
-  .project-detail-page .new-location-section .decription-title__text {
+  .project-detail-page .location-section .decription-title__text {
     font-size: 30px;
   }
-  .project-detail-page .new-location-section .description-text {
+  .project-detail-page .location-section .description-text {
     font-size: 17px;
   }
-  .project-detail-page .new-location-section .location-advantages-slider-item__image {
+  .project-detail-page .location-section .location-advantages-slider-item__image {
     width: 196px;
     border-radius: 15px;
   }
-  .project-detail-page .new-location-section .location-image {
+  .project-detail-page .location-section .location-image {
     width: 478px;
     border-radius: 25px;
   }
@@ -3932,9 +3882,6 @@ iframe {
     right: 40px;
     bottom: 40px;
   }
-  .project-detail-page .location-section .map {
-    border-radius: 20px;
-  }
   .project-detail-page .flats-section .flats-sold-out-title {
     font-size: 40px;
   }
@@ -3942,29 +3889,15 @@ iframe {
     height: 320px;
     border-radius: 25px;
   }
-  .project-detail-page .location-section .grid-container {
-    gap: 20px;
-  }
-  .project-detail-page .location-section .location-item__image {
-    width: 200px;
-    height: 115px;
-    border-radius: 15px;
-  }
-  .project-detail-page .location-section .location-item__title {
-    font-size: 18px;
-  }
-  .project-detail-page .location-section .location-map {
-    height: 520px;
-  }
-  .project-detail-page .new-location-section .location-advantages-slider-item {
+  .project-detail-page .location-section .location-advantages-slider-item {
     width: 49%;
     padding: 15px;
     gap: 20px;
   }
-  .project-detail-page .new-location-section .decription-title {
+  .project-detail-page .location-section .decription-title {
     align-items: flex-start;
   }
-  .project-detail-page .new-location-section .swiper-slide-active .location-advantages-slider-item__title {
+  .project-detail-page .location-section .swiper-slide-active .location-advantages-slider-item__title {
     font-size: 19px;
   }
   .project-detail-page .project-detail-advantages-section .grid-container {
@@ -3992,10 +3925,10 @@ iframe {
     top: 20px;
     left: 20px;
   }
-  .project-detail-page .new-location-section .decription-title__text {
+  .project-detail-page .location-section .decription-title__text {
     font-size: 28px;
   }
-  .project-detail-page .new-location-section .location-content-item {
+  .project-detail-page .location-section .location-content-item {
     gap: 40px;
   }
 
@@ -4423,31 +4356,23 @@ iframe {
     height: 280px;
     border-radius: 20px;
   }
-  .project-detail-page .location-section .location-item__image {
-    width: 200px;
-    height: 115px;
-    border-radius: 15px;
-  }
-  .project-detail-page .location-section .location-item__title {
-    font-size: 18px;
-  }
-  .project-detail-page .new-location-section .description-text {
+  .project-detail-page .location-section .description-text {
     font-size: 16px;
   }
-  .project-detail-page .new-location-section .decription-title__text {
+  .project-detail-page .location-section .decription-title__text {
     font-size: 24px;
   }
-  .project-detail-page .new-location-section .location-image {
+  .project-detail-page .location-section .location-image {
     width: 350px;
     border-radius: 20px;
   }
-  .project-detail-page .new-location-section .location-content-item {
+  .project-detail-page .location-section .location-content-item {
     gap: 20px;
   }
-  .project-detail-page .new-location-section .location-advantages-slider-item__image {
+  .project-detail-page .location-section .location-advantages-slider-item__image {
     width: 146px;
   }
-  .project-detail-page .new-location-section .location-advantages-slider-item__title {
+  .project-detail-page .location-section .location-advantages-slider-item__title {
     display: -webkit-box;
     height: 48px;
     overflow: hidden;
@@ -4455,8 +4380,8 @@ iframe {
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
   }
-  .project-detail-page .new-location-section .location-advantages-slider-item__content,
-  .project-detail-page .new-location-section .location-advantages-slider-item__image {
+  .project-detail-page .location-section .location-advantages-slider-item__content,
+  .project-detail-page .location-section .location-advantages-slider-item__image {
     width: 48%;
   }
   .project-detail-page .working-progress-section .grid-container {
@@ -4856,23 +4781,23 @@ iframe {
   .project-detail-page .slider-section .download-presentation-btn {
     position: static;
   }
-  .project-detail-page .new-location-section .location-image {
+  .project-detail-page .location-section .location-image {
     display: none;
   }
-  .project-detail-page .new-location-section .decription-title {
+  .project-detail-page .location-section .decription-title {
     margin: 0 0 10px 0;
   }
-  .project-detail-page .new-location-section .location-content {
+  .project-detail-page .location-section .location-content {
     height: 250px;
     margin-bottom: 30px;
   }
   .project-detail-page .working-progress-section .grid-container {
     grid-template-columns: repeat(2, 1fr);
   }
-  .project-detail-page .new-location-section .description {
+  .project-detail-page .location-section .description {
     height: 250px;
   }
-  .project-detail-page .new-location-section .location-advantages-slider-item {
+  .project-detail-page .location-section .location-advantages-slider-item {
     width: 100%;
   }
 
@@ -5092,14 +5017,14 @@ iframe {
   .project-detail-page .slider-section .project-slider-item__image {
     height: 240px;
   }
-  .project-detail-page .new-location-section .location-content {
+  .project-detail-page .location-section .location-content {
     height: 280px;
   }
-  .project-detail-page .new-location-section .description {
+  .project-detail-page .location-section .description {
     height: 280px;
   }
-  .project-detail-page .new-location-section .location-advantages-slider-item__content,
-  .project-detail-page .new-location-section .location-advantages-slider-item__image {
+  .project-detail-page .location-section .location-advantages-slider-item__content,
+  .project-detail-page .location-section .location-advantages-slider-item__image {
     width: 47%;
   }
 
@@ -5314,10 +5239,10 @@ iframe {
     flex-direction: column;
     align-items: flex-start;
   }
-  .project-detail-page .new-location-section .location-content {
+  .project-detail-page .location-section .location-content {
     height: 320px;
   }
-  .project-detail-page .new-location-section .description {
+  .project-detail-page .location-section .description {
     height: 320px;
   }
   .project-detail-page .working-progress-section .grid-container {
