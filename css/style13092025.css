@@ -4197,6 +4197,11 @@ iframe {
     font-size: 24px;
   }
 
+  /* Страница О компании */
+  .about-company-page .title-section .description {
+    font-size: 26px;
+  }
+
   /* we use cookie */
   .we-use-cookie {
     max-width: 880px;
@@ -4527,6 +4532,54 @@ iframe {
     font-size: 18px;
   }
 
+  /* Страница О компании */
+  .about-company-page .w60 {
+    width: 100%;
+  }
+  .about-company-page .w40 {
+    width: 100%;
+  }
+  .about-company-page .title-section .flex-container {
+    flex-direction: column;
+  }
+  .about-company-page .title-section .title {
+    font-size: 52px;
+  }
+  .about-company-page .title-section .description {
+    font-size: 24px;
+  }
+  .about-company-page .mission-section .flex-container {
+    flex-direction: column;
+  }
+  .about-company-page .mission-section .mission-title {
+    font-size: 30px;
+  }
+  .about-company-page .our-values-section .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .about-company-page .our-values-section .our-values-item {
+    padding: 15px;
+    border-radius: 20px;
+  }
+  .about-company-page .awards-section .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .about-company-page .team-section .name__title {
+    font-size: 26px;
+  }
+  .about-company-page .team-section .flex-container {
+    gap: 16px;
+    flex-direction: column;
+  }
+
+  /* Параграф текста левый и правый */
+  .paragraph-left-right {
+    font-size: 18px;
+  }
+  .paragraph-left-right.paragraph-right {
+    margin-bottom: 40px;
+  }
+
 }
 
 @media only screen and (max-width : 768px) {
@@ -4820,11 +4873,6 @@ iframe {
     width: 100%;
   }
 
-  /* Параграф текста левый и правый */
-  .paragraph-left-right {
-    font-size: 18px;
-  }
-
   /* Страница Ипотека */
   .mortgage-page .submit-application-section .flex-container {
     margin-bottom: 20px;
@@ -4865,6 +4913,38 @@ iframe {
   /* Страница Гид по ипотеке */
   .mortgage-guide-page .mortgage-title {
     font-size: 20px;
+  }
+
+  /* Страница О компании */
+  .about-company-page .title-section .title {
+    font-size: 48px;
+  }
+  .about-company-page .title-section .description {
+    font-size: 22px;
+  }
+  .about-company-page .mission-section .mission-title {
+    font-size: 26px;
+  }
+  .about-company-page .our-values-section .our-values-item__title {
+    font-size: 22px;
+  }
+  .about-company-page .our-values-section .our-values-item .our-values-item__text {
+    margin-bottom: 30px;
+    font-size: 16px;
+  }
+  .about-company-page .our-values-section .our-values-item .our-values-item__star {
+    width: 58px;
+  }
+
+  /* Параграф текста левый и правый */
+  .paragraph-left-right {
+    font-size: 16px;
+  }
+  .paragraph-left-right.paragraph-left {
+    margin-bottom: 10px;
+  }
+  .paragraph-left-right.paragraph-right {
+    margin-bottom: 20px;
   }
 
   /* mobile menu */
@@ -5021,6 +5101,14 @@ iframe {
   }
   .contacts-page .contacts-section .c-item {
     height: auto;
+  }
+
+  /* Страница О компании */
+  .about-company-page .title-section .title {
+    font-size: 44px;
+  }
+  .about-company-page .title-section .description {
+    font-size: 20px;
   }
 
   /* burger menu */
@@ -5220,6 +5308,43 @@ iframe {
     padding: 15px;
   }
 
+  /* Страница О компании */
+  .about-company-page .title-section .title {
+    font-size: 36px;
+  }
+  .about-company-page .title-section .description {
+    font-size: 18px;
+  }
+  .about-company-page .our-advantages-section .our-advantages {
+    height: auto;
+  }
+  .about-company-page .our-advantages-section .our-advantages-image {
+    position: static;
+    margin: 20px 0;
+    border-radius: 20px;
+  }
+  .about-company-page .mission-section .mission-title {
+    font-size: 22px;
+  }
+  .about-company-page .mission-section .mission-description__title {
+    font-size: 26px;
+  }
+  .about-company-page .our-values-section {
+    padding-top: 0;
+  }
+  .about-company-page .our-values-section .grid-container {
+    grid-template-columns: auto;
+  }
+  .about-company-page .awards-section .grid-container {
+    gap: 10px;
+  }
+  .about-company-page .awards-section .awards-item {
+    border-radius: 15px;
+  }
+  .about-company-page .team-section .name__title {
+    font-size: 22px;
+  }
+
   /* agreement text галочка соглашения */
   .agreement-text .checkbox-text {
     font-size: 12px;
@@ -5255,6 +5380,11 @@ iframe {
   /* Карточка проекта */
   .project-detail-page .slider-section .details {
     padding: 15px;
+  }
+
+  /* Страница О компании */
+  .about-company-page .title-section .title {
+    font-size: 32px;
   }
 
 }
