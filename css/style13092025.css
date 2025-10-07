@@ -4479,6 +4479,17 @@ iframe {
     height: 720px;
   }
 
+  /* Страница Контакты */
+  .contacts-page .contacts-section .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .contacts-page .contacts-section .grid-container {
+    gap: 10px;
+  }
+  .contacts-page .contacts-section .c-item {
+    padding: 20px;
+  }
+
   /* Параграф текста левый и правый */
   .paragraph-left-right {
     font-size: 20px;
@@ -5004,6 +5015,14 @@ iframe {
     padding: 15px;
   }
 
+  /* Страница Контакты */
+  .contacts-page .contacts-section .grid-container {
+    grid-template-columns: auto;
+  }
+  .contacts-page .contacts-section .c-item {
+    height: auto;
+  }
+
   /* burger menu */
   .burger-menu-wrapper {
     right: 12px;
@@ -5194,6 +5213,11 @@ iframe {
   /* Страница Гид по ипотеке */
   .mortgage-guide-page .mortgage-title {
     font-size: 18px;
+  }
+
+  /* Страница Контакты */
+  .contacts-page .contacts-section .c-item {
+    padding: 15px;
   }
 
   /* agreement text галочка соглашения */
