@@ -1298,11 +1298,6 @@ iframe {
   gap: 60px;
   align-items: center;
 }
-/*
-.project-detail-page .title-section .view-more-btn {
-  height: 60px;
-}
-*/
 .project-detail-page .title-section .make-an-appointment-wrapper {
   display: flex;
   align-items: center;
@@ -1416,6 +1411,9 @@ iframe {
 }
 .project-detail-page .flats-section .flats-sold-out-title {
   color: var(--blue-color);
+}
+.project-detail-page .negative-margin {
+  margin-bottom: -40px ;
 }
 
 /* Карточка проекта выполненная */
@@ -4353,7 +4351,7 @@ iframe {
     font-size: 34px;
   }
   .project-detail-page .flats-section .flats-sold-out {
-    height: 280px;
+    height: 250px;
     border-radius: 20px;
   }
   .project-detail-page .location-section .description-text {
@@ -5027,6 +5025,13 @@ iframe {
   .project-detail-page .location-section .location-advantages-slider-item__image {
     width: 47%;
   }
+  .project-detail-page .flats-section .flats-sold-out {
+    height: 200px;
+  }
+  .project-detail-page .flats-section .flats-sold-out-title {
+    margin-bottom: 0;
+    font-size: 30px;
+  }
 
   /* Параграф текста левый и правый */
   .paragraph-left-right {
@@ -5248,6 +5253,9 @@ iframe {
   .project-detail-page .working-progress-section .grid-container {
     grid-template-columns: repeat(1, 1fr);
   }
+  .project-detail-page .flats-section .flats-sold-out-title {
+    font-size: 26px;
+  }
 
   /* Секция Карта офисов в карточке проекта и Контакты */
   .office-map-section .address-card__content {
@@ -5370,6 +5378,13 @@ iframe {
   /* Карточка проекта */
   .project-detail-page .slider-section .details {
     padding: 15px;
+  }
+  .project-detail-page .flats-section .flats-sold-out {
+    height: 150px;
+    gap: 20px;
+  }
+  .project-detail-page .flats-section .flats-sold-out-title {
+    font-size: 24px;
   }
 
   /* Страница О компании */
