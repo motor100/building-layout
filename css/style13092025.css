@@ -2486,6 +2486,7 @@ iframe {
   margin: 0 0 40px 0;
   font-family: 'InterDisplay-SemiBold';
   font-size: 68px;
+  line-height: 1.2;
   text-align: center;
 }
 .page-404 .page-404-text {
@@ -4580,6 +4581,15 @@ iframe {
     margin-bottom: 40px;
   }
 
+  /* Страница 404 */
+  .page-404 .page-404-title {
+    margin-bottom: 30px;
+    font-size: 60px;
+  }
+  .page-404 .page-404-text {
+    font-size: 28px;
+  }
+
 }
 
 @media only screen and (max-width : 768px) {
@@ -4947,6 +4957,14 @@ iframe {
     margin-bottom: 20px;
   }
 
+  /* Страница 404 */
+  .page-404 .page-404-title {
+    font-size: 52px;
+  }
+  .page-404 .page-404-text {
+    font-size: 24px;
+  }
+
   /* mobile menu */
   .mobile-menu {
     display: block;
@@ -5108,6 +5126,14 @@ iframe {
     font-size: 44px;
   }
   .about-company-page .title-section .description {
+    font-size: 20px;
+  }
+
+  /* Страница 404 */
+  .page-404 .page-404-title {
+    font-size: 46px;
+  }
+  .page-404 .page-404-text {
     font-size: 20px;
   }
 
@@ -5345,6 +5371,18 @@ iframe {
     font-size: 22px;
   }
 
+  /* Страница 404 */
+  .page-404 .page-404-image {
+    width: 300px;
+  }
+  .page-404 .page-404-title {
+    font-size: 38px;
+  }
+  .page-404 .page-404-text {
+    width: 90%;
+    font-size: 18px;
+  }
+
   /* agreement text галочка соглашения */
   .agreement-text .checkbox-text {
     font-size: 12px;
@@ -5385,6 +5423,11 @@ iframe {
   /* Страница О компании */
   .about-company-page .title-section .title {
     font-size: 32px;
+  }
+
+  /* Страница 404 */
+  .page-404 .page-404-title {
+    font-size: 30px;
   }
 
 }
