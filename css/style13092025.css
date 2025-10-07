@@ -2463,23 +2463,15 @@ iframe {
 }
 
 /* Страница Гид по ипотеке */
-.mortgage-guide-page .mortgage-guide-section {
-  margin: 0 0 40px 0;
-}
 .mortgage-guide-page .mortgage-title {
-  margin: 0 0 20px 0;
   font-size: 32px;
   line-height: 1.2;
 }
-.mortgage-guide-page .section-content {
-  margin: 0 0 20px 0;
-  padding: 30px;
-  border-radius: 30px;
-  background-color: var(--lightgrey-color);
-  font-size: 18px;
+.mortgage-guide-page .mbottom20 {
+  margin-bottom: 20px;
 }
-.mortgage-guide-page .section-content .list-item {
-  margin-bottom: 5px;
+.mortgage-guide-page .ptop20 {
+  padding-top: 20px;
 }
 
 /* Страница 404 */
@@ -3128,6 +3120,11 @@ iframe {
     font-size: 21px;
   }
 
+  /* Страница Гид по ипотеке */
+  .mortgage-guide-page .mortgage-title {
+    font-size: 30px;
+  }
+
 }
 
 @media only screen and (max-width : 1400px) {
@@ -3617,6 +3614,19 @@ iframe {
   .accordeon .accordeon-item .arrow {
     top: 30px;
   }
+
+  /* Страница Гид по ипотеке */
+  .mortgage-guide-page .mortgage-title {
+    font-size: 28px;
+  }
+  /*
+  .mortgage-guide-page .mbottom20 {
+    margin-bottom: 15px;
+  }
+  .mortgage-guide-page .ptop20 {
+    padding-top: 15px;
+  }
+  */
 
   /* we use cookie */
   .we-use-cookie {
@@ -4182,6 +4192,11 @@ iframe {
     top: 20px;
   }
 
+  /* Страница Гид по ипотеке */
+  .mortgage-guide-page .mortgage-title {
+    font-size: 24px;
+  }
+
   /* we use cookie */
   .we-use-cookie {
     max-width: 880px;
@@ -4375,8 +4390,6 @@ iframe {
     flex-direction: column;
   }
 
-
-
   /* Карточка проекта */
   .project-detail-page .title-section .flex-container {
     flex-direction: column;
@@ -4492,6 +4505,10 @@ iframe {
   }
   .mortgage-page .list-section .list-section-frame {
     padding: 15px;
+  }
+  .mortgage-page .list-section .list {
+    margin: 0;
+    padding-left: 20px;
   }
 
   /* Accordeon */
@@ -4830,8 +4847,13 @@ iframe {
     font-size: 16px;
   }
   .accordeon .accordeon-item .arrow {
-    top: 15px;
+    top: 10px;
     right: 15px;
+  }
+
+  /* Страница Гид по ипотеке */
+  .mortgage-guide-page .mortgage-title {
+    font-size: 20px;
   }
 
   /* mobile menu */
@@ -5166,6 +5188,11 @@ iframe {
     font-size: 22px;
   }
   .mortgage-page .list-section .list-section__title {
+    font-size: 18px;
+  }
+
+  /* Страница Гид по ипотеке */
+  .mortgage-guide-page .mortgage-title {
     font-size: 18px;
   }
 
