@@ -219,9 +219,10 @@ document.addEventListener("DOMContentLoaded", () => {
     const accordeonItems = document.querySelectorAll('.accordeon-item');
 
     accordeonItems.forEach((item) => {
-      const accordeonItemTitle = item.querySelector('.accordeon-item-title');
+      // const accordeonItemTitle = item.querySelector('.accordeon-item-title');
 
-      accordeonItemTitle.onclick = function () {
+      // accordeonItemTitle.onclick = function () {
+      item.onclick = function () {
         item.classList.toggle('active');
       }
     });

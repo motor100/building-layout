@@ -1939,7 +1939,6 @@ iframe {
 /* Карточка новости */
 .np-detail-page .np-detail__date {
   width: max-content;
-  height: 26px;
   margin: 0 0 40px 0;
   padding: 3px 12px;
   border-radius: 13px;
@@ -2388,7 +2387,7 @@ iframe {
 .mortgage-page .contacts-section .contacts-item__title {
   font-family: 'InterDisplay-Medium';
   font-size: 24px;
-  line-height: 1.1;  
+  line-height: 1.1;
 }
 .mortgage-page .contacts-section .contacts-item-blue .contacts-item__title,
 .mortgage-page .contacts-section .contacts-item-blue .contacts-item__text {
@@ -2405,13 +2404,13 @@ iframe {
   padding: 40px 30px;
   border-radius: 30px;
   background-color: var(--lightgrey-color);
+  cursor: pointer;
 }
 .accordeon .accordeon-item-title {
   margin-bottom: 0;
   padding: 0 40px 0 0;
   font-family: 'InterDisplay-Medium';
   font-size: 24px;
-  cursor: pointer;
   transition: margin-bottom .3s;
 }
 .accordeon .accordeon-text {
@@ -3300,6 +3299,8 @@ iframe {
     padding: 30px;
     border-radius: 25px;
   }
+
+  /* Темная рамка */
   .dark-frame .dark-frame__title {
     font-size: 36px;
   }
@@ -3340,11 +3341,6 @@ iframe {
   .about-company-section .flex-container {
     gap: 60px;
   }
-  /*
-  .about-company-section .about-company-item {
-    font-size: 17px;
-  }
-  */
 
   /* Секция Новости главная и страница Новости */
   .news-section {
@@ -3588,6 +3584,12 @@ iframe {
     height: 224px;
   }
 
+  /* Карточка новости */
+  .np-detail-page .np-detail__excerpt {
+    margin-bottom: 30px;
+    font-size: 30px;
+  }
+
   /* Страница Ипотека */
   .mortgage-page .submit-application-section .submit-application-section-text {
     margin-bottom: 30px;
@@ -3620,14 +3622,6 @@ iframe {
   .mortgage-guide-page .mortgage-title {
     font-size: 28px;
   }
-  /*
-  .mortgage-guide-page .mbottom20 {
-    margin-bottom: 15px;
-  }
-  .mortgage-guide-page .ptop20 {
-    padding-top: 15px;
-  }
-  */
 
   /* we use cookie */
   .we-use-cookie {
@@ -4581,6 +4575,16 @@ iframe {
     margin-bottom: 40px;
   }
 
+  /* Карточка новости */
+  .np-detail-page .np-detail__excerpt {
+    margin-bottom: 25px;
+    font-size: 26px;
+  }
+  .np-detail-page .np-detail__text {
+    margin-bottom: 30px;
+    font-size: 16px;
+  }
+
   /* Страница 404 */
   .page-404 .page-404-title {
     margin-bottom: 30px;
@@ -4823,6 +4827,12 @@ iframe {
     grid-template-columns: repeat(2, 1fr);
   }
 
+  /* Карточка новости */
+  .np-detail-page .np-detail__excerpt {
+    margin-bottom: 25px;
+    font-size: 24px;
+  }
+
   /* Карточка проекта */
   .project-detail-page .title-section .title-wrapper {
     gap: 16px;
@@ -4913,6 +4923,9 @@ iframe {
     border-radius: 15px;
   }
   .accordeon .accordeon-item-title {
+    font-size: 16px;
+  }
+  .accordeon .accordeon-text {
     font-size: 16px;
   }
   .accordeon .accordeon-item .arrow {
@@ -5056,7 +5069,7 @@ iframe {
 
   /* Страница Новости и Акции */
   .np-page .n-main-section .frame {
-    padding: 30px;
+    padding: 25px;
     border-radius: 20px;
   }
   .np-page .n-main-section .n-main-section__title {
@@ -5065,6 +5078,11 @@ iframe {
   }
   .np-page .n-main-section .n-main-section__image {
     border-radius: 15px;
+  }
+
+  /* Карточка новости */
+  .np-detail-page .np-detail__date {
+    font-size: 13px;
   }
 
   /* Карточка проекта */
@@ -5277,6 +5295,15 @@ iframe {
   }
   .np-page .news-section .grid-container {
     grid-template-columns: auto;
+  }
+
+  /* Карточка новости */
+  .np-detail-page .np-detail__excerpt {
+    font-size: 22px;
+  }
+  .np-detail-page .np-detail__buttons {
+    gap: 10px;
+    flex-direction: column;
   }
 
   /* Карточка проекта */
