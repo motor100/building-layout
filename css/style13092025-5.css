@@ -447,7 +447,7 @@ iframe {
   border-radius: 40px;
   background: url(../images/main-image.jpg) center no-repeat;
   overflow: hidden;
-  z-index: -2;
+  z-index: 1;
 }
 .main-section .main-image img {
   width: 100%;
@@ -2564,7 +2564,6 @@ iframe {
   padding: 50px;
   border-radius: 40px;
   background-color: var(--white-color);
-  overflow: hidden;
 }
 .modal-window .modal-close {
   position: absolute;
@@ -2611,15 +2610,26 @@ iframe {
 }
 
 /* video modal */
-.video-modal .modal-area {
-  width: 1400px;
-  height: 840px;
-  padding-top: 45px;
-  padding-bottom: 45px;
+.modal-window .modal-wrapper {
+  padding: 0 12%;
 }
 .video-modal .modal-close {
-  top: 25px;
-  right: 25px;
+  top: 20px;
+  right: 20px;
+}
+.video-modal .modal-content {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%;
+  overflow: hidden;
+}
+.video-modal .modal-content video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 /* callback modal */
@@ -2757,6 +2767,7 @@ iframe {
   max-width: 440px;
   margin: 0 0 60px 0;
   flex-wrap: wrap;
+  justify-content: flex-start;
 }
 .mobile-menu .socials {
   max-width: 375px;
@@ -3206,25 +3217,6 @@ iframe {
     font-size: 14px;
   }
 
-  /* Секция Преимущества */
-  /*
-  .advantages-section .advantages-item {
-    padding: 25px;
-  }
-  .advantages-section .advantages-item__title {
-    font-size: 40px;
-  }
-  .advantages-section .advantages-item__accent {
-    font-size: 22px;
-  }
-  .advantages-section .advantages-item__text {
-    font-size: 16px;
-  }
-  .advantages-section .grid-container {
-    gap: 20px;
-  }
-  */
-
   /* Новая секция Наши преимущества */
   .our-advantages-section .our-advantages-slider .our-advantages-item__title {
     font-size: 34px;
@@ -3569,6 +3561,11 @@ iframe {
   /* Страница Гид по ипотеке */
   .mortgage-guide-page .mortgage-title {
     font-size: 28px;
+  }
+
+  /* Страница Реквизиты */
+  .requisites-page .requisites-item .requisites-item__value {
+    font-size: 22px;
   }
 
   /* we use cookie */
@@ -3968,11 +3965,6 @@ iframe {
   }
 
   /* Форма Забронировать онлайн */
-  /*
-  .booking-online-form-wrapper {
-    padding: 20px 0;
-  }
-  */
   .booking-online-form-wrapper .white-frame {
     padding: 0;
   }
@@ -4128,13 +4120,18 @@ iframe {
     font-size: 26px;
   }
 
+  /* Страница Реквизиты */
+  .requisites-page .requisites-item .requisites-item__value {
+    font-size: 20px;
+  }
+
   /* we use cookie */
   .we-use-cookie {
     max-width: 880px;
   }
   .we-use-cookie .we-use-cookie-wrapper {
     padding: 20px 25px;
-    border-radius: 21px;
+    border-radius: 20px;
     gap: 20px;
   }
   .we-use-cookie .we-use-cookie-text {
@@ -4143,6 +4140,16 @@ iframe {
   .we-use-cookie .we-use-cookie-close {
     width: 100px;
     height: 48px;
+  }
+
+  /* video modal */
+  .video-modal .modal-area {
+    padding: 30px;
+    border-radius: 30px;
+  }
+  .video-modal .modal-close {
+    top: -30px;
+    right: 0;
   }
 }
 
@@ -4508,6 +4515,17 @@ iframe {
     font-size: 16px;
   }
 
+  /* Страница Реквизиты */
+  .requisites-page .requisites-item .requisites-item__title {
+    font-size: 16px;
+  }
+  .requisites-page .requisites-item .requisites-item__value {
+    font-size: 18px;
+  }
+  .requisites-page .requisites-item {
+    margin-bottom: 15px;
+  }
+
   /* Страница 404 */
   .page-404 .page-404-title {
     margin-bottom: 30px;
@@ -4515,6 +4533,12 @@ iframe {
   }
   .page-404 .page-404-text {
     font-size: 28px;
+  }
+
+  /* video modal */
+  .video-modal .modal-area {
+    padding: 25px;
+    border-radius: 25px;
   }
 
 }
@@ -4906,6 +4930,27 @@ iframe {
     display: block;
   }
 
+  /* we use cookie */
+  .we-use-cookie {
+    bottom: 125px;
+  }
+  .we-use-cookie .we-use-cookie-image {
+    display: none !important;
+  }
+  .we-use-cookie .we-use-cookie-buttons {
+    gap: 10px;
+    flex-direction: column;
+  }
+
+  /* video modal */
+  .modal-window .modal-wrapper {
+    padding: 0 120px;
+  }
+  .video-modal .modal-area {
+    padding: 20px;
+    border-radius: 20px;
+  }
+  
 }
 
 @media only screen and (max-width : 576px) {
@@ -5088,6 +5133,27 @@ iframe {
   /* burger menu */
   .burger-menu-wrapper {
     right: 12px;
+  }
+
+  /* we use cookie */
+  .we-use-cookie .we-use-cookie-wrapper {
+    padding: 15px 20px;
+    border-radius: 21px;
+    gap: 10px;
+  }
+  .we-use-cookie .we-use-cookie-close {
+    width: 94px;
+    height: 42px;
+    font-size: 15px;
+  }
+
+  /* video modal */
+  .video-modal .modal-wrapper {
+    padding: 0 50px;
+  }
+  .video-modal .modal-area {
+    padding: 15px;
+    border-radius: 15px;
   }
 
 }
@@ -5346,6 +5412,25 @@ iframe {
   /* agreement text галочка соглашения */
   .agreement-text .checkbox-text {
     font-size: 12px;
+  }
+
+  /* we use cookie */
+  .we-use-cookie .we-use-cookie-wrapper {
+    padding: 15px;
+    flex-direction: column;
+  }
+  .we-use-cookie .we-use-cookie-buttons {
+    gap: 0;
+    flex-direction: row;
+  }
+
+  /* video modal */
+  .video-modal .modal-wrapper {
+    padding: 0;
+  }
+  .video-modal .modal-area {
+    padding: 10px;
+    border-radius: 10px;
   }
 
 }
