@@ -1957,6 +1957,11 @@ iframe {
   display: flex;
   justify-content: space-between;
 }
+.projects-page .projects-section .projects-section-title {
+  margin: 0 0 20px 0;
+  font-size: 32px;
+  line-height: 1.2;
+}
 
 /* Карта проектов */
 .projects-map-page .map-wrapper {
@@ -2013,40 +2018,6 @@ iframe {
   height: 100%;
   object-fit: cover;
 }
-
-
-/*
-.about-company-page .advantages-section .image-wrapper {
-  position: relative;
-  margin: 150px 0 0 0;
-}
-.about-company-page .advantages-section .image {
-  position: relative;
-  height: 0;
-  padding: 0 0 41% 0;
-  border-radius: 30px;
-  overflow: hidden;
-}
-.about-company-page .advantages-section .image img {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: 1;
-}
-*/
-/*
-.about-company-page .advantages-section .grid-container {
-  position: absolute;
-  top: -110px;
-  left: 0;
-  z-index: 2;
-}
-*/
-
-
 .about-company-page .mission-section .flex-container {
   display: flex;
   gap: 24px;
@@ -3338,6 +3309,12 @@ iframe {
     gap: 12px;
   }
 
+  /* Страница Проекты */
+  .projects-page .projects-section .projects-section-title {
+    margin: 0 0 15px 0;
+    font-size: 30px;
+  }
+
   /* Карточка проекта */
   .project-detail-page .title-section {
     margin-bottom: 30px;
@@ -3855,6 +3832,11 @@ iframe {
     font-size: 15px;
   }
 
+  /* Страница Проекты */
+  .projects-page .projects-section .projects-section-title {
+    font-size: 28px;
+  }
+
   /* Карточка проекта */
   .project-detail-page .title-section .text-btn {
     height: 50px;
@@ -4325,6 +4307,11 @@ iframe {
   }
   .np-page .frame .flex-container {
     flex-direction: column;
+  }
+
+  /* Страница Проекты */
+  .projects-page .projects-section .projects-section-title {
+    font-size: 24px;
   }
 
   /* Карточка проекта */
