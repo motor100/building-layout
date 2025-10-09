@@ -21,10 +21,16 @@
       <div class="flex-container">
         <div class="title-wrapper">
           <div class="project-detail-title primary-title section-title">Гранат</div>
-          <a href="https://xn----7sbaksyrwv.xn--p1ai/" class="view-more-btn quaternary-btn" target="_blank">
-            <span class="view-more-btn__text quaternary-btn__text">Подробнее о ЖК</span>
-            <img src="/images/arrow-right-white.png" class="view-more-btn__image quaternary-btn__image" alt="">
-          </a>
+          <div class="title-buttons">
+            <a href="https://xn----7sbaksyrwv.xn--p1ai/" class="view-more-btn quaternary-btn" target="_blank">
+              <span class="view-more-btn__text quaternary-btn__text">Подробнее о ЖК</span>
+              <img src="/images/arrow-right-white.png" class="view-more-btn__image quaternary-btn__image" alt="">
+            </a>
+            <!-- Кнопка Отзывы показывается в статусе проекта "Продажа" или "Сдан". В статусе "Строительство" отзывов нет. -->
+            <a href="#" class="testimonial-btn tertiary-btn">
+              <span class="tertiary-btn__text">Отзывы</span>
+            </a>
+          </div>
         </div>
         <div class="make-an-appointment-wrapper">
           <a href="/temp-vidget.html" target="_blank" class="flats text-btn">Квартиры</a>
@@ -463,7 +469,7 @@
     <div class="container">
       <div class="form-wrapper">
         <div class="form-title primary-title">Узнать подробнее</div>
-        <div class="form-text">оставьте заявку и наш менеджер с вами свяжется в течение 10 минут</div>
+        <div class="form-text">оставьте заявку и наш менеджер с вами свяжется в ближайшее время</div>
         <form id="booking-online-form" class="form">
           <div class="flex-container">
             <div class="form-group">
@@ -471,7 +477,7 @@
               <input type="text" name="name" id="name" class="input-field" placeholder="Введите имя">
             </div>
             <div class="form-group">
-              <label for="email" class="label">Почта*</label>
+              <label for="email" class="label">Email*</label>
               <input type="email" name="email" id="email" class="input-field" placeholder="pochta@mail.ru">
             </div>
             <div class="form-group">

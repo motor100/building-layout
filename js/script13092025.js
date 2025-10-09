@@ -67,6 +67,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // News Swiper slider
+  /*
   const newsSlider = document.querySelector('.news-slider');
 
   if (newsSlider) {
@@ -106,6 +107,17 @@ document.addEventListener("DOMContentLoaded", () => {
         prevEl: '.swiper-prev',
       },
     });
+  }
+  */
+
+  // Показать еще в форме открытие полей
+  const moreInfoBtn = document.querySelector('.more-info-btn');
+  const openMoreInfo = document.querySelector('.js-open-more-info');
+
+  if (moreInfoBtn) {
+    moreInfoBtn.onclick = function() {
+      openMoreInfo.classList.toggle('active');
+    }
   }
 
   // Project detail Swiper slider

@@ -1289,6 +1289,9 @@ iframe {
   gap: 60px;
   align-items: center;
 }
+.project-detail-page .title-section .title-buttons {
+  display: flex;
+}
 .project-detail-page .title-section .make-an-appointment-wrapper {
   display: flex;
   align-items: center;
@@ -1729,6 +1732,22 @@ iframe {
 .big-booking-online-form-wrapper .form .submit-btn {
   /*margin-bottom: 20px;*/
   font-size: 22px;
+}
+.big-booking-online-form-wrapper .form .more-info-btn {
+  background-color: var(--lightgrey-color);
+}
+.big-booking-online-form-wrapper .form .form-groups-wrapper {
+  margin: 20px 0;
+}
+.big-booking-online-form-wrapper .form .open-more-info {
+  max-height: 0;
+  overflow: hidden;
+  margin-bottom: 0;
+  transition: min-height .2s, margin-bottom .2s;
+}
+.big-booking-online-form-wrapper .form .open-more-info.active {
+  max-height: 200px;
+  margin-bottom: 20px;
 }
 
 /* slim select */
@@ -4652,6 +4671,9 @@ iframe {
   .big-booking-online-form-wrapper .form .flex-container-bottom .form-group,
   .big-booking-online-form-wrapper .form .submit-btn {
     width: 49%;
+  }
+  .big-booking-online-form-wrapper .form .more-info-btn {
+    margin: 10px 0 -10px 0;
   }
 
   /* form */

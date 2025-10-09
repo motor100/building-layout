@@ -77,56 +77,64 @@
         <form id="big-booking-online-form" class="form">
           <div class="flex-container">
             <div class="form-group">
+              <label for="big-form-name" class="label">Имя*</label>
+              <input type="text" name="name" id="big-form-name" class="input-field" required placeholder="Введите имя">
+            </div>
+            <div class="form-group">
+              <label for="big-form-email" class="label">Email*</label>
+              <input type="email" name="email" id="big-form-email" class="input-field" required placeholder="pochta@mail.ru">
+            </div>
+            <div class="form-group">
+              <label for="big-form-phone" class="label">Телефон*</label>
+              <input type="text" name="phone" id="big-form-phone" class="input-field js-input-phone-mask" required placeholder="+7 (999) 999 99 99">
+            </div>
+            <div class="form-group">
               <label for="big-form-project" class="label">Проект*</label>
-              <select name="project" id="big-form-project">
+              <select name="project" id="big-form-project" required>
                 <option value="" data-placeholder="true">Выберите проект</option>
                 <option value="Островский">Островский</option>
                 <option value="Чурилово 3.20">Чурилово 3.20</option>
                 <option value="Гранат">Гранат</option>
               </select>
             </div>
-            <div class="form-group">
-              <label for="big-form-type-meeting" class="label">Тип встречи*</label>
-              <select name="type-meeting" id="big-form-type-meeting">
-                <option value="" data-placeholder="true">Выберите тип</option>
-                <option value="Оформление">Оформление</option>
-                <option value="Консультация">Консультация</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label for="big-form-type-room" class="label">Тип недвижимости*</label>
-              <select name="type-room" id="big-form-type-room">
-                <option value="" data-placeholder="true">Выберите тип</option>
-                <option value="Квартира">Квартира</option>
-                <option value="Коммерция">Коммерция</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label for="big-form-type-payment" class="label">Вид оплаты*</label>
-              <select name="type-payment" id="big-form-type-payment">
-                <option value="" data-placeholder="true">Выберите тип</option>
-                <option value="Квартира">Собственные средства</option>
-                <option value="Коммерция">Кредит</option>
-              </select>
-            </div>
           </div>
-          <div class="flex-container flex-container-bottom">
-            <div class="form-group">
-              <label for="big-form-name" class="label">Имя*</label>
-              <input type="text" name="name" id="big-form-name" class="input-field" placeholder="Введите имя">
-            </div>
-            <div class="form-group">
-              <label for="big-form-email" class="label">Почта*</label>
-              <input type="email" name="email" id="big-form-email" class="input-field" placeholder="pochta@mail.ru">
-            </div>
-            <div class="form-group">
-              <label for="big-form-phone" class="label">Телефон*</label>
-              <input type="text" name="phone" id="big-form-phone" class="input-field js-input-phone-mask" placeholder="+7 (999) 999 99 99">
+
+          <button type="button" class="more-info-btn tertiary-btn">
+            <span class="tertiary-btn__text">Дополнительно</span>
+            <img src="/images/plus-circle.svg" class="tertiary-btn__image" alt="">
+          </button>
+
+          <div class="form-groups-wrapper">
+            <div class="flex-container flex-container-bottom open-more-info js-open-more-info">
+              <div class="form-group">
+                <label for="big-form-type-meeting" class="label">Тип встречи</label>
+                <select name="type-meeting" id="big-form-type-meeting">
+                  <option value="" data-placeholder="true">Выберите тип</option>
+                  <option value="Оформление">Оформление</option>
+                  <option value="Консультация">Консультация</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="big-form-type-room" class="label">Тип недвижимости</label>
+                <select name="type-room" id="big-form-type-room">
+                  <option value="" data-placeholder="true">Выберите тип</option>
+                  <option value="Квартира">Квартира</option>
+                  <option value="Коммерция">Коммерция</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="big-form-type-payment" class="label">Вид оплаты</label>
+                <select name="type-payment" id="big-form-type-payment">
+                  <option value="" data-placeholder="true">Выберите тип</option>
+                  <option value="Квартира">Собственные средства</option>
+                  <option value="Коммерция">Кредит</option>
+                </select>
+              </div>
             </div>
             <button id="callback-submit-btn3" class="submit-btn quaternary-btn">
               <span class="quaternary-btn__text">Записаться на встречу</span>
             </button>
-          </div>
+          </div>            
           
           <div class="checkboxes-flex-container">
             <div class="agreement-text">
@@ -204,7 +212,7 @@
           <input type="text" id="name-write-us-modal" class="input-field js-required-name" name="name" required minlength="3" maxlength="50" autocomplete="on">
         </div>
         <div class="form-group">
-          <label for="email-write-us-modal" class="label">Почта*</label>
+          <label for="email-write-us-modal" class="label">Email*</label>
           <input type="email" id="email-write-us-modal" class="input-field js-required-email" name="email" required minlength="3" maxlength="50" autocomplete="on">
         </div>
         <div class="form-group">
