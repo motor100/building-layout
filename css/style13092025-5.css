@@ -2146,8 +2146,12 @@ iframe {
   line-height: 1.1;
 }
 .about-company-page .values-section .values-item-white {
+  height: 290px;
   padding: 0 40px;
   flex-grow: 1;
+}
+.about-company-page .values-section .values-item-white img {
+  height: 100%;
 }
 .about-company-page .description-section .description-frame {
   border-radius: 30px;
@@ -2157,7 +2161,7 @@ iframe {
   padding: 60px 40px 30px 40px;
 }
 .about-company-page .description-section .white-frame {
-  padding: 60px 40px;
+  padding: 60px 40px 0 40px;
   border-radius: 30px;
   background-color: var(--white-color);
 }
@@ -2178,8 +2182,11 @@ iframe {
   text-align: center;
   background-color: var(--text-color);
 }
-
-
+/*
+.about-company-page .description-section .description-section-flex-container {
+  height: 280px;
+}
+*/
 
 /* О компании Наши преимущества */
 .about-company-page .our-advantages-section .our-advantages {
@@ -3138,11 +3145,51 @@ iframe {
   }
 
   /* Страница О компании */
-  /*
-  .about-company-page .title-section .title {
+
+  .about-company-page .title-section .title-dark-frame {
+    padding: 50px;
+  }
+  .about-company-page .title-section .description-title {
     font-size: 64px;
   }
-  */
+  .about-company-page .title-section .description-text {
+    margin-bottom: 70px;
+    font-size: 26px;
+  }
+  .about-company-page .title-section .description-item {
+    padding: 25px;
+  }
+  .about-company-page .logo-section .logo {
+    width: 400px;
+  }
+  .about-company-page .logo-section .text {
+    font-size: 38px;
+  }
+  .about-company-page .text-section-flex-container {
+    height: 200px;
+  }
+  .about-company-page .t-text {
+    font-size: 26px;
+  }
+  .about-company-page .values-section .values-section-title {
+    font-size: 38px;
+  }
+  .about-company-page .values-section .values-item {
+    padding: 30px;
+  }
+  .about-company-page .values-section .values-item__text {
+    font-size: 36px;
+  }
+  .about-company-page .values-section .values-item-white {
+    height: 250px;
+  }
+  .about-company-page .description-section .top-frame {
+    padding: 40px 40px 30px 40px;
+  }
+  .about-company-page .description-section .black-frame {
+    font-size: 38px;
+  }
+
   .about-company-page .mission-section .mission-title {
     font-size: 40px;
   }
@@ -3588,11 +3635,72 @@ iframe {
   }
 
   /* Страница О компании */
-  /*
-  .about-company-page .title-section .title {
+  .about-company-page .title-section .title-dark-frame {
+    padding: 40px;
+    border-radius: 25px;
+  }
+  .about-company-page .title-section .description-title {
+    margin-bottom: 20px;
     font-size: 60px;
   }
-  */
+  .about-company-page .title-section .description-text {
+    margin-bottom: 60px;
+    font-size: 24px;
+  }
+  .about-company-page .title-section .description-item {
+    padding: 20px;
+    border-radius: 25px;
+  }
+  .about-company-page .title-section .description-item__number {
+    font-size: 60px;
+  }
+  .about-company-page .title-section .description-item__text {
+    font-size: 22px;
+  }
+  .about-company-page .logo-section .logo {
+    width: 300px;
+  }
+  .about-company-page .logo-section .text {
+    width: 100%;
+    font-size: 34px;
+  }
+  .about-company-page .text-section-flex-container {
+    height: 170px;
+  }
+  .about-company-page .t-text {
+    font-size: 22px;
+  }
+  .about-company-page .t-image {
+    border-radius: 25px;
+  }
+  .about-company-page .values-section .values-section-title {
+    width: 100%;
+    font-size: 34px;
+  }
+  .about-company-page .values-section .values-item__text {
+    font-size: 30px;
+  }
+  .about-company-page .values-section .values-item__image {
+    width: 66px;
+    height: 66px;
+    margin-bottom: 60px;
+  }
+  .about-company-page .values-section .values-item-white {
+    height: 215px;
+  }
+  .about-company-page .description-section .description-frame {
+    border-radius: 25px;
+  }
+  .about-company-page .description-section .top-frame {
+    padding: 30px;
+  }
+  .about-company-page .description-section .white-frame .text {
+    font-size: 24px;
+  }
+  .about-company-page .description-section .black-frame {
+    padding: 25px 60px;
+    font-size: 34px;
+  }
   .advantages-section .advantages-item {
     padding: 20px;
   }
@@ -4143,11 +4251,82 @@ iframe {
   }
 
   /* Страница О компании */
-  /*
-  .about-company-page .title-section .title {
+  .about-company-page .title-section .flex-container {
+    flex-direction: column;
+    gap: 0;
+  }
+  .about-company-page .title-section .description {
+    width: 100%;
+  }
+  .about-company-page .title-section .image {
+    width: 100%;
+    border-radius: 20px;
+  }
+  .about-company-page .title-section .title-dark-frame {
+    padding: 30px;
+    border-radius: 20px;
+  }
+  .about-company-page .title-section .description-title {
+    margin-bottom: 20px;
     font-size: 56px;
   }
-  */
+  .about-company-page .title-section .description-text {
+    margin-bottom: 40px;
+    font-size: 22px;
+  }
+  .about-company-page .title-section .description-item__number {
+    font-size: 54px;
+  }
+  .about-company-page .title-section .description-item__text {
+    font-size: 20px;
+  }
+  .about-company-page .title-section .description-item {
+    padding: 15px;
+    border-radius: 20px;
+  }
+  .about-company-page .logo-section .text {
+    font-size: 30px;
+  }
+  .about-company-page .t-text {
+    font-size: 20px;
+  }
+  .about-company-page .text-section-flex-container {
+    height: 155px;
+  }
+  .about-company-page .t-image {
+    border-radius: 20px;
+  }
+  .about-company-page .t-flex-container {
+    gap: 50px;
+  }
+  .about-company-page .values-section .values-section-title {
+    font-size: 30px;
+  }
+  .about-company-page .values-section .values-item__text {
+    font-size: 24px;
+  }
+  .about-company-page .values-section .values-item__image {
+    width: 46px;
+    height: 46px;
+    margin-bottom: 40px;
+  }
+  .about-company-page .values-section .values-item-white {
+    height: 160px;
+  }
+  .about-company-page .description-section .top-frame {
+    padding: 25px;
+  }
+  .about-company-page .description-section .white-frame {
+    padding: 40px 30px 0 30px;
+    border-radius: 25px;
+  }
+  .about-company-page .description-section .white-frame .text {
+    font-size: 22px;
+  }
+  .about-company-page .description-section .black-frame {
+    padding: 20px 30px;
+    font-size: 30px;
+  }
   .about-company-page .mission-section .mission-title {
     font-size: 34px;
   }
@@ -4648,17 +4827,81 @@ iframe {
   .about-company-page .w40 {
     width: 100%;
   }
-  /*
-  .about-company-page .title-section .flex-container {
+  
+  .about-company-page .title-section .description-title {
+    font-size: 50px;
+  }
+  .about-company-page .title-section .description-text {
+    margin-bottom: 30px;
+    font-size: 20px;
+  }
+  .about-company-page .title-section .description-item__number {
+    font-size: 50px;
+  }
+  .about-company-page .title-section .description-item__image {
+    width: 130px;
+  }
+  .about-company-page .title-section .description-item__image img {
+    width: 100%;
+  }
+  .about-company-page .logo-section .logo {
+    width: 250px;
+  }
+  .about-company-page .logo-section .text {
+    font-size: 26px;
+  }
+  .about-company-page .t-flex-container {
+    gap: 20px;
     flex-direction: column;
   }
-  .about-company-page .title-section .title {
-    font-size: 52px;
+  .about-company-page .text-section-flex-container {
+    height: auto;
   }
-  .about-company-page .title-section .description {
-    font-size: 24px;
+  .about-company-page .t-text {
+    width: 100%;
   }
-  */
+  .about-company-page .t-image {
+    width: 50%;
+  }
+  .about-company-page .values-section .values-section-title {
+    margin-bottom: 30px;
+    font-size: 26px;
+  }
+  .about-company-page .values-section .values-section-title br {
+    display: none;
+  }
+  .about-company-page .values-section .flex-container {
+    flex-wrap: wrap;
+  }
+  .about-company-page .values-section .values-item {
+    padding: 20px;
+    border-radius: 20px;
+  }
+  .about-company-page .values-section .values-item,
+  .about-company-page .values-section .values-item-white {
+    width: 50%;
+  }
+  .about-company-page .values-section .values-item-white {
+    height: 140px;
+  }
+  .about-company-page .values-section .values-item__text {
+    font-size: 22px;
+  }
+  .about-company-page .t-text {
+    font-size: 18px;
+  }
+  .about-company-page .description-section .white-frame .text {
+    width: 100%;
+    font-size: 20px;
+  }
+  .about-company-page .description-section .white-frame {
+    padding: 30px 20px 0 20px;
+    border-radius: 20px;
+  }
+  .about-company-page .description-section .black-frame {
+    padding: 15px;
+    font-size: 26px;
+  }
   .about-company-page .mission-section .flex-container {
     flex-direction: column;
   }
@@ -5096,14 +5339,42 @@ iframe {
   }
 
   /* Страница О компании */
-  /*
-  .about-company-page .title-section .title {
-    font-size: 48px;
+  .about-company-page .title-section .title-dark-frame {
+    padding: 25px;
   }
-  .about-company-page .title-section .description {
+  .about-company-page .title-section .description-title {
+    font-size: 40px;
+  }
+  .about-company-page .title-section .description-text {
+    font-size: 18px;
+  }
+  .about-company-page .title-section .description-item__number {
+    font-size: 40px;
+  }
+  .about-company-page .title-section .description-item__image {
+    width: 90px;
+  }
+  .about-company-page .logo-section .logo {
+    width: 200px;
+  }
+  .about-company-page .logo-section .text {
     font-size: 22px;
   }
-  */
+  .about-company-page .values-section .values-section-title {
+    font-size: 22px;
+  }
+  .about-company-page .description-section .top-frame {
+    padding: 20px;
+  }
+  .about-company-page .description-section .white-frame {
+    padding: 20px 10px 0 10px;
+  }
+  .about-company-page .description-section .white-frame .text {
+    font-size: 18px;
+  }
+  .about-company-page .description-section .black-frame {
+    font-size: 22px;
+  }
   .about-company-page .mission-section .mission-title {
     font-size: 26px;
   }
@@ -5335,14 +5606,51 @@ iframe {
   }
 
   /* Страница О компании */
-  /*
-  .about-company-page .title-section .title {
-    font-size: 44px;
+  .about-company-page .title-section .title-dark-frame {
+    padding: 20px;
   }
-  .about-company-page .title-section .description {
+  .about-company-page .title-section .description-title {
+    font-size: 36px;
+  }
+  .about-company-page .title-section .description-item {
+    padding: 10px;
+  }
+  .about-company-page .title-section .description-item__number {
+    font-size: 30px;
+  }
+  .about-company-page .title-section .description-item__text {
+    font-size: 18px;
+  }
+  .about-company-page .title-section .description-item__image {
+    width: 70px;
+  }
+  .about-company-page .logo-section .text {
+    font-size: 22px;
+  }
+  .about-company-page .values-section .values-section-title {
     font-size: 20px;
   }
-  */
+  .about-company-page .values-section .values-item {
+    padding: 15px;
+  }
+  .about-company-page .values-section .values-item,
+  .about-company-page .values-section .values-item-white {
+    width: 100%;
+  }
+  .about-company-page .values-section .values-item__image {
+    width: 36px;
+    height: 36px;
+    margin-bottom: 30px;
+  }
+  .about-company-page .values-section .values-item-white {
+    height: 120px;
+  }
+  .about-company-page .t-text {
+    font-size: 16px;
+  }
+  .about-company-page .description-section .black-frame {
+    font-size: 20px;
+  }
 
   /* Страница 404 */
   .page-404 .page-404-title {
@@ -5593,14 +5901,43 @@ iframe {
   }
 
   /* Страница О компании */
-  /*
-  .about-company-page .title-section .title {
-    font-size: 36px;
+  .about-company-page .title-section .description-title {
+    font-size: 31px;
   }
-  .about-company-page .title-section .description {
+  .about-company-page .title-section .description-items {
+    flex-wrap: wrap;
+  }
+  .about-company-page .title-section .description-item {
+    width: 135px;
+    border-radius: 15px;
+  }
+  .about-company-page .title-section .description-item__text {
+    font-size: 16px;
+  }
+  .about-company-page .logo-section .text {
+    font-size: 20px;
+  }
+  .about-company-page .values-section .values-section-title {
     font-size: 18px;
   }
-  */
+  .about-company-page .values-section .values-item {
+    border-radius: 15px;
+  }
+  .about-company-page .values-section .values-item__image {
+    margin-bottom: 20px;
+  }
+  .about-company-page .values-section .values-item-white {
+    height: 100px;
+  }
+  .about-company-page .description-section .top-frame {
+    padding: 15px;
+  }
+  .about-company-page .description-section .white-frame .text {
+    font-size: 16px;
+  }
+  .about-company-page .description-section .black-frame {
+    font-size: 18px;
+  }
   .about-company-page .our-advantages-section .our-advantages {
     height: auto;
   }
@@ -5707,11 +6044,24 @@ iframe {
   }
 
   /* Страница О компании */
-  /*
-  .about-company-page .title-section .title {
-    font-size: 32px;
+  .about-company-page .title-section .title-dark-frame {
+    padding: 15px;
   }
-  */
+  .about-company-page .title-section .description-title {
+    font-size: 26px;
+  }
+  .about-company-page .title-section .description-text {
+    font-size: 16px;
+  }
+  .about-company-page .logo-section .text {
+    font-size: 18px;
+  }
+  .about-company-page .values-section .values-item__text {
+    font-size: 20px;
+  }
+  .about-company-page .description-section .black-frame {
+    font-size: 16px;
+  }
 
   /* Страница 404 */
   .page-404 .page-404-title {
