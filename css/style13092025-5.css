@@ -1,12 +1,5 @@
 @font-face {
   font-display: swap;
-  font-family: 'InterDisplay-Light';
-  font-style: normal;
-  font-weight: 400;
-  src: url(../fonts/InterDisplay-Light.woff2) format("woff2");
-}
-@font-face {
-  font-display: swap;
   font-family: 'InterDisplay-Regular';
   font-style: normal;
   font-weight: 400;
@@ -25,13 +18,6 @@
   font-style: normal;
   font-weight: 400;
   src: url(../fonts/InterDisplay-SemiBold.woff2) format("woff2");
-}
-@font-face {
-  font-display: swap;
-  font-family: 'InterDisplay-Bold';
-  font-style: normal;
-  font-weight: 400;
-  src: url(../fonts/InterDisplay-Bold.woff2) format("woff2");
 }
 
 :root {
