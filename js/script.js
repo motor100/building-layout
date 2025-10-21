@@ -428,6 +428,64 @@ document.addEventListener("DOMContentLoaded", () => {
   inputPhoneMask();
 
 
+  // AJAX Отправка формы Заказать звонок
+  const bigBookingOnlineFormBtn = document.getElementById('big-booking-online-form-btn');
+
+  function ajaxCallback(form) {
+
+    let arr = [];
+
+    const inputName = form.querySelector('.js-required-name');
+    if (inputName.value.length < 3 || inputName.value.length > 30) {
+      inputName.classList.add('required');
+      arr.push(false);
+    } else {
+      inputName.classList.remove('required');
+    }
+
+    const inputPhone = form.querySelector('.js-required-phone');
+    if (inputPhone.value.length != 18) {
+      inputPhone.classList.add('required');
+      arr.push(false);
+    } else {
+      inputPhone.classList.remove('required');
+    }
+
+    const inputCheckboxes = form.querySelectorAll('.js-required-checkbox');
+    inputCheckboxes.forEach((item) => {
+      if (!item.checked) {
+        arr.push(false);
+      }
+    });
+
+    if (arr.length == 0) {
+
+      // fetch('/local/templates/main/phpmailer/mailer.php', {
+      fetch('/phpmailer/mailer.php', {  
+        method: 'POST',
+        cache: 'no-cache',
+        body: new FormData(form)
+      })
+      .catch((error) => {
+        console.log(error);
+      })
+
+      alert("Спасибо. Мы свяжемся с вами.");
+
+      form.reset();
+
+    }
+
+    return false;
+  }
+
+  if (bigBookingOnlineFormBtn) {
+    bigBookingOnlineFormBtn.onclick = function(event) {
+      ajaxCallback(bigBookingOnlineForm);
+    }
+  }
+
+
   // Set cookie
   function setCookie(name, value, days) {
     let expires = "";
