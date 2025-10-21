@@ -110,6 +110,31 @@ document.addEventListener("DOMContentLoaded", () => {
   }
   */
 
+  // Testimonials slider
+   const testimonialsSlider = document.querySelector('.testimonials-slider');
+
+  if (testimonialsSlider) {
+    new Swiper('.testimonials-slider', {
+      loop: true,
+      autoplay: false,
+      spaceBetween: 10,
+      breakpoints: {
+        // mobile 320-991
+        320: {
+          slidesPerView: 1,
+        },
+        // mobile >= 480
+        480: {
+          slidesPerView: 2,
+        }
+      },
+      navigation: {
+        nextEl: '.section-title-wrapper .swiper-next',
+        prevEl: '.section-title-wrapper .swiper-prev',
+      },
+    });
+  }
+
   // Показать еще в форме открытие полей
   const moreInfoBtn = document.querySelector('.more-info-btn');
   const openMoreInfo = document.querySelector('.js-open-more-info');
