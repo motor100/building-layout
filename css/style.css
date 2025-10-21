@@ -1774,7 +1774,8 @@ iframe {
 }
 .big-booking-online-form-wrapper .form .open-more-info.active {
   max-height: 200px;
-  margin-bottom: 20px;
+  margin-bottom: 80px;
+  overflow: initial;
 }
 
 /* slim select */
