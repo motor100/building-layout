@@ -1410,67 +1410,6 @@ iframe {
 .project-detail-page .negative-margin {
   margin-bottom: -40px ;
 }
-.project-detail-page .testimonials-section .section-title-wrapper {
-  display: flex;
-  justify-content: space-between;
-}
-.project-detail-page .testimonials-section .section-title-wrapper .swiper-nav {
-  display: none;
-}
-.project-detail-page .testimonials-section .grid-container {
-  display: grid;
-  margin: 0 0 40px 0;
-  gap: 24px;
-  grid-template-columns: repeat(3, 1fr);
-}
-.project-detail-page .testimonials-section .testimonials-item {
-  height: 343px;
-  padding: 30px;
-  border-radius: 30px;
-  background-color: var(--lightgrey-color);
-  font-size: 18px;
-  line-height: 1.2;
-}
-.project-detail-page .testimonials-section .flex-container {
-  display: flex;
-  margin-bottom: 20px;
-  gap: 16px;
-  align-items: center;
-}
-.project-detail-page .testimonials-section .testimonials-item__letter {
-  display: flex;
-  width: 68px;
-  height: 68px;
-  border-radius: 50%;
-  background-color: var(--white-color);
-  font-size: 32px;
-  flex-shrink: 0;
-  align-items: center;
-  justify-content: center;
-}
-.project-detail-page .testimonials-section .testimonials-item__text {
-  display: -webkit-box;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  -webkit-line-clamp: 9;
-  -webkit-box-orient: vertical;
-}
-.project-detail-page .testimonials-section .testimonials-buttons {
-  display: flex;
-  justify-content: center;
-}
-.project-detail-page .testimonials-section .testimonials-slider-wrapper {
-  margin-bottom: 25px;
-}
-  
-
-
-/* Карточка проекта выполненная */
-/*
-.project-detail-page .location-section {
-  padding: 0 0 40px 0;
-}
-*/
 .project-detail-page .location-section-title {
   margin: 0 0 20px 0;
   letter-spacing: -1.5px;
@@ -1709,6 +1648,60 @@ iframe {
 }
 .project-detail-page .working-progress-section .blur-arrow-right img {
   width: 100%;
+}
+
+/* Testimonials */
+.testimonials-section .section-title-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+.testimonials-section .section-title-wrapper .swiper-nav {
+  display: none;
+}
+.testimonials-section .grid-container {
+  display: grid;
+  margin: 0 0 40px 0;
+  gap: 24px;
+  grid-template-columns: repeat(3, 1fr);
+}
+.testimonials-section .testimonials-item {
+  height: 343px;
+  padding: 30px;
+  border-radius: 30px;
+  background-color: var(--lightgrey-color);
+  font-size: 18px;
+  line-height: 1.2;
+}
+.testimonials-section .flex-container {
+  display: flex;
+  margin-bottom: 20px;
+  gap: 16px;
+  align-items: center;
+}
+.testimonials-section .testimonials-item__letter {
+  display: flex;
+  width: 68px;
+  height: 68px;
+  border-radius: 50%;
+  background-color: var(--white-color);
+  font-size: 32px;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+}
+.testimonials-section .testimonials-item__text {
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 9;
+  -webkit-box-orient: vertical;
+}
+.testimonials-section .testimonials-buttons {
+  display: flex;
+  justify-content: center;
+}
+.testimonials-section .testimonials-slider-wrapper {
+  margin-bottom: 25px;
 }
 
 /* Параграф текста левый и правый */
@@ -3171,7 +3164,9 @@ iframe {
   .project-detail-page .location-section-title {
     letter-spacing: 0;
   }
-  .project-detail-page .testimonials-section .testimonials-item {
+
+  /* Testimonials */
+  .testimonials-section .testimonials-item {
     height: 335px;
     padding: 25px;
   }
@@ -3547,15 +3542,17 @@ iframe {
     width: 54px;
     height: 54px;
   }
-  .project-detail-page .testimonials-section .testimonials-item {
+
+  /* Testimonials */
+  .testimonials-section .testimonials-item {
     height: 307px;
     border-radius: 25px;
     font-size: 17px;
   }
-  .project-detail-page .testimonials-section .flex-container {
+  .testimonials-section .flex-container {
     margin-bottom: 15px;
   }
-  .project-detail-page .testimonials-section .testimonials-item__letter {
+  .testimonials-section .testimonials-item__letter {
     width: 58px;
     height: 58px;
     font-size: 28px;
@@ -4144,11 +4141,13 @@ iframe {
   .project-detail-page .location-section .location-content-item {
     gap: 40px;
   }
-  .project-detail-page .testimonials-section .grid-container {
+
+  /* Testimonials */
+  .testimonials-section .grid-container {
     margin-bottom: 30px;
     gap: 16px;
   }
-  .project-detail-page .testimonials-section .testimonials-item {
+  .testimonials-section .testimonials-item {
     height: 287px;
     padding: 20px;
     border-radius: 20px;
@@ -4704,26 +4703,26 @@ iframe {
     width: 44px;
     height: 44px;
   }
-  .project-detail-page .testimonials-section .flex-container {
+
+  /* Testimonials */
+  .testimonials-section .flex-container {
     gap: 10px;
   }
-  .project-detail-page .testimonials-section .testimonials-item {
+  .testimonials-section .testimonials-item {
     height: 250px;
     padding: 15px;
     border-radius: 15px;
     font-size: 15px;
   }
-  .project-detail-page .testimonials-section .flex-container {
+  .testimonials-section .flex-container {
     margin-bottom: 10px;
     gap: 12px;
   }
-  .project-detail-page .testimonials-section .testimonials-item__letter {
+  .testimonials-section .testimonials-item__letter {
     width: 48px;
     height: 48px;
     font-size: 24px;
   }
-  
-    
 
   /* Секция Карта офисов в карточке проекта и Контакты */
   .office-map-section .office-map {
@@ -5241,7 +5240,9 @@ iframe {
   .project-detail-page .slider-section .view-more-mobile-btn {
     display: flex;
   }
-  .project-detail-page .testimonials-section .section-title-wrapper .swiper-nav {
+
+  /* Testimonials */
+  .testimonials-section .section-title-wrapper .swiper-nav {
     display: flex;
   }
 
@@ -5530,11 +5531,13 @@ iframe {
     margin-bottom: 0;
     font-size: 30px;
   }
-  .project-detail-page .testimonials-section .section-title-wrapper {
+
+  /* Testimonials */
+  .testimonials-section .section-title-wrapper {
     margin-bottom: 10px;
     align-items: center;
   }
-  .project-detail-page .testimonials-section .section-title-wrapper .section-title {
+  .testimonials-section .section-title-wrapper .section-title {
     margin-bottom: 0;
   }
 
@@ -5844,12 +5847,14 @@ iframe {
   .project-detail-page .location-section .description-text p {
     margin-bottom: .5em;
   }
-  .project-detail-page .testimonials-section .testimonials-buttons {
+
+  /* Testimonials */
+  .testimonials-section .testimonials-buttons {
     gap: 10px;
     flex-direction: column;
   }
-  .project-detail-page .testimonials-section .view-all-testimonials-btn,
-  .project-detail-page .testimonials-section .add-testimonials-btn {
+  .testimonials-section .view-all-testimonials-btn,
+  .testimonials-section .add-testimonials-btn {
     width: 100%;
   }
 

@@ -332,6 +332,9 @@ document.addEventListener("DOMContentLoaded", () => {
   const writeUsBtn = document.querySelector('.js-write-us-btn');
   const writeUsModal = document.querySelector('#write-us-modal');
 
+  const testimonialBtn = document.querySelector('.js-testimonial-btn');
+  const testimonialModal = document.querySelector('#testimonial-modal');
+
   const callbackFormBtns = document.querySelectorAll('.js-callback-form-btn');
   const callbackModal = document.querySelector('#callback-modal');
   const modalCloseBtns = document.querySelectorAll('.modal-window .modal-close');
@@ -351,6 +354,12 @@ document.addEventListener("DOMContentLoaded", () => {
   if (writeUsBtn) {
     writeUsBtn.onclick = function () {
       modalWindowOpen(writeUsModal);
+    }
+  }
+
+  if (testimonialBtn) {
+    testimonialBtn.onclick = function () {
+      modalWindowOpen(testimonialModal);
     }
   }
 
