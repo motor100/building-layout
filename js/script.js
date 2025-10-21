@@ -402,10 +402,8 @@ document.addEventListener("DOMContentLoaded", () => {
       win.classList.remove('active');
     }, 300);
     // Если это окно с видео, то при закрытии ставлю видео на паузу
-    console.log(win == videoModal);
     if (win == videoModal) {
       const video = document.getElementById("video");
-      console.log(video);
       video.load();
     }
   }
@@ -443,6 +441,14 @@ document.addEventListener("DOMContentLoaded", () => {
       inputName.classList.remove('required');
     }
 
+    const inputEmail = form.querySelector('.js-required-email');
+    if (inputEmail.value.length < 3 || inputEmail.value.length > 50) {
+      inputEmail.classList.add('required');
+      arr.push(false);
+    } else {
+      inputEmail.classList.remove('required');
+    }
+
     const inputPhone = form.querySelector('.js-required-phone');
     if (inputPhone.value.length != 18) {
       inputPhone.classList.add('required');
@@ -451,17 +457,27 @@ document.addEventListener("DOMContentLoaded", () => {
       inputPhone.classList.remove('required');
     }
 
+    const inputProject = form.querySelector('.js-required-project');
+    if (inputProject.value.length < 3 || inputProject.value.length > 50) {
+      inputProject.classList.add('required');
+      arr.push(false);
+    } else {
+      inputProject.classList.remove('required');
+    }
+
     const inputCheckboxes = form.querySelectorAll('.js-required-checkbox');
     inputCheckboxes.forEach((item) => {
-      if (!item.checked) {
+      if (item.checked) {
+        item.classList.remove('required');
+      } else {
         arr.push(false);
+        item.classList.add('required');
       }
     });
 
     if (arr.length == 0) {
 
-      // fetch('/local/templates/main/phpmailer/mailer.php', {
-      fetch('/phpmailer/mailer.php', {  
+      fetch('/phpmailer/mailer.php', {
         method: 'POST',
         cache: 'no-cache',
         body: new FormData(form)

@@ -286,6 +286,11 @@ iframe {
   transform: translate(0, 0);
   opacity: 1;
 }
+.required,
+.required .ss-single-selected,
+.required + label::before {
+  border-color: red !important;
+}
 
 /* header */
 .header {
