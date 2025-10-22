@@ -1703,6 +1703,8 @@ iframe {
 }
 .testimonials-section .testimonials-buttons {
   display: flex;
+  margin-top: -100px;
+  padding-top: 100px;
   justify-content: center;
 }
 .testimonials-section .testimonials-slider-wrapper {
@@ -4951,6 +4953,12 @@ iframe {
 
   .primary-title {
     font-size: 32px;
+  }
+
+  /* header */
+  .header,
+  .header.active {
+    position: static;
   }
 
   /* main section */
