@@ -1,0 +1,119 @@
+<!--#include virtual="/parts/header.html" -->
+
+
+<script crossorigin src="https://cdn.jsdelivr.net/npm/@babel/standalone@7/babel.min.js"></script>
+    <!-- To make the map appear, you must add your apikey -->
+    <script src="https://api-maps.yandex.ru/v3/?apikey=43769839-ea8a-4276-aede-298fecb6e04e&lang=ru_RU"></script>
+
+    <script
+      data-plugins="transform-modules-umd"
+      data-presets="typescript"
+      type="text/babel"
+      src="./common.ts"
+    ></script>
+    <script
+      data-plugins="transform-modules-umd"
+      data-presets="typescript"
+      type="text/babel"
+      src="../variables.ts"
+    ></script>
+    <script data-plugins="transform-modules-umd" data-presets="typescript" type="text/babel">
+      import {LOCATION, MARKER_PROPS} from '../variables';
+
+      window.map = null;
+
+      main();
+
+        async function main() {
+          // Waiting for all api elements to be loaded
+          await ymaps3.ready;
+
+          // Create a custom control class for a hint window
+            class HintWindow extends ymaps3.YMapComplexEntity<{}> {
+              private _element: HTMLDivElement;
+
+              private _detachDom: () => void;
+
+              private _unwatchSearchContext: () => void;
+
+              // Method for create a DOM control element
+                _createElement() {
+                  const windowElement = document.createElement('div');
+                  windowElement.classList.add('hint_window');
+
+                  const windowElementTitle = document.createElement('div');
+                  windowElementTitle.classList.add('hint_window__title');
+
+                  const windowElementText = document.createElement('div');
+                  windowElementText.classList.add('hint_window__text');
+
+                  windowElement.appendChild(windowElementTitle);
+                  windowElement.appendChild(windowElementText);
+                  return windowElement;
+                }
+
+              // Callback method triggered on hint context change, responsible for updating the text in the hint window
+                _searchContextListener() {
+                  const hintContext = this._consumeContext<{hint: {title: string; text: string}}>(YMapHintContext)?.hint;
+                  this._element.firstChild.textContent = hintContext?.title;
+                  this._element.lastChild.textContent = hintContext?.text;
+                }
+
+              // Method for attaching the control to the map
+                protected _onAttach(): void {
+                  this._element = this._createElement();
+                  this._unwatchSearchContext = this._watchContext(YMapHintContext, this._searchContextListener.bind(this));
+                  this._detachDom = ymaps3.useDomContext(this, this._element, this._element);
+                }
+
+              // Method for detaching control from the map
+                protected _onDetach(): void {
+                  this._unwatchSearchContext();
+                  this._detachDom();
+                }
+            }
+
+          const {YMap, YMapDefaultSchemeLayer, YMapDefaultFeaturesLayer, YMapFeature} = ymaps3;
+
+          // Load the package with the hint, extract the class to create the hint object  and the hint context
+          const {YMapHint, YMapHintContext} = await ymaps3.import('@yandex/ymaps3-hint');
+          // Load the package with the default marker, extract the class to create the default marker object
+          const {YMapDefaultMarker} = await ymaps3.import('@yandex/ymaps3-default-ui-theme');
+
+          // Initialize the map
+          map = new YMap(
+              // Pass the link to the HTMLElement of the container
+              document.getElementById('app'),
+              // Pass the map initialization parameters
+              {location: LOCATION},
+              [
+                  // Add a map scheme layer
+                  new YMapDefaultSchemeLayer({}),
+                  // Add a layer of geo objects
+                  new YMapDefaultFeaturesLayer({})
+              ]
+          );
+
+          /* Create a hint object and add it to the map
+        As parameters, provide a function that returns the hint message of your geo object */
+          const hint = new YMapHint({hint: (object) => object?.properties?.hint});
+          map.addChild(hint);
+
+          // Add your custom hint window to the hint, which will be displayed when you hover over the geo object
+          hint.addChild(new HintWindow({}));
+
+          // Create and add markers to the map with a hint message (properties.hint)
+          map.addChild(new YMapDefaultMarker({...MARKER_PROPS}));
+        }
+    </script>
+
+    <!-- prettier-ignore -->
+    <style>#app { width: 100%; height: 100%;}</style>
+
+
+    <div id="app"></div>
+
+
+
+
+<!--#include virtual="/parts/footer.html" -->
