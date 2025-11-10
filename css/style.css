@@ -2159,12 +2159,11 @@ iframe {
   height: 300px;
   padding: 30px;
   border-radius: 30px;
-  justify-content: space-between;
-}
-.pa-page .our-values-section .our-values-item-light {
   background-color: var(--background-color);
+  justify-content: space-between;
+  transition: background-color .3s;
 }
-.pa-page .our-values-section .our-values-item-blue {
+.pa-page .our-values-section .our-values-item:hover {
   background-color: var(--blue-color);
 }
 .pa-page .our-values-section .our-values-item__title {
@@ -2172,21 +2171,26 @@ iframe {
   font-size: 32px;
   line-height: 1.2;
 }
-.pa-page .our-values-section .our-values-item-light .our-values-item__title {
+.pa-page .our-values-section .our-values-item .our-values-item__title {
   color: var(--blue-color);
+  transition: color .3s;
 }
-.pa-page .our-values-section .our-values-item-blue .our-values-item__title {
+.pa-page .our-values-section .our-values-item:hover .our-values-item__title {
   color: var(--white-color);
 }
 .pa-page .our-values-section .our-values-item .our-values-item__text {
   font-size: 18px;
   line-height: 1.2;
 }
-.pa-page .our-values-section .our-values-item-blue .our-values-item__text {
-  color: var(--white-color);
-}
 .pa-page .our-values-section .our-values-item .our-values-item__star {
   width: 68px;
+}
+.pa-page .our-values-section .our-values-item .our-values-item__star svg path {
+  stroke: var(--blue-color);
+  transition: stroke .3s;
+}
+.pa-page .our-values-section .our-values-item:hover .our-values-item__star svg path {
+  stroke: var(--white-color);
 }
 
 /* Страница О компании */
