@@ -4434,6 +4434,9 @@ iframe {
   .project-detail-page .location-section .location-content-item {
     gap: 40px;
   }
+  .project-detail-page .required-section {
+    font-size: 15px;
+  }
 
   /* Testimonials */
   .testimonials-section .grid-container {
@@ -6360,6 +6363,9 @@ iframe {
   }
   .project-detail-page .location-section .description-text p {
     margin-bottom: .5em;
+  }
+  .project-detail-page .required-section {
+    font-size: 14px;
   }
 
   /* Testimonials */
