@@ -1160,6 +1160,7 @@ iframe {
 }
 .footer .footer-menu {
   display: flex;
+  height: 100%;
   gap: 40px 80px;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -1344,6 +1345,9 @@ iframe {
 .project-detail-page .slider-section .slider-wrapper {
   position: relative;
 }
+.project-detail-page .slider-section .swiper-wrapper {
+  height: 750px;
+}
 .project-detail-page .slider-section .project-slider-item__image {
   height: 750px;
   border-radius: 30px;
@@ -1514,6 +1518,9 @@ iframe {
 }
 .project-detail-page .location-section .swiper-nav {
   margin: 0 0 20px auto;
+}
+.project-detail-page .location-section .swiper-wrapper {
+  height: 200px;
 }
 .project-detail-page .location-section .location-advantages-slider-item {
   display: flex;
@@ -3704,6 +3711,9 @@ iframe {
     gap: 20px;
     align-items: flex-start;
   }
+  .project-detail-page .slider-section .swiper-wrapper {
+    height: 700px;
+  }
   .project-detail-page .slider-section .project-slider-item__image {
     height: 700px;
     border-radius: 25px;
@@ -3723,6 +3733,9 @@ iframe {
   }
   .project-detail-page .project-detail-advantages-section .project-detail-advantages-item {
     height: 360px;
+  }
+  .project-detail-page .location-section .swiper-wrapper {
+    height: 192px;
   }
   .project-detail-page .location-section .location-advantages-slider-item {
     height: 192px;
@@ -4981,6 +4994,9 @@ iframe {
     width: 100%;
     justify-content: flex-end;
   }
+  .project-detail-page .slider-section .swiper-wrapper {
+    height: 660px;
+  }
   .project-detail-page .slider-section .project-slider-item__image {
     height: 660px;
   }
@@ -5581,6 +5597,9 @@ iframe {
     align-items: flex-start;
     flex-direction: column;
   }
+  .project-detail-page .slider-section .swiper-wrapper {
+    height: 342px;
+  }
   .project-detail-page .slider-section .project-slider-item__image {
     height: 342px;
   }
@@ -5957,6 +5976,9 @@ iframe {
   /* Карточка проекта */
   .project-detail-page .slider-section .details {
     padding: 20px;
+  }
+  .project-detail-page .slider-section .swiper-wrapper {
+    height: 284px;
   }
   .project-detail-page .slider-section .project-slider-item__image {
     height: 284px;
