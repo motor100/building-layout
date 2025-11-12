@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (parallax) {
       let offset = window.pageYOffset;
       let clientWidth = document.body.clientWidth;
-      parallax.style.backgroundPositionY = (-50 + offset * 0.4) + 'px';
+      parallax.style.backgroundPositionY = (-50 + offset * 0.2) + 'px';
     }
   });
 

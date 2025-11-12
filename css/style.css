@@ -665,7 +665,7 @@ iframe {
   margin: 0 auto;
 }
 
-/* Новая секция Наши преимущества */
+/* Наши преимущества */
 .our-advantages-section .title-wrapper {
   display: flex;
   margin: 0 0 40px 0;
@@ -675,6 +675,9 @@ iframe {
 .our-advantages-section .our-advantages-section-title {
   margin-bottom: 0;
   padding-right: 10px;
+}
+.our-advantages-section .our-advantages-slider .swiper-wrapper {
+  height: 200px;
 }
 .our-advantages-section .our-advantages-slider .our-advantages-item {
   width: 21%;
@@ -3234,7 +3237,7 @@ iframe {
     height: 42px;
   }
 
-  /* Новая секция Наши преимущества */
+  /* Наши преимущества */
   .our-advantages-section .our-advantages-slider .our-advantages-item {
     width: 26%;
     padding: 25px;
@@ -3568,7 +3571,7 @@ iframe {
     font-size: 14px;
   }
 
-  /* Новая секция Наши преимущества */
+  /* Наши преимущества */
   .our-advantages-section .our-advantages-slider .our-advantages-item__title {
     font-size: 34px;
   }
@@ -4211,7 +4214,10 @@ iframe {
     margin-bottom: 30px;
   }
 
-  /* Новая секция Наши преимущества */
+  /* Наши преимущества */
+  .our-advantages-section .our-advantages-slider .swiper-wrapper {
+    height: 180px;
+  }
   .our-advantages-section .our-advantages-slider .our-advantages-item {
     width: 33%;
     height: 180px;
@@ -5407,7 +5413,10 @@ iframe {
     visibility: visible;
   }
 
-  /* Новая секция Наши преимущества */
+  /* Наши преимущества */
+  .our-advantages-section .our-advantages-slider .swiper-wrapper {
+    height: 150px;
+  }
   .our-advantages-section .our-advantages-slider .our-advantages-item {
     height: 150px;
     padding: 20px;
@@ -5904,7 +5913,10 @@ iframe {
     font-size: 20px;
   }
 
-  /* Новая секция Наши преимущества */
+  /* Наши преимущества */
+  .our-advantages-section .our-advantages-slider .swiper-wrapper {
+    height: 120px;
+  }
   .our-advantages-section .our-advantages-slider .our-advantages-item {
     height: 120px;
     padding: 15px;
@@ -6221,7 +6233,10 @@ iframe {
     border-radius: 20px;
   }
 
-  /* Новая секция Наши преимущества */
+  /* Наши преимущества */
+  .our-advantages-section .our-advantages-slider .swiper-wrapper {
+    height: 100px;
+  }
   .our-advantages-section .our-advantages-slider .our-advantages-item {
     height: 100px;
     padding: 15px;
